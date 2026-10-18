@@ -182,6 +182,29 @@ int32 ADSGameMode::GetBomberCountForCapacity(int32 RequestedCount, int32 Capacit
     return Count>0 && Count%2==0 ? Count-1 : Count;
 }
 
+float ADSGameMode::GetBomberIngressAltitude(const FVector& Origin, int32 Count) const
+{
+    // Clear the whole approach once, including both wings of every slot. A
+    // common level altitude preserves the triangle while crossing tall ridges.
+    const FVector Heading = (AirportLocation-Origin).GetSafeNormal2D();
+    const FVector Right = FVector::CrossProduct(FVector::UpVector, Heading);
+    const float Distance = FVector::Dist2D(Origin, AirportLocation);
+    const int32 Steps = FMath::Max(1, FMath::CeilToInt(Distance/10000.f));
+    float HighestGround = AirportLocation.Z;
+    for (int32 Slot = 0; Slot < FMath::Clamp(Count, 1, 5); ++Slot)
+    {
+        const FVector Offset = ADSEnemyAircraft::GetFormationSlotOffset(Slot);
+        const FVector SlotOrigin = Origin+Heading*Offset.X+Right*Offset.Y;
+        for (int32 I = 0; I <= Steps; ++I)
+        {
+            const FVector Sample = SlotOrigin+Heading*(Distance*I/Steps);
+            for (const float WingOffset : {-3000.f, 0.f, 3000.f})
+                HighestGround = FMath::Max(HighestGround, GroundHeightAt(Sample+Right*WingOffset));
+        }
+    }
+    return FMath::Max(100000.f, HighestGround+30000.f);
+}
+
 void ADSGameMode::SpawnWave()
 {
     ++Wave;
@@ -190,7 +213,8 @@ void ADSGameMode::SpawnWave()
     const int32 RequestedBombers=FMath::Min(1+2*(Random.RandRange(0,1)+(Wave-1)/3),5);
     const int32 BomberCapacity=GetBomberCountForCapacity(RequestedBombers,24-Enemies.Num());
     const float Heading=Random.FRandRange(0,2*PI);
-    const FVector FormationOrigin(FMath::Cos(Heading)*850000.f,FMath::Sin(Heading)*850000.f,100000.f);
+    FVector FormationOrigin(FMath::Cos(Heading)*850000.f,FMath::Sin(Heading)*850000.f,0.f);
+    FormationOrigin.Z=GetBomberIngressAltitude(FormationOrigin,BomberCapacity);
     const FVector FormationHeading=(AirportLocation-FormationOrigin).GetSafeNormal2D();
     const FVector FormationRight=FVector::CrossProduct(FVector::UpVector,FormationHeading);
     auto SpawnEnemy=[this](bool bBomber,const FVector& Position,const FRotator& Rotation)
@@ -238,7 +262,8 @@ void ADSGameMode::SpawnWave()
     for (int32 I=0;I<RequestedFighters && Enemies.Num()<24;++I)
     {
         const float Angle=Heading+(I-RequestedFighters*.5f)*.065f;
-        const FVector Pos(FMath::Cos(Angle)*850000.f,FMath::Sin(Angle)*850000.f,130000.f+I*6000);
+        FVector Pos(FMath::Cos(Angle)*850000.f,FMath::Sin(Angle)*850000.f,130000.f+I*6000);
+        Pos.Z=FMath::Max(Pos.Z,GetBomberIngressAltitude(Pos,1));
         const FRotator Facing=(AirportLocation+FVector(0,0,65000)-Pos).Rotation();
         if (ADSEnemyAircraft* Enemy=SpawnEnemy(false,Pos,Facing))
         {

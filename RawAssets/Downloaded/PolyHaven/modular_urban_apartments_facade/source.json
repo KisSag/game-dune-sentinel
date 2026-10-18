@@ -1,0 +1,124 @@
+{
+  "schema": "downloaded-model-source/v1",
+  "id": "modular_urban_apartments_facade",
+  "title": "Modular Urban Apartments Facade",
+  "page": "https://polyhaven.com/a/modular_urban_apartments_facade",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "authors": {
+    "James Ray Cock": "All"
+  },
+  "resolution": "2k",
+  "publisher_dimensions_mm": [
+    51529.99687194824,
+    6664.999693632126,
+    17000
+  ],
+  "files": [
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/modular_urban_apartments_facade_2k.blend",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_2k.blend",
+      "size": 1599741,
+      "sha256": "433912cc72e2e1b9c00f5e9ef15b8ccbc84d88aa9a33ffdcc22e2afa4a02c91b",
+      "md5": "d5d9439763737600f52973afefacfd23"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_trim_01_rough_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_trim_01_rough_2k.png",
+      "size": 6447911,
+      "sha256": "980cec58491ef5d92d139a891f96fc2e60e16315d01891c7263cba4683dd7dc8",
+      "md5": "9370fa5b2e779d2021f703abfd461ec8"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_diff_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_objects_diff_2k.png",
+      "size": 15101409,
+      "sha256": "b39bad844ac3c82dec729e2adb1afe6e87f4d172fd8d0d1710fe6a2f79835222",
+      "md5": "6f0cfe4493c6fcdb2529f46458c2de5d"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_trim_02_diff_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_trim_02_diff_2k.png",
+      "size": 15608021,
+      "sha256": "f9117c9223d86591e650d3a8c92db3332fbf953a9b19b7557d00801ef8e3c33c",
+      "md5": "4dd20f26af53f6797ef3f1eff0f45baa"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_rough_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_objects_rough_2k.png",
+      "size": 4713661,
+      "sha256": "b95a5ba10cd6c0aa06020970f88be307a7f77c42722d21c267c03a90b92acddc",
+      "md5": "816c66734694a5574c0cb27a4983630e"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_nor_gl_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_objects_nor_gl_2k.png",
+      "size": 12815000,
+      "sha256": "76d2e97de2703cb5324d280b61a4130358c552a6f64fbcb9e071e279eec9a2cd",
+      "md5": "2768810cb8646fc56045b9ade203d57a"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_trim_01_diff_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_trim_01_diff_2k.png",
+      "size": 21827162,
+      "sha256": "31c9e97949460aa253670133a111f0118986375d485b7a9b985ac744800c89e7",
+      "md5": "f5fe3d1eb4cd86330e8a661c856bee5c"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_trim_02_rough_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_trim_02_rough_2k.png",
+      "size": 6817580,
+      "sha256": "e9f1b8a9e613f8d5cff13efda4521a29a264fdeeaf8a87c621275d79e653abc8",
+      "md5": "de060566f45c4dce91412f8914a1c892"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_plaster_nor_gl_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_plaster_nor_gl_2k.png",
+      "size": 23951306,
+      "sha256": "20c41cafbe592f79341c75e0d7dc486969e80676de16aee873011852bbcdc1af",
+      "md5": "022d71fcf992c6360e9461bcf01e0347"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_metal_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_objects_metal_2k.png",
+      "size": 41686,
+      "sha256": "d4898413c8ab7576cbe45c4327ab3936b585b74284f0fd0c6d50b88959cfb8ef",
+      "md5": "a13e2432461a0969e37af2988d2597f9"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_plaster_rough_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_plaster_rough_2k.png",
+      "size": 7017154,
+      "sha256": "ac1ea4d800b4e45a51e2a73971627d45d4217587bbe06732aff316681741c345",
+      "md5": "94b09d23596f854d7ba12ea47c0ca101"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_plaster_diff_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_plaster_diff_2k.png",
+      "size": 20967115,
+      "sha256": "3002569ed716947b669315b7cd7cc0f3bd01882c5de5bfb810a32b426e049f5f",
+      "md5": "9de5ef30b7eab0324e9cc7b904c5a443"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_alpha_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_objects_alpha_2k.png",
+      "size": 199493,
+      "sha256": "bc2a824960184a26fa4f46b0d3612174cfc412ed17b950d9b0ef17ad7ffcf866",
+      "md5": "a07870c940eca06dec5366fe65612686"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_trim_01_nor_gl_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_trim_01_nor_gl_2k.png",
+      "size": 20637317,
+      "sha256": "e6895ea27d9c871446c893451ed061e8467a6f2c6d962dcd9c5cd09c48e95b3a",
+      "md5": "0ab3615dab5c3821ed7d3c1ada31eec8"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_trim_02_nor_gl_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_urban_apartments_facade/modular_urban_apartments_facade_trim_02_nor_gl_2k.png",
+      "size": 20644061,
+      "sha256": "b654c07932fb503725fa3543618598d1ac7c706c710abceaac13d90639b245db",
+      "md5": "edc2e48bce929bf835c7766be1432316"
+    }
+  ]
+}

@@ -1,0 +1,54 @@
+{
+  "schema": "downloaded-model-source/v1",
+  "id": "grass_bermuda_01",
+  "title": "Grass Bermuda 01",
+  "page": "https://polyhaven.com/a/grass_bermuda_01",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "authors": {
+    "Rico Cilliers": "All"
+  },
+  "resolution": "2k",
+  "publisher_dimensions_mm": [
+    3135.906159877777,
+    1073.481559753418,
+    1059.9278211593628
+  ],
+  "files": [
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/grass_bermuda_01/grass_bermuda_01_2k.blend",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/grass_bermuda_01/grass_bermuda_01_2k.blend",
+      "size": 185406,
+      "sha256": "3b2ec52390d293b9e810ec4e2a182d725ed2a858eb0912f5bb36909d9c5f5073",
+      "md5": "3afe6597602f82d02dd69a76170432b3"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/grass_bermuda_01/textures/grass_bermuda_01_alpha_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/grass_bermuda_01/grass_bermuda_01_alpha_2k.png",
+      "size": 118124,
+      "sha256": "2750b808598d2c4116e494c20065a2dbf7fba5a098c3ed445772ff6d02ec3d3c",
+      "md5": "62f5d6785a48f74ba3820279f685e14d"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/grass_bermuda_01/textures/grass_bermuda_01_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/grass_bermuda_01/grass_bermuda_01_diff_2k.jpg",
+      "size": 494673,
+      "sha256": "30183c203739dee9812b70f21916fcdcd88719dcfe4fa3270d8ce208369ec933",
+      "md5": "16d1d5cccc2966fff5abeeb2e91b44a2"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/grass_bermuda_01/textures/grass_bermuda_01_nor_gl_2k.exr",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/grass_bermuda_01/grass_bermuda_01_nor_gl_2k.exr",
+      "size": 5539729,
+      "sha256": "9455b54c57471a0a6816ef49a0169aa6180b16ba256e6c7179d1513ad79fe7d2",
+      "md5": "8dc54ea88e98892cbf783ff66cd561e4"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/grass_bermuda_01/textures/grass_bermuda_01_rough_2k.exr",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/grass_bermuda_01/grass_bermuda_01_rough_2k.exr",
+      "size": 1990710,
+      "sha256": "353ac7379043d9dee6883af0283f6949bb436e9b6c890a49959036bd0733f0e4",
+      "md5": "d16758423aca4e2ef2c8869dfde963c4"
+    }
+  ]
+}

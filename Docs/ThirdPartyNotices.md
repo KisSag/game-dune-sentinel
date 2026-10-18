@@ -50,3 +50,19 @@ The following ambientCG textures are CC0 1.0. Original selected maps and SHA-256
 - [Bark012](https://ambientcg.com/view?id=Bark012) — Bark surface.
 
 [License](https://docs.ambientcg.com/license/). Settlement architecture, plants, terrain, lakes and roads are original project-authored geometry.
+
+## Downloaded environment model revision
+
+The revised town and oasis use the following Poly Haven model packs under [CC0 1.0](https://polyhaven.com/license). Original model files, texture dependencies, publisher checksums and SHA-256 digests are retained in `RawAssets/Downloaded/PolyHaven/`. The assembled buildings and adapted natural models are in `RawAssets/Environment/Downloaded/`.
+
+- [Grass Bermuda 01](https://polyhaven.com/a/grass_bermuda_01) — Rico Cilliers.
+- [Island Tree 01](https://polyhaven.com/a/island_tree_01) — Rob Tuytel, Rico Cilliers.
+- [Island Tree 02](https://polyhaven.com/a/island_tree_02) — Rob Tuytel, Rico Cilliers.
+- [Jacaranda Tree](https://polyhaven.com/a/jacaranda_tree) — Rob Tuytel, Rico Cilliers.
+- [Modular Factory Facade](https://polyhaven.com/a/modular_factory_facade) — James Ray Cock.
+- [Modular Urban Apartments Facade](https://polyhaven.com/a/modular_urban_apartments_facade) — James Ray Cock.
+- [Namaqualand Boulder 02](https://polyhaven.com/a/namaqualand_boulder_02) — Greg Zaal, Rico Cilliers.
+- [Namaqualand Cliff 02](https://polyhaven.com/a/namaqualand_cliff_02) — Dario Barresi, Rico Cilliers.
+- [Wild Rooibos Bush](https://polyhaven.com/a/wild_rooibos_bush) — James Ray Cock, Jenelle van Heerden.
+
+The earlier authored town and plants remain in source history and retained raw assets; the current map replaces them with these downloadable model derivatives. Terrain, roads and lake surfaces remain project-authored geometry.

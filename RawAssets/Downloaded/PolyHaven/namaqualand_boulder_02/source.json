@@ -1,0 +1,48 @@
+{
+  "schema": "downloaded-model-source/v1",
+  "id": "namaqualand_boulder_02",
+  "title": "Namaqualand Boulder 02",
+  "page": "https://polyhaven.com/a/namaqualand_boulder_02",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "authors": {
+    "Greg Zaal": "Photography",
+    "Rico Cilliers": "modeling"
+  },
+  "resolution": "2k",
+  "publisher_dimensions_mm": [
+    2533.2456827163696,
+    1234.761118888855,
+    883.3709806203842
+  ],
+  "files": [
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/namaqualand_boulder_02/namaqualand_boulder_02_2k.blend",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/namaqualand_boulder_02/namaqualand_boulder_02_2k.blend",
+      "size": 6625796,
+      "sha256": "6bbdec21533e7f6fcfcc5cf59921ae7549ec8ba0efb0a3e0bc2b9ad4385be602",
+      "md5": "140886f0c33a4a746962a946c61d1329"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_rough_2k.exr",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/namaqualand_boulder_02/namaqualand_boulder_02_rough_2k.exr",
+      "size": 2251265,
+      "sha256": "9669c0861068639ef852e464e57ce899c7ecaac5e172abfd44559f403f629799",
+      "md5": "5c1433f7a717cc9b6378869f03174473"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/namaqualand_boulder_02/namaqualand_boulder_02_diff_2k.jpg",
+      "size": 3867934,
+      "sha256": "0f81c51224deb025079f10dad21530e77e42baad541eb766922fe8fc6e46a88e",
+      "md5": "0f37f02ceb397383a0d0bddfaef4441d"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_nor_gl_2k.exr",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/namaqualand_boulder_02/namaqualand_boulder_02_nor_gl_2k.exr",
+      "size": 8275148,
+      "sha256": "e548cc5e051a1f2e2b53d706276e1d73e5c26212448319e1a18903b6cc5b6fdb",
+      "md5": "96ad28e14dae30a493c7bfb8b56fc3e6"
+    }
+  ]
+}

@@ -148,7 +148,7 @@ private:
             if (Actor->ActorHasTag(TEXT("DSEnvironmentBank"))) Banks.Add(Actor);
         }
         Check(TEXT("Exactly one terrain component is present in the real map"), TerrainCount == 1 && Terrain.IsValid());
-        Check(TEXT("Airport town contains at least forty authored buildings"), Town.Num() >= 40);
+        Check(TEXT("Airport town contains at least forty assembled buildings"), Town.Num() >= 40);
         Check(TEXT("Three lake surfaces and three green banks are present"), Water.Num() == 3 && Banks.Num() == 3);
         Check(TEXT("Oasis vegetation contains at least one hundred placed meshes"), Vegetation.Num() >= 100);
         if (!Terrain.IsValid() || Town.IsEmpty() || Water.IsEmpty() || Vegetation.IsEmpty())
@@ -214,8 +214,8 @@ private:
             }
         }
         Check(TEXT("Collision terrain covers every sampled point in the combat arena"), Hits == Samples);
-        Check(TEXT("Actual terrain collision has at least 450 metres of mountain relief"), Hits > 0 && Highest - Lowest >= 45000.);
-        Check(TEXT("Ridges have at least 100 metres of local rise over a 500 metre sample interval"), LargestNeighborRise >= 10000.);
+        Check(TEXT("Actual terrain collision has at least 1800 metres of mountain relief"), Hits > 0 && Highest - Lowest >= 180000.);
+        Check(TEXT("Ridges have at least 350 metres of local rise over a 500 metre sample interval"), LargestNeighborRise >= 35000.);
         Check(TEXT("Terrain uses sampled texture materials"), HasTexture(Terrain.Get()));
         bool bFlat = true, bRunwayClear = true;
         double MaxFlatError = 0., HighestRunway = -DBL_MAX;
@@ -242,7 +242,7 @@ private:
         Observations.Add(FString::Printf(TEXT("{\"case\":\"terrain\",\"samples\":%d,\"collision_hits\":%d,\"minimum_cm\":%.3f,\"maximum_cm\":%.3f,\"relief_cm\":%.3f,\"largest_500m_rise_cm\":%.3f,\"flat_corridor_error_cm\":%.3f,\"highest_runway_collision_cm\":%.3f}"),
             Samples, Hits, Lowest, Highest, Highest-Lowest, LargestNeighborRise, MaxFlatError, HighestRunway));
 
-        int32 TownGrounded = 0, TownTextured = 0, TownDetailed = 0, TownCollidable = 0;
+        int32 TownGrounded = 0, TownTextured = 0, TownDetailed = 0, TownCollidable = 0, DownloadedBuildings = 0;
         bool bTownOutsideRunway = true;
         double MaximumTownBaseError = 0.;
         TSet<UStaticMesh*> BuildingVariants;
@@ -260,6 +260,8 @@ private:
             if (Mesh->GetNumMaterials() >= 3) ++TownDetailed;
             if (Mesh->IsQueryCollisionEnabled()) ++TownCollidable;
             BuildingVariants.Add(Mesh->GetStaticMesh());
+            if (Actor->ActorHasTag(TEXT("DSDownloadedArt")) && Mesh->GetStaticMesh() &&
+                Mesh->GetStaticMesh()->GetPathName().Contains(TEXT("/Downloaded/"))) ++DownloadedBuildings;
             const FBox Bounds = Mesh->Bounds.GetBox();
             bTownOutsideRunway &= Bounds.Min.Y > 150000. && FVector::Dist2D(Position, FVector(0,260000,0)) < 90000.;
         }
@@ -267,8 +269,9 @@ private:
         Check(TEXT("Town contains at least four textured building variants with facade material sections"),
             BuildingVariants.Num() >= 4 && TownTextured == Town.Num() && TownDetailed >= 40);
         Check(TEXT("Town buildings retain query collision and stay beyond the runway approach area"), TownCollidable == Town.Num() && bTownOutsideRunway);
-        Observations.Add(FString::Printf(TEXT("{\"case\":\"town\",\"buildings\":%d,\"variants\":%d,\"grounded\":%d,\"textured\":%d,\"multi_material\":%d,\"maximum_base_error_cm\":%.3f}"),
-            Town.Num(), BuildingVariants.Num(), TownGrounded, TownTextured, TownDetailed, MaximumTownBaseError));
+        Check(TEXT("Every town building uses the downloaded architecture kit"), DownloadedBuildings == Town.Num());
+        Observations.Add(FString::Printf(TEXT("{\"case\":\"town\",\"buildings\":%d,\"variants\":%d,\"grounded\":%d,\"textured\":%d,\"multi_material\":%d,\"downloaded_models\":%d,\"maximum_base_error_cm\":%.3f}"),
+            Town.Num(), BuildingVariants.Num(), TownGrounded, TownTextured, TownDetailed, DownloadedBuildings, MaximumTownBaseError));
 
         for (int32 I = 0; I < 3; ++I)
         {
@@ -329,7 +332,7 @@ private:
             Observations.Add(FString::Printf(TEXT("{\"case\":\"bank_%d\",\"sample_spacing_cm\":2500,\"mesh_hits\":%d,\"terrain_misses\":%d,\"maximum_gap_cm\":%.3f,\"maximum_burial_cm\":%.3f,\"mean_absolute_error_cm\":%.3f}"),
                 I+1,BankHits,GroundMisses,MaximumGap,MaximumBurial,AbsoluteErrorSum/FMath::Max(BankHits-GroundMisses,1)));
         }
-        int32 GroundedFlora = 0, MaskedFlora = 0, TexturedFlora = 0, BankedFlora = 0;
+        int32 GroundedFlora = 0, MaskedFlora = 0, TexturedFlora = 0, BankedFlora = 0, DownloadedFlora = 0;
         double MaximumFloraBaseError = 0.;
         TSet<UStaticMesh*> FloraVariants;
         for (const TWeakObjectPtr<AStaticMeshActor>& Actor : Vegetation)
@@ -347,6 +350,8 @@ private:
                 if (UMaterialInterface* Material = Mesh->GetMaterial(Slot)) bMasked |= Material->GetBlendMode() == BLEND_Masked;
             if (bMasked) ++MaskedFlora;
             if (HasTexture(Mesh)) ++TexturedFlora;
+            if (Actor->ActorHasTag(TEXT("DSDownloadedArt")) && Mesh->GetStaticMesh() &&
+                Mesh->GetStaticMesh()->GetPathName().Contains(TEXT("/Downloaded/"))) ++DownloadedFlora;
             FloraVariants.Add(Mesh->GetStaticMesh());
             double NearestDistance = DBL_MAX, NearestWater = 0.;
             for (const FVector& Center : LakeCenters)
@@ -357,8 +362,9 @@ private:
         Check(TEXT("At least three textured vegetation variants use cutout leaf materials"),
             FloraVariants.Num() >= 3 && TexturedFlora == Vegetation.Num() && MaskedFlora == Vegetation.Num());
         Check(TEXT("Oasis vegetation sits on nearby banks instead of below lake surfaces"), BankedFlora == Vegetation.Num());
-        Observations.Add(FString::Printf(TEXT("{\"case\":\"vegetation\",\"instances\":%d,\"variants\":%d,\"grounded\":%d,\"masked\":%d,\"near_lake_banks\":%d,\"maximum_base_error_cm\":%.3f}"),
-            Vegetation.Num(), FloraVariants.Num(), GroundedFlora, MaskedFlora, BankedFlora, MaximumFloraBaseError));
+        Check(TEXT("Every oasis vegetation mesh uses downloaded plant geometry"), DownloadedFlora == Vegetation.Num());
+        Observations.Add(FString::Printf(TEXT("{\"case\":\"vegetation\",\"instances\":%d,\"variants\":%d,\"grounded\":%d,\"masked\":%d,\"near_lake_banks\":%d,\"downloaded_models\":%d,\"maximum_base_error_cm\":%.3f}"),
+            Vegetation.Num(), FloraVariants.Num(), GroundedFlora, MaskedFlora, BankedFlora, DownloadedFlora, MaximumFloraBaseError));
     }
 
     ADSEnemyAircraft* MakeEnemy(bool bBomber, const FVector& Position, const FVector& Heading)
@@ -398,6 +404,44 @@ private:
 
     void RunEnemyClearanceChecks()
     {
+        // Independently inspect the widest supported formation over a full
+        // compass of arrivals. Staggered 75 m stations and 25 m wing margins
+        // also cover positions between the spawn planner's own probes.
+        double IngressMinimumClearance = DBL_MAX, LowestIngress = DBL_MAX, HighestIngress = -DBL_MAX;
+        int32 IngressSamples = 0, IngressTraceMisses = 0;
+        for (int32 Direction = 0; Direction < 24; ++Direction)
+        {
+            const double Angle = Direction*UE_TWO_PI/24.;
+            const FVector OutwardRay(FMath::Cos(Angle), FMath::Sin(Angle), 0);
+            FVector Origin = Mode->AirportLocation+OutwardRay*850000.;
+            Origin.Z = Mode->GetBomberIngressAltitude(Origin,5);
+            LowestIngress = FMath::Min(LowestIngress, Origin.Z);
+            HighestIngress = FMath::Max(HighestIngress, Origin.Z);
+            const FVector Heading = -OutwardRay;
+            const FVector Right = FVector::CrossProduct(FVector::UpVector, Heading);
+            const double ApproachLength = 850000.-ADSEnemyAircraft::FormationBreakDistance;
+            const int32 Stations = FMath::CeilToInt(ApproachLength/7500.);
+            for (int32 Slot = 0; Slot < 5; ++Slot)
+            {
+                const FVector Offset = ADSEnemyAircraft::GetFormationSlotOffset(Slot);
+                for (int32 Station = 0; Station <= Stations; ++Station)
+                    for (const double WingOffset : {-2500.,0.,2500.})
+                    {
+                        const FVector Position = Origin+Heading*(Offset.X+ApproachLength*Station/Stations)+Right*(Offset.Y+WingOffset);
+                        double Ground = 0.;
+                        ++IngressSamples;
+                        if (!TerrainHeight(Position,Ground)) { ++IngressTraceMisses; continue; }
+                        IngressMinimumClearance = FMath::Min(IngressMinimumClearance,Position.Z-Ground);
+                    }
+            }
+        }
+        Check(TEXT("Five-bomber ingress clears real terrain in all twenty-four sampled approach directions"),
+            IngressSamples > 20000 && IngressTraceMisses == 0 && IngressMinimumClearance >= 15000.);
+        Check(TEXT("Shared bomber ingress altitude adapts to the actual mountain approaches"),
+            HighestIngress >= 200000. && HighestIngress-LowestIngress >= 30000.);
+        Observations.Add(FString::Printf(TEXT("{\"case\":\"five_bomber_approach_sweep\",\"directions\":24,\"slots_per_formation\":5,\"terrain_samples\":%d,\"trace_misses\":%d,\"minimum_clearance_cm\":%.3f,\"lowest_ingress_altitude_cm\":%.3f,\"highest_ingress_altitude_cm\":%.3f}"),
+            IngressSamples,IngressTraceMisses,IngressMinimumClearance,LowestIngress,HighestIngress));
+
         // Choose a genuinely difficult approach from collision measurements,
         // not a test-only mound or a path that happens to cross flat ground.
         FVector Outward = FVector(1, 0, 0);
@@ -412,11 +456,13 @@ private:
                 if (TerrainHeight(Ray*Radius, Height) && Height > RidgeHeight) { RidgeHeight = Height; RidgeRadius = Radius; Outward = Ray; }
             }
         }
-        Check(TEXT("Enemy clearance fixture traverses an actual ridge above 450 metres"), RidgeHeight > 45000.);
+        Check(TEXT("Enemy clearance fixture traverses an actual ridge above 1800 metres"), RidgeHeight > 180000.);
         Mode->Player->SetActorLocation(FVector(0,0,400000));
         Mode->AirportHealth = Mode->AirportMaxHealth;
         const float SoloInitialHealth = Mode->AirportHealth;
-        ADSEnemyAircraft* Bomber = MakeEnemy(true, Outward*850000.+FVector(0,0,100000), -Outward);
+        const FVector SoloOriginXY = Outward*850000.;
+        const float SoloAltitude = Mode->GetBomberIngressAltitude(SoloOriginXY, 1);
+        ADSEnemyAircraft* Bomber = MakeEnemy(true, SoloOriginXY+FVector(0,0,SoloAltitude), -Outward);
         if (!Bomber) { Check(TEXT("Single bomber clearance fixture spawned"), false); return; }
         double MinimumClearance = DBL_MAX, MaxStepError = 0.;
         int32 Samples = 0, TraceMisses = 0;
@@ -446,7 +492,7 @@ private:
         Mode->Player->SetActorLocation(PlayerPoint+FVector(0,0,PlayerGround+3000.));
         Mode->Player->SetActorRotation((-Outward).Rotation());
         Mode->Player->Speed = 0.f;
-        ADSEnemyAircraft* Fighter = MakeEnemy(false, Outward*850000.+FVector(0,0,100000), -Outward);
+        ADSEnemyAircraft* Fighter = MakeEnemy(false, SoloOriginXY+FVector(0,0,SoloAltitude), -Outward);
         if (!Fighter) { Check(TEXT("Fighter clearance fixture spawned"), false); return; }
         MinimumClearance = DBL_MAX; MaxStepError = 0.; Samples = 0; TraceMisses = 0;
         double ClosestTarget = DBL_MAX, HighestTraversedGround = -DBL_MAX;
@@ -466,7 +512,7 @@ private:
             ClosestTarget = FMath::Min(ClosestTarget, FVector::Dist2D(After, PlayerPoint));
         }
         Check(TEXT("Pursuing fighter crosses elevated terrain with physical clearance and ordinary movement"),
-            Samples >= 700 && TraceMisses == 0 && HighestTraversedGround > 45000. && MinimumClearance > 2500. && MaxStepError < 2. && ClosestTarget < 100000.);
+            Samples >= 700 && TraceMisses == 0 && HighestTraversedGround > 180000. && MinimumClearance > 2500. && MaxStepError < 2. && ClosestTarget < 100000.);
         Observations.Add(FString::Printf(TEXT("{\"case\":\"fighter_ridge\",\"samples\":%d,\"trace_misses\":%d,\"highest_traversed_ground_cm\":%.3f,\"minimum_clearance_cm\":%.3f,\"maximum_movement_error_cm\":%.6f,\"closest_target_horizontal_cm\":%.3f}"),
             Samples, TraceMisses, HighestTraversedGround, MinimumClearance, MaxStepError, ClosestTarget));
         ClearCombatActors();
@@ -474,7 +520,7 @@ private:
         Mode->AirportHealth = Mode->AirportMaxHealth;
         const float GroupInitialHealth = Mode->AirportHealth;
 
-        const FVector FormationOrigin = Outward*850000.+FVector(0,0,100000), Heading = -Outward;
+        const FVector FormationOrigin = SoloOriginXY+FVector(0,0,Mode->GetBomberIngressAltitude(SoloOriginXY,3)), Heading = -Outward;
         const FVector Right = FVector::CrossProduct(FVector::UpVector, Heading);
         TArray<ADSEnemyAircraft*> Group;
         for (int32 Slot = 0; Slot < 3; ++Slot)

@@ -1,0 +1,1212 @@
+{
+  "schema": "native-asset-reuse/v1",
+  "stage": "s11",
+  "engine": "5.7",
+  "operation": "reuse_existing_assets",
+  "started": "2026-10-18T13:26:00.628840-07:00",
+  "import_performed": false,
+  "native_authoring_performed": false,
+  "runtime_tests_run": false,
+  "packages": [
+    {
+      "path": "Content/Art/Aircraft/SM_bomber.uasset",
+      "sha256": "dc4e4383728d6b5830d19e09e947968d4c606f5741af8b88f2365bec7d6524d7",
+      "bytes": 134000
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_falcon.uasset",
+      "sha256": "468102e1a0a987df9113b1d8f55f2e9fad2a81c2bc9b76c1003f06ab46152010",
+      "bytes": 201050
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_hostile.uasset",
+      "sha256": "3ec252f4cd67b27dc95b707c2d6aa9ef4ff8591b1d38c095a09c134c99363cac",
+      "bytes": 192190
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_lancer.uasset",
+      "sha256": "69426dbbd5e17b541ae328ff50a717a6bda3ee75cc0442cad10a34ba88577d83",
+      "bytes": 149752
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_landinggear.uasset",
+      "sha256": "cdd6169aed96cea53554a6218ca9d8bed46aad7276e7dc30fcbac62e45a3c960",
+      "bytes": 26147
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_mirage.uasset",
+      "sha256": "49b75358ee6890e50434eb93e1f209b6347d379db5a4fb6efca748f1f711e37b",
+      "bytes": 200996
+    },
+    {
+      "path": "Content/Art/Effects/M_CannonFlash.uasset",
+      "sha256": "577f248a84735e9e56c647799f3fd553fc6eef9a66ca15f2ead8ea41cd2da3eb",
+      "bytes": 11592
+    },
+    {
+      "path": "Content/Art/Effects/M_CannonHead.uasset",
+      "sha256": "9225cd0ae0899a832c9183bb5ac1ffa20b8edf645728a70e9d9d46c774bc6e0f",
+      "bytes": 11382
+    },
+    {
+      "path": "Content/Art/Effects/M_CannonSmoke.uasset",
+      "sha256": "0e00c9c45fa4b9f0785f723e7b4abf46f594e35930be67f49bc972fa2f467f4a",
+      "bytes": 12089
+    },
+    {
+      "path": "Content/Art/Effects/M_CannonTrail.uasset",
+      "sha256": "e628d0c96637c9778b946b510ae167e25958b6d6e06d2448b54be5cd6fd7d8e3",
+      "bytes": 11215
+    },
+    {
+      "path": "Content/Art/Effects/M_Explosion.uasset",
+      "sha256": "980f40bdcdfe16eda62bc0d68e6c1b276d2781f2d85fcde7ec4fb4d82972e501",
+      "bytes": 8104
+    },
+    {
+      "path": "Content/Art/Effects/M_MissileGlow.uasset",
+      "sha256": "87236acad5a7f535f673f8f88a2828c5fc99dfce41fa8d0334a598fd4fadef7c",
+      "bytes": 7756
+    },
+    {
+      "path": "Content/Art/Effects/M_Tracer.uasset",
+      "sha256": "5a26d317c0bff567c4647e23bc7a7fbcb2bc3843f7b7f35166d6d5a5844f5aaa",
+      "bytes": 7731
+    },
+    {
+      "path": "Content/Art/Effects/SM_missile.uasset",
+      "sha256": "53bea0b3bb12f5b9b6eb8db895e0c67475cf9faa97131a0d4da23b532ac3304a",
+      "bytes": 21198
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_AirfieldWorkshop.uasset",
+      "sha256": "7164891a3d6f9d7ad92bbcbda0903d7804ebee74f04bb4cb8ef6cfcbde10dcc1",
+      "bytes": 1293293
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_BermudaPatch.uasset",
+      "sha256": "364fd04913eb94fe5e89a215e7f4f482169ee88701d7d78112076dcf7eb87188",
+      "bytes": 562326
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_CivicBlock.uasset",
+      "sha256": "2f63305c32784b48ce90c1dd29862effb4d4fad3c87fd43ac99f92e71c2a1503",
+      "bytes": 2375832
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_CourtyardHomes.uasset",
+      "sha256": "98c2cc4dc0616fe7a8efc4ffced0e4677c3d54ca1712a694d213cd109ad89288",
+      "bytes": 563888
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_DesertBoulder.uasset",
+      "sha256": "a644431d001bf68aeaf6d637301cdc8f78ee0d86567bdbd09902574adecca2d6",
+      "bytes": 476935
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_DesertCliff.uasset",
+      "sha256": "99954acd376e2f0bf2a3387f7eabe0348b96578d7177bd2e24799011a6e68984",
+      "bytes": 1902016
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_IslandTreeA.uasset",
+      "sha256": "2156206ae2be77c5acdd89e1544d62ddb85344b3a61a251095fa69f0ae9f9e45",
+      "bytes": 3933942
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_IslandTreeB.uasset",
+      "sha256": "044ce74a655a411a368e5be8af5b259b25924a730f8b0bdb842684f8efe78f5d",
+      "bytes": 3602858
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_Jacaranda.uasset",
+      "sha256": "901d907c5b3dc6df21e91709eabf104cd5f1996fd380d3d77275b1badce7091e",
+      "bytes": 9312283
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_RooibosBush.uasset",
+      "sha256": "59aa38dfcc4248cbb6663ac52e1844851720badfbc7b1704ef6a4cbb7a8b1ce9",
+      "bytes": 392049
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_TownApartments.uasset",
+      "sha256": "04659a3f14b22d589664a0328b18e696d12ade59a5a7f101f4ba528980535101",
+      "bytes": 1533649
+    },
+    {
+      "path": "Content/Art/Environment/SM_Airbase.uasset",
+      "sha256": "4e86ecd9938f8b83f64501437380d082079b54874d896210764916e122e6bf2c",
+      "bytes": 643269
+    },
+    {
+      "path": "Content/Art/Environment/SM_DesertTerrain.uasset",
+      "sha256": "f05f29ac889ff63f7bdbc310beec3fad8dd119f3fc1383fb17e5234b46866347",
+      "bytes": 2055893
+    },
+    {
+      "path": "Content/Art/Environment/SM_DistantGobi.uasset",
+      "sha256": "1e7b3ec06d11124dc9352045b62f39abdf818a3610bc25993af901a7e92a6834",
+      "bytes": 435252
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_Apartment.uasset",
+      "sha256": "3f8e87e441d2bd257d2b5758c3d32c894d9d625fa0aca4e8368390de279c543a",
+      "bytes": 975484
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_BankEast.uasset",
+      "sha256": "5b4a4b5f84a7588a5ff6a79c246b1b9b19d35e7bc06a0031af6e49c7a1f8d4eb",
+      "bytes": 588638
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_BankNorth.uasset",
+      "sha256": "f0d770c354626a211d73e6b10df62674a34fb3059e6640beea7e487e96644161",
+      "bytes": 325344
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_BankWest.uasset",
+      "sha256": "84c1b109d11f3cac4a404193e0da1bdb7dbf70700b34718d2112710320feef14",
+      "bytes": 473015
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_DistantGobi.uasset",
+      "sha256": "bba338931b48f66a1a944074ad5760835709446482ad272ed8836b5d51a00a12",
+      "bytes": 1725254
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_HouseA.uasset",
+      "sha256": "557552ac94904865486c658c6740bc110e984023e4717160865a75f8aca6f179",
+      "bytes": 225374
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_HouseB.uasset",
+      "sha256": "d3003f377c9ff9ffd36bc1d0dfed43fb9207cdbdcb2bf01b61f23e947cae0bb1",
+      "bytes": 394632
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_LakeEast.uasset",
+      "sha256": "6b4cb0088e08f7eab1cc80aee0e84f0d4c330201dc7f756fd56a967bceba7745",
+      "bytes": 17198
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_LakeNorth.uasset",
+      "sha256": "62d5d5cc97dd14eefd39aff035d82e7a3fdd89db9830ffa240d5daa1daf9e886",
+      "bytes": 16529
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_LakeWest.uasset",
+      "sha256": "eab9f6872cb89dc48880a428c526e43413cc45fecd6e1e8ed42af1f519c30ef8",
+      "bytes": 16408
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_OasisPoplar.uasset",
+      "sha256": "876f890672d071b4e4c4bb9a96df246544dd9855c159d27de5097070ec294579",
+      "bytes": 248700
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_OasisReeds.uasset",
+      "sha256": "7d03746c17cf46d45f9283ae2deed005ddf0fdae563507fd0fd32d43077f4e80",
+      "bytes": 73822
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_OasisShrub.uasset",
+      "sha256": "a8ef70eab4b0dcb0b23112d462982dbd98f27c40243ab3e864064863d512fdc3",
+      "bytes": 76058
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_OasisWillow.uasset",
+      "sha256": "38225e84afb5a57e3dfd2962c6b0837174d6b8e8bfb17333d793362761515b46",
+      "bytes": 359472
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_RidgedTerrain.uasset",
+      "sha256": "e428be70a5bf611b443f0c7cb4fd7303880619498abdef47277274fe738e3d2c",
+      "bytes": 22904709
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_TownRoads.uasset",
+      "sha256": "2573367a80b973d20695bbc57b72fb528147b8d3ce9ef7a44e08037f1b638c9f",
+      "bytes": 170115
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_WaterTower.uasset",
+      "sha256": "aae9f1ca41c5b6978245d37389ea9d84adb78e5c8daf128fb73df4bf405aefd3",
+      "bytes": 79399
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_Workshop.uasset",
+      "sha256": "0557b80bb2dd445c6d852a8f96da839504af295bdaa385f49d1fd2a338948997",
+      "bytes": 190207
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_grass_bermuda_01.uasset",
+      "sha256": "dc7a99d27e5124f0d73679f80189c7b93cc4499965d9b57f1bbc44cad7992367",
+      "bytes": 13418
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_island_tree_01.uasset",
+      "sha256": "0ac8de84d04c42a7b6a8a64f47582cc7b1715531ce4f9c6e432e7cf7063013e3",
+      "bytes": 10675
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_island_tree_01_branches.uasset",
+      "sha256": "2c70cf5163c114076f398019976280e5f861c8a4bf9c948fa352861983dfdd03",
+      "bytes": 10774
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_island_tree_01_leaves.uasset",
+      "sha256": "ef56808dab135d71c00d03c30b29168e2448407689ee21ad2f4b0a92dda1ef4e",
+      "bytes": 13467
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_island_tree_02.uasset",
+      "sha256": "4fca64df5c81a4701c090e420e8498bd8268bedebd165f469395ed7a535a4b37",
+      "bytes": 10675
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_island_tree_02_branches.uasset",
+      "sha256": "45638e317dc31aa36096d0dce89ad5fcd0aa72dea4e067d2ff4146e06670f2a4",
+      "bytes": 10774
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_island_tree_02_leaves.uasset",
+      "sha256": "8cb4984c9fd117e78ad86e1a3dd8dd84523843f06140d4846bcac1a0e609369a",
+      "bytes": 13483
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_jacaranda_tree_branches.uasset",
+      "sha256": "9bf75762bc30ff7ca190a20ef17ee6d34aeaceb8ba3a49d64a60a676c5fb568c",
+      "bytes": 10774
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_jacaranda_tree_leaves.uasset",
+      "sha256": "c6c381d8e8691019a8cce55587367c7e00c09f70fca5463ebe8ce2b3044fff53",
+      "bytes": 13483
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_jacaranda_tree_trunk.uasset",
+      "sha256": "9cb432e23b88135c175e564f6af2b7297f30eb79f7fbf6dc0a163ac97197078b",
+      "bytes": 10741
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_brick.uasset",
+      "sha256": "705bcf7ac06221ab808f7b04cc5ff0c0a7c376b22f65265dc23c69822a171961",
+      "bytes": 10878
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_brick_doors.uasset",
+      "sha256": "8aa8d787477f066270c907e4eefa6b89289bca0e982d92df50cb7d8601d8be74",
+      "bytes": 12566
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_garage.uasset",
+      "sha256": "83b15b38ab18d28a4479d8ec2cdb8f45e97c679f7125193fdaf448239d1e0d75",
+      "bytes": 12549
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_trim_01.uasset",
+      "sha256": "18309dcc9cbe202ca56d7f1ea9f6ad6a6c8719a36986f8394981210d310e3188",
+      "bytes": 10900
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_windows.uasset",
+      "sha256": "746a04116af68a96c3753ed0fee7aa56b15ff4d07bb5258274fb6fd36383ebf6",
+      "bytes": 10900
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_windows_glass.uasset",
+      "sha256": "a8df0d91fb7facffc069cdf64d2cb0754faa48034a6bbe56f2316dece25f9aae",
+      "bytes": 12390
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_glass.uasset",
+      "sha256": "5fff2fdc687dcddeb40eb39a90f10b071248ec227f970d8d3fa250cabfda88fd",
+      "bytes": 14147
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_objects.uasset",
+      "sha256": "8cae0e0b72f79722f2ed410dae3af6026793ca841a4e8db54411f9b652c3f1ae",
+      "bytes": 14157
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_plaster.uasset",
+      "sha256": "6797a9f6016cceb855d214be8b75903f9af81cf0d5322433db74a5dc0c1b22fc",
+      "bytes": 10999
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_trim_01.uasset",
+      "sha256": "29375fb50ed73051ef08caa68b5e771b342e263ba390d8bc19b37a4c1139b18e",
+      "bytes": 10999
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_trim_02.uasset",
+      "sha256": "1ff28a842fe4e85a480e370c38f04278e26860e257fc6be37ee4bcce8e449507",
+      "bytes": 10983
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_namaqualand_boulder_02.uasset",
+      "sha256": "08501baec7748d553f14fbc57b1b08ed06ab3f6076c4ba7512631683a9a5ccc9",
+      "bytes": 10812
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_namaqualand_cliff_02.uasset",
+      "sha256": "4d62d1f917fc01207fee6c5e648bac54c031081910defd4c5c6522348d82f52f",
+      "bytes": 10790
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_wild_rooibos_bush.uasset",
+      "sha256": "c524cd1bfb5946aa6c680a28a83c74da8a847393297402d497ad1219553d98d8",
+      "bytes": 10750
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_wild_rooibos_bush_leaves.uasset",
+      "sha256": "c4fbf0e5eb8acfc03144809dc1eec7217f781b75d14f8431ca2244f362680c42",
+      "bytes": 13466
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_OasisBankV2.uasset",
+      "sha256": "b4dfc43d3fe6bc1637bdab0c36cc29de01a3f7a103be15755ac22451e610f34b",
+      "bytes": 22907
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_OasisBark.uasset",
+      "sha256": "fadb69a8f647a4f45f986c421f9fc1e0d589e4a64f52c4e3430759bfa2d24678",
+      "bytes": 8554
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_OasisGrass.uasset",
+      "sha256": "62ceb91a52a771c610771033ea7be8c026e1e12ab5bffe876773ecb2ab879c09",
+      "bytes": 9842
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_OasisLeaves.uasset",
+      "sha256": "b5ab8b5dab27ffaf1b33e5746fee5d0a4ba8c7b1652b349e2bc3033fe68ceca9",
+      "bytes": 10810
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_OasisWater.uasset",
+      "sha256": "b395cc579ab1bf019175fe2042a9d5d09d09277ebdce7bc392ea6baadf64557c",
+      "bytes": 20130
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_OasisWaterV2.uasset",
+      "sha256": "dfc68f1aa90874b7687ba751e1160af68fe264ba5515c9a893874512f97e5a3e",
+      "bytes": 21816
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_RidgedDesert.uasset",
+      "sha256": "d80db4e0f320e51ba628c479c79a721225830dffde50a956075399b332b5694e",
+      "bytes": 34885
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_RuggedDesert.uasset",
+      "sha256": "688ddc6d525388bd3f3702cc319c1d003a9b66243d1613636a08026925ed0287",
+      "bytes": 165256
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_TownPlaster.uasset",
+      "sha256": "1ec80fb1a6a02ff8e0b249192eec92b5d71a45b5122162c6257f84a507dc4839",
+      "bytes": 8624
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_TownRoof.uasset",
+      "sha256": "1ab0c338b3c650f1648a7773eb71041895b44b6c0f114e91297ec49d37ee11f7",
+      "bytes": 8654
+    },
+    {
+      "path": "Content/Art/Materials/M_Airframe.uasset",
+      "sha256": "92a6c143eca61b0098038b04b7602b5bff52631e66bd9f64799c885c3b5b67a3",
+      "bytes": 7493
+    },
+    {
+      "path": "Content/Art/Materials/M_Asphalt.uasset",
+      "sha256": "3ee59e239fb5c8f4436a869614f0359a7a8830d558ff40a30e9e1c0620545726",
+      "bytes": 9601
+    },
+    {
+      "path": "Content/Art/Materials/M_Canopy.uasset",
+      "sha256": "726f9c98275966aeb77152551432a3600de3a28dc1e7594ce306aadaecbaede5",
+      "bytes": 7483
+    },
+    {
+      "path": "Content/Art/Materials/M_Concrete.uasset",
+      "sha256": "bf68735f2180df07cb66693084d37dc52bb8ecbae1dc3a228ddcfb60a09d28fe",
+      "bytes": 9612
+    },
+    {
+      "path": "Content/Art/Materials/M_Desert.uasset",
+      "sha256": "9aeaf305f9b231945480ea39a8eb4fb0e7ec80a763fb96a5afbf0f9aad92796e",
+      "bytes": 25782
+    },
+    {
+      "path": "Content/Art/Materials/M_Engine.uasset",
+      "sha256": "d42fada7bbce4cca65fcc476364f758fde7208a512fb3c9a5249a40b0e57d18f",
+      "bytes": 7483
+    },
+    {
+      "path": "Content/Art/Materials/M_Glass.uasset",
+      "sha256": "6ffc0e8c3cead719e62ebe386d6ab33e56fc4608214bc8498ac86d2af55049f5",
+      "bytes": 7478
+    },
+    {
+      "path": "Content/Art/Materials/M_Hangar.uasset",
+      "sha256": "c25106a025a6f41a830e328faf0001541dadfa747be1d958d898f486188df4d5",
+      "bytes": 8269
+    },
+    {
+      "path": "Content/Art/Materials/M_Intake.uasset",
+      "sha256": "ed9f5ec46b5c606125259c13c27fe63fe7fc53a1b20de84548f53fce1d4ba939",
+      "bytes": 7471
+    },
+    {
+      "path": "Content/Art/Materials/M_Marking.uasset",
+      "sha256": "84d1d8254e845b700f9876654e910d9fa6c20beb8b1fbdb482dbb17de043538c",
+      "bytes": 7398
+    },
+    {
+      "path": "Content/Art/Materials/M_Paint.uasset",
+      "sha256": "e64b1f24304608e3f08fca126284af9e3d37705dc8d3cd78249d9213910f32b7",
+      "bytes": 7388
+    },
+    {
+      "path": "Content/Art/Materials/M_Rubber.uasset",
+      "sha256": "e582a900c6467d37294c80e4811c209f4d5a2942eaa1c190cff5f227ac83c449",
+      "bytes": 8228
+    },
+    {
+      "path": "Content/Art/Materials/M_RunwayLight.uasset",
+      "sha256": "cc03b225367051e39c83c44f3357528bc857f8df50c78b3566990d16e16d9f39",
+      "bytes": 6777
+    },
+    {
+      "path": "Content/Art/Materials/M_Steel.uasset",
+      "sha256": "0f2da8b4d7233f99cd48b2a9d2abc0baac1f78d5a1c0e4519036d2b519d1bf35",
+      "bytes": 7478
+    },
+    {
+      "path": "Content/Art/Materials/M_White.uasset",
+      "sha256": "28a461a30f0740037036bea21d3f39458836ec0e3d6e3b39d452967491ffeafa",
+      "bytes": 7388
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_grass_bermuda_01_alpha_2k_2f15d45.uasset",
+      "sha256": "b3ede5539a608f7f9c7c83598a661461e6af61ec67e5e09bc4d5ab6bb0df8892",
+      "bytes": 120669
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_grass_bermuda_01_diff_2k_f7196a6.uasset",
+      "sha256": "530264369b0f365fffcd2862474bcf36211b69f1ffa3aaac7023476a69f4b9ef",
+      "bytes": 498807
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_grass_bermuda_01_nor_gl_2k_149d7c3.uasset",
+      "sha256": "e1900707a009d764fc063d5be7b0f1c1c548df657b1aec0d99948ffedf89f096",
+      "bytes": 13176189
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_grass_bermuda_01_rough_2k_6bbeb37.uasset",
+      "sha256": "52ab324b959ab34679334c47aece5aadc181baecfaaecad951503b092478f01b",
+      "bytes": 1636189
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_branches_diff_2k_c891b56.uasset",
+      "sha256": "06b2068519291bb84d576ca284f8222a440fb4029924cf796543df5d098321de",
+      "bytes": 19754021
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_branches_nor_gl_2k_bd5d1cf.uasset",
+      "sha256": "0b15f3d6eef3135b6f54c8a597513dbf6ba4f9420c595e026b9d37e47e8fc809",
+      "bytes": 22748391
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_branches_rough_2k_b4915c0.uasset",
+      "sha256": "af476d7892cda75fa0b8bfc14bd23b4198cfd79b90795b767f5a2fe3b7473b3b",
+      "bytes": 3847306
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_diff_2k_1af8298.uasset",
+      "sha256": "005590ea92731ffeb29d6acb24211e4d3d0e7ce700eaf199ad803ddb294d62bb",
+      "bytes": 2959060
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_leaves_alpha_2k_bb56cb2.uasset",
+      "sha256": "5a09ea4fcf06fb115a8a6ee36fa5c2757a932e95dc5917e3924dce22daa14f02",
+      "bytes": 136823
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_leaves_diff_2k_8484ff0.uasset",
+      "sha256": "b3253d374b64738dc813f39ccde0e562e41341fc6d761c64f965747614c5d20a",
+      "bytes": 5800410
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_leaves_nor_gl_2k_1356353.uasset",
+      "sha256": "797e20e6fea5dd56bca34708429b49c3c3a78bad6feda04e675f669e97740c34",
+      "bytes": 9946217
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_leaves_rough_2k_54d1967.uasset",
+      "sha256": "36c0e1c838d809d5d30725b080114bee9c17cca154a979002fce102b84707861",
+      "bytes": 2724652
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_nor_gl_2k_7abf9fd.uasset",
+      "sha256": "059d029a59a2826177a9dd38b22b94ac069a94ef27dceb69879802f260210ca9",
+      "bytes": 17738987
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_rough_2k_3396f2a.uasset",
+      "sha256": "b0bfe4b4ce202f6debd06e663e9c2e58da885057c82b711550cbb67d9ebcb73c",
+      "bytes": 3730444
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_branches_diff_2k_55cdd32.uasset",
+      "sha256": "66068db935c2afb9bd97d21669d6f663ff49068ab17ff566d168c13e801444ed",
+      "bytes": 19754021
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_branches_nor_gl_2k_c5d67f7.uasset",
+      "sha256": "99e5d5e1f5f665f88fa721bfddbd722e460f1dccc2f4335b5787c96fba986d0e",
+      "bytes": 22748391
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_branches_rough_2k_1d2cdcc.uasset",
+      "sha256": "0bf044583b674381032321863f069654f92bfe1801b00ee03af930ef2527c3d8",
+      "bytes": 3847306
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_diff_2k_ae34720.uasset",
+      "sha256": "e4978d9da17ac7a6c988fd7f95fcf772d4163dbe8b0b9cc47a86b8eb0eaac3b4",
+      "bytes": 2688585
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_leaves_alpha_2k_cb795e0.uasset",
+      "sha256": "be01451cce3d8efff8e5a82e9c8d7cdbc7a32a438f4d6d41647c45312545bbbd",
+      "bytes": 136823
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_leaves_diff_2k_581352c.uasset",
+      "sha256": "fca4231e3ffc8437c999d203f11aa866bfd7878ac06665b7d1ad0cc8492a62e2",
+      "bytes": 5800410
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_leaves_nor_gl_2k_cd8d31a.uasset",
+      "sha256": "73efeb101b71752025bcc0e96b53583d37d9555e47970052845d819a3dd830ca",
+      "bytes": 9946233
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_leaves_rough_2k_82363ab.uasset",
+      "sha256": "27e9d42d5b45f0fa409b4ce9d553c1f81268213a8cf6afce5e7b5df61e6de85a",
+      "bytes": 2724652
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_nor_gl_2k_edc576a.uasset",
+      "sha256": "e7c8e60f2f920d43dcefb4c41a206ce5b491c30504cbd852a105de90147452bd",
+      "bytes": 17292003
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_rough_2k_fb4de10.uasset",
+      "sha256": "a6cf79e455ef1101c445606f051c1be26bf779fb7855e606d227ae6d058b00dc",
+      "bytes": 3612499
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_branches_diff_2k_453f13e.uasset",
+      "sha256": "35325fdd0e3d214c6797358581bb3005791935d55629bd8fecbc3df5dd1eb032",
+      "bytes": 19492913
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_branches_nor_gl_2k_041d38d.uasset",
+      "sha256": "b31895d7b7f7f8c8c25ab4dd386ee3f1b5950ee37b4e2479525205cd20528bdb",
+      "bytes": 22748391
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_branches_rough_2k_bea0558.uasset",
+      "sha256": "f4a10c170c518dd9b2fb4b8293e9bd1d4a4ce3d2b0cadc06781b70a3e142a2a5",
+      "bytes": 3847306
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_leaves_alpha_2k_38ef3de.uasset",
+      "sha256": "fb01215fa2c85a34f1132e99bd8d1e370535731ab69ebdd76c8ad9f4f76aae8b",
+      "bytes": 2346786
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_leaves_diff_2k_1db683a.uasset",
+      "sha256": "fc59fab0aca105a849e6e2013c467e0b80fe7ec6d80e3e1564d49cc3fae3c66d",
+      "bytes": 7761828
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_leaves_nor_gl_2k_e0adadd.uasset",
+      "sha256": "42f766ee2745a497bb470cf1b712bef7a4a51f7002bc1167e6673d7fcdd50c52",
+      "bytes": 14162937
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_leaves_rough_2k_671622e.uasset",
+      "sha256": "0f52dc277f93f112d1c105bc00c30c4e9d953a883c2c8274e28db26ec3f4e7cc",
+      "bytes": 2876379
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_trunk_diff_2k_b4503c8.uasset",
+      "sha256": "be15d04d7a75573ff536e746749752652eb276c0c63211c089a185c29bf3c780",
+      "bytes": 21016908
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_trunk_nor_gl_2k_5a446bd.uasset",
+      "sha256": "560e1e4dce4e304528b87b301147461c37e8bd09298ad10919dc5353d5b72ca2",
+      "bytes": 20999518
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_trunk_rough_2k_cf71dcd.uasset",
+      "sha256": "d74c68861fc391ec2673cd0b07777c099aa7aae48dbe011762d11a59f583cba4",
+      "bytes": 6188628
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_brick_diff_2k_ea3a12d.uasset",
+      "sha256": "74deda42464db0d87a85669a2c1b6ebed4a4af1faded102c130dfc7de627998c",
+      "bytes": 9482369
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_brick_nor_gl_2k_9aacd43.uasset",
+      "sha256": "8be77be133e910e609a61a3f4365b58d97a491311ab9a68e37f771c00386e29b",
+      "bytes": 23150847
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_brick_rough_2k_ab1199f.uasset",
+      "sha256": "8253bd703aea4f93f6308a890b056b4de458fb3be338565a9667254c7df80c4e",
+      "bytes": 8376743
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_doors_diff_2k_873aa63.uasset",
+      "sha256": "206cac1469ff3e802d4ef9f14a8f7abea2fe5dd7340534451fa4d19baa936f48",
+      "bytes": 18038666
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_doors_metal_2k_0157929.uasset",
+      "sha256": "b9bd0634687c27e5fd32391101ee98be84cc5b01a4a4ed5c7723278cd059f9ea",
+      "bytes": 1159693
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_doors_nor_gl_2k_51c2bdb.uasset",
+      "sha256": "774fd4c65016f62cb9899bc005ae71211e829a47dac046b2e9ed392286417af9",
+      "bytes": 16872107
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_doors_rough_2k_d515606.uasset",
+      "sha256": "54158e286c46724b9edba1f609d38fe5f8dc09e098d65e106d8d14898eec6452",
+      "bytes": 5550750
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_garage_diff_2k_1720a2a.uasset",
+      "sha256": "cb00286c3f6ce9cfd33fadc9754f86da51b93deb9e295c15234629155f2fe5bb",
+      "bytes": 18692120
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_garage_metal_2k_90047bd.uasset",
+      "sha256": "c0f3cf2fd0a902fceb002420d0742fe89c7a65de693ccb5a220939b22a3c6080",
+      "bytes": 251163
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_garage_nor_gl_2k_1660a4e.uasset",
+      "sha256": "2249c6f0e409ca6e1b4d5ee81c7e6f5ec9cd6896b95b4ebe763ce7c4ebb40ed4",
+      "bytes": 18821669
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_garage_rough_2k_cc60b5e.uasset",
+      "sha256": "00ed92340c8933d3488f111a47e0fff0f5c47929d5e650284b01ca3551d8b575",
+      "bytes": 6018748
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_trim_01_diff_2k_5c10893.uasset",
+      "sha256": "c118ffbbe41d4f82bacc1a8d5ee1de62a57f3c672258f1f423f7244a3a8732c7",
+      "bytes": 21881534
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_trim_01_nor_gl_2k_bae34f8.uasset",
+      "sha256": "e10fc96fbe695e3c87b289a06d59077694034c50fc3bb6ecde8a36dd78e70981",
+      "bytes": 23456191
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_trim_01_rough_2k_889865e.uasset",
+      "sha256": "c654896ba641f6892f4f545a86fbd794204a1b0ba5553b379ee0fade5f521c16",
+      "bytes": 7417604
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_windows_alpha_2k_cc1145a.uasset",
+      "sha256": "fb312a0a411d1d7f0eadb18bd888b8b668299ee06083d9738a9f0ed6d59162ad",
+      "bytes": 3160535
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_windows_diff_2k_24a96ab.uasset",
+      "sha256": "185e49278b0481882d24024cb5c9473ed5d69cc2c734f5239e8f5b1b6c4a43a7",
+      "bytes": 21511061
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_windows_nor_gl_2k_29a6b67.uasset",
+      "sha256": "c1a1a56ca9395d6b0218551e9a0d8eb2f7e9a04828bbd6f92be11bbc883eb31d",
+      "bytes": 19643670
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_windows_rough_2k_8d872d1.uasset",
+      "sha256": "fe759f1d0967930338e6933615ab2b4cdeb95f59b9734541470495e199a4529e",
+      "bytes": 6385162
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_alpha_2k_620664f.uasset",
+      "sha256": "2f934cc8d256eabe52d45c4655ff1160e9b7509be7902de2b638a05859b21ada",
+      "bytes": 191478
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_diff_2k_559e194.uasset",
+      "sha256": "bc997bd0ddd3e966070bc5b15c044789263c19716efaa6d51c063d1c42eabd3a",
+      "bytes": 13545130
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_metal_2k_ba7d90c.uasset",
+      "sha256": "aa090727c9a790e251e31c8ab2e8d582e671af778120dd145228c873c2da3205",
+      "bytes": 43375
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_nor_gl_2k_1448b17.uasset",
+      "sha256": "f463a882815ae814e7430d13ea193da6203959d20913264ac22463256e5c3b01",
+      "bytes": 12545440
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_rough_2k_2c5e5fc.uasset",
+      "sha256": "aac2894e46127813eeec6189c3ec173ea4fe861e8a83ac5114c7606352b13201",
+      "bytes": 4470766
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_plaster_diff_2k_d78d7fc.uasset",
+      "sha256": "258781682839fd2ec6a62b081a6b3be47ccd34b6d097352d154f14356121172a",
+      "bytes": 21556766
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_plaster_nor_gl_2k_24f9807.uasset",
+      "sha256": "0ee6181784b92ee7afbedbab99cd03a81e1fc273e1102066c2f8408baff30b26",
+      "bytes": 25073268
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_plaster_rough_2k_36d370a.uasset",
+      "sha256": "f58f87c8e74b9a1c957d6551e13b64b76606417e16a927af74472f3261f79146",
+      "bytes": 6656596
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_01_diff_2k_dbe25b2.uasset",
+      "sha256": "69cbf30ad261dfe86b30df856671fdc353d4eb54ef38b13cfb3bc20e5bddfa23",
+      "bytes": 19433610
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_01_nor_gl_2k_c57d4eb.uasset",
+      "sha256": "be546d265a435a5de42032756c6e981f28a4c2b76452f0f2ed83a2833bba95a3",
+      "bytes": 21799239
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_01_rough_2k_e1b54b5.uasset",
+      "sha256": "0efdb9cf79bf6f5b23ea8009094d7300a8157e940887749cc83652d77a1a4191",
+      "bytes": 6225284
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_02_diff_2k_3ed7795.uasset",
+      "sha256": "69e672de065a19e76fbfff88338dbbc8014134c0bed8212d6b54671b2f879814",
+      "bytes": 13890140
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_02_nor_gl_2k_15dc6a7.uasset",
+      "sha256": "3058a4df6725d247a4616b7dfea186d8bc93c150550de7314247a689afb77920",
+      "bytes": 19352232
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_02_rough_2k_3144259.uasset",
+      "sha256": "3e04cda2fd066d4776390abb98161f6c0c7459e46a7c3fc52e4ff0b00c2578c1",
+      "bytes": 6479816
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_namaqualand_boulder_02_diff_2k_98a3200.uasset",
+      "sha256": "f60034ceb148c2a689c9da9cffd7e909554728e029fd8d1a6fcac9f5946bd923",
+      "bytes": 3872116
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_namaqualand_boulder_02_nor_gl_2k_46e6b60.uasset",
+      "sha256": "0bec25668bb83ad7b0ac2ecaa68a1a2b983328ae5a0dbba2c3582d609eb2d9b8",
+      "bytes": 15868602
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_namaqualand_boulder_02_rough_2k_d55881b.uasset",
+      "sha256": "851b58dfb90a731c2afa90464ffa98767c07ecb0359607296ffec1ae4107bcc2",
+      "bytes": 4261051
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_namaqualand_cliff_02_diff_2k_330a8c1.uasset",
+      "sha256": "186179e3b21af170e7843e6d421d2e61e63d4232e5de7b6ea590389a20bb4fdd",
+      "bytes": 2849882
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_namaqualand_cliff_02_nor_gl_2k_0801371.uasset",
+      "sha256": "4ff20574b3e060026b46697d6f83d1dec059c42ff2cc27c79201752a5218e551",
+      "bytes": 16134746
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_namaqualand_cliff_02_rough_2k_0d2f107.uasset",
+      "sha256": "3e2fd68b1bb5c1efb1b05baf77941e1fbd419919c3877da909d1cb84b047418b",
+      "bytes": 4165027
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_wild_rooibos_bush_alpha_2k_7fc3283.uasset",
+      "sha256": "cf3fa89b086e91e8ebd309c7f0d13bc1b55114d97004515ebcc7b1dcde47a666",
+      "bytes": 345238
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_wild_rooibos_bush_diff_2k_23eb12e.uasset",
+      "sha256": "2897ee728aa4f2614c914e052a2912b0c7876a3bbcaa7056fc3b4eb599605dd3",
+      "bytes": 1387246
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_wild_rooibos_bush_nor_gl_2k_f14cdad.uasset",
+      "sha256": "631a31550c40213833b910e84a364e662b215278242e682a048797d935b91987",
+      "bytes": 7448024
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_wild_rooibos_bush_rough_2k_9c1c094.uasset",
+      "sha256": "3aaad5145df27d465b648981aa60e9a6eb69c4cbd8fa8a41d51c939469828d30",
+      "bytes": 1697557
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Bark012_Color.uasset",
+      "sha256": "672641ea556c6a9e29ab324b93dd77eefcf1e7a254920dc97cc3886d11ed2723",
+      "bytes": 6409419
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Bark012_NormalDX.uasset",
+      "sha256": "61bc0d8aaf5dea412a5cfe87e6741475878b1966f48a708a5d463bfdfd624bcc",
+      "bytes": 9309484
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Bark012_Roughness.uasset",
+      "sha256": "f5a5b187e498946bfc295d29c5c8843fbe6b126ba191b0fd487350e6dd5207ab",
+      "bytes": 2524672
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_CorrugatedSteel005_Color.uasset",
+      "sha256": "47e107257d67cc36dbf443f7c4481548f40b130337740f9c15f0d0d5b1994a38",
+      "bytes": 4193009
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_CorrugatedSteel005_NormalDX.uasset",
+      "sha256": "bb421d400b6b1de630842667734b2b73af78e13235d0f6c68d38538807cf80e1",
+      "bytes": 4221530
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_CorrugatedSteel005_Roughness.uasset",
+      "sha256": "f57d1369db132f2e3a7f9d73d70eb64c14b53de43d105a8c56a9147a1b2484f8",
+      "bytes": 2479359
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Grass004_Color.uasset",
+      "sha256": "052305a0f9ec5d8a5c3d86ee569476bf0a473ddd36799152fc94ade6eb93c15e",
+      "bytes": 7648313
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Grass004_NormalDX.uasset",
+      "sha256": "919a4cbc035ebcdbbf49fa83f8904fe4de7280b9e887e50eea9f2f72578a02f5",
+      "bytes": 10015828
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Grass004_Roughness.uasset",
+      "sha256": "0bb84c477462940c5fbc251168c7ddf92e598ad08a16c9c2479df716e7c44974",
+      "bytes": 3417864
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_LeafSet014_Color.uasset",
+      "sha256": "9cdaf5cb8380a5d6483e08dcc23e7163d79f470fb500744c6438f4ea198d90b7",
+      "bytes": 2342192
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_LeafSet014_NormalDX.uasset",
+      "sha256": "0f49f6f613e98ebaee35dda19b58b6755fdbeb1b0f0a1af71b63088bc7a28945",
+      "bytes": 2983003
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_LeafSet014_Opacity.uasset",
+      "sha256": "64e3b6707628f1b6d8dd71f04de0e48481fac726993c4119966440cdabbf1ab0",
+      "bytes": 208155
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_LeafSet014_Roughness.uasset",
+      "sha256": "b679bb93110428055f3c07dd58497247370f161ca5a1d3c3d217525d4741e30d",
+      "bytes": 1038988
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_PaintedPlaster017_Color.uasset",
+      "sha256": "5c0fa1b87be48451f2cbef8ca99345c149bed47222661ba5f111fb6a9c5691c2",
+      "bytes": 1689260
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_PaintedPlaster017_NormalDX.uasset",
+      "sha256": "f4cfe56243b9ea6ad995afd70a2e359e9b3c980041a58f00b1a5b27593e5c4cc",
+      "bytes": 4643177
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_PaintedPlaster017_Roughness.uasset",
+      "sha256": "16e283490d1c147886549e9521dcc059f03105cc946496eb618b30257e615197",
+      "bytes": 976716
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Rock030_Color.uasset",
+      "sha256": "2d2ad9872af2835bf476ec439751b0149cd183642fa8b826e8029c41225677d2",
+      "bytes": 5909796
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Rock030_NormalDX.uasset",
+      "sha256": "c39b8f7e69b117838b8af79e21adfa78b163747a63170b3cdf0e993ee380d305",
+      "bytes": 10232900
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Rock030_Roughness.uasset",
+      "sha256": "9badbbd0baccb885e8c45df1e26ef800339b9e016765dfd313d3ce07ed41ca73",
+      "bytes": 2510927
+    },
+    {
+      "path": "Content/Art/Textures/T_AircraftPanel.uasset",
+      "sha256": "ec6c983865eb88828fac2cf9514dc941b6bc2991cac1425a1353b3b5b20d08be",
+      "bytes": 1186163
+    },
+    {
+      "path": "Content/Art/Textures/T_Asphalt.uasset",
+      "sha256": "066f4ae39974e9d6c1d8d50b0002c074c0136be13671a4170c8d6f5c55e9bc76",
+      "bytes": 382667
+    },
+    {
+      "path": "Content/Art/Textures/T_DesertARM.uasset",
+      "sha256": "552f895b8868769ba8ae17071d442bcbe4e2df4907236ba98dc34b11ff324335",
+      "bytes": 813208
+    },
+    {
+      "path": "Content/Art/Textures/T_DesertBase.uasset",
+      "sha256": "e39d4a718c101deb293259b9b1982d0badce848da8c7da5f495735508a26b4a5",
+      "bytes": 2526269
+    },
+    {
+      "path": "Content/Art/Textures/T_DesertNormal.uasset",
+      "sha256": "7be7a32110a0904b7c4acf921b1ed83e316269e643c3cd9bdb6b959df43fc924",
+      "bytes": 2424608
+    },
+    {
+      "path": "Content/Audio/S_defeat.uasset",
+      "sha256": "0ad3db4e1924a4b002fc81e58942224b653a7cfe131d55004155f913eee39edb",
+      "bytes": 53240
+    },
+    {
+      "path": "Content/Audio/S_engine.uasset",
+      "sha256": "a983aa5b11001f86166dabc4a38db1e3289afeef6a0a3d9a823a823c32239fd1",
+      "bytes": 305900
+    },
+    {
+      "path": "Content/Audio/S_explosion.uasset",
+      "sha256": "ee2a9c056a09c0dd3488e726329aecdbc1cb6a5ff3ba6bed403ba2a4f45d8e23",
+      "bytes": 174892
+    },
+    {
+      "path": "Content/Audio/S_gun.uasset",
+      "sha256": "c4d791693afae2364d3d65489f8a3ceafb64ee60f7cf7ad61eea53d39e9a57eb",
+      "bytes": 17428
+    },
+    {
+      "path": "Content/Audio/S_hit.uasset",
+      "sha256": "a19d8d60b391e71ead60658bb2ca5692e98fe7f5edc6ddf2e87552dedb8180f9",
+      "bytes": 29464
+    },
+    {
+      "path": "Content/Audio/S_lock.uasset",
+      "sha256": "1ef9b9d65cf4e8ff1cddcdec9246ea6b903724e4ab8429e3d51905953dcb7f75",
+      "bytes": 12626
+    },
+    {
+      "path": "Content/Audio/S_menu.uasset",
+      "sha256": "3b2b1b3617fdc433fd09e303ebf0f1d1ad09be40c596634f91293f99e7d74831",
+      "bytes": 10543
+    },
+    {
+      "path": "Content/Audio/S_missile.uasset",
+      "sha256": "403f834416fef6cb60466adf32e4c37727c5f11a1e8a12a2bf6f338067bc9685",
+      "bytes": 103911
+    },
+    {
+      "path": "Content/Audio/S_resupply.uasset",
+      "sha256": "5e208e1cc4c2c73ae8a6afcc325d4cc1067925aa8c11a5dc9b00ca77ce8ee035",
+      "bytes": 48222
+    },
+    {
+      "path": "Content/Audio/S_start.uasset",
+      "sha256": "91344ff8b47e2a4329e0852dbce7ab86358eb7c041f99e4a599c0dcff1c894b0",
+      "bytes": 63575
+    },
+    {
+      "path": "Content/Audio/S_wave.uasset",
+      "sha256": "8f667f79a1a1334421da4ba6e0922ebb9d7bbc3b0c4dad37978c1ad4d7067387",
+      "bytes": 38696
+    },
+    {
+      "path": "Content/Audio/S_wind.uasset",
+      "sha256": "3d05ea88ab86b5c5c175d5b2b0dcdec15ea06da7d6e2c5bbce1d830fc863a670",
+      "bytes": 441595
+    },
+    {
+      "path": "Content/Blueprints/BP_DSGameMode.uasset",
+      "sha256": "41ce8bb4fc284e7d92f4fbf9d1ce59dee9cec890512ac9e65d8638ed16fe8ef1",
+      "bytes": 20829
+    },
+    {
+      "path": "Content/Maps/DesertDefense.umap",
+      "sha256": "17726e84a8fe977666fd937652a4404639bb992889e4b4de701f5bf465d9f204",
+      "bytes": 2537526
+    },
+    {
+      "path": "Content/UI/Fonts/OrbitronFont.uasset",
+      "sha256": "f670a1ba35c1e678d434619ac779fbe1417031492cd7d49b31488c2517e0aa49",
+      "bytes": 2464
+    },
+    {
+      "path": "Content/UI/Fonts/OrbitronFont_Face.uasset",
+      "sha256": "9e8d0d9faf01f1ed063c7dad3b048eeba96aa0c46c30b51e86f026cc134af68e",
+      "bytes": 40112
+    },
+    {
+      "path": "Content/UI/Fonts/RajdhaniFont.uasset",
+      "sha256": "e8bbf4ca89a96e5fb503c5a96987f2138a3d68e6b17f45f67b2ed4dc3c18106a",
+      "bytes": 2464
+    },
+    {
+      "path": "Content/UI/Fonts/RajdhaniFont_Face.uasset",
+      "sha256": "15f3965a05da9582b741dad6ad995c9b6506eb07af133d7bfcd0707d66c76e91",
+      "bytes": 379396
+    }
+  ],
+  "copied": [
+    "Content/Art/Environment/Downloaded/SM_PH_AirfieldWorkshop.uasset",
+    "Content/Art/Environment/Downloaded/SM_PH_BermudaPatch.uasset",
+    "Content/Art/Environment/Downloaded/SM_PH_CivicBlock.uasset",
+    "Content/Art/Environment/Downloaded/SM_PH_CourtyardHomes.uasset",
+    "Content/Art/Environment/Downloaded/SM_PH_DesertBoulder.uasset",
+    "Content/Art/Environment/Downloaded/SM_PH_DesertCliff.uasset",
+    "Content/Art/Environment/Downloaded/SM_PH_IslandTreeA.uasset",
+    "Content/Art/Environment/Downloaded/SM_PH_IslandTreeB.uasset",
+    "Content/Art/Environment/Downloaded/SM_PH_Jacaranda.uasset",
+    "Content/Art/Environment/Downloaded/SM_PH_RooibosBush.uasset",
+    "Content/Art/Environment/Downloaded/SM_PH_TownApartments.uasset",
+    "Content/Art/Environment/Variation/SM_BankEast.uasset",
+    "Content/Art/Environment/Variation/SM_BankNorth.uasset",
+    "Content/Art/Environment/Variation/SM_BankWest.uasset",
+    "Content/Art/Environment/Variation/SM_DistantGobi.uasset",
+    "Content/Art/Environment/Variation/SM_LakeEast.uasset",
+    "Content/Art/Environment/Variation/SM_LakeNorth.uasset",
+    "Content/Art/Environment/Variation/SM_LakeWest.uasset",
+    "Content/Art/Environment/Variation/SM_RidgedTerrain.uasset",
+    "Content/Art/Environment/Variation/SM_TownRoads.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_grass_bermuda_01.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_island_tree_01.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_island_tree_01_branches.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_island_tree_01_leaves.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_island_tree_02.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_island_tree_02_branches.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_island_tree_02_leaves.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_jacaranda_tree_branches.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_jacaranda_tree_leaves.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_jacaranda_tree_trunk.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_brick.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_brick_doors.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_garage.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_trim_01.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_windows.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_windows_glass.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_glass.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_objects.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_plaster.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_trim_01.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_trim_02.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_namaqualand_boulder_02.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_namaqualand_cliff_02.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_wild_rooibos_bush.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_wild_rooibos_bush_leaves.uasset",
+    "Content/Art/Materials/Environment/M_OasisBankV2.uasset",
+    "Content/Art/Materials/Environment/M_OasisWaterV2.uasset",
+    "Content/Art/Materials/Environment/M_RuggedDesert.uasset",
+    "Content/Art/Textures/Downloaded/T_grass_bermuda_01_alpha_2k_2f15d45.uasset",
+    "Content/Art/Textures/Downloaded/T_grass_bermuda_01_diff_2k_f7196a6.uasset",
+    "Content/Art/Textures/Downloaded/T_grass_bermuda_01_nor_gl_2k_149d7c3.uasset",
+    "Content/Art/Textures/Downloaded/T_grass_bermuda_01_rough_2k_6bbeb37.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_01_branches_diff_2k_c891b56.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_01_branches_nor_gl_2k_bd5d1cf.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_01_branches_rough_2k_b4915c0.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_01_diff_2k_1af8298.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_01_leaves_alpha_2k_bb56cb2.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_01_leaves_diff_2k_8484ff0.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_01_leaves_nor_gl_2k_1356353.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_01_leaves_rough_2k_54d1967.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_01_nor_gl_2k_7abf9fd.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_01_rough_2k_3396f2a.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_02_branches_diff_2k_55cdd32.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_02_branches_nor_gl_2k_c5d67f7.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_02_branches_rough_2k_1d2cdcc.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_02_diff_2k_ae34720.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_02_leaves_alpha_2k_cb795e0.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_02_leaves_diff_2k_581352c.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_02_leaves_nor_gl_2k_cd8d31a.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_02_leaves_rough_2k_82363ab.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_02_nor_gl_2k_edc576a.uasset",
+    "Content/Art/Textures/Downloaded/T_island_tree_02_rough_2k_fb4de10.uasset",
+    "Content/Art/Textures/Downloaded/T_jacaranda_tree_branches_diff_2k_453f13e.uasset",
+    "Content/Art/Textures/Downloaded/T_jacaranda_tree_branches_nor_gl_2k_041d38d.uasset",
+    "Content/Art/Textures/Downloaded/T_jacaranda_tree_branches_rough_2k_bea0558.uasset",
+    "Content/Art/Textures/Downloaded/T_jacaranda_tree_leaves_alpha_2k_38ef3de.uasset",
+    "Content/Art/Textures/Downloaded/T_jacaranda_tree_leaves_diff_2k_1db683a.uasset",
+    "Content/Art/Textures/Downloaded/T_jacaranda_tree_leaves_nor_gl_2k_e0adadd.uasset",
+    "Content/Art/Textures/Downloaded/T_jacaranda_tree_leaves_rough_2k_671622e.uasset",
+    "Content/Art/Textures/Downloaded/T_jacaranda_tree_trunk_diff_2k_b4503c8.uasset",
+    "Content/Art/Textures/Downloaded/T_jacaranda_tree_trunk_nor_gl_2k_5a446bd.uasset",
+    "Content/Art/Textures/Downloaded/T_jacaranda_tree_trunk_rough_2k_cf71dcd.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_brick_diff_2k_ea3a12d.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_brick_nor_gl_2k_9aacd43.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_brick_rough_2k_ab1199f.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_doors_diff_2k_873aa63.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_doors_metal_2k_0157929.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_doors_nor_gl_2k_51c2bdb.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_doors_rough_2k_d515606.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_garage_diff_2k_1720a2a.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_garage_metal_2k_90047bd.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_garage_nor_gl_2k_1660a4e.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_garage_rough_2k_cc60b5e.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_trim_01_diff_2k_5c10893.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_trim_01_nor_gl_2k_bae34f8.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_trim_01_rough_2k_889865e.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_windows_alpha_2k_cc1145a.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_windows_diff_2k_24a96ab.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_windows_nor_gl_2k_29a6b67.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_factory_facade_windows_rough_2k_8d872d1.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_alpha_2k_620664f.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_diff_2k_559e194.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_metal_2k_ba7d90c.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_nor_gl_2k_1448b17.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_rough_2k_2c5e5fc.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_plaster_diff_2k_d78d7fc.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_plaster_nor_gl_2k_24f9807.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_plaster_rough_2k_36d370a.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_01_diff_2k_dbe25b2.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_01_nor_gl_2k_c57d4eb.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_01_rough_2k_e1b54b5.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_02_diff_2k_3ed7795.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_02_nor_gl_2k_15dc6a7.uasset",
+    "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_02_rough_2k_3144259.uasset",
+    "Content/Art/Textures/Downloaded/T_namaqualand_boulder_02_diff_2k_98a3200.uasset",
+    "Content/Art/Textures/Downloaded/T_namaqualand_boulder_02_nor_gl_2k_46e6b60.uasset",
+    "Content/Art/Textures/Downloaded/T_namaqualand_boulder_02_rough_2k_d55881b.uasset",
+    "Content/Art/Textures/Downloaded/T_namaqualand_cliff_02_diff_2k_330a8c1.uasset",
+    "Content/Art/Textures/Downloaded/T_namaqualand_cliff_02_nor_gl_2k_0801371.uasset",
+    "Content/Art/Textures/Downloaded/T_namaqualand_cliff_02_rough_2k_0d2f107.uasset",
+    "Content/Art/Textures/Downloaded/T_wild_rooibos_bush_alpha_2k_7fc3283.uasset",
+    "Content/Art/Textures/Downloaded/T_wild_rooibos_bush_diff_2k_23eb12e.uasset",
+    "Content/Art/Textures/Downloaded/T_wild_rooibos_bush_nor_gl_2k_f14cdad.uasset",
+    "Content/Art/Textures/Downloaded/T_wild_rooibos_bush_rough_2k_9c1c094.uasset",
+    "Content/Maps/DesertDefense.umap"
+  ],
+  "deleted": [],
+  "status": "reused_bytes_verified",
+  "completed": "2026-10-18T13:26:04.057906-07:00"
+}

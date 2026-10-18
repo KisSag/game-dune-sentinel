@@ -61,9 +61,8 @@ void ADSEnemyAircraft::InitializeFormation(int32 GroupId, int32 SlotIndex, int32
 
 void ADSEnemyAircraft::ApplyTerrainClearance(FVector& Aim, const FVector& Position, ADSGameMode* Mode, float DeltaSeconds)
 {
-    constexpr float ClearanceCm = 15000.f;
+    constexpr float ClearanceCm = 30000.f;
     constexpr float NearProbeCm = 50000.f;
-    constexpr float FarProbeCm = 150000.f;
     FVector IntendedHeading = (Aim - Position).GetSafeNormal2D();
     FVector ForwardHeading = GetActorForwardVector().GetSafeNormal2D();
     if (ForwardHeading.IsNearlyZero()) ForwardHeading = IntendedHeading;
@@ -72,14 +71,18 @@ void ADSEnemyAircraft::ApplyTerrainClearance(FVector& Aim, const FVector& Positi
     TerrainCheckCooldown -= FMath::Max(DeltaSeconds, 0.f);
     if (TerrainCheckCooldown <= 0.f)
     {
-        // Cache sparse probes rather than tracing the ground every frame.
-        // Probe both the current course and an upcoming turn before steering.
+        // Sample far enough ahead to climb a mountain with the ordinary turn
+        // limit. Stop at the intended target: a ridge beyond the runway must
+        // not hold an inbound bomber high after it has cleared the near ridge.
+        const float LookaheadLimit = FMath::Max(NearProbeCm, float(FVector::Dist2D(Position, Aim)));
         float HighestGround = Mode->GroundHeightAt(Position);
-        for (const float Distance : {NearProbeCm, FarProbeCm})
+        for (const float Distance : {25000.f, 50000.f, 75000.f, 100000.f, 150000.f, 200000.f, 250000.f, 300000.f})
         {
-            HighestGround = FMath::Max(HighestGround, Mode->GroundHeightAt(Position + ForwardHeading * Distance));
+            const float ProbeDistance = FMath::Min(Distance, LookaheadLimit);
+            HighestGround = FMath::Max(HighestGround, Mode->GroundHeightAt(Position + ForwardHeading * ProbeDistance));
             if (FVector::DotProduct(ForwardHeading, IntendedHeading) < .98f)
-                HighestGround = FMath::Max(HighestGround, Mode->GroundHeightAt(Position + IntendedHeading * Distance));
+                HighestGround = FMath::Max(HighestGround, Mode->GroundHeightAt(Position + IntendedHeading * ProbeDistance));
+            if (Distance >= LookaheadLimit) break;
         }
         TerrainAltitudeFloor = HighestGround + ClearanceCm;
         TerrainCheckCooldown = .2f;
@@ -142,7 +145,15 @@ void ADSEnemyAircraft::Tick(float Dt)
         if (FVector::Dist2D(Pos, Objective) < 210000.f)
         {
             BombCooldown -= Dt;
-            if (BombCooldown <= 0.f && BombsDropped < 3)
+            // Mountain approaches can arrive higher than the original flight
+            // lane. Release only when the actual ballistic arc reaches the
+            // airfield, rather than consuming the payload during a high pass.
+            const FVector ReleaseVelocity = GetActorForwardVector()*Speed*100.f;
+            const float Height = FMath::Max(0.f, float(Pos.Z-400.f-Objective.Z));
+            const float FallTime = (ReleaseVelocity.Z+FMath::Sqrt(ReleaseVelocity.Z*ReleaseVelocity.Z+2.f*981.f*Height))/981.f;
+            const FVector Impact = Pos+ReleaseVelocity*FallTime;
+            const bool bPayloadOnTarget = FVector::Dist2D(Impact,Objective) < 170000.f;
+            if (BombCooldown <= 0.f && BombsDropped < 3 && bPayloadOnTarget)
             {
                 ADSBomb* Bomb = GetWorld()->SpawnActor<ADSBomb>(Pos - FVector(0,0,400), FRotator(-70, GetActorRotation().Yaw, 0));
                 if (Bomb) Bomb->Velocity = GetActorForwardVector() * Speed * 100.f;

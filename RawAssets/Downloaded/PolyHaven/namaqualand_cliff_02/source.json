@@ -1,0 +1,48 @@
+{
+  "schema": "downloaded-model-source/v1",
+  "id": "namaqualand_cliff_02",
+  "title": "Namaqualand Cliff 02",
+  "page": "https://polyhaven.com/a/namaqualand_cliff_02",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "authors": {
+    "Dario Barresi": "Photography",
+    "Rico Cilliers": "modeling"
+  },
+  "resolution": "2k",
+  "publisher_dimensions_mm": [
+    20229.52938079834,
+    6593.420505523682,
+    7187.2673481702805
+  ],
+  "files": [
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/namaqualand_cliff_02/namaqualand_cliff_02_2k.blend",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/namaqualand_cliff_02/namaqualand_cliff_02_2k.blend",
+      "size": 13489443,
+      "sha256": "a3ce3a54970b1992ee3fe126cd58012e2a80104691c46932254e473cf6c8d517",
+      "md5": "223b63545138c3322bab6ebc190ab8f7"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/namaqualand_cliff_02/textures/namaqualand_cliff_02_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/namaqualand_cliff_02/namaqualand_cliff_02_diff_2k.jpg",
+      "size": 2845716,
+      "sha256": "9618e2a42155b93189e0bac9edebcc46a6af1357f4f6ed56f79ca1714690d4f0",
+      "md5": "45a8861aebda11935b29f1cedf6f800d"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/namaqualand_cliff_02/textures/namaqualand_cliff_02_nor_gl_2k.exr",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/namaqualand_cliff_02/namaqualand_cliff_02_nor_gl_2k.exr",
+      "size": 8567909,
+      "sha256": "89fec17b228802c94ca51c06bffd0d42aadec0eb1c0908655258e63b3188ae64",
+      "md5": "65d79fd6995c8f399741f0a3177a51e1"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/namaqualand_cliff_02/textures/namaqualand_cliff_02_rough_2k.exr",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/namaqualand_cliff_02/namaqualand_cliff_02_rough_2k.exr",
+      "size": 1934747,
+      "sha256": "d72097288c77991f8688cded5f43bb3faa98d93e850a850228c226eb5d8a2db4",
+      "md5": "9c2919017df4b8a47127e4e2e42a73b1"
+    }
+  ]
+}

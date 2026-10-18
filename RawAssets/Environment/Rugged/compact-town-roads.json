@@ -1,0 +1,85 @@
+{
+  "schema": "compact-town-roads/1",
+  "status": "passed",
+  "block_center_x_m": [
+    -240,
+    -120,
+    0,
+    120,
+    240
+  ],
+  "block_center_y_m": [
+    2350,
+    2450,
+    2550,
+    2650,
+    2750,
+    2850
+  ],
+  "buildings_per_block": 4,
+  "building_offsets_m": [
+    [
+      -25,
+      -22
+    ],
+    [
+      -25,
+      22
+    ],
+    [
+      25,
+      -22
+    ],
+    [
+      25,
+      22
+    ]
+  ],
+  "vertical_roads_x_m": [
+    -300,
+    -180,
+    -60,
+    60,
+    180,
+    300
+  ],
+  "horizontal_roads_y_m": [
+    2300,
+    2400,
+    2500,
+    2600,
+    2700,
+    2800,
+    2900
+  ],
+  "street_width_m": 12,
+  "access_width_m": 14,
+  "height_offset_m": 0.25,
+  "source_triangles": 1744,
+  "removed_sliver_area_m2": 0.0,
+  "access_points_m": [
+    [
+      1150,
+      -200
+    ],
+    [
+      1150,
+      1900
+    ],
+    [
+      300,
+      2300
+    ]
+  ],
+  "mesh": {
+    "name": "SM_TownRoads",
+    "file": "RawAssets/Environment/Rugged/SM_TownRoads.fbx",
+    "slot": "Asphalt",
+    "vertices": 20889,
+    "triangles": 6963,
+    "bytes": 254124,
+    "sha256": "40bc1c116c0ec0f7b95d7454a421ad363c363c2ef302b545af5adb1fa5bc43c0",
+    "previous_sha256": "67bde8c8e36147d661f421aa33077053cf3f6bf8f887205d1ccba869664d3422"
+  },
+  "max_center_surface_error_m": 2.1316282072803006e-14
+}

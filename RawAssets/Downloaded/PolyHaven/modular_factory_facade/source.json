@@ -1,0 +1,159 @@
+{
+  "schema": "downloaded-model-source/v1",
+  "id": "modular_factory_facade",
+  "title": "Modular Factory Facade",
+  "page": "https://polyhaven.com/a/modular_factory_facade",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "authors": {
+    "James Ray Cock": "All"
+  },
+  "resolution": "2k",
+  "publisher_dimensions_mm": [
+    53329.99801635742,
+    5356.249764561653,
+    29000
+  ],
+  "files": [
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/modular_factory_facade_2k.blend",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/modular_factory_facade/modular_factory_facade_2k.blend",
+      "size": 2456277,
+      "sha256": "e3914d0ddb70f526b4c4ec84df63bcca7351a7a2761a384d938643ef9f0b7afc",
+      "md5": "045eb1200e768e2f5170cef1119be70c"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_garage_diff_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_garage_diff_2k.png",
+      "size": 20424488,
+      "sha256": "01dfbf807981c02e8f2079792557cbf98f11875fe18ff815ced4506011977861",
+      "md5": "8e10be3a37c24b3065e4c35cb80fb87a"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_windows_rough_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_windows_rough_2k.png",
+      "size": 6317273,
+      "sha256": "55595a3f6eeb83ef7e31546e98eb686d10a6020fdc01a59a3b92fdd3889f9591",
+      "md5": "79e38a30271dfe0b9715eef9dd954844"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_doors_rough_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_doors_rough_2k.png",
+      "size": 5687930,
+      "sha256": "2b801f04f2146313fec0b62c2422faae06562bb485c181832c5ce5cc47b608e0",
+      "md5": "f78f94c77c3a1eacb9621d0228485fb0"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_trim_01_nor_gl_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_trim_01_nor_gl_2k.png",
+      "size": 22225169,
+      "sha256": "4aee23b656e2f3b07c062be7ec4a4765f9ee399ba29a1814d33db3298723c94c",
+      "md5": "b455c9aae5b8357018ba2dca9b6dbcf0"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_brick_rough_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_brick_rough_2k.png",
+      "size": 9422725,
+      "sha256": "e268bb7dd86d307eb59947509447e4738cda093055a1053d92f5f2044ba058bc",
+      "md5": "aada1dc0fe4837a9cccefa4259fce928"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_doors_diff_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_doors_diff_2k.png",
+      "size": 20333005,
+      "sha256": "5707d503fbf795b0b913a61bb2aabdb158aba72c161e55b3cf1af51afed85607",
+      "md5": "36946eae5ddca96457bd6dd7d95bc5aa"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_brick_nor_gl_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_brick_nor_gl_2k.png",
+      "size": 21548678,
+      "sha256": "ea66f43ba5eb840b3cf35eea04a95f5f4b2de34b5bdf9513ede08301ddbfda16",
+      "md5": "c05627531ce57a07a101a6c4c5326a8c"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_trim_01_diff_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_trim_01_diff_2k.png",
+      "size": 24220907,
+      "sha256": "2df9ea84749ee88a4d2f2ecb2013c91a3db45cec5da61f2df11820f4a6e9fa6b",
+      "md5": "67a46c602693962bbd8578637d397381"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_windows_nor_gl_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_windows_nor_gl_2k.png",
+      "size": 18850638,
+      "sha256": "ee0ac855947f8e123a4b56918c1e091e8cb38bbfb54d25cea1e8d19803c38dbb",
+      "md5": "e03a5f214af47de61fcb5a9ca77faeaa"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_garage_nor_gl_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_garage_nor_gl_2k.png",
+      "size": 18209119,
+      "sha256": "320bcd56c10f0cdabd727fa872238506c960d9c215499f3bfd4083d75affaaf4",
+      "md5": "ec236b3016adfbdaebe299ffea921de8"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_brick_disp_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_brick_disp_2k.png",
+      "size": 7394788,
+      "sha256": "c225fef287072b113ecd821c44ced04a38039f85105fe076aa200a8c9ca6722a",
+      "md5": "3b7cbdb2e03d0a3ff1418a9ba5a0d8b2"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_garage_metal_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_garage_metal_2k.png",
+      "size": 247243,
+      "sha256": "969d60a9fa5fa6dada20a2a8880d12307148d23feb450d23dd2ebf33ba355c8f",
+      "md5": "148543b8be33577b4863d68ff21bac4a"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_trim_01_rough_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_trim_01_rough_2k.png",
+      "size": 7306847,
+      "sha256": "51ca8ed08e115127a0ac7cbc5ea1951f6d334b45adf672dc4e4837dfc7a50c91",
+      "md5": "761815a69ff56f4d9eabe453fd322dc7"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_brick_diff_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_brick_diff_2k.png",
+      "size": 8843825,
+      "sha256": "0b13e3f7c5abc614d64dbb51bb9df5a7d3b99996a4038bc8d15d1c908123dda2",
+      "md5": "fa38bfb466dea741c3eedae8ac1d6a40"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_garage_rough_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_garage_rough_2k.png",
+      "size": 5818679,
+      "sha256": "ce0104793e2e34ede789649b026991e6b52d6a6de92a50f07ad54a0828fb127c",
+      "md5": "289fbdbc3aa51b727fd10ef473a146de"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_doors_nor_gl_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_doors_nor_gl_2k.png",
+      "size": 17055029,
+      "sha256": "06e4c702b2917aa28179725a059e83476725633e8bded600c8660f0ced87ada4",
+      "md5": "b9ed404498b9d22644a5add9736eaa65"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_windows_alpha_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_windows_alpha_2k.png",
+      "size": 3251560,
+      "sha256": "60ca7612ca3d3ae2c27b0590a900124af01945303816a40f01bbf961ac52f6c0",
+      "md5": "4f138c2c582f5e5cc9f50b920996eef3"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_doors_metal_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_doors_metal_2k.png",
+      "size": 1151821,
+      "sha256": "c7e4f07e96f49ae72efefa203e4bd286177fe53875c0093c928d3cf248a5a324",
+      "md5": "78756dfae25216a297e9dd7a772cf925"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_windows_diff_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/modular_factory_facade/modular_factory_facade_windows_diff_2k.png",
+      "size": 22431211,
+      "sha256": "e1298cc2635bffea1f6ef749692ba7760bc061f115b10e4229cff0565901a6d7",
+      "md5": "f7278c37052a06142de4f5edd94ee53f"
+    }
+  ]
+}

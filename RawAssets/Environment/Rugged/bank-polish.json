@@ -1,0 +1,60 @@
+{
+  "schema": "rugged-bank-polish/1",
+  "status": "passed",
+  "meshes": [
+    {
+      "name": "SM_BankWest",
+      "file": "RawAssets/Environment/Rugged/SM_BankWest.fbx",
+      "slot": "Grass",
+      "vertices": 36069,
+      "triangles": 12023,
+      "bytes": 661340,
+      "sha256": "444b75aa2483bcd67ca73b2db3e090abcbb13f9b0658b2a57ae6b6e9e23be819",
+      "bank_error_max_abs_m": 4.178098638590866e-05,
+      "bank_error_sample_count": 84161,
+      "bank_target_offset_m": 0.18,
+      "original_triangles": 12108,
+      "removed_triangles": 85,
+      "removed_area_m2": 0.7186355684947259,
+      "removed_area_fraction": 2.201100091905041e-06,
+      "previous_sha256": "080ba8a10c5a2bc799fd796697767b4b27d54091ed19b33fbdb501550ec04060"
+    },
+    {
+      "name": "SM_BankEast",
+      "file": "RawAssets/Environment/Rugged/SM_BankEast.fbx",
+      "slot": "Grass",
+      "vertices": 44526,
+      "triangles": 14842,
+      "bytes": 808316,
+      "sha256": "d1a78d79b7718637a073ba8e9ec6a6d6d8cc9cf0888ca1abb9995da3f4934816",
+      "bank_error_max_abs_m": 1.5127660838054613e-05,
+      "bank_error_sample_count": 103894,
+      "bank_target_offset_m": 0.18,
+      "original_triangles": 14938,
+      "removed_triangles": 96,
+      "removed_area_m2": 1.1093235972206177,
+      "removed_area_fraction": 2.1842573630970594e-06,
+      "previous_sha256": "c35446c2182fa82e44fde3d35207723454cd1b080626a9370c492378ccf2cb68"
+    },
+    {
+      "name": "SM_BankNorth",
+      "file": "RawAssets/Environment/Rugged/SM_BankNorth.fbx",
+      "slot": "Grass",
+      "vertices": 27513,
+      "triangles": 9171,
+      "bytes": 508956,
+      "sha256": "0a83e3917aa411775cd1fcc4fe6bb793c283253716c958be17de759d2d3958a8",
+      "bank_error_max_abs_m": 3.620682824873045e-05,
+      "bank_error_sample_count": 64197,
+      "bank_target_offset_m": 0.18,
+      "original_triangles": 9232,
+      "removed_triangles": 61,
+      "removed_area_m2": 0.9861394619311191,
+      "removed_area_fraction": 4.942529173345758e-06,
+      "previous_sha256": "cdb349352e165865034e565bb740aa7b4180da8a45524988f0e43ba510365967"
+    }
+  ],
+  "minimum_area_m2": 0.01,
+  "minimum_edge_m": 0.02,
+  "minimum_area_to_longest_edge_squared": 1e-05
+}

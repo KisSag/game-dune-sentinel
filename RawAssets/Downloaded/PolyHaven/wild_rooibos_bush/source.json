@@ -1,0 +1,55 @@
+{
+  "schema": "downloaded-model-source/v1",
+  "id": "wild_rooibos_bush",
+  "title": "Wild Rooibos Bush",
+  "page": "https://polyhaven.com/a/wild_rooibos_bush",
+  "license": "CC0-1.0",
+  "license_url": "https://polyhaven.com/license",
+  "authors": {
+    "James Ray Cock": "modeling",
+    "Jenelle van Heerden": "photography"
+  },
+  "resolution": "2k",
+  "publisher_dimensions_mm": [
+    2285.276174545288,
+    854.104071855545,
+    543.936595087871
+  ],
+  "files": [
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/wild_rooibos_bush/wild_rooibos_bush_2k.blend",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/blend/2k/wild_rooibos_bush/wild_rooibos_bush_2k.blend",
+      "size": 2607728,
+      "sha256": "873825a6af13e79c649d3567497f9c762efa01bfe07674f358eee4c4cac57821",
+      "md5": "97b42f62432e25d6bb1a02c2a05c20d6"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/wild_rooibos_bush/textures/wild_rooibos_bush_diff_2k.jpg",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/jpg/2k/wild_rooibos_bush/wild_rooibos_bush_diff_2k.jpg",
+      "size": 1383104,
+      "sha256": "9c8f32906f59483b576448d4b8815449ee395c49ff020f16af81aac6931c8049",
+      "md5": "620baee5986d736ab68603c4a2e938eb"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/wild_rooibos_bush/textures/wild_rooibos_bush_nor_gl_2k.exr",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wild_rooibos_bush/wild_rooibos_bush_nor_gl_2k.exr",
+      "size": 3964292,
+      "sha256": "676f69ec160baa16f23580ce8a56a41db5059d9a3fab07bf8c69913d8f67ab1e",
+      "md5": "0c96a1a600118156ae8bdb21ba40e727"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/wild_rooibos_bush/textures/wild_rooibos_bush_rough_2k.exr",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/exr/2k/wild_rooibos_bush/wild_rooibos_bush_rough_2k.exr",
+      "size": 879422,
+      "sha256": "69c159538d726cfba4e06a7ef98263b2ff1cd512af770c6950638675d8ff8823",
+      "md5": "bb9c3883d45c843834abbb1a302645d4"
+    },
+    {
+      "path": "RawAssets/Downloaded/PolyHaven/wild_rooibos_bush/textures/wild_rooibos_bush_alpha_2k.png",
+      "url": "https://dl.polyhaven.org/file/ph-assets/Models/png/2k/wild_rooibos_bush/wild_rooibos_bush_alpha_2k.png",
+      "size": 206554,
+      "sha256": "11a2bbdd11cfdccfb1badb716769b83504beef063709280fe757f8beb8398feb",
+      "md5": "54f2820a6fce80d83ce013f57ce6421a"
+    }
+  ]
+}

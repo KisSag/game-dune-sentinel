@@ -1,0 +1,276 @@
+{
+  "schema": "rugged-environment/1",
+  "status": "passed",
+  "grid_m": 25.0,
+  "town": {
+    "center_m": [
+      0,
+      2600
+    ],
+    "half_size_m": [
+      800,
+      500
+    ],
+    "height_m": 48
+  },
+  "oases": [
+    {
+      "id": "West",
+      "center_m": [
+        -2700,
+        -2200
+      ],
+      "lake_radii_m": [
+        300,
+        180
+      ],
+      "water_m": 60
+    },
+    {
+      "id": "East",
+      "center_m": [
+        4200,
+        1800
+      ],
+      "lake_radii_m": [
+        350,
+        240
+      ],
+      "water_m": 92
+    },
+    {
+      "id": "North",
+      "center_m": [
+        1000,
+        5300
+      ],
+      "lake_radii_m": [
+        220,
+        150
+      ],
+      "water_m": 118
+    }
+  ],
+  "ridges": [
+    [
+      -4600,
+      3700,
+      2520,
+      3400,
+      1500,
+      -0.55,
+      0.3
+    ],
+    [
+      4000,
+      -4400,
+      2650,
+      3600,
+      1660,
+      0.63,
+      1.7
+    ],
+    [
+      -5900,
+      -5100,
+      2290,
+      3000,
+      1540,
+      -0.66,
+      2.8
+    ],
+    [
+      6600,
+      4800,
+      2580,
+      3200,
+      1520,
+      0.5,
+      4.2
+    ],
+    [
+      400,
+      7900,
+      2480,
+      4000,
+      1400,
+      0.04,
+      5.7
+    ],
+    [
+      -8300,
+      100,
+      1920,
+      2900,
+      1250,
+      1.27,
+      6.8
+    ]
+  ],
+  "axes": "Original source XY; world mesh actors require scale (1,-1,1)",
+  "terrain_actor_offset_m": 1.8,
+  "other_world_mesh_actor_offset_m": 0,
+  "meshes": [
+    {
+      "name": "SM_RidgedTerrain",
+      "file": "RawAssets/Environment/Rugged/SM_RidgedTerrain.fbx",
+      "slot": "Terrain",
+      "vertices": 641601,
+      "triangles": 1280000,
+      "bytes": 27691852,
+      "sha256": "e216fb406385c96413a53f6d0b1434e1b95e36f2889f5b9d976d76ddd9b1cc98"
+    },
+    {
+      "name": "SM_BankWest",
+      "file": "RawAssets/Environment/Rugged/SM_BankWest.fbx",
+      "slot": "Grass",
+      "vertices": 36069,
+      "triangles": 12023,
+      "bytes": 661340,
+      "sha256": "444b75aa2483bcd67ca73b2db3e090abcbb13f9b0658b2a57ae6b6e9e23be819",
+      "bank_error_max_abs_m": 4.178098638590866e-05,
+      "bank_error_sample_count": 84161,
+      "bank_target_offset_m": 0.18,
+      "source_area_m2": 326489.2728584416,
+      "clipped_area_m2": 326489.27285844064,
+      "area_error_m2": -9.313225746154785e-10,
+      "original_triangles": 12108,
+      "removed_triangles": 85,
+      "removed_area_m2": 0.7186355684947259,
+      "removed_area_fraction": 2.201100091905041e-06,
+      "previous_sha256": "080ba8a10c5a2bc799fd796697767b4b27d54091ed19b33fbdb501550ec04060"
+    },
+    {
+      "name": "SM_LakeWest",
+      "file": "RawAssets/Environment/Rugged/SM_LakeWest.fbx",
+      "slot": "Water",
+      "vertices": 161,
+      "triangles": 160,
+      "bytes": 19676,
+      "sha256": "575e266430312207fb78061f277ff614e4c37f4c8f70196efd67e6637b0432b8",
+      "edge_ground_above_water_min_m": 1.2873268859103746,
+      "edge_ground_above_water_max_m": 1.6113043947308014,
+      "edge_samples": 640,
+      "basin_depth_m": 8.0
+    },
+    {
+      "name": "SM_BankEast",
+      "file": "RawAssets/Environment/Rugged/SM_BankEast.fbx",
+      "slot": "Grass",
+      "vertices": 44526,
+      "triangles": 14842,
+      "bytes": 808316,
+      "sha256": "d1a78d79b7718637a073ba8e9ec6a6d6d8cc9cf0888ca1abb9995da3f4934816",
+      "bank_error_max_abs_m": 1.5127660838054613e-05,
+      "bank_error_sample_count": 103894,
+      "bank_target_offset_m": 0.18,
+      "source_area_m2": 507872.2022242412,
+      "clipped_area_m2": 507872.20222423703,
+      "area_error_m2": -4.190951585769653e-09,
+      "original_triangles": 14938,
+      "removed_triangles": 96,
+      "removed_area_m2": 1.1093235972206177,
+      "removed_area_fraction": 2.1842573630970594e-06,
+      "previous_sha256": "c35446c2182fa82e44fde3d35207723454cd1b080626a9370c492378ccf2cb68"
+    },
+    {
+      "name": "SM_LakeEast",
+      "file": "RawAssets/Environment/Rugged/SM_LakeEast.fbx",
+      "slot": "Water",
+      "vertices": 161,
+      "triangles": 160,
+      "bytes": 20140,
+      "sha256": "f2664808f8d8d533d7e73337d9b36fcdf35a4e26661ca54cf7b358e7cfa6a102",
+      "edge_ground_above_water_min_m": 1.3590679104749626,
+      "edge_ground_above_water_max_m": 1.5362669832308598,
+      "edge_samples": 640,
+      "basin_depth_m": 8.0
+    },
+    {
+      "name": "SM_BankNorth",
+      "file": "RawAssets/Environment/Rugged/SM_BankNorth.fbx",
+      "slot": "Grass",
+      "vertices": 27513,
+      "triangles": 9171,
+      "bytes": 508956,
+      "sha256": "0a83e3917aa411775cd1fcc4fe6bb793c283253716c958be17de759d2d3958a8",
+      "bank_error_max_abs_m": 3.620682824873045e-05,
+      "bank_error_sample_count": 64197,
+      "bank_target_offset_m": 0.18,
+      "source_area_m2": 199521.22230238034,
+      "clipped_area_m2": 199521.2223023813,
+      "area_error_m2": 9.604264050722122e-10,
+      "original_triangles": 9232,
+      "removed_triangles": 61,
+      "removed_area_m2": 0.9861394619311191,
+      "removed_area_fraction": 4.942529173345758e-06,
+      "previous_sha256": "cdb349352e165865034e565bb740aa7b4180da8a45524988f0e43ba510365967"
+    },
+    {
+      "name": "SM_LakeNorth",
+      "file": "RawAssets/Environment/Rugged/SM_LakeNorth.fbx",
+      "slot": "Water",
+      "vertices": 161,
+      "triangles": 160,
+      "bytes": 19836,
+      "sha256": "7f098267acf75fe62211c7f61e629ab542fc41e6e303689a6a4b2535536c8827",
+      "edge_ground_above_water_min_m": 1.1375098971944624,
+      "edge_ground_above_water_max_m": 1.6943965709261306,
+      "edge_samples": 640,
+      "basin_depth_m": 8.0
+    },
+    {
+      "name": "SM_TownRoads",
+      "file": "RawAssets/Environment/Rugged/SM_TownRoads.fbx",
+      "slot": "Asphalt",
+      "vertices": 20889,
+      "triangles": 6963,
+      "bytes": 254124,
+      "sha256": "40bc1c116c0ec0f7b95d7454a421ad363c363c2ef302b545af5adb1fa5bc43c0",
+      "previous_sha256": "67bde8c8e36147d661f421aa33077053cf3f6bf8f887205d1ccba869664d3422"
+    },
+    {
+      "name": "SM_DistantGobi",
+      "file": "RawAssets/Environment/Rugged/SM_DistantGobi.fbx",
+      "slot": "Terrain",
+      "vertices": 41600,
+      "triangles": 76800,
+      "bytes": 1780396,
+      "sha256": "fe28ae442bc877f518d8cc4cc2ae728f96715485ed26049e56cc7c40283d228f",
+      "seam_vertex_count": 3200,
+      "seam_error_max_m": 0.0,
+      "outer_half_extent_m": 500000
+    }
+  ],
+  "terrain_height_world_m": [
+    21.8,
+    2978.1096531090757
+  ],
+  "terrain_relief_m": 2956.3096531090755,
+  "terrain_peak_world_m": [
+    3625.0,
+    -4400.0,
+    2978.1096531090757
+  ],
+  "terrain_height_percentiles_m": {
+    "10": 49.59354182556807,
+    "25": 78.13122107389378,
+    "50": 113.90928356557964,
+    "75": 172.5283240892503,
+    "90": 961.3438604805084,
+    "95": 1458.909708722711,
+    "99": 2146.2788034578944
+  },
+  "height_area_percent": {
+    "250": 20.16066059747413,
+    "500": 15.66160277181613,
+    "1000": 9.614074791030562,
+    "1500": 4.657411693560328,
+    "2000": 1.5582893418183574
+  },
+  "runway_flat_error_max_m": 0.0,
+  "town_plateau_error_max_m": 0.0,
+  "elapsed_s": 48.266,
+  "bank_polish_report": "RawAssets/Environment/Rugged/bank-polish.json",
+  "compact_town_roads_report": "RawAssets/Environment/Rugged/compact-town-roads.json"
+}

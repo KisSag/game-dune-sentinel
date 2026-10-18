@@ -43,6 +43,7 @@ public:
     void PlayCue(const FString& Cue, float Volume=1.f);
     void Radio(const FString& Line, float Duration=7.f);
     float GroundHeightAt(const FVector& Position) const;
+    float GetBomberIngressAltitude(const FVector& Origin, int32 Count) const;
     static int32 GetBomberCountForCapacity(int32 RequestedCount, int32 Capacity);
 private:
     void SpawnWave();

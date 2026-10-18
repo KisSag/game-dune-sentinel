@@ -1,0 +1,838 @@
+{
+  "schema": "environment-downloaded-art/v1",
+  "materials": [
+    {
+      "name": "M_PH_grass_bermuda_01",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/grass_bermuda_01/textures/grass_bermuda_01_diff_2k.jpg",
+      "roughness": "RawAssets/Downloaded/PolyHaven/grass_bermuda_01/textures/grass_bermuda_01_rough_2k.exr",
+      "normal": "RawAssets/Downloaded/PolyHaven/grass_bermuda_01/textures/grass_bermuda_01_nor_gl_2k.exr",
+      "opacity": "RawAssets/Downloaded/PolyHaven/grass_bermuda_01/textures/grass_bermuda_01_alpha_2k.png",
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": true,
+      "masked": true,
+      "source_asset": "grass_bermuda_01",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R",
+      "opacity_channel": "R"
+    },
+    {
+      "name": "M_PH_island_tree_01",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/island_tree_01/textures/island_tree_01_diff_2k.jpg",
+      "roughness": "RawAssets/Downloaded/PolyHaven/island_tree_01/textures/island_tree_01_rough_2k.exr",
+      "normal": "RawAssets/Downloaded/PolyHaven/island_tree_01/textures/island_tree_01_nor_gl_2k.exr",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "island_tree_01",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_island_tree_01_branches",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/island_tree_01/textures/island_tree_01_branches_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/island_tree_01/textures/island_tree_01_branches_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/island_tree_01/textures/island_tree_01_branches_nor_gl_2k.png",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "island_tree_01",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_island_tree_01_leaves",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/island_tree_01/textures/island_tree_01_leaves_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/island_tree_01/textures/island_tree_01_leaves_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/island_tree_01/textures/island_tree_01_leaves_nor_gl_2k.png",
+      "opacity": "RawAssets/Downloaded/PolyHaven/island_tree_01/textures/island_tree_01_leaves_alpha_2k.png",
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": true,
+      "masked": true,
+      "source_asset": "island_tree_01",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R",
+      "opacity_channel": "R"
+    },
+    {
+      "name": "M_PH_island_tree_02",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/island_tree_02/textures/island_tree_02_diff_2k.jpg",
+      "roughness": "RawAssets/Downloaded/PolyHaven/island_tree_02/textures/island_tree_02_rough_2k.exr",
+      "normal": "RawAssets/Downloaded/PolyHaven/island_tree_02/textures/island_tree_02_nor_gl_2k.exr",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "island_tree_02",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_island_tree_02_branches",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/island_tree_02/textures/island_tree_02_branches_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/island_tree_02/textures/island_tree_02_branches_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/island_tree_02/textures/island_tree_02_branches_nor_gl_2k.png",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "island_tree_02",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_island_tree_02_leaves",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/island_tree_02/textures/island_tree_02_leaves_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/island_tree_02/textures/island_tree_02_leaves_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/island_tree_02/textures/island_tree_02_leaves_nor_gl_2k.png",
+      "opacity": "RawAssets/Downloaded/PolyHaven/island_tree_02/textures/island_tree_02_leaves_alpha_2k.png",
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": true,
+      "masked": true,
+      "source_asset": "island_tree_02",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R",
+      "opacity_channel": "R"
+    },
+    {
+      "name": "M_PH_jacaranda_tree_branches",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/jacaranda_tree/textures/jacaranda_tree_branches_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/jacaranda_tree/textures/jacaranda_tree_branches_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/jacaranda_tree/textures/jacaranda_tree_branches_nor_gl_2k.png",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "jacaranda_tree",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_jacaranda_tree_leaves",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/jacaranda_tree/textures/jacaranda_tree_leaves_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/jacaranda_tree/textures/jacaranda_tree_leaves_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/jacaranda_tree/textures/jacaranda_tree_leaves_nor_gl_2k.png",
+      "opacity": "RawAssets/Downloaded/PolyHaven/jacaranda_tree/textures/jacaranda_tree_leaves_alpha_2k.png",
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": true,
+      "masked": true,
+      "source_asset": "jacaranda_tree",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R",
+      "opacity_channel": "R"
+    },
+    {
+      "name": "M_PH_jacaranda_tree_trunk",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/jacaranda_tree/textures/jacaranda_tree_trunk_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/jacaranda_tree/textures/jacaranda_tree_trunk_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/jacaranda_tree/textures/jacaranda_tree_trunk_nor_gl_2k.png",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "jacaranda_tree",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_modular_factory_facade_brick",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_brick_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_brick_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_brick_nor_gl_2k.png",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "modular_factory_facade",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_modular_factory_facade_brick_doors",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_doors_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_doors_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_doors_nor_gl_2k.png",
+      "opacity": null,
+      "metallic": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_doors_metal_2k.png",
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 1.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "modular_factory_facade",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R",
+      "metallic_channel": "R"
+    },
+    {
+      "name": "M_PH_modular_factory_facade_garage",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_garage_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_garage_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_garage_nor_gl_2k.png",
+      "opacity": null,
+      "metallic": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_garage_metal_2k.png",
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 1.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "modular_factory_facade",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R",
+      "metallic_channel": "R"
+    },
+    {
+      "name": "M_PH_modular_factory_facade_trim_01",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_trim_01_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_trim_01_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_trim_01_nor_gl_2k.png",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "modular_factory_facade",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_modular_factory_facade_windows",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_windows_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_windows_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_windows_nor_gl_2k.png",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "modular_factory_facade",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_modular_factory_facade_windows_glass",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_windows_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_windows_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_windows_nor_gl_2k.png",
+      "opacity": "RawAssets/Downloaded/PolyHaven/modular_factory_facade/textures/modular_factory_facade_windows_alpha_2k.png",
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": true,
+      "masked": true,
+      "source_asset": "modular_factory_facade",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R",
+      "opacity_channel": "R"
+    },
+    {
+      "name": "M_PH_modular_urban_apartments_facade_glass",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_nor_gl_2k.png",
+      "opacity": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_alpha_2k.png",
+      "metallic": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_metal_2k.png",
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 1.0,
+      "two_sided": true,
+      "masked": true,
+      "source_asset": "modular_urban_apartments_facade",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R",
+      "opacity_channel": "R",
+      "metallic_channel": "R"
+    },
+    {
+      "name": "M_PH_modular_urban_apartments_facade_objects",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_nor_gl_2k.png",
+      "opacity": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_alpha_2k.png",
+      "metallic": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_objects_metal_2k.png",
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 1.0,
+      "two_sided": true,
+      "masked": true,
+      "source_asset": "modular_urban_apartments_facade",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R",
+      "opacity_channel": "R",
+      "metallic_channel": "R"
+    },
+    {
+      "name": "M_PH_modular_urban_apartments_facade_plaster",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_plaster_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_plaster_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_plaster_nor_gl_2k.png",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "modular_urban_apartments_facade",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_modular_urban_apartments_facade_trim_01",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_trim_01_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_trim_01_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_trim_01_nor_gl_2k.png",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "modular_urban_apartments_facade",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_modular_urban_apartments_facade_trim_02",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_trim_02_diff_2k.png",
+      "roughness": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_trim_02_rough_2k.png",
+      "normal": "RawAssets/Downloaded/PolyHaven/modular_urban_apartments_facade/textures/modular_urban_apartments_facade_trim_02_nor_gl_2k.png",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "modular_urban_apartments_facade",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_namaqualand_boulder_02",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_diff_2k.jpg",
+      "roughness": "RawAssets/Downloaded/PolyHaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_rough_2k.exr",
+      "normal": "RawAssets/Downloaded/PolyHaven/namaqualand_boulder_02/textures/namaqualand_boulder_02_nor_gl_2k.exr",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "namaqualand_boulder_02",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_namaqualand_cliff_02",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/namaqualand_cliff_02/textures/namaqualand_cliff_02_diff_2k.jpg",
+      "roughness": "RawAssets/Downloaded/PolyHaven/namaqualand_cliff_02/textures/namaqualand_cliff_02_rough_2k.exr",
+      "normal": "RawAssets/Downloaded/PolyHaven/namaqualand_cliff_02/textures/namaqualand_cliff_02_nor_gl_2k.exr",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": false,
+      "masked": false,
+      "source_asset": "namaqualand_cliff_02",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_wild_rooibos_bush",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/wild_rooibos_bush/textures/wild_rooibos_bush_diff_2k.jpg",
+      "roughness": "RawAssets/Downloaded/PolyHaven/wild_rooibos_bush/textures/wild_rooibos_bush_rough_2k.exr",
+      "normal": "RawAssets/Downloaded/PolyHaven/wild_rooibos_bush/textures/wild_rooibos_bush_nor_gl_2k.exr",
+      "opacity": null,
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": true,
+      "masked": false,
+      "source_asset": "wild_rooibos_bush",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R"
+    },
+    {
+      "name": "M_PH_wild_rooibos_bush_leaves",
+      "basecolor": "RawAssets/Downloaded/PolyHaven/wild_rooibos_bush/textures/wild_rooibos_bush_diff_2k.jpg",
+      "roughness": "RawAssets/Downloaded/PolyHaven/wild_rooibos_bush/textures/wild_rooibos_bush_rough_2k.exr",
+      "normal": "RawAssets/Downloaded/PolyHaven/wild_rooibos_bush/textures/wild_rooibos_bush_nor_gl_2k.exr",
+      "opacity": "RawAssets/Downloaded/PolyHaven/wild_rooibos_bush/textures/wild_rooibos_bush_alpha_2k.png",
+      "metallic": null,
+      "normal_opengl": true,
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "roughness_factor": 1.0,
+      "metallic_factor": 0.0,
+      "two_sided": true,
+      "masked": true,
+      "source_asset": "wild_rooibos_bush",
+      "basecolor_channel": "R",
+      "roughness_channel": "R",
+      "normal_channel": "R",
+      "opacity_channel": "R"
+    }
+  ],
+  "meshes": [
+    {
+      "name": "SM_PH_CourtyardHomes",
+      "fbx": "RawAssets/Environment/Downloaded/SM_PH_CourtyardHomes.fbx",
+      "category": "town",
+      "source_assets": [
+        "modular_urban_apartments_facade"
+      ],
+      "dimensions_m": [
+        12.66,
+        9.66,
+        4.2
+      ],
+      "triangles": 22888,
+      "materials": [
+        "M_PH_modular_urban_apartments_facade_trim_01",
+        "M_PH_modular_urban_apartments_facade_plaster",
+        "M_PH_modular_urban_apartments_facade_objects",
+        "M_PH_modular_urban_apartments_facade_glass",
+        "M_PH_modular_urban_apartments_facade_trim_02"
+      ],
+      "sha256": "ad07a3ff091654e15d4a938c6025a70c961f633f8ac5653de8fd62684404f690",
+      "origin": "center_xy_ground_z",
+      "notes": "Closed perimeter assembled from original 3 m facade bays, windows, doors, bases and cornices; textured roof closes the shell."
+    },
+    {
+      "name": "SM_PH_TownApartments",
+      "fbx": "RawAssets/Environment/Downloaded/SM_PH_TownApartments.fbx",
+      "category": "town",
+      "source_assets": [
+        "modular_urban_apartments_facade"
+      ],
+      "dimensions_m": [
+        18.66,
+        12.66,
+        10.2
+      ],
+      "triangles": 75395,
+      "materials": [
+        "M_PH_modular_urban_apartments_facade_trim_01",
+        "M_PH_modular_urban_apartments_facade_plaster",
+        "M_PH_modular_urban_apartments_facade_objects",
+        "M_PH_modular_urban_apartments_facade_glass",
+        "M_PH_modular_urban_apartments_facade_trim_02"
+      ],
+      "sha256": "5745f9b8b811089f51e71ce4bfb894380891e876a636aa2db0343586db62065a",
+      "origin": "center_xy_ground_z",
+      "notes": "Closed perimeter assembled from original 3 m facade bays, windows, doors, bases and cornices; textured roof closes the shell."
+    },
+    {
+      "name": "SM_PH_CivicBlock",
+      "fbx": "RawAssets/Environment/Downloaded/SM_PH_CivicBlock.fbx",
+      "category": "town",
+      "source_assets": [
+        "modular_urban_apartments_facade"
+      ],
+      "dimensions_m": [
+        24.66,
+        15.66,
+        13.2
+      ],
+      "triangles": 122217,
+      "materials": [
+        "M_PH_modular_urban_apartments_facade_trim_01",
+        "M_PH_modular_urban_apartments_facade_plaster",
+        "M_PH_modular_urban_apartments_facade_objects",
+        "M_PH_modular_urban_apartments_facade_glass",
+        "M_PH_modular_urban_apartments_facade_trim_02"
+      ],
+      "sha256": "a51e5c03f7549b6a4c98931e0b5e0625c175e1d04cc9569f3e1373d6651664eb",
+      "origin": "center_xy_ground_z",
+      "notes": "Closed perimeter assembled from original 3 m facade bays, windows, doors, bases and cornices; textured roof closes the shell."
+    },
+    {
+      "name": "SM_PH_AirfieldWorkshop",
+      "fbx": "RawAssets/Environment/Downloaded/SM_PH_AirfieldWorkshop.fbx",
+      "category": "town",
+      "source_assets": [
+        "modular_factory_facade"
+      ],
+      "dimensions_m": [
+        30.4,
+        18.4,
+        6.77
+      ],
+      "triangles": 60353,
+      "materials": [
+        "M_PH_modular_factory_facade_trim_01",
+        "M_PH_modular_factory_facade_brick",
+        "M_PH_modular_factory_facade_windows",
+        "M_PH_modular_factory_facade_windows_glass",
+        "M_PH_modular_factory_facade_garage",
+        "M_PH_modular_factory_facade_brick_doors"
+      ],
+      "sha256": "28e4e6a2205e1da9fded5e2418eda64ff96bfcf73e0a303dc27daf344a7de081",
+      "origin": "center_xy_ground_z",
+      "notes": "Closed industrial warehouse assembled from downloaded brick walls, metal loading doors, framed windows and stone cornices."
+    },
+    {
+      "name": "SM_PH_IslandTreeA",
+      "fbx": "RawAssets/Environment/Downloaded/SM_PH_IslandTreeA.fbx",
+      "category": "tree",
+      "source_assets": [
+        "island_tree_01"
+      ],
+      "dimensions_m": [
+        4.7472,
+        4.8124,
+        5.0275
+      ],
+      "triangles": 59999,
+      "materials": [
+        "M_PH_island_tree_01_branches",
+        "M_PH_island_tree_01_leaves",
+        "M_PH_island_tree_01"
+      ],
+      "sha256": "8ccef1f3cc25a0cc90c3b73784c4b1ff53639a1a10072ea641d49fb51cb1616b",
+      "origin": "center_xy_ground_z",
+      "notes": "Publisher LOD1, with separate trunk, branch and leaf simplification budgets; original UVs and opacity masks retained. Degenerate reduction faces removed and unit corner normals regenerated after FBX readback."
+    },
+    {
+      "name": "SM_PH_IslandTreeB",
+      "fbx": "RawAssets/Environment/Downloaded/SM_PH_IslandTreeB.fbx",
+      "category": "tree",
+      "source_assets": [
+        "island_tree_02"
+      ],
+      "dimensions_m": [
+        4.0572,
+        4.0733,
+        3.4089
+      ],
+      "triangles": 59999,
+      "materials": [
+        "M_PH_island_tree_02",
+        "M_PH_island_tree_02_leaves",
+        "M_PH_island_tree_02_branches"
+      ],
+      "sha256": "6f4bdf8f73c271296102480df11d4bed24697c8441a7203914174dfd7cf6b723",
+      "origin": "center_xy_ground_z",
+      "notes": "Publisher LOD1, with separate trunk, branch and leaf simplification budgets; original UVs and opacity masks retained. Degenerate reduction faces removed and unit corner normals regenerated after FBX readback."
+    },
+    {
+      "name": "SM_PH_RooibosBush",
+      "fbx": "RawAssets/Environment/Downloaded/SM_PH_RooibosBush.fbx",
+      "category": "shrub",
+      "source_assets": [
+        "wild_rooibos_bush"
+      ],
+      "dimensions_m": [
+        0.6836,
+        0.7468,
+        0.533
+      ],
+      "triangles": 9123,
+      "materials": [
+        "M_PH_wild_rooibos_bush_leaves",
+        "M_PH_wild_rooibos_bush"
+      ],
+      "sha256": "c6c8c02a61317d402772c8dbb1e47c88c92e31b979fee4b0a16dfc09021eed5e",
+      "origin": "center_xy_ground_z",
+      "notes": "Publisher authored LOD mesh, physical dimensions and original UVs preserved."
+    },
+    {
+      "name": "SM_PH_BermudaPatch",
+      "fbx": "RawAssets/Environment/Downloaded/SM_PH_BermudaPatch.fbx",
+      "category": "grass",
+      "source_assets": [
+        "grass_bermuda_01"
+      ],
+      "dimensions_m": [
+        2.0062,
+        1.9934,
+        0.1589
+      ],
+      "triangles": 17894,
+      "materials": [
+        "M_PH_grass_bermuda_01"
+      ],
+      "sha256": "997ec757f1f28394aee04441ee2d50644b8eee4a5da5691959a87105bda9b8d0",
+      "origin": "center_xy_ground_z",
+      "notes": "A two-metre patch assembled from 324 original, physically sized grass blades and seedling models; no giant tufts."
+    },
+    {
+      "name": "SM_PH_DesertBoulder",
+      "fbx": "RawAssets/Environment/Downloaded/SM_PH_DesertBoulder.fbx",
+      "category": "rock",
+      "source_assets": [
+        "namaqualand_boulder_02"
+      ],
+      "dimensions_m": [
+        2.5324,
+        1.2343,
+        0.882
+      ],
+      "triangles": 12245,
+      "materials": [
+        "M_PH_namaqualand_boulder_02"
+      ],
+      "sha256": "b345a32a3eeb3ebeb9a99fb91a01e1848b398d38ad8ea7a702ef161b73d32650",
+      "origin": "center_xy_ground_z",
+      "notes": "Publisher authored LOD mesh, physical dimensions and original UVs preserved."
+    },
+    {
+      "name": "SM_PH_DesertCliff",
+      "fbx": "RawAssets/Environment/Downloaded/SM_PH_DesertCliff.fbx",
+      "category": "rock",
+      "source_assets": [
+        "namaqualand_cliff_02"
+      ],
+      "dimensions_m": [
+        20.2295,
+        6.592,
+        7.1873
+      ],
+      "triangles": 48517,
+      "materials": [
+        "M_PH_namaqualand_cliff_02"
+      ],
+      "sha256": "e25d370b699eb2459c2d5d548b5c0b984ea64c21cd25e45f05ab40aa78b7b3a8",
+      "origin": "center_xy_ground_z",
+      "notes": "Publisher authored LOD mesh, physical dimensions and original UVs preserved."
+    },
+    {
+      "name": "SM_PH_Jacaranda",
+      "fbx": "RawAssets/Environment/Downloaded/SM_PH_Jacaranda.fbx",
+      "category": "tree",
+      "source_assets": [
+        "jacaranda_tree"
+      ],
+      "dimensions_m": [
+        24.3508,
+        19.1228,
+        19.4495
+      ],
+      "triangles": 119702,
+      "materials": [
+        "M_PH_jacaranda_tree_leaves",
+        "M_PH_jacaranda_tree_trunk",
+        "M_PH_jacaranda_tree_branches"
+      ],
+      "sha256": "040067e4338b9a04dac1ba617a06a5ce0b5160266be3582cefb6c56dd16bd91b",
+      "origin": "center_xy_ground_z",
+      "notes": "Publisher LOD1, with separate trunk, branch and leaf simplification budgets; original UVs and opacity masks retained. Degenerate reduction faces removed and unit corner normals regenerated after FBX readback."
+    }
+  ]
+}

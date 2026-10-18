@@ -4,6 +4,7 @@
 #include "DSEnemyAircraft.h"
 #include "DSPlayerController.h"
 #include "DSProjectile.h"
+#include "DSCannonFXComponent.h"
 #include "AutoPlay/AutoPlaySubsystem.h"
 #include "Camera/CameraComponent.h"
 #include "Components/SphereComponent.h"
@@ -33,6 +34,8 @@ ADSFlightPawn::ADSFlightPawn()
     AircraftMesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Aircraft"));
     AircraftMesh->SetupAttachment(Collision);
     AircraftMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+    CannonFX = CreateDefaultSubobject<UDSCannonFXComponent>(TEXT("CannonFX"));
+    CannonFX->SetupAttachment(Collision);
     LandingGear = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LandingGear"));
     LandingGear->SetupAttachment(AircraftMesh);
     LandingGear->SetRelativeScale3D(FVector(.8f));
@@ -229,6 +232,7 @@ void ADSFlightPawn::ConfigureAircraft(const FDSAircraftSpec& Aircraft)
 
 void ADSFlightPawn::Park()
 {
+    CannonFX->ResetEffects();
     bFlying = false;
     Speed = 0.f;
     FlightVelocity = FVector::ZeroVector;
@@ -243,6 +247,7 @@ void ADSFlightPawn::Park()
 
 void ADSFlightPawn::BeginFlight()
 {
+    CannonFX->ResetEffects();
     ResetControls();
     bFlying = true;
     Speed = Spec.CruiseSpeed;
@@ -397,13 +402,15 @@ void ADSFlightPawn::FireGun()
     if (!bFlying || CannonAmmo <= 0 || GunCooldown > 0.f) return;
     ADSGameMode* Mode = GetWorld()->GetAuthGameMode<ADSGameMode>();
     if (!Mode || Mode->Phase != EDSPhase::Flying) return;
-    const FVector Muzzle = GetActorLocation() + GetActorForwardVector() * 1100.f - GetActorUpVector() * 45.f;
+    const FVector Muzzle = GetActorLocation() + GetActorForwardVector() * 1100.f
+        + GetActorRightVector() * 160.f + GetActorUpVector() * 80.f;
     FActorSpawnParameters Params;
     Params.Owner = this;
     Params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
     ADSProjectile* Shot = GetWorld()->SpawnActor<ADSProjectile>(Muzzle, GetActorRotation(), Params);
     if (!Shot) return;
     Shot->Initialize(this, nullptr, true, false, 8.f, 1450.f + Speed);
+    CannonFX->FireShot(Muzzle, GetActorForwardVector(), GetVelocity(), false);
     --CannonAmmo;
     if (UAutoPlaySubsystem* AP = UAutoPlaySubsystem::Get(this); AP && AP->IsRunning())
         AP->Telemetry(TEXT("weapon_fired"), FString::Printf(TEXT("\"weapon\":\"cannon\",\"ammo\":%d"), CannonAmmo));

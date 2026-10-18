@@ -13,6 +13,7 @@ class UStaticMeshComponent;
 class UCameraComponent;
 class USpringArmComponent;
 class UAudioComponent;
+class UDSCannonFXComponent;
 class ADSEnemyAircraft;
 
 UCLASS()
@@ -67,6 +68,7 @@ private:
     UPROPERTY(VisibleAnywhere) TObjectPtr<UCameraComponent> Camera;
     UPROPERTY(VisibleAnywhere) TObjectPtr<UAudioComponent> EngineAudio;
     UPROPERTY(VisibleAnywhere) TObjectPtr<UAudioComponent> WindAudio;
+    UPROPERTY(VisibleAnywhere) TObjectPtr<UDSCannonFXComponent> CannonFX;
     UPROPERTY() TObjectPtr<UInputMappingContext> FlightMapping;
     UPROPERTY() TObjectPtr<UInputAction> MousePitchAction;
     UPROPERTY() TObjectPtr<UInputAction> MouseRollAction;

@@ -3,6 +3,7 @@
 #include "DSFlightPawn.h"
 #include "DSProjectile.h"
 #include "DSImpactFX.h"
+#include "DSCannonFXComponent.h"
 #include "Components/SphereComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Engine/StaticMesh.h"
@@ -20,6 +21,8 @@ ADSEnemyAircraft::ADSEnemyAircraft()
     Mesh = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("Airframe"));
     Mesh->SetupAttachment(Collision);
     Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+    CannonFX = CreateDefaultSubobject<UDSCannonFXComponent>(TEXT("CannonFX"));
+    CannonFX->SetupAttachment(Collision);
 }
 
 void ADSEnemyAircraft::Initialize(bool Bomber, const FVector& Destination)
@@ -88,8 +91,13 @@ void ADSEnemyAircraft::Tick(float Dt)
             FRotator ShotRot = TowardPlayer.Rotation();
             ShotRot.Pitch += FMath::FRandRange(-1.5f,1.5f);
             ShotRot.Yaw += FMath::FRandRange(-1.5f,1.5f);
-            ADSProjectile* Shot = GetWorld()->SpawnActor<ADSProjectile>(Pos + TowardPlayer * 1300.f, ShotRot);
-            if (Shot) Shot->Initialize(this, Player, false, false, bBomber ? 4.f : 5.f, 1100.f);
+            const FVector Muzzle = Pos + TowardPlayer * 1300.f;
+            ADSProjectile* Shot = GetWorld()->SpawnActor<ADSProjectile>(Muzzle, ShotRot);
+            if (Shot)
+            {
+                Shot->Initialize(this, Player, false, false, bBomber ? 4.f : 5.f, 1100.f);
+                CannonFX->FireShot(Muzzle, ShotRot.Vector(), GetActorForwardVector() * Speed * 100.f, true);
+            }
             GunCooldown = bBomber ? .4f : .22f;
         }
         if (!bBomber && PlayerDist < 450000.f && PlayerDist > 70000.f && Facing > .85f && MissileCooldown <= 0.f)

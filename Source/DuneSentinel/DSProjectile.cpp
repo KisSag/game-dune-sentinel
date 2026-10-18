@@ -4,11 +4,15 @@
 #include "DSFlightPawn.h"
 #include "DSGameMode.h"
 #include "DSImpactFX.h"
+#include "Camera/PlayerCameraManager.h"
 #include "Components/PointLightComponent.h"
+#include "Components/MaterialBillboardComponent.h"
 #include "Components/SphereComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Engine/StaticMesh.h"
 #include "Engine/World.h"
+#include "GameFramework/PlayerController.h"
+#include "Materials/MaterialInstanceDynamic.h"
 #include "Materials/MaterialInterface.h"
 #include "UObject/ConstructorHelpers.h"
 
@@ -26,6 +30,26 @@ ADSProjectile::ADSProjectile()
     static ConstructorHelpers::FObjectFinder<UStaticMesh> TracerMesh(TEXT("/Engine/BasicShapes/Sphere.Sphere"));
     if (TracerMesh.Succeeded()) Mesh->SetStaticMesh(TracerMesh.Object);
     Mesh->SetRelativeScale3D(FVector(2.4f, .06f, .06f));
+    static ConstructorHelpers::FObjectFinder<UStaticMesh> TrailPlane(TEXT("/Engine/BasicShapes/Plane.Plane"));
+    for (int32 Index = 0; Index < 3; ++Index)
+    {
+        UStaticMeshComponent* Plane = CreateDefaultSubobject<UStaticMeshComponent>(*FString::Printf(TEXT("CannonTrail%d"), Index));
+        Plane->SetupAttachment(Collision);
+        Plane->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+        Plane->SetCastShadow(false);
+        Plane->SetReceivesDecals(false);
+        Plane->SetVisibility(false);
+        Plane->SetRelativeRotation(FRotator(0.f, 0.f, Index * 60.f));
+        if (TrailPlane.Succeeded()) Plane->SetStaticMesh(TrailPlane.Object);
+        CannonTrailPlanes.Add(Plane);
+    }
+    CannonHead = CreateDefaultSubobject<UMaterialBillboardComponent>(TEXT("CannonHead"));
+    CannonHead->SetupAttachment(Collision);
+    CannonHead->SetCollisionEnabled(ECollisionEnabled::NoCollision);
+    CannonHead->SetGenerateOverlapEvents(false);
+    CannonHead->SetCastShadow(false);
+    CannonHead->SetReceivesDecals(false);
+    CannonHead->SetVisibility(false);
     Glow = CreateDefaultSubobject<UPointLightComponent>(TEXT("ProjectileGlow"));
     Glow->SetupAttachment(Collision);
     Glow->SetIntensity(0.f);
@@ -44,9 +68,28 @@ void ADSProjectile::Initialize(AActor* OwnerActor, AActor* TargetActor, bool bPl
     VelocityMps = FMath::Max(1.f, SpeedMps);
     TravelDirection = GetActorForwardVector();
     LifeSeconds = bGuided ? 10.f : 1.6f;
+    Mesh->SetVisibility(bGuided);
     if (!bGuided)
-        if (UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Art/Effects/M_Tracer.M_Tracer")))
-            Mesh->SetMaterial(0, Material);
+    {
+        if (UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Art/Effects/M_CannonTrail.M_CannonTrail")))
+        {
+            CannonTrailMaterial = UMaterialInstanceDynamic::Create(Material, this);
+            CannonTrailMaterial->SetVectorParameterValue(TEXT("Color"), bFriendly ? FLinearColor(1.f, .62f, .17f) : FLinearColor(1.f, .22f, .045f));
+            CannonTrailMaterial->SetScalarParameterValue(TEXT("Opacity"), .9f);
+            for (UStaticMeshComponent* Plane : CannonTrailPlanes) Plane->SetMaterial(0, CannonTrailMaterial);
+        }
+        // A small facing core stays visible when the camera looks directly along the crossed tail planes.
+        if (UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Art/Effects/M_CannonHead.M_CannonHead")))
+        {
+            CannonHeadMaterial = UMaterialInstanceDynamic::Create(Material, this);
+            CannonHeadMaterial->SetVectorParameterValue(TEXT("Color"), bFriendly ? FLinearColor(1.f, .62f, .17f) : FLinearColor(1.f, .22f, .045f));
+            CannonHeadMaterial->SetScalarParameterValue(TEXT("Opacity"), .9f);
+            CannonHeadMaterial->SetScalarParameterValue(TEXT("Strength"), 40000.f);
+            CannonHead->AddElement(CannonHeadMaterial, nullptr, false, 7.f, 7.f, nullptr);
+            CannonHead->SetVisibility(true);
+        }
+        UpdateCannonTrail();
+    }
     if (bGuided)
     {
         if (UStaticMesh* MissileMesh = LoadObject<UStaticMesh>(nullptr, TEXT("/Game/Art/Effects/SM_missile.SM_missile")))
@@ -122,7 +165,76 @@ void ADSProjectile::Tick(float DeltaSeconds)
         return;
     }
     SetActorLocation(End);
+    if (!bGuided)
+    {
+        DistanceTravelledCm += FVector::Distance(Start, End);
+        UpdateCannonTrail();
+    }
     if (End.Z <= Mode->GroundHeightAt(End) + 20.f) Impact(nullptr);
+}
+
+void ADSProjectile::UpdateCannonTrail()
+{
+    if (bGuided) return;
+    // The tail ends at the real projectile and cannot extend behind its firing position.
+    const float Length = FMath::Min(DistanceTravelledCm, FMath::Clamp(VelocityMps * 100.f * .018f, 1800.f, 4200.f));
+    float Width = 14.f;
+    if (APlayerController* PC = GetWorld()->GetFirstPlayerController(); PC && PC->PlayerCameraManager)
+    {
+        int32 ViewWidth = 0, ViewHeight = 0;
+        PC->GetViewportSize(ViewWidth, ViewHeight);
+        if (ViewWidth > 0)
+        {
+            const float Distance = FVector::Distance(PC->PlayerCameraManager->GetCameraLocation(), GetActorLocation());
+            const float HalfFOV = FMath::DegreesToRadians(PC->PlayerCameraManager->GetFOVAngle() * .5f);
+            const float TwoPixelWidth = 4.f * Distance * FMath::Tan(HalfFOV) / ViewWidth;
+            Width = FMath::Clamp(TwoPixelWidth, 14.f, 180.f);
+        }
+    }
+    for (UStaticMeshComponent* Plane : CannonTrailPlanes)
+    {
+        Plane->SetRelativeLocation(FVector(-Length * .5f, 0.f, 0.f));
+        Plane->SetRelativeScale3D(FVector(Length / 100.f, Width / 100.f, 1.f));
+        Plane->SetVisibility(CannonTrailMaterial && Length > 1.f);
+    }
+    if (CannonHeadMaterial && CannonHead->Elements.Num() > 0)
+    {
+        // Billboard geometry uses BaseSize directly; its camera basis cancels component scaling.
+        FMaterialSpriteElement& Element = CannonHead->Elements[0];
+        const float Radius = Width * .5f;
+        if (!FMath::IsNearlyEqual(Element.BaseSizeX, Radius, .25f))
+        {
+            Element.BaseSizeX = Element.BaseSizeY = Radius;
+            CannonHead->UpdateBounds();
+            CannonHead->MarkRenderStateDirty();
+        }
+    }
+}
+
+FVector ADSProjectile::GetCannonTrailHeadLocation() const
+{
+    return CannonTrailPlanes.Num() > 0
+        ? CannonTrailPlanes[0]->GetComponentTransform().TransformPosition(FVector(50.f, 0.f, 0.f))
+        : GetActorLocation();
+}
+
+FVector ADSProjectile::GetCannonTrailTailLocation() const
+{
+    return CannonTrailPlanes.Num() > 0
+        ? CannonTrailPlanes[0]->GetComponentTransform().TransformPosition(FVector(-50.f, 0.f, 0.f))
+        : GetActorLocation();
+}
+
+float ADSProjectile::GetCannonTrailLengthCm() const
+{
+    return GetVisibleCannonTrailPlaneCount() > 0 ? FVector::Distance(GetCannonTrailHeadLocation(), GetCannonTrailTailLocation()) : 0.f;
+}
+
+int32 ADSProjectile::GetVisibleCannonTrailPlaneCount() const
+{
+    int32 Count = 0;
+    for (const UStaticMeshComponent* Plane : CannonTrailPlanes) if (Plane && Plane->IsVisible()) ++Count;
+    return Count;
 }
 
 void ADSProjectile::Impact(AActor* HitActor)

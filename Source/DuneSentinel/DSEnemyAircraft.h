@@ -5,6 +5,7 @@
 
 class UStaticMeshComponent;
 class USphereComponent;
+class UDSCannonFXComponent;
 UCLASS()
 class DUNESENTINEL_API ADSEnemyAircraft : public AActor
 {
@@ -23,6 +24,7 @@ public:
     UPROPERTY(VisibleAnywhere) TObjectPtr<UStaticMeshComponent> Mesh;
     bool bEgress = false;
 private:
+    UPROPERTY(VisibleAnywhere) TObjectPtr<UDSCannonFXComponent> CannonFX;
     FVector Objective;
     float GunCooldown = 1.f;
     float MissileCooldown = 5.f;

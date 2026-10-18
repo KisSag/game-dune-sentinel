@@ -101,7 +101,7 @@
       "name": "original-desert-airbase-art",
       "origin": "studio",
       "source": "Original game artwork",
-      "description": "Authored terrain, airbase structures, missile, undercarriage, surface panel artwork and synthesized nonvoice audio created for this game by the retained art script",
+      "description": "Authored terrain, airbase structures, missile, undercarriage, surface panel artwork, cannon flash, smoke and tracer materials, and synthesized nonvoice audio created for this game by retained art scripts",
       "licence": "Project original work",
       "store": false,
       "files": [
@@ -122,7 +122,7 @@
         "Content/Blueprints/"
       ],
       "used_for": "20 km desert arena, distant scenic Gobi ground, defended airbase, missile geometry, parked aircraft undercarriage, coherent surface detail and sound feedback",
-      "changes": "Created for this project by retained Scripts/build_art_v1.py; distant ground ring by Scripts/build_horizon_v1.py; sound boundaries polished by Scripts/prepare_audio_v1.py; material and exposure repairs retained as versioned polish_environment scripts"
+      "changes": "Created for this project by retained Scripts/build_art_v1.py; distant ground ring by Scripts/build_horizon_v1.py; sound boundaries polished by Scripts/prepare_audio_v1.py; material and exposure repairs retained as versioned polish_environment scripts; original soft cannon flash, smoke, tapered tracer and projectile-head HLSL materials authored by Scripts/build_cannon_fx_v1.py"
     }
   ]
 }

@@ -1,0 +1,675 @@
+{
+  "schema": "authored-town-roads/v1",
+  "status": "passed",
+  "meshes": [
+    {
+      "name": "SM_AuthoredTownRoads",
+      "file": "RawAssets/Environment/AuthoredTownRoadsV1/SM_AuthoredTownRoads.fbx",
+      "slot": "Asphalt",
+      "vertices": 116733,
+      "triangles": 38911,
+      "bytes": 1374828,
+      "sha256": "e0efc88ad10eda06eb70a0ed77d62cba2f53669fb0f5284ef881e506fcfdd18b",
+      "stability_angle_threshold_degrees": 0.1,
+      "stability_minimum_angle_before_degrees": 0.04355584205610562,
+      "stability_minimum_angle_after_degrees": 0.10415464174383009,
+      "stability_removed_triangles": 11,
+      "stability_removed_area_m2": 1.0488333269022405,
+      "stability_bad_corner_normal_triangles": 0,
+      "corner_normal_checks": 116733,
+      "invalid_corner_normals": 0,
+      "uv_local_origin_m": [
+        190,
+        1430
+      ],
+      "native_uv_requirement": "Use full precision UVs; original world-projected materials remain unchanged",
+      "ground_error_max_abs_m": 1.0476074290000081e-05,
+      "ground_error_mean_abs_m": 7.105477354005582e-07,
+      "ground_error_sample_count": 272377,
+      "ground_target_offset_m": 0.2,
+      "exported_normal_vectors": 116733,
+      "exported_normal_length_min": 0.9999998876424763,
+      "exported_normal_length_max": 1.0000000960006425,
+      "exported_invalid_normals": 0,
+      "source_area_m2": 301676.9037473609,
+      "clipped_area_m2": 301676.90374736086,
+      "area_error_m2": -5.4569682106375694e-12,
+      "removed_sliver_area_m2": 2.4835419078010688,
+      "removed_sliver_triangles": 378,
+      "removed_sliver_fraction": 8.232456236957764e-06,
+      "total_removed_area_m2": 3.5323752347033093,
+      "total_removed_fraction": 1.1709133814438423e-05,
+      "category": "DSEnvironmentRoad",
+      "material_reuse": "Existing textured asphalt"
+    }
+  ],
+  "town": {
+    "center_m": [
+      0,
+      2600
+    ],
+    "half_size_m": [
+      800,
+      500
+    ],
+    "height_m": 48
+  },
+  "source_xy_units": "metres",
+  "mesh_actor_scale": [
+    1,
+    -1,
+    1
+  ],
+  "mesh_actor_location_cm": [
+    0,
+    0,
+    0
+  ],
+  "fbx_axes": {
+    "forward": "X",
+    "up": "Z"
+  },
+  "road_offset_m": 0.2,
+  "original_access_waypoints_m": [
+    [
+      1150,
+      -200
+    ],
+    [
+      1150,
+      1900
+    ],
+    [
+      450,
+      2320
+    ]
+  ],
+  "access_waypoints_m": [
+    [
+      1150,
+      -200
+    ],
+    [
+      950,
+      500
+    ],
+    [
+      600,
+      1200
+    ],
+    [
+      350,
+      1900
+    ],
+    [
+      150,
+      2100
+    ],
+    [
+      150,
+      2170
+    ]
+  ],
+  "retained_town_streets": 13,
+  "native_import_requirement": "Retain existing asphalt, query collision and full precision UVs; replace only the town road mesh",
+  "terrain": {
+    "metadata": "RawAssets/Environment/AuthoredDesert/landscape.json",
+    "metadata_sha256": "f4a90cdd1ef3ccc6cbe7119933df8ccf62afe3a19145b5906770bb0e941b51a2",
+    "height_r16": "RawAssets/Environment/AuthoredDesert/height.r16",
+    "height_r16_sha256": "57bef7ca9f17633ab64152f8a6dd4841bd3a93a1229c5c5a90744629a3c917b3",
+    "width": 2017,
+    "height": 2017,
+    "bounds_m": [
+      -10000.0,
+      -10000.0,
+      10000.0,
+      10000.0
+    ],
+    "grid_m": [
+      9.920634920634921,
+      9.920634920634921
+    ],
+    "scale_cm": [
+      992.063492063492,
+      992.063492063492,
+      640.0
+    ],
+    "location_cm": [
+      -1000000.0,
+      -1000000.0,
+      120000.0
+    ],
+    "diagonal": "00_to_11",
+    "height_quantization_step_m": 0.05,
+    "collision_mip_level": 0,
+    "coordinates": "Unreal world XY metres; no reflection"
+  },
+  "clipping_helper": {
+    "file": "Scripts/build_authored_ground_details_v2.py",
+    "sha256": "6fb76475ba5b621862d3ec44754d65e91ee4f5883375de7dc4456422ec18c632"
+  },
+  "original_access_audit": {
+    "length_m": 2916.3332652783533,
+    "triangle_intervals": 875,
+    "minimum_height_m": 21.799999999999955,
+    "maximum_height_m": 195.7840000000006,
+    "maximum_longitudinal_slope_degrees": 39.23095046865485,
+    "worst_interval": {
+      "start_m": [
+        1150.0,
+        1855.1587301587301,
+        167.58400000000063
+      ],
+      "end_m": [
+        1150.0,
+        1862.5,
+        173.5780000000008
+      ],
+      "length_m": 7.341269841269985,
+      "slope_degrees": 39.23095046865485
+    },
+    "length_over_20_degrees_m": 480.64761016073487,
+    "sampled_maximum_crossfall_degrees": 48.56669025237545,
+    "crossfall_samples": 235
+  },
+  "routes": [
+    {
+      "name": "town_east_west_2170",
+      "width_m": 16,
+      "centerline": {
+        "length_m": 1499.9999999999975,
+        "triangle_intervals": 419,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            -750.0,
+            2170.0,
+            48.0
+          ],
+          "end_m": [
+            -746.6666666666688,
+            2170.0,
+            48.0
+          ],
+          "length_m": 3.333333333331228,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 121
+      },
+      "full_width": {
+        "native_plane_faces": 3136,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 23999.964267717787,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "town_east_west_2320",
+      "width_m": 16,
+      "centerline": {
+        "length_m": 1500.0000000000036,
+        "triangle_intervals": 419,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            -750.0,
+            2320.0,
+            48.0
+          ],
+          "end_m": [
+            -745.4761904761914,
+            2320.0,
+            48.0
+          ],
+          "length_m": 4.5238095238086,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 121
+      },
+      "full_width": {
+        "native_plane_faces": 2364,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 23999.980068747107,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "town_east_west_2470",
+      "width_m": 16,
+      "centerline": {
+        "length_m": 1499.9999999999961,
+        "triangle_intervals": 419,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            -750.0,
+            2470.0,
+            48.0
+          ],
+          "end_m": [
+            -744.2857142857163,
+            2470.0,
+            48.0
+          ],
+          "length_m": 5.714285714283716,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 121
+      },
+      "full_width": {
+        "native_plane_faces": 2372,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 23999.946584354635,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "town_east_west_2620",
+      "width_m": 16,
+      "centerline": {
+        "length_m": 1499.9999999999966,
+        "triangle_intervals": 419,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            -750.0,
+            2620.0,
+            48.0
+          ],
+          "end_m": [
+            -744.0476190476188,
+            2620.0,
+            48.0
+          ],
+          "length_m": 5.952380952381221,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 121
+      },
+      "full_width": {
+        "native_plane_faces": 2365,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 23999.959845049074,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "town_east_west_2770",
+      "width_m": 16,
+      "centerline": {
+        "length_m": 1500.0000000000045,
+        "triangle_intervals": 419,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            -750.0,
+            2770.0,
+            48.0
+          ],
+          "end_m": [
+            -744.0476190476188,
+            2770.0,
+            48.0
+          ],
+          "length_m": 5.952380952381221,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 121
+      },
+      "full_width": {
+        "native_plane_faces": 3128,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 23999.870572832322,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "town_east_west_2920",
+      "width_m": 16,
+      "centerline": {
+        "length_m": 1499.9999999999977,
+        "triangle_intervals": 419,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            -750.0,
+            2920.0,
+            48.0
+          ],
+          "end_m": [
+            -744.0476190476188,
+            2920.0,
+            48.0
+          ],
+          "length_m": 5.952380952381221,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 121
+      },
+      "full_width": {
+        "native_plane_faces": 3132,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 23999.93440458198,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "town_east_west_3070",
+      "width_m": 16,
+      "centerline": {
+        "length_m": 1500.0000000000005,
+        "triangle_intervals": 420,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            -750.0,
+            3070.0,
+            48.0
+          ],
+          "end_m": [
+            -749.4444444444463,
+            3070.0,
+            48.0
+          ],
+          "length_m": 0.5555555555537008,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 121
+      },
+      "full_width": {
+        "native_plane_faces": 3135,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 23999.943252168625,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "town_north_south_-750",
+      "width_m": 18,
+      "centerline": {
+        "length_m": 899.9999999999989,
+        "triangle_intervals": 254,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            -750.0,
+            2170.0,
+            48.0
+          ],
+          "end_m": [
+            -750.0,
+            2172.619047619049,
+            48.0
+          ],
+          "length_m": 2.619047619048865,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 73
+      },
+      "full_width": {
+        "native_plane_faces": 2313,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 16199.910612403239,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "town_north_south_-450",
+      "width_m": 18,
+      "centerline": {
+        "length_m": 899.9999999999987,
+        "triangle_intervals": 253,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            -450.0,
+            2170.0,
+            48.0
+          ],
+          "end_m": [
+            -450.0,
+            2172.619047619049,
+            48.0
+          ],
+          "length_m": 2.619047619048865,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 73
+      },
+      "full_width": {
+        "native_plane_faces": 2311,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 16199.932934993483,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "town_north_south_-150",
+      "width_m": 18,
+      "centerline": {
+        "length_m": 900.000000000001,
+        "triangle_intervals": 254,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            -150.0,
+            2170.0,
+            48.0
+          ],
+          "end_m": [
+            -150.0,
+            2171.428571428574,
+            48.0
+          ],
+          "length_m": 1.4285714285737487,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 73
+      },
+      "full_width": {
+        "native_plane_faces": 2306,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 16199.827034689579,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "town_north_south_150",
+      "width_m": 18,
+      "centerline": {
+        "length_m": 900.0000000000007,
+        "triangle_intervals": 254,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            150.0,
+            2170.0,
+            48.0
+          ],
+          "end_m": [
+            150.0,
+            2172.619047619049,
+            48.0
+          ],
+          "length_m": 2.619047619048865,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 73
+      },
+      "full_width": {
+        "native_plane_faces": 2299,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 16199.83495186509,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "town_north_south_450",
+      "width_m": 18,
+      "centerline": {
+        "length_m": 900.0000000000015,
+        "triangle_intervals": 254,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            450.0,
+            2170.0,
+            48.0
+          ],
+          "end_m": [
+            450.0,
+            2172.619047619049,
+            48.0
+          ],
+          "length_m": 2.619047619048865,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 73
+      },
+      "full_width": {
+        "native_plane_faces": 2304,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 16199.623840972019,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "town_north_south_750",
+      "width_m": 18,
+      "centerline": {
+        "length_m": 899.9999999999986,
+        "triangle_intervals": 253,
+        "minimum_height_m": 48.0,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 0.0,
+        "worst_interval": {
+          "start_m": [
+            750.0,
+            2170.0,
+            48.0
+          ],
+          "end_m": [
+            750.0,
+            2172.619047619049,
+            48.0
+          ],
+          "length_m": 2.619047619048865,
+          "slope_degrees": 0.0
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 0.0,
+        "crossfall_samples": 73
+      },
+      "full_width": {
+        "native_plane_faces": 2306,
+        "maximum_surface_slope_degrees": 0.0,
+        "footprint_m2": 16199.89774423225,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    },
+    {
+      "name": "valley_airfield_access",
+      "width_m": 14,
+      "centerline": {
+        "length_m": 2606.7809308935293,
+        "triangle_intervals": 880,
+        "minimum_height_m": 21.799999999999955,
+        "maximum_height_m": 48.0,
+        "maximum_longitudinal_slope_degrees": 6.210924968757146,
+        "worst_interval": {
+          "start_m": [
+            350.6265664160402,
+            1898.2456140350873,
+            28.463263157894655
+          ],
+          "end_m": [
+            350.0,
+            1900.0,
+            28.66599999999996
+          ],
+          "length_m": 1.8629158831229278,
+          "slope_degrees": 6.210924968757146
+        },
+        "length_over_20_degrees_m": 0,
+        "sampled_maximum_crossfall_degrees": 6.474799327029598,
+        "crossfall_samples": 212
+      },
+      "full_width": {
+        "native_plane_faces": 5451,
+        "maximum_surface_slope_degrees": 8.616795039608071,
+        "footprint_m2": 36475.79409084593,
+        "footprint_over_20_degrees_m2": 0.0
+      }
+    }
+  ],
+  "lod_risk_proxy": {
+    "scope": "CPU coarsened-grid surrogate only; not actual Landscape renderer LOD measurements",
+    "samples": [
+      {
+        "vertex_stride": 2,
+        "coarse_above_full_max_m": 0.07029999999994985,
+        "coarse_below_full_max_m": 0.08243478260863668
+      },
+      {
+        "vertex_stride": 4,
+        "coarse_above_full_max_m": 0.2542500000000203,
+        "coarse_below_full_max_m": 0.2984347826086591
+      },
+      {
+        "vertex_stride": 8,
+        "coarse_above_full_max_m": 1.1040999999999315,
+        "coarse_below_full_max_m": 0.9697826086956312
+      }
+    ]
+  },
+  "render_note": "Roads sit 0.20 m above full-resolution terrain. Inspect the real view for Landscape LOD intersection; do not treat CPU fit as proof of visible continuity.",
+  "elapsed_s": 4.671
+}

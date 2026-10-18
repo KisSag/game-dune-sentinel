@@ -27,7 +27,8 @@ namespace
 class FDSBomberFormationRenderCommand final : public IAutomationLatentCommand
 {
 public:
-    explicit FDSBomberFormationRenderCommand(FAutomationTestBase* InTest) : Test(InTest) {}
+    explicit FDSBomberFormationRenderCommand(FAutomationTestBase* InTest) : Test(InTest),
+        bNoMedia(FParse::Param(FCommandLine::Get(), TEXT("DSNoMedia"))) {}
     virtual ~FDSBomberFormationRenderCommand() override { RemoveDelegate(); }
 
     virtual bool Update() override
@@ -111,6 +112,7 @@ private:
     uint64 CameraSettleFrame = 0;
     bool bInitialized = false, bFinished = false, bOriginalModeTick = true, bOriginalPlayerTick = true, bOriginalAutoCamera = true;
     bool bEverReformed = false, bEarlyBomb = false, bPartialRelease = false;
+    const bool bNoMedia;
 
     void Check(const FString& Name, bool bPassed)
     {
@@ -490,6 +492,13 @@ private:
             }
             Check(FString::Printf(TEXT("%s keeps all five aircraft centers within the HUD-free observation area"), Name), bClearOfHUD);
         }
+        if (bNoMedia)
+        {
+            Captures.Add(FString::Printf(TEXT("{\"file\":null,\"kind\":\"numeric_only\",\"moment\":\"%s\",\"world_time_s\":%.6f,\"render_frame\":%llu,\"group_size\":%d,\"released\":%d,\"bombs_created\":%d,\"airport_health\":%.1f,\"max_slot_error_cm\":%.6f}"),
+                Name, World->GetTimeSeconds(), static_cast<unsigned long long>(GFrameCounter), ExpectedCount, ReleasedCount,
+                ObservedBombs.Num(), Mode->AirportHealth, MaxSlotError));
+            return;
+        }
         PendingScreenshot = OutputDir / (FString(Name) + TEXT(".png"));
         ScreenshotRequestedAt = FPlatformTime::Seconds();
         Captures.Add(FString::Printf(TEXT("{\"file\":\"%s.png\",\"world_time_s\":%.6f,\"render_frame\":%llu,\"group_size\":%d,\"released\":%d,\"bombs_created\":%d,\"airport_health\":%.1f,\"max_slot_error_cm\":%.6f}"),
@@ -519,13 +528,19 @@ private:
             if (OriginalViewTarget.IsValid()) PC->SetViewTarget(OriginalViewTarget.Get());
         }
         if (ReviewCamera.IsValid()) ReviewCamera->Destroy();
-        Check(TEXT("Eight actual viewport evidence frames were saved"), Images.Num() == 8);
+        if (bNoMedia)
+        {
+            Check(TEXT("Eight numeric formation observations were recorded"), Captures.Num() == 8);
+            Test->AddInfo(TEXT("DSNoMedia: screenshot evidence was not requested or evaluated; visual review was not observed."));
+        }
+        else Check(TEXT("Eight actual viewport evidence frames were saved"), Images.Num() == 8);
         if (!OutputDir.IsEmpty())
         {
             TArray<FString> ImageJson;
             for (const FString& Name : Images) ImageJson.Add(TEXT("\"") + Name + TEXT("\""));
-            const FString Report = FString::Printf(TEXT("{\"schema\":\"bomber-formation-acceptance/1\",\"status\":\"%s\",\"checks_scope\":\"mechanical_only\",\"visual_review\":\"required\",\"fixture\":\"development observation of real wave spawning and enemy AI; no AutoPlay\",\"simulated_seconds\":%.3f,\"checks\":[%s],\"capacity_cases\":[%s],\"three_frame_samples\":%d,\"five_frame_samples\":%d,\"motion_samples\":%d,\"max_slot_error_cm\":%.6f,\"max_symmetry_error_cm\":%.6f,\"max_motion_relative_error\":%.6f,\"release_distance_cm\":%.3f,\"attack_lateral_change_cm\":%.3f,\"bombs_observed\":%d,\"initial_airport_health\":%.1f,\"final_airport_health\":%.1f,\"screenshots\":[%s],\"capture_observations\":[%s]}\n"),
-                Test->HasAnyErrors() ? TEXT("failed") : TEXT("passed"), World.IsValid() ? World->GetTimeSeconds() - SimulationStarted : 0.f,
+            const FString Report = FString::Printf(TEXT("{\"schema\":\"bomber-formation-acceptance/1\",\"status\":\"%s\",\"checks_scope\":\"mechanical_only\",\"visual_review\":\"%s\",\"media_capture\":\"%s\",\"media_files_written\":%d,\"screenshot_check\":\"%s\",\"fixture\":\"development observation of real wave spawning and enemy AI; no AutoPlay\",\"simulated_seconds\":%.3f,\"checks\":[%s],\"capacity_cases\":[%s],\"three_frame_samples\":%d,\"five_frame_samples\":%d,\"motion_samples\":%d,\"max_slot_error_cm\":%.6f,\"max_symmetry_error_cm\":%.6f,\"max_motion_relative_error\":%.6f,\"release_distance_cm\":%.3f,\"attack_lateral_change_cm\":%.3f,\"bombs_observed\":%d,\"initial_airport_health\":%.1f,\"final_airport_health\":%.1f,\"screenshots\":[%s],\"capture_observations\":[%s]}\n"),
+                Test->HasAnyErrors() ? TEXT("failed") : TEXT("passed"), bNoMedia ? TEXT("not_observed") : TEXT("required"),
+                bNoMedia ? TEXT("disabled") : TEXT("enabled"), Images.Num(), bNoMedia ? TEXT("not_run") : TEXT("evaluated"), World.IsValid() ? World->GetTimeSeconds() - SimulationStarted : 0.f,
                 *FString::Join(Checks, TEXT(",")), *FString::Join(CapacityReports, TEXT(",")), ThreeSamples, FiveSamples, MotionSamples,
                 MaxSlotError, MaxSymmetryError, MaxMotionRelativeError, ReleaseDistance, MaxAttackLateralChange, ObservedBombs.Num(), InitialAirportHealth, FinalAirportHealth,
                 *FString::Join(ImageJson, TEXT(",")), *FString::Join(Captures, TEXT(",")));
@@ -542,9 +557,10 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FDSBomberFormationRenderTest, "DuneSentinel.Ren
 
 bool FDSBomberFormationRenderTest::RunTest(const FString& Parameters)
 {
-    if (!FParse::Param(FCommandLine::Get(), TEXT("DSBomberFormationValidation")) || FParse::Param(FCommandLine::Get(), TEXT("AutoPlay")))
+    if (!FParse::Param(FCommandLine::Get(), TEXT("DSBomberFormationValidation")) || FParse::Param(FCommandLine::Get(), TEXT("AutoPlay")) ||
+        (FParse::Param(FCommandLine::Get(), TEXT("DSNoMedia")) && FParse::Param(FCommandLine::Get(), TEXT("CaptureFrames"))))
     {
-        AddError(TEXT("Use a dedicated -game -DSBomberFormationValidation launch without -AutoPlay on DesertDefense."));
+        AddError(TEXT("Use a dedicated -game -DSBomberFormationValidation launch without -AutoPlay on DesertDefense; DSNoMedia also forbids CaptureFrames."));
         return false;
     }
     ADD_LATENT_AUTOMATION_COMMAND(FDSBomberFormationRenderCommand(this));

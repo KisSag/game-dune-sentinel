@@ -32,7 +32,8 @@ namespace
 class FDSCannonFXRenderCommand final : public IAutomationLatentCommand
 {
 public:
-    explicit FDSCannonFXRenderCommand(FAutomationTestBase* InTest) : Test(InTest) {}
+    explicit FDSCannonFXRenderCommand(FAutomationTestBase* InTest) : Test(InTest),
+        bNoMedia(FParse::Param(FCommandLine::Get(), TEXT("DSNoMedia"))) {}
     virtual ~FDSCannonFXRenderCommand() override { RemoveWorldDelegates(); }
 
     virtual bool Update() override
@@ -111,29 +112,25 @@ private:
         if (Phase == EPhase::Fire)
         {
             if (Now - PhaseStarted > 9.f)
-                return Finish(TEXT("Normal fire did not yield two rendered evidence frames in time."));
+                return Finish(bNoMedia ? TEXT("Normal fire did not yield both numeric observations in time.") :
+                    TEXT("Normal fire did not yield two rendered evidence frames in time."));
             const uint64 Shots = FX->GetShotCount() - ShotBaseline;
             if (Shots > 0 && FirstShotComponents < 0)
                 FirstShotComponents = PeakComponents = Shooter->GetComponents().Num();
+            // The numeric path advances on the next real actor tick, without
+            // requesting a screenshot or treating an omitted image as evidence.
+            if (bNoMedia && (CaptureStep == 1 || CaptureStep == 3))
+            {
+                AdvanceAfterObservation(Now);
+                return false;
+            }
             if (!PendingScreenshot.IsEmpty())
             {
                 if (!FScreenshotRequest::IsScreenshotRequested() && IFileManager::Get().FileSize(*PendingScreenshot) > 1024)
                 {
                     ScreenshotNames.Add(FPaths::GetCleanFilename(PendingScreenshot));
                     PendingScreenshot.Empty();
-                    if (CaptureStep == 1)
-                    {
-                        bSideView = true;
-                        SecondCaptureAfter = Now + .35f;
-                        SideViewReadyFrame = GFrameCounter + 3;
-                        CaptureStep = 2;
-                    }
-                    else
-                    {
-                        if (Enemy.IsValid()) Enemy->SetActorTickEnabled(false);
-                        Phase = EPhase::Drain;
-                        PhaseStarted = Now;
-                    }
+                    AdvanceAfterObservation(Now);
                 }
                 else if (FPlatformTime::Seconds() - ScreenshotRequestedAt > 8.0)
                     return Finish(TEXT("The viewport did not write the requested screenshot."));
@@ -200,6 +197,24 @@ private:
     float MaxTrailHeadError = 0.f, MaxTravelError = 0.f, MaxSpeedRelativeError = 0.f;
     bool bInitialized = false, bFinished = false, bOriginalModeTick = true, bOriginalAutoCamera = true, bSideView = false;
     bool bTrailGeometryValid = true;
+    const bool bNoMedia;
+
+    void AdvanceAfterObservation(float Now)
+    {
+        if (CaptureStep == 1)
+        {
+            bSideView = true;
+            SecondCaptureAfter = Now + .35f;
+            SideViewReadyFrame = GFrameCounter + 3;
+            CaptureStep = 2;
+        }
+        else
+        {
+            if (Enemy.IsValid()) Enemy->SetActorTickEnabled(false);
+            Phase = EPhase::Drain;
+            PhaseStarted = Now;
+        }
+    }
 
     void BeforeActorTick(UWorld* TickWorld, ELevelTick, float)
     {
@@ -332,6 +347,14 @@ private:
 
     void RequestFrame(const TCHAR* Moment)
     {
+        if (bNoMedia)
+        {
+            CaptureObservations.Add(FString::Printf(TEXT("{\"file\":null,\"kind\":\"numeric_only\",\"case\":\"%s\",\"moment\":\"%s\",\"world_time_s\":%.6f,\"render_frame\":%llu,\"shots\":%llu,\"flash\":%d,\"smoke\":%d,\"visible_trails\":%d,\"view\":\"%s\",\"phase\":\"post_actor_tick\"}"),
+                *CaseName, Moment, World->GetTimeSeconds(), static_cast<unsigned long long>(GFrameCounter),
+                static_cast<unsigned long long>(FX->GetShotCount() - ShotBaseline), FX->GetActiveFlashCount(),
+                FX->GetActiveSmokeCount(), CurrentVisibleTrails, bSideView ? TEXT("side") : TEXT("normal_chase")));
+            return;
+        }
         PendingScreenshot = OutputDir / (CaseName + TEXT("_") + Moment + TEXT(".png"));
         ScreenshotRequestedAt = FPlatformTime::Seconds();
         CaptureObservations.Add(FString::Printf(TEXT("{\"file\":\"%s\",\"world_time_s\":%.6f,\"render_frame\":%llu,\"shots\":%llu,\"flash\":%d,\"smoke\":%d,\"visible_trails\":%d,\"view\":\"%s\",\"phase\":\"post_actor_tick\"}"),
@@ -349,7 +372,8 @@ private:
         const uint64 Shots = FX->GetShotCount() - ShotBaseline;
         const int32 FlashAfter = FX->GetActiveFlashCount(), SmokeAfter = FX->GetActiveSmokeCount();
         const int32 ComponentsAfter = Shooter->GetComponents().Num();
-        Test->TestTrue(CaseName + TEXT(": real firing sustained both evidence frames"), Shots >= static_cast<uint64>(CaseIndex < 3 ? 16 : 5));
+        Test->TestTrue(CaseName + (bNoMedia ? TEXT(": real firing sustained both numeric observations") :
+            TEXT(": real firing sustained both evidence frames")), Shots >= static_cast<uint64>(CaseIndex < 3 ? 16 : 5));
         if (CaseIndex < 3) Test->TestTrue(CaseName + TEXT(": real firing consumed ammunition"), Mode->Player->CannonAmmo < AmmoBaseline);
         Test->TestTrue(CaseName + TEXT(": flash and smoke activated"), MaxFlash > 0 && MaxSmoke > 0 && MaxSmoke <= 16);
         Test->TestTrue(CaseName + TEXT(": trail planes follow real projectile geometry"), TrailSamples > 0 && bTrailGeometryValid && MaxTrailHeadError < 2.f);
@@ -382,16 +406,22 @@ private:
         }
         if (ReviewCamera.IsValid()) ReviewCamera->Destroy();
         Test->TestEqual(TEXT("All five real firing cases completed"), CaseReports.Num(), 5);
-        Test->TestEqual(TEXT("Ten actual viewport screenshots were saved"), ScreenshotNames.Num(), 10);
+        if (bNoMedia)
+        {
+            Test->TestEqual(TEXT("Ten numeric firing observations were recorded"), CaptureObservations.Num(), 10);
+            Test->AddInfo(TEXT("DSNoMedia: screenshot evidence was not requested or evaluated; visual review was not observed."));
+        }
+        else Test->TestEqual(TEXT("Ten actual viewport screenshots were saved"), ScreenshotNames.Num(), 10);
         if (!OutputDir.IsEmpty())
         {
             TArray<FString> Images;
             for (const FString& Name : ScreenshotNames) Images.Add(TEXT("\"") + Name + TEXT("\""));
-            const FString Report = FString::Printf(TEXT("{\"schema\":\"cannon-fx-acceptance/1\",\"status\":\"%s\",\"checks_scope\":\"mechanical_only\",\"visual_review\":\"required\",\"fixture\":\"development automation using normal firing paths; no AutoPlay\",\"cases\":[%s],\"screenshots\":[%s],\"capture_observations\":[%s]}\n"),
-                Test->HasAnyErrors() ? TEXT("failed") : TEXT("passed"), *FString::Join(CaseReports, TEXT(",")),
+            const FString Report = FString::Printf(TEXT("{\"schema\":\"cannon-fx-acceptance/1\",\"status\":\"%s\",\"checks_scope\":\"mechanical_only\",\"visual_review\":\"%s\",\"media_capture\":\"%s\",\"media_files_written\":%d,\"screenshot_check\":\"%s\",\"fixture\":\"development automation using normal firing paths; no AutoPlay\",\"cases\":[%s],\"screenshots\":[%s],\"capture_observations\":[%s]}\n"),
+                Test->HasAnyErrors() ? TEXT("failed") : TEXT("passed"), bNoMedia ? TEXT("not_observed") : TEXT("required"),
+                bNoMedia ? TEXT("disabled") : TEXT("enabled"), ScreenshotNames.Num(), bNoMedia ? TEXT("not_run") : TEXT("evaluated"), *FString::Join(CaseReports, TEXT(",")),
                 *FString::Join(Images, TEXT(",")), *FString::Join(CaptureObservations, TEXT(",")));
             Test->TestTrue(TEXT("Acceptance report saved"), FFileHelper::SaveStringToFile(Report, *(OutputDir / TEXT("report.json")), FFileHelper::EEncodingOptions::ForceUTF8WithoutBOM));
-            Test->AddInfo(TEXT("Cannon visual evidence: ") + OutputDir);
+            Test->AddInfo((bNoMedia ? TEXT("Cannon numeric evidence: ") : TEXT("Cannon visual evidence: ")) + OutputDir);
         }
         return true;
     }
@@ -404,9 +434,10 @@ IMPLEMENT_SIMPLE_AUTOMATION_TEST(FDSCannonFXRenderTest, "DuneSentinel.Rendering.
 bool FDSCannonFXRenderTest::RunTest(const FString& Parameters)
 {
     if (!FParse::Param(FCommandLine::Get(), TEXT("DSCannonFXValidation")) ||
-        FParse::Param(FCommandLine::Get(), TEXT("AutoPlay")))
+        FParse::Param(FCommandLine::Get(), TEXT("AutoPlay")) ||
+        (FParse::Param(FCommandLine::Get(), TEXT("DSNoMedia")) && FParse::Param(FCommandLine::Get(), TEXT("CaptureFrames"))))
     {
-        AddError(TEXT("Use a dedicated -game -DSCannonFXValidation launch without -AutoPlay on DesertDefense."));
+        AddError(TEXT("Use a dedicated -game -DSCannonFXValidation launch without -AutoPlay on DesertDefense; DSNoMedia also forbids CaptureFrames."));
         return false;
     }
     ADD_LATENT_AUTOMATION_COMMAND(FDSCannonFXRenderCommand(this));

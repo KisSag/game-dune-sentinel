@@ -343,8 +343,10 @@ AActor* UDSLandscapeTools::ImportTerrainLandscape(UObject* WorldContextObject, c
     Landscape->Import(FGuid::NewGuid(), 0, 0, Width - 1, Height - 1, Sections, Quads, Heights,
         *HeightPath, Paint, ELandscapeImportAlphamapType::Additive, TArrayView<const FLandscapeLayer>());
 #if ENGINE_MAJOR_VERSION == 5 && ENGINE_MINOR_VERSION == 7
-    // Restore retained paint bytes after the older importer's weight adjustment.
-    // Keep the requested blend mode and every original layer value unchanged.
+    // 5.7 Import writes its default edit layer with legacy weight adjustment:
+    // each later layer redistributes earlier layers even for Additive input.
+    // These source layers are already normalized together. Restore their exact
+    // values without that redistribution; retain the final-weight blend mode.
     if (!PaintLayers.IsEmpty())
     {
         ULandscapeInfo* ImportedInfo = Landscape->GetLandscapeInfo();

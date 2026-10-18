@@ -1,0 +1,55 @@
+{
+  "bounds_cm": [
+    -1000000,
+    1000000
+  ],
+  "central_height_cm": 2000,
+  "central_flat_radius_cm": 180000,
+  "airfield_surface_cm": 2200,
+  "mountains_m": [
+    [
+      -7200,
+      4400,
+      620,
+      2000,
+      1500
+    ],
+    [
+      7200,
+      4800,
+      810,
+      1700,
+      2100
+    ],
+    [
+      -6600,
+      -6100,
+      540,
+      2100,
+      1600
+    ],
+    [
+      5700,
+      -7200,
+      690,
+      2300,
+      1500
+    ],
+    [
+      1000,
+      8500,
+      710,
+      2500,
+      1300
+    ],
+    [
+      -8900,
+      -400,
+      430,
+      1000,
+      2500
+    ]
+  ],
+  "grid_vertices": 241,
+  "formula": "See height(x,y) in Scripts/build_art_v1.py; inputs/outputs metres"
+}

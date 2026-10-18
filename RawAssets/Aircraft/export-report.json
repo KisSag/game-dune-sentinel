@@ -1,0 +1,150 @@
+[
+  {
+    "slug": "falcon",
+    "source": "basic/basic_replacements.blend",
+    "source_objects": [
+      "f15_eagle"
+    ],
+    "forward": "+X",
+    "up": "+Z",
+    "units": "metres (FBX exporter embeds centimetre conversion)",
+    "dimensions_m": [
+      19.60305118560791,
+      13.207504272460938,
+      4.255703926086426
+    ],
+    "vertices": 2085,
+    "triangles": 4126,
+    "materials": [
+      "M_Airframe",
+      "M_Engine",
+      "M_Intake",
+      "M_Canopy"
+    ],
+    "original_forward_axis": "X",
+    "original_forward_sign": 1,
+    "canopy_centroid_relative": 46.517670416062884,
+    "uv_layers": [
+      "UVMap"
+    ]
+  },
+  {
+    "slug": "lancer",
+    "source": "basic/basic_replacements.blend",
+    "source_objects": [
+      "eurofighter"
+    ],
+    "forward": "+X",
+    "up": "+Z",
+    "units": "metres (FBX exporter embeds centimetre conversion)",
+    "dimensions_m": [
+      15.78611946105957,
+      10.556875228881836,
+      4.601215362548828
+    ],
+    "vertices": 1667,
+    "triangles": 3212,
+    "materials": [
+      "M_Airframe",
+      "M_Engine",
+      "M_Intake",
+      "M_Canopy"
+    ],
+    "original_forward_axis": "X",
+    "original_forward_sign": 1,
+    "canopy_centroid_relative": 36.9768273769281,
+    "uv_layers": [
+      "UVMap"
+    ]
+  },
+  {
+    "slug": "mirage",
+    "source": "basic/basic_replacements.blend",
+    "source_objects": [
+      "rafale_B"
+    ],
+    "forward": "+X",
+    "up": "+Z",
+    "units": "metres (FBX exporter embeds centimetre conversion)",
+    "dimensions_m": [
+      15.235275268554688,
+      10.68072509765625,
+      4.170787572860718
+    ],
+    "vertices": 2099,
+    "triangles": 4144,
+    "materials": [
+      "M_Airframe",
+      "M_Engine",
+      "M_Intake",
+      "M_Canopy"
+    ],
+    "original_forward_axis": "X",
+    "original_forward_sign": 1,
+    "canopy_centroid_relative": 34.126362559559595,
+    "uv_layers": [
+      "UVMap"
+    ]
+  },
+  {
+    "slug": "bomber",
+    "source": "basic/basic_replacements.blend",
+    "source_objects": [
+      "f_111_aardvark_fuselage",
+      "f_111_aardvark_wing_l",
+      "f_111_aardvark_wing_r"
+    ],
+    "forward": "+X",
+    "up": "+Z",
+    "units": "metres (FBX exporter embeds centimetre conversion)",
+    "dimensions_m": [
+      22.33953094482422,
+      19.20400905609131,
+      4.559442520141602
+    ],
+    "vertices": 2424,
+    "triangles": 4792,
+    "materials": [
+      "M_Airframe",
+      "M_Engine",
+      "M_Intake",
+      "M_Canopy"
+    ],
+    "original_forward_axis": "X",
+    "original_forward_sign": 1,
+    "canopy_centroid_relative": 51.465368807315826,
+    "uv_layers": [
+      "UVMap"
+    ]
+  },
+  {
+    "slug": "hostile",
+    "source": "adversaries/Adversaries.blend",
+    "source_objects": [
+      "Chengdu_J_20"
+    ],
+    "forward": "+X",
+    "up": "+Z",
+    "units": "metres (FBX exporter embeds centimetre conversion)",
+    "dimensions_m": [
+      20.40790843963623,
+      13.018446922302246,
+      3.271632432937622
+    ],
+    "vertices": 2124,
+    "triangles": 4124,
+    "materials": [
+      "M_Airframe",
+      "M_Engine",
+      "M_Intake",
+      "M_Canopy",
+      "M_Marking"
+    ],
+    "original_forward_axis": "Y",
+    "original_forward_sign": -1,
+    "canopy_centroid_relative": -62.070444646871294,
+    "uv_layers": [
+      "UVMap"
+    ]
+  }
+]

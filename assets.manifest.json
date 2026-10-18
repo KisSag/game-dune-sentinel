@@ -1,0 +1,128 @@
+{
+  "schema": "assets-manifest/v1",
+  "project": "DuneSentinel",
+  "assets": [
+    {
+      "name": "fighter-jets",
+      "source": "OpenGameArt.org",
+      "url": "https://opengameart.org/content/fighter-jets",
+      "author": "Captain_Ahab_62",
+      "version": "2023-01-18 author release",
+      "licence": "CC0 1.0",
+      "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "store": false,
+      "files": [
+        "RawAssets/Aircraft/basic_replacements.blend.zip",
+        "RawAssets/Aircraft/falcon.fbx",
+        "RawAssets/Aircraft/lancer.fbx",
+        "RawAssets/Aircraft/mirage.fbx",
+        "RawAssets/Aircraft/bomber.fbx",
+        "Content/Art/Aircraft/SM_falcon.uasset",
+        "Content/Art/Aircraft/SM_lancer.uasset",
+        "Content/Art/Aircraft/SM_mirage.uasset",
+        "Content/Art/Aircraft/SM_bomber.uasset"
+      ],
+      "used_for": "Three selectable modern fighter silhouettes and the hostile bomber",
+      "changes": "Selected source meshes; applied modifiers; centered and normalized to +X forward; converted to metre units; unified PBR material slots; added bevels and weighted normals; joined bomber wings and fuselage"
+    },
+    {
+      "name": "adversary-aircraft",
+      "source": "OpenGameArt.org",
+      "url": "https://opengameart.org/content/adversary-aircraft",
+      "author": "Captain_Ahab_62",
+      "version": "2023-01-18 author release",
+      "licence": "CC0 1.0",
+      "licence_url": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "store": false,
+      "files": [
+        "RawAssets/Aircraft/adversaries.blend.zip",
+        "RawAssets/Aircraft/hostile.fbx",
+        "Content/Art/Aircraft/SM_hostile.uasset"
+      ],
+      "used_for": "Hostile stealth-fighter silhouette",
+      "changes": "Selected the J-20 mesh; normalized axes and units; applied consistent materials, bevels and weighted normals"
+    },
+    {
+      "name": "aerial-ground-rock",
+      "source": "Poly Haven",
+      "url": "https://polyhaven.com/a/aerial_ground_rock",
+      "author": "Rob Tuytel",
+      "version": "2K maps retrieved 2026-10-15",
+      "licence": "CC0 1.0",
+      "licence_url": "https://polyhaven.com/license",
+      "store": false,
+      "files": [
+        "RawAssets/Textures/aerial_ground_rock_diff_2k.jpg",
+        "RawAssets/Textures/aerial_ground_rock_nor_dx_2k.jpg",
+        "RawAssets/Textures/aerial_ground_rock_arm_2k.jpg",
+        "Content/Art/Textures/T_DesertBase.uasset",
+        "Content/Art/Textures/T_DesertNormal.uasset",
+        "Content/Art/Textures/T_DesertARM.uasset"
+      ],
+      "used_for": "Rocky Gobi ground and weathered airbase concrete",
+      "changes": "Tiled in world-scaled terrain UVs; warm desert colour multiplier; DirectX normal and packed AO/roughness/metal channels retained"
+    },
+    {
+      "name": "orbitron",
+      "source": "Google Fonts",
+      "url": "https://github.com/google/fonts/tree/main/ofl/orbitron",
+      "version": "Retrieved 2026-10-15",
+      "licence": "SIL OFL 1.1",
+      "licence_url": "https://openfontlicense.org/",
+      "store": false,
+      "files": [
+        "RawAssets/Fonts/Orbitron.ttf",
+        "RawAssets/Fonts/OFL.txt",
+        "Content/UI/Fonts/OrbitronFont.uasset",
+        "Content/UI/Fonts/OrbitronFont_Face.uasset"
+      ],
+      "used_for": "Aviation display titles and HUD figures",
+      "changes": "Imported as a runtime font; glyph artwork unchanged"
+    },
+    {
+      "name": "rajdhani",
+      "source": "Google Fonts",
+      "url": "https://github.com/google/fonts/tree/main/ofl/rajdhani",
+      "author": "Indian Type Foundry",
+      "version": "Regular, retrieved 2026-10-15",
+      "licence": "SIL OFL 1.1",
+      "licence_url": "https://openfontlicense.org/",
+      "store": false,
+      "files": [
+        "RawAssets/Fonts/Rajdhani.ttf",
+        "RawAssets/Fonts/Rajdhani-OFL.txt",
+        "Content/UI/Fonts/RajdhaniFont.uasset",
+        "Content/UI/Fonts/RajdhaniFont_Face.uasset"
+      ],
+      "used_for": "Readable cockpit labels and menu body text",
+      "changes": "Imported as a runtime font; glyph artwork unchanged"
+    },
+    {
+      "name": "original-desert-airbase-art",
+      "origin": "studio",
+      "source": "Original game artwork",
+      "description": "Authored terrain, airbase structures, missile, undercarriage, surface panel artwork and synthesized nonvoice audio created for this game by the retained art script",
+      "licence": "Project original work",
+      "store": false,
+      "files": [
+        "RawAssets/Environment/",
+        "RawAssets/Effects/",
+        "RawAssets/Audio/",
+        "RawAssets/Aircraft/SM_landinggear.fbx",
+        "RawAssets/Textures/T_AircraftPanel.png",
+        "RawAssets/Textures/T_Asphalt.png",
+        "Content/Art/Environment/",
+        "Content/Art/Effects/",
+        "Content/Audio/",
+        "Content/Art/Aircraft/SM_landinggear.uasset",
+        "Content/Art/Textures/T_AircraftPanel.uasset",
+        "Content/Art/Textures/T_Asphalt.uasset",
+        "Content/Art/Materials/",
+        "Content/Maps/",
+        "Content/Blueprints/"
+      ],
+      "used_for": "20 km desert arena, defended airbase, missile geometry, parked aircraft undercarriage, coherent surface detail and sound feedback",
+      "changes": "Created for this project by the retained Scripts/build_art_v1.py; sound boundaries polished by Scripts/prepare_audio_v1.py"
+    }
+  ]
+}

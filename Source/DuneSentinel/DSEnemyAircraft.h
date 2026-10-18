@@ -6,6 +6,7 @@
 class UStaticMeshComponent;
 class USphereComponent;
 class UDSCannonFXComponent;
+class UDSAircraftExhaustComponent;
 class ADSGameMode;
 UCLASS()
 class DUNESENTINEL_API ADSEnemyAircraft : public AActor
@@ -22,6 +23,7 @@ public:
     FVector GetFormationAnchor() const { return FormationOrigin + FormationHeading * FormationElapsed * 17000.f; }
     FVector GetFormationHeading() const { return FormationHeading; }
     void ApplyCombatDamage(float Damage, bool bPlayerOwned);
+    UDSAircraftExhaustComponent* GetAircraftExhaust() const { return AircraftExhaust; }
     UPROPERTY(BlueprintReadOnly) bool bBomber = false;
     UPROPERTY(BlueprintReadOnly) bool bDying = false;
     UPROPERTY(BlueprintReadOnly) float Health = 65.f;
@@ -37,6 +39,7 @@ public:
 private:
     void ApplyTerrainClearance(FVector& Aim, const FVector& Position, ADSGameMode* Mode, float DeltaSeconds);
     UPROPERTY(VisibleAnywhere) TObjectPtr<UDSCannonFXComponent> CannonFX;
+    UPROPERTY(VisibleAnywhere) TObjectPtr<UDSAircraftExhaustComponent> AircraftExhaust;
     FVector Objective;
     FVector FormationOrigin = FVector::ZeroVector;
     FVector FormationHeading = FVector::ForwardVector;

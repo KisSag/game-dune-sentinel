@@ -38,6 +38,9 @@ Airbase structures, terrain and distant ground geometry, equipment, missile and 
 aircraft panel artwork, asphalt surface artwork and nonvoice sound effects were
 created for this game. No recorded speech or synthesized speech is used.
 
+Aircraft engine exhaust uses project-authored animated shader artwork, retained in
+`RawAssets/Effects/aircraft_exhaust_*.hlsl`, with nozzle placement measured from the credited aircraft models.
+
 ## Desert settlement and oasis textures
 
 The following ambientCG textures are CC0 1.0. Original selected maps and SHA-256 hashes are retained in `RawAssets/Textures/Environment/` and its `sources.json`.

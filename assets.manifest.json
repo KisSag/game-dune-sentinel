@@ -98,6 +98,22 @@
       "changes": "Imported as a runtime font; glyph artwork unchanged"
     },
     {
+      "name": "original-aircraft-exhaust-art",
+      "origin": "studio",
+      "source": "Original game artwork",
+      "description": "Animated aircraft exhaust flame and hot-core shaders with layered temperature color, compression diamonds and soft edges",
+      "licence": "Project original work",
+      "store": false,
+      "files": [
+        "RawAssets/Effects/aircraft_exhaust_flame.hlsl",
+        "RawAssets/Effects/aircraft_exhaust_core.hlsl",
+        "Content/Art/Effects/M_AircraftExhaustFlame.uasset",
+        "Content/Art/Effects/M_AircraftExhaustCore.uasset"
+      ],
+      "used_for": "Visible twin-engine exhaust on all three player aircraft and both enemy types, with player power response",
+      "changes": "Original shader artwork and native material graphs built by Scripts/build_aircraft_exhaust_v1.py; placement measured from the separately credited aircraft source meshes. Runtime components control size and emissive strength without changing aircraft geometry."
+    },
+    {
       "name": "original-desert-airbase-art",
       "origin": "studio",
       "source": "Original game artwork",

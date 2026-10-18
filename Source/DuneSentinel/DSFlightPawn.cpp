@@ -5,6 +5,7 @@
 #include "DSPlayerController.h"
 #include "DSProjectile.h"
 #include "DSCannonFXComponent.h"
+#include "DSAircraftExhaustComponent.h"
 #include "AutoPlay/AutoPlaySubsystem.h"
 #include "Camera/CameraComponent.h"
 #include "Components/SphereComponent.h"
@@ -36,6 +37,8 @@ ADSFlightPawn::ADSFlightPawn()
     AircraftMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
     CannonFX = CreateDefaultSubobject<UDSCannonFXComponent>(TEXT("CannonFX"));
     CannonFX->SetupAttachment(Collision);
+    AircraftExhaust = CreateDefaultSubobject<UDSAircraftExhaustComponent>(TEXT("AircraftExhaust"));
+    AircraftExhaust->SetupAttachment(AircraftMesh);
     LandingGear = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LandingGear"));
     LandingGear->SetupAttachment(AircraftMesh);
     LandingGear->SetRelativeScale3D(FVector(.8f));
@@ -175,6 +178,7 @@ void ADSFlightPawn::SetupPlayerInputComponent(UInputComponent* PlayerInputCompon
 
 void ADSFlightPawn::EndPlay(const EEndPlayReason::Type Reason)
 {
+    AircraftExhaust->SetExhaustVisible(false);
     EngineAudio->Stop();
     WindAudio->Stop();
     if (APlayerController* PC = Cast<APlayerController>(GetController()))
@@ -224,6 +228,7 @@ void ADSFlightPawn::ConfigureAircraft(const FDSAircraftSpec& Aircraft)
     MissileAmmo = FMath::Max(0, Spec.Missiles);
     if (UStaticMesh* Model = LoadObject<UStaticMesh>(nullptr, *Spec.MeshPath))
         AircraftMesh->SetStaticMesh(Model);
+    AircraftExhaust->ConfigureAircraft(Spec.MeshPath);
     if (UStaticMesh* Gear = LoadObject<UStaticMesh>(nullptr, TEXT("/Game/Art/Aircraft/SM_landinggear.SM_landinggear")))
         LandingGear->SetStaticMesh(Gear);
     Target.Reset();
@@ -233,6 +238,8 @@ void ADSFlightPawn::ConfigureAircraft(const FDSAircraftSpec& Aircraft)
 void ADSFlightPawn::Park()
 {
     CannonFX->ResetEffects();
+    AircraftExhaust->SetExhaustVisible(false);
+    AircraftExhaust->ResetToCruise();
     bFlying = false;
     Speed = 0.f;
     FlightVelocity = FVector::ZeroVector;
@@ -250,6 +257,8 @@ void ADSFlightPawn::BeginFlight()
     CannonFX->ResetEffects();
     ResetControls();
     bFlying = true;
+    AircraftExhaust->ResetToCruise();
+    AircraftExhaust->SetExhaustVisible(true);
     Speed = Spec.CruiseSpeed;
     bCockpitView = false;
     BoundaryTime = 0.f;
@@ -294,6 +303,11 @@ void ADSFlightPawn::Tick(float DeltaSeconds)
         UpdateTarget(DeltaSeconds);
         if (bGunHeld) FireGun();
     }
+    // Update after movement and damage so the mounted flames never lag the
+    // airframe or persist for one frame after a fatal collision.
+    const bool bPoweredFlight = bFlying && Health > 0.f && Mode && Mode->Phase == EDSPhase::Flying;
+    AircraftExhaust->SetExhaustVisible(bPoweredFlight);
+    if (bPoweredFlight) AircraftExhaust->UpdateExhaust(DeltaSeconds, ThrottleInput, BrakeInput);
     UpdateCamera(DeltaSeconds);
 }
 
@@ -488,6 +502,7 @@ void ADSFlightPawn::ApplyCombatDamage(float Damage)
 {
     if (!bFlying || Health <= 0.f || Damage <= 0.f) return;
     Health = FMath::Max(0.f, Health - Damage);
+    if (Health <= 0.f) AircraftExhaust->SetExhaustVisible(false);
     if (ADSGameMode* Mode = GetWorld()->GetAuthGameMode<ADSGameMode>())
     {
         Mode->PlayCue(Health <= 0.f ? TEXT("explosion") : TEXT("hit"), .7f);

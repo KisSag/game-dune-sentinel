@@ -14,6 +14,7 @@ class UCameraComponent;
 class USpringArmComponent;
 class UAudioComponent;
 class UDSCannonFXComponent;
+class UDSAircraftExhaustComponent;
 class ADSEnemyAircraft;
 
 UCLASS()
@@ -58,6 +59,7 @@ public:
     void ClearFlightInput() { ResetControls(); }
     bool IsFlying() const { return bFlying; }
     UCameraComponent* GetFlightCamera() const { return Camera; }
+    UDSAircraftExhaustComponent* GetAircraftExhaust() const { return AircraftExhaust; }
     void SetMissileThreat(float Seconds = 1.5f);
     void FireMissile();
 
@@ -70,6 +72,7 @@ private:
     UPROPERTY(VisibleAnywhere) TObjectPtr<UAudioComponent> EngineAudio;
     UPROPERTY(VisibleAnywhere) TObjectPtr<UAudioComponent> WindAudio;
     UPROPERTY(VisibleAnywhere) TObjectPtr<UDSCannonFXComponent> CannonFX;
+    UPROPERTY(VisibleAnywhere) TObjectPtr<UDSAircraftExhaustComponent> AircraftExhaust;
     UPROPERTY() TObjectPtr<UInputMappingContext> FlightMapping;
     UPROPERTY() TObjectPtr<UInputAction> MousePitchAction;
     UPROPERTY() TObjectPtr<UInputAction> MouseRollAction;

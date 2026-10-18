@@ -4,6 +4,7 @@
 #include "DSProjectile.h"
 #include "DSImpactFX.h"
 #include "DSCannonFXComponent.h"
+#include "DSAircraftExhaustComponent.h"
 #include "AutoPlay/AutoPlaySubsystem.h"
 #include "Components/SphereComponent.h"
 #include "Components/StaticMeshComponent.h"
@@ -24,6 +25,8 @@ ADSEnemyAircraft::ADSEnemyAircraft()
     Mesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
     CannonFX = CreateDefaultSubobject<UDSCannonFXComponent>(TEXT("CannonFX"));
     CannonFX->SetupAttachment(Collision);
+    AircraftExhaust = CreateDefaultSubobject<UDSAircraftExhaustComponent>(TEXT("AircraftExhaust"));
+    AircraftExhaust->SetupAttachment(Mesh);
 }
 
 void ADSEnemyAircraft::Initialize(bool Bomber, const FVector& Destination)
@@ -34,6 +37,8 @@ void ADSEnemyAircraft::Initialize(bool Bomber, const FVector& Destination)
     Speed = bBomber ? 170.f : 235.f;
     const TCHAR* Path = bBomber ? TEXT("/Game/Art/Aircraft/SM_bomber.SM_bomber") : TEXT("/Game/Art/Aircraft/SM_hostile.SM_hostile");
     Mesh->SetStaticMesh(LoadObject<UStaticMesh>(nullptr, Path));
+    AircraftExhaust->ConfigureAircraft(Path, bBomber);
+    AircraftExhaust->SetExhaustVisible(true);
     GunCooldown = FMath::FRandRange(.3f, 2.f);
     MissileCooldown = FMath::FRandRange(8.f, 16.f);
     TerrainCheckCooldown = 0.f;
@@ -104,7 +109,11 @@ void ADSEnemyAircraft::Tick(float Dt)
 {
     Super::Tick(Dt);
     ADSGameMode* Mode = GetWorld()->GetAuthGameMode<ADSGameMode>();
-    if (!Mode || Mode->Phase != EDSPhase::Flying || bDying) return;
+    if (!Mode || Mode->Phase != EDSPhase::Flying || bDying)
+    {
+        AircraftExhaust->SetExhaustVisible(false);
+        return;
+    }
     LifeTime += Dt;
     GunCooldown -= Dt;
     MissileCooldown -= Dt;
@@ -178,6 +187,8 @@ void ADSEnemyAircraft::Tick(float Dt)
     FRotator NewRot = FMath::RInterpConstantTo(GetActorRotation(), Desired, Dt, bBomber ? 14.f : 30.f);
     SetActorRotation(NewRot);
     SetActorLocation(Pos + GetActorForwardVector() * Speed * 100.f * Dt);
+    AircraftExhaust->SetExhaustVisible(true);
+    AircraftExhaust->UpdateExhaust(Dt, 0.f, 0.f);
     if (IsValid(Player))
     {
         const FVector TowardPlayer = (Player->GetActorLocation() - Pos).GetSafeNormal();
@@ -208,6 +219,7 @@ void ADSEnemyAircraft::Tick(float Dt)
     if ((bEgress && FVector::Dist2D(GetActorLocation(), Mode->AirportLocation) > Mode->ArenaHalfExtent*1.35f) || LifeTime > 420.f)
     {
         bDying = true;
+        AircraftExhaust->SetExhaustVisible(false);
         Mode->RegisterKill(this, false);
         Destroy();
     }
@@ -220,6 +232,7 @@ void ADSEnemyAircraft::ApplyCombatDamage(float Damage, bool bPlayerOwned)
     if (Health <= 0.f)
     {
         bDying = true;
+        AircraftExhaust->SetExhaustVisible(false);
         if (ADSGameMode* Mode = GetWorld()->GetAuthGameMode<ADSGameMode>())
         {
             Mode->RegisterKill(this, bPlayerOwned);

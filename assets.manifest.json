@@ -60,7 +60,7 @@
         "Content/Art/Textures/T_DesertARM.uasset"
       ],
       "used_for": "Rocky Gobi ground and weathered airbase concrete",
-      "changes": "Tiled in world-scaled terrain UVs; warm desert colour multiplier; DirectX normal and packed AO/roughness/metal channels retained"
+      "changes": "World-position UVs with 20 m near detail, distance-blended 600 m ground and weak 2.8 km colour variation; near DirectX normals and packed AO/roughness retained; pavement uses physical texture scale"
     },
     {
       "name": "orbitron",
@@ -121,8 +121,8 @@
         "Content/Maps/",
         "Content/Blueprints/"
       ],
-      "used_for": "20 km desert arena, defended airbase, missile geometry, parked aircraft undercarriage, coherent surface detail and sound feedback",
-      "changes": "Created for this project by the retained Scripts/build_art_v1.py; sound boundaries polished by Scripts/prepare_audio_v1.py"
+      "used_for": "20 km desert arena, distant scenic Gobi ground, defended airbase, missile geometry, parked aircraft undercarriage, coherent surface detail and sound feedback",
+      "changes": "Created for this project by retained Scripts/build_art_v1.py; distant ground ring by Scripts/build_horizon_v1.py; sound boundaries polished by Scripts/prepare_audio_v1.py; material and exposure repairs retained as versioned polish_environment scripts"
     }
   ]
 }

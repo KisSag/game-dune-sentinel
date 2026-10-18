@@ -229,6 +229,8 @@ void ADSGameMode::EndSortie(const FString& Reason)
     Phase=EDSPhase::Defeat;
     DefeatReason=Reason;
     bRearming=false;
+    if (FParse::Param(FCommandLine::Get(),TEXT("CaptureFrames")))
+        FScreenshotRequest::RequestScreenshot(TEXT("DuneSentinel_Debrief.png"),true,false);
     HighScore=FMath::Max(HighScore,Score);
     if (GetWorld()->HasBegunPlay())
     {
@@ -286,7 +288,7 @@ float ADSGameMode::GroundHeightAt(const FVector& Position) const
     FCollisionObjectQueryParams GroundObjects;
     GroundObjects.AddObjectTypesToQuery(ECC_WorldStatic);
     if (GetWorld()->LineTraceSingleByObjectType(Hit,FVector(Position.X,Position.Y,1500000.f),FVector(Position.X,Position.Y,-50000.f),GroundObjects,Params)) return Hit.ImpactPoint.Z;
-    return 2000.f;
+    return 2180.f;
 }
 
 void ADSGameMode::UpdateBot(float Dt)
@@ -297,8 +299,8 @@ void ADSGameMode::UpdateBot(float Dt)
     const float Skill=AP->GetSkill();
     const float Roll=FMath::Sin(Elapsed*.14f)*.18f*Skill;
     const float Pitch=(Player->GetActorLocation().Z<120000.f?.17f:.02f)*Skill;
-    AP->Inject(PC,Player->RollAction,FInputActionValue(Roll),TEXT("MouseX"));
-    AP->Inject(PC,Player->PitchAction,FInputActionValue(Pitch),TEXT("MouseY"));
+    AP->Inject(PC,Player->RollAction,FInputActionValue(Roll),Roll<0.f?TEXT("A"):TEXT("D"));
+    AP->Inject(PC,Player->PitchAction,FInputActionValue(Pitch),Pitch<0.f?TEXT("Up"):TEXT("Down"));
     if (Elapsed<4.f) AP->Inject(PC,Player->ThrottleAction,FInputActionValue(.35f),TEXT("W"));
     if (FMath::Fmod(Elapsed,11.f)<Dt) AP->Inject(PC,Player->TargetAction,FInputActionValue(true),TEXT("Tab"));
     if (FMath::Fmod(Elapsed,6.f)>4.5f) AP->Inject(PC,Player->GunAction,FInputActionValue(true),TEXT("LeftMouseButton"));

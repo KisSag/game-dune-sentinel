@@ -17,8 +17,9 @@ fuselage were combined. Game aircraft have fictional names and performance.
 **Aerial Ground Rock** by **Rob Tuytel**, from
 [Poly Haven](https://polyhaven.com/a/aerial_ground_rock).
 License: [Creative Commons Zero 1.0](https://polyhaven.com/license).
-The 2K base colour, DirectX normal and AO/roughness/metallic maps are tiled and
-tinted for the desert ground and weathered airbase concrete.
+The 2K base colour, DirectX normal and AO/roughness/metallic maps use world-scaled
+coordinates for desert ground and weathered airbase concrete. Close surface
+detail fades into broader ground variation with viewing distance.
 
 ## Typography
 
@@ -33,6 +34,6 @@ SIL Open Font License 1.1. The complete license is retained at
 
 ## Original work
 
-Airbase structures, terrain geometry, equipment, missile and undercarriage models,
+Airbase structures, terrain and distant ground geometry, equipment, missile and undercarriage models,
 aircraft panel artwork, asphalt surface artwork and nonvoice sound effects were
 created for this game. No recorded speech or synthesized speech is used.

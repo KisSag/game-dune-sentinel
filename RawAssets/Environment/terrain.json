@@ -3,7 +3,9 @@
     -1000000,
     1000000
   ],
-  "central_height_cm": 2000,
+  "central_height_cm": 2180,
+  "mesh_central_height_cm": 2000,
+  "terrain_actor_z_offset_cm": 180,
   "central_flat_radius_cm": 180000,
   "airfield_surface_cm": 2200,
   "mountains_m": [
@@ -51,5 +53,5 @@
     ]
   ],
   "grid_vertices": 241,
-  "formula": "See height(x,y) in Scripts/build_art_v1.py; inputs/outputs metres"
+  "formula": "World ground: height(x,y) in Scripts/build_art_v1.py plus 1.8 metres actor offset; inputs/outputs metres. Distant scenic ring continues the mesh edge without collision or changing play bounds."
 }

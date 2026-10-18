@@ -330,10 +330,11 @@ void ADSHUD::Combat(ADSGameMode* Mode, ADSFlightPawn* Player)
         Text(TEXT("RETURN TO AIRFIELD TO REARM"), 960, 864, 16, Amber, true, true);
     if (!Mode->RadioLine.IsEmpty())
     {
-        Rect(590, 750, 740, 80, Ink);
-        Rect(590, 750, 3, 80, Cyan);
-        Text(TEXT("CORRIDOR CONTROL"), 610, 762, 12, Cyan, true);
-        Text(Mode->RadioLine.Left(80), 610, 790, 18, White);
+        const float RadioY = Warning.IsEmpty() ? 250.f : 296.f;
+        Rect(590, RadioY, 740, 80, Ink);
+        Rect(590, RadioY, 3, 80, Cyan);
+        Text(TEXT("CORRIDOR CONTROL"), 610, RadioY + 12, 12, Cyan, true);
+        Text(Mode->RadioLine.Left(80), 610, RadioY + 40, 18, White);
     }
 }
 

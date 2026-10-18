@@ -1,6 +1,7 @@
 #if WITH_DEV_AUTOMATION_TESTS
 #include "Misc/AutomationTest.h"
 #include "Engine/World.h"
+#include "Engine/Engine.h"
 #include "DSGameMode.h"
 #include "DSFlightPawn.h"
 #include "DSEnemyAircraft.h"
@@ -10,6 +11,7 @@ bool FDSMissionRulesTest::RunTest(const FString& Parameters)
 {
     const UWorld::InitializationValues InitValues=UWorld::InitializationValues().AllowAudioPlayback(false).CreatePhysicsScene(false).RequiresHitProxies(false).CreateNavigation(false).CreateAISystem(false).ShouldSimulatePhysics(false).SetTransactional(false);
     UWorld* World=UWorld::CreateWorld(EWorldType::Game,false,FName(TEXT("DuneMissionTest")),nullptr,true,ERHIFeatureLevel::Num,&InitValues);
+    GEngine->CreateNewWorldContext(EWorldType::Game).SetCurrentWorld(World);
     ADSGameMode* Mode=World->SpawnActor<ADSGameMode>();
     TestEqual(TEXT("Three distinct selectable airframes"),Mode->Aircraft.Num(),3);
     TestEqual(TEXT("Waves are separated by five minutes"),Mode->WaveInterval,300.f);
@@ -49,8 +51,10 @@ bool FDSMissionRulesTest::RunTest(const FString& Parameters)
     const int32 ParkedScore=Mode->Score;
     Mode->Tick(10.f);
     TestEqual(TEXT("Menu never advances survival score"),Mode->Score,ParkedScore);
+    Pawn->Health=1.f;
     Mode->StartSortie();
     TestTrue(TEXT("Start enables flight"),Pawn->IsFlying());
+    TestEqual(TEXT("Restart restores player health"),Pawn->Health,Mode->Aircraft[0].MaxHealth);
     TestEqual(TEXT("Restart restores airport health"),Mode->AirportHealth,Mode->AirportMaxHealth);
     TestEqual(TEXT("Restart resets score"),Mode->Score,0);
     TestEqual(TEXT("Start spawns the initial wave"),Mode->Wave,1);
@@ -71,6 +75,7 @@ bool FDSMissionRulesTest::RunTest(const FString& Parameters)
     Mode->ReturnToMenu();
     TestFalse(TEXT("Returning to menu parks the aircraft"),Pawn->IsFlying());
     TestEqual(TEXT("Returning to menu removes hostile actors"),Mode->Enemies.Num(),0);
+    GEngine->DestroyWorldContext(World);
     World->DestroyWorld(false);
     return true;
 }

@@ -445,7 +445,7 @@ void ADSFlightPawn::UpdateCamera(float DeltaSeconds)
     {
         Desired = FRotator(-11.f, GetActorRotation().Yaw + 145.f, 0.f);
         ArmLength = 4500.f;
-        Offset = FVector(0.f, 0.f, 450.f);
+        Offset = FVector(0.f, -850.f, -200.f);
     }
     else
     {

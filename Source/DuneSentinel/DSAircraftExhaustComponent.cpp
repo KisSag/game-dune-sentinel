@@ -183,7 +183,7 @@ void UDSAircraftExhaustComponent::ApplyVisuals()
     const float Strength = GetGlowStrength();
     for (int32 Nozzle = 0; Nozzle < NozzleCount; ++Nozzle)
     {
-        const float Length = NozzleRadiiCm[Nozzle] * FMath::Lerp(3.5f, 23.f, Thrust);
+        const float Length = NozzleRadiiCm[Nozzle] * FMath::Max(6.f, FMath::Lerp(3.5f, 23.f, Thrust));
         const float Radius = NozzleRadiiCm[Nozzle] * FMath::Lerp(.72f, 1.6f, Thrust);
         const float Width = NozzleRadiiCm[Nozzle] * FMath::Lerp(1.1f, 2.8f, Thrust);
         // A hot facing core preserves the visible nozzle from the normal rear
@@ -241,7 +241,7 @@ TArray<FVector> UDSAircraftExhaustComponent::GetNozzleWorldAftDirections() const
 
 float UDSAircraftExhaustComponent::GetFlameLengthCm() const
 {
-    return (NozzleRadiiCm.IsEmpty() ? 40.f : NozzleRadiiCm[0]) * FMath::Lerp(3.5f, 23.f, Thrust);
+    return (NozzleRadiiCm.IsEmpty() ? 40.f : NozzleRadiiCm[0]) * FMath::Max(6.f, FMath::Lerp(3.5f, 23.f, Thrust));
 }
 
 float UDSAircraftExhaustComponent::GetCoreRadiusCm() const
@@ -251,7 +251,7 @@ float UDSAircraftExhaustComponent::GetCoreRadiusCm() const
 
 float UDSAircraftExhaustComponent::GetGlowStrength() const
 {
-    return FMath::Lerp(24000.f, 165000.f, Thrust);
+    return FMath::Max(36000.f, FMath::Lerp(24000.f, 165000.f, Thrust));
 }
 
 int32 UDSAircraftExhaustComponent::GetVisiblePrimitiveCount() const

@@ -123,6 +123,122 @@
       ],
       "used_for": "20 km desert arena, distant scenic Gobi ground, defended airbase, missile geometry, parked aircraft undercarriage, coherent surface detail and sound feedback",
       "changes": "Created for this project by retained Scripts/build_art_v1.py; distant ground ring by Scripts/build_horizon_v1.py; sound boundaries polished by Scripts/prepare_audio_v1.py; material and exposure repairs retained as versioned polish_environment scripts; original soft cannon flash, smoke, tapered tracer and projectile-head HLSL materials authored by Scripts/build_cannon_fx_v1.py"
+    },
+    {
+      "name": "environment-paintedplaster017",
+      "source": "ambientCG",
+      "url": "https://ambientcg.com/view?id=PaintedPlaster017",
+      "version": "2K JPG maps retained 2026-10-16",
+      "licence": "CC0 1.0",
+      "licence_url": "https://docs.ambientcg.com/license/",
+      "store": false,
+      "files": [
+        "RawAssets/Textures/Environment/PaintedPlaster017_2K-JPG_Color.jpg",
+        "RawAssets/Textures/Environment/PaintedPlaster017_2K-JPG_NormalDX.jpg",
+        "RawAssets/Textures/Environment/PaintedPlaster017_2K-JPG_Roughness.jpg",
+        "Content/Art/Textures/Environment/T_PaintedPlaster017_Color.uasset",
+        "Content/Art/Textures/Environment/T_PaintedPlaster017_NormalDX.uasset",
+        "Content/Art/Textures/Environment/T_PaintedPlaster017_Roughness.uasset"
+      ],
+      "used_for": "Textured settlement buildings, mountain slopes and lowland oasis foliage",
+      "changes": "Original maps retained; native materials set colour space, physical UV scale, warm surface tint or masked foliage as appropriate"
+    },
+    {
+      "name": "environment-corrugatedsteel005",
+      "source": "ambientCG",
+      "url": "https://ambientcg.com/view?id=CorrugatedSteel005",
+      "version": "2K JPG maps retained 2026-10-16",
+      "licence": "CC0 1.0",
+      "licence_url": "https://docs.ambientcg.com/license/",
+      "store": false,
+      "files": [
+        "RawAssets/Textures/Environment/CorrugatedSteel005_2K-JPG_Color.jpg",
+        "RawAssets/Textures/Environment/CorrugatedSteel005_2K-JPG_NormalDX.jpg",
+        "RawAssets/Textures/Environment/CorrugatedSteel005_2K-JPG_Roughness.jpg",
+        "Content/Art/Textures/Environment/T_CorrugatedSteel005_Color.uasset",
+        "Content/Art/Textures/Environment/T_CorrugatedSteel005_NormalDX.uasset",
+        "Content/Art/Textures/Environment/T_CorrugatedSteel005_Roughness.uasset"
+      ],
+      "used_for": "Textured settlement buildings, mountain slopes and lowland oasis foliage",
+      "changes": "Original maps retained; native materials set colour space, physical UV scale, warm surface tint or masked foliage as appropriate"
+    },
+    {
+      "name": "environment-rock030",
+      "source": "ambientCG",
+      "url": "https://ambientcg.com/view?id=Rock030",
+      "version": "2K JPG maps retained 2026-10-16",
+      "licence": "CC0 1.0",
+      "licence_url": "https://docs.ambientcg.com/license/",
+      "store": false,
+      "files": [
+        "RawAssets/Textures/Environment/Rock030_2K-JPG_Color.jpg",
+        "RawAssets/Textures/Environment/Rock030_2K-JPG_NormalDX.jpg",
+        "RawAssets/Textures/Environment/Rock030_2K-JPG_Roughness.jpg",
+        "Content/Art/Textures/Environment/T_Rock030_Color.uasset",
+        "Content/Art/Textures/Environment/T_Rock030_NormalDX.uasset",
+        "Content/Art/Textures/Environment/T_Rock030_Roughness.uasset"
+      ],
+      "used_for": "Textured settlement buildings, mountain slopes and lowland oasis foliage",
+      "changes": "Original maps retained; native materials set colour space, physical UV scale, warm surface tint or masked foliage as appropriate"
+    },
+    {
+      "name": "environment-grass004",
+      "source": "ambientCG",
+      "url": "https://ambientcg.com/view?id=Grass004",
+      "version": "2K JPG maps retained 2026-10-16",
+      "licence": "CC0 1.0",
+      "licence_url": "https://docs.ambientcg.com/license/",
+      "store": false,
+      "files": [
+        "RawAssets/Textures/Environment/Grass004_2K-JPG_Color.jpg",
+        "RawAssets/Textures/Environment/Grass004_2K-JPG_NormalDX.jpg",
+        "RawAssets/Textures/Environment/Grass004_2K-JPG_Roughness.jpg",
+        "Content/Art/Textures/Environment/T_Grass004_Color.uasset",
+        "Content/Art/Textures/Environment/T_Grass004_NormalDX.uasset",
+        "Content/Art/Textures/Environment/T_Grass004_Roughness.uasset"
+      ],
+      "used_for": "Textured settlement buildings, mountain slopes and lowland oasis foliage",
+      "changes": "Original maps retained; native materials set colour space, physical UV scale, warm surface tint or masked foliage as appropriate"
+    },
+    {
+      "name": "environment-leafset014",
+      "source": "ambientCG",
+      "url": "https://ambientcg.com/view?id=LeafSet014",
+      "version": "2K JPG maps retained 2026-10-16",
+      "licence": "CC0 1.0",
+      "licence_url": "https://docs.ambientcg.com/license/",
+      "store": false,
+      "files": [
+        "RawAssets/Textures/Environment/LeafSet014_2K-JPG_Color.jpg",
+        "RawAssets/Textures/Environment/LeafSet014_2K-JPG_NormalDX.jpg",
+        "RawAssets/Textures/Environment/LeafSet014_2K-JPG_Roughness.jpg",
+        "RawAssets/Textures/Environment/LeafSet014_2K-JPG_Opacity.jpg",
+        "Content/Art/Textures/Environment/T_LeafSet014_Color.uasset",
+        "Content/Art/Textures/Environment/T_LeafSet014_NormalDX.uasset",
+        "Content/Art/Textures/Environment/T_LeafSet014_Roughness.uasset",
+        "Content/Art/Textures/Environment/T_LeafSet014_Opacity.uasset"
+      ],
+      "used_for": "Textured settlement buildings, mountain slopes and lowland oasis foliage",
+      "changes": "Original maps retained; native materials set colour space, physical UV scale, warm surface tint or masked foliage as appropriate"
+    },
+    {
+      "name": "environment-bark012",
+      "source": "ambientCG",
+      "url": "https://ambientcg.com/view?id=Bark012",
+      "version": "2K JPG maps retained 2026-10-16",
+      "licence": "CC0 1.0",
+      "licence_url": "https://docs.ambientcg.com/license/",
+      "store": false,
+      "files": [
+        "RawAssets/Textures/Environment/Bark012_2K-JPG_Color.jpg",
+        "RawAssets/Textures/Environment/Bark012_2K-JPG_NormalDX.jpg",
+        "RawAssets/Textures/Environment/Bark012_2K-JPG_Roughness.jpg",
+        "Content/Art/Textures/Environment/T_Bark012_Color.uasset",
+        "Content/Art/Textures/Environment/T_Bark012_NormalDX.uasset",
+        "Content/Art/Textures/Environment/T_Bark012_Roughness.uasset"
+      ],
+      "used_for": "Textured settlement buildings, mountain slopes and lowland oasis foliage",
+      "changes": "Original maps retained; native materials set colour space, physical UV scale, warm surface tint or masked foliage as appropriate"
     }
   ]
 }

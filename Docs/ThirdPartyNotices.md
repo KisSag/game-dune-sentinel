@@ -37,3 +37,16 @@ SIL Open Font License 1.1. The complete license is retained at
 Airbase structures, terrain and distant ground geometry, equipment, missile and undercarriage models,
 aircraft panel artwork, asphalt surface artwork and nonvoice sound effects were
 created for this game. No recorded speech or synthesized speech is used.
+
+## Desert settlement and oasis textures
+
+The following ambientCG textures are CC0 1.0. Original selected maps and SHA-256 hashes are retained in `RawAssets/Textures/Environment/` and its `sources.json`.
+
+- [PaintedPlaster017](https://ambientcg.com/view?id=PaintedPlaster017) — Plaster surface.
+- [CorrugatedSteel005](https://ambientcg.com/view?id=CorrugatedSteel005) — Roof surface.
+- [Rock030](https://ambientcg.com/view?id=Rock030) — Rock surface.
+- [Grass004](https://ambientcg.com/view?id=Grass004) — Grass surface.
+- [LeafSet014](https://ambientcg.com/view?id=LeafSet014) — Leaf surface.
+- [Bark012](https://ambientcg.com/view?id=Bark012) — Bark surface.
+
+[License](https://docs.ambientcg.com/license/). Settlement architecture, plants, terrain, lakes and roads are original project-authored geometry.

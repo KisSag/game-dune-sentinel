@@ -1,0 +1,564 @@
+{
+  "schema": "settlement-art/v1",
+  "units": "metres",
+  "axes": "+X forward, +Z up",
+  "origin": "Ground-centred origin, base at or above Z zero",
+  "export": {
+    "axis_forward": "X",
+    "axis_up": "Z",
+    "apply_unit_scale": true,
+    "apply_scale_options": "FBX_SCALE_NONE",
+    "path_mode": "STRIP"
+  },
+  "ue_import": {
+    "convert_scene": true,
+    "convert_scene_unit": true,
+    "force_front_x_axis": false,
+    "combine_meshes": true,
+    "import_materials": false,
+    "import_textures": false
+  },
+  "uv": {
+    "architecture": "Dominant-face planar projection, UV scale in metres per tile",
+    "tile_metres": {
+      "Plaster": 4.0,
+      "Roof": 3.0,
+      "Concrete": 4.0,
+      "Glass": 1.0,
+      "Steel": 1.0,
+      "Bark": 1.2
+    },
+    "bark": "Cylindrical branch UVs, 1.2 metres per tile",
+    "leaf": "Curved cards select one of six 3-column by 2-row atlas cells, with 0.008 UV inset; masked two-sided foliage required"
+  },
+  "original_geometry": {
+    "licence": "Project original work",
+    "script": "Scripts/build_settlement_art_v2.py"
+  },
+  "meshes": [
+    {
+      "name": "SM_HouseA",
+      "category": "town",
+      "file": "RawAssets/Environment/Settlement/SM_HouseA.fbx",
+      "bounds_min_m": [
+        -7.8,
+        -7.85,
+        0.0
+      ],
+      "bounds_max_m": [
+        7.8,
+        6.575,
+        9.42
+      ],
+      "dimensions_m": [
+        15.6,
+        14.425,
+        9.42
+      ],
+      "vertices": 5704,
+      "triangles": 10992,
+      "material_slots": [
+        "Concrete",
+        "Plaster",
+        "Roof",
+        "Glass",
+        "Steel"
+      ],
+      "bytes": 259948,
+      "sha256": "44442c5e53517b71c4fa541b0d0402569783ff08dae3423a8b3201ce98787a71",
+      "floors": 2,
+      "features": [
+        "weathered_facade",
+        "framed_glazing",
+        "parapets",
+        "rooftop_equipment",
+        "entrance_canopy",
+        "rainwater_pipes"
+      ]
+    },
+    {
+      "name": "SM_HouseB",
+      "category": "town",
+      "file": "RawAssets/Environment/Settlement/SM_HouseB.fbx",
+      "bounds_min_m": [
+        -10.8,
+        -9.35,
+        -0.0
+      ],
+      "bounds_max_m": [
+        12.435,
+        14.825,
+        9.42
+      ],
+      "dimensions_m": [
+        23.235,
+        24.175,
+        9.42
+      ],
+      "vertices": 10184,
+      "triangles": 19632,
+      "material_slots": [
+        "Concrete",
+        "Plaster",
+        "Roof",
+        "Glass",
+        "Steel"
+      ],
+      "bytes": 438492,
+      "sha256": "74d5df867ffa21bcf4a975a4826c3418e5ecc84842aade44076f100a753acf9e",
+      "floors": 2,
+      "features": [
+        "weathered_facade",
+        "framed_glazing",
+        "parapets",
+        "rooftop_equipment",
+        "entrance_canopy",
+        "rainwater_pipes"
+      ]
+    },
+    {
+      "name": "SM_Apartment",
+      "category": "town",
+      "file": "RawAssets/Environment/Settlement/SM_Apartment.fbx",
+      "bounds_min_m": [
+        -14.3,
+        -10.75,
+        0.0
+      ],
+      "bounds_max_m": [
+        14.3,
+        9.075,
+        19.92
+      ],
+      "dimensions_m": [
+        28.6,
+        19.825,
+        19.92
+      ],
+      "vertices": 34696,
+      "triangles": 66880,
+      "material_slots": [
+        "Concrete",
+        "Plaster",
+        "Roof",
+        "Glass",
+        "Steel"
+      ],
+      "bytes": 1331292,
+      "sha256": "aaa8f06f7b615f1f1c84c4c47b78c5382a34e61a0637d1410fbe39597f3d9822",
+      "floors": 5,
+      "features": [
+        "weathered_facade",
+        "framed_glazing",
+        "parapets",
+        "rooftop_equipment",
+        "entrance_canopy",
+        "rainwater_pipes"
+      ]
+    },
+    {
+      "name": "SM_Workshop",
+      "category": "town",
+      "file": "RawAssets/Environment/Settlement/SM_Workshop.fbx",
+      "bounds_min_m": [
+        -17.6,
+        -16.5,
+        0.0
+      ],
+      "bounds_max_m": [
+        17.6,
+        12.585,
+        13.2
+      ],
+      "dimensions_m": [
+        35.2,
+        29.085,
+        13.2
+      ],
+      "vertices": 5068,
+      "triangles": 9750,
+      "material_slots": [
+        "Concrete",
+        "Plaster",
+        "Roof",
+        "Steel",
+        "Glass"
+      ],
+      "bytes": 228460,
+      "sha256": "d931ebaf98dc52ed0884d9b89447ec25513488097c74111c8f82135ae363de2f",
+      "floors": 1,
+      "features": [
+        "corrugated_pitched_roof",
+        "roller_shutters",
+        "loading_canopy",
+        "clerestory_glazing",
+        "vent_stacks"
+      ]
+    },
+    {
+      "name": "SM_WaterTower",
+      "category": "town",
+      "file": "RawAssets/Environment/Settlement/SM_WaterTower.fbx",
+      "bounds_min_m": [
+        -4.66,
+        -4.66,
+        0.0
+      ],
+      "bounds_max_m": [
+        4.66,
+        4.66,
+        24.5
+      ],
+      "dimensions_m": [
+        9.32,
+        9.32,
+        24.5
+      ],
+      "vertices": 1552,
+      "triangles": 2776,
+      "material_slots": [
+        "Concrete",
+        "Steel",
+        "Roof"
+      ],
+      "bytes": 84012,
+      "sha256": "c446dffca25040cb8936ed5e9f3819bf935cd12f2caa24f34f8571437cdbc1bc",
+      "features": [
+        "braced_supports",
+        "rounded_reservoir",
+        "ladder",
+        "supply_pipe"
+      ]
+    },
+    {
+      "name": "SM_OasisPoplar",
+      "category": "flora",
+      "file": "RawAssets/Environment/Settlement/SM_OasisPoplar.fbx",
+      "bounds_min_m": [
+        -3.4385,
+        -3.4626,
+        0.0
+      ],
+      "bounds_max_m": [
+        3.3705,
+        3.5082,
+        16.3268
+      ],
+      "dimensions_m": [
+        6.809,
+        6.9708,
+        16.3268
+      ],
+      "vertices": 6900,
+      "triangles": 5876,
+      "material_slots": [
+        "Bark",
+        "Leaf"
+      ],
+      "bytes": 277804,
+      "sha256": "b7b38c59b2d5e771f4b54c89f5681f21af0d093aa702328b144b7e773ec57a9a",
+      "leaves": 960,
+      "features": [
+        "branched_trunk",
+        "upright_crown",
+        "curved_masked_leaf_cards"
+      ]
+    },
+    {
+      "name": "SM_OasisWillow",
+      "category": "flora",
+      "file": "RawAssets/Environment/Settlement/SM_OasisWillow.fbx",
+      "bounds_min_m": [
+        -5.5068,
+        -5.4926,
+        0.0
+      ],
+      "bounds_max_m": [
+        5.0685,
+        5.6639,
+        10.3216
+      ],
+      "dimensions_m": [
+        10.5753,
+        11.1565,
+        10.3216
+      ],
+      "vertices": 9096,
+      "triangles": 7612,
+      "material_slots": [
+        "Bark",
+        "Leaf"
+      ],
+      "bytes": 358604,
+      "sha256": "e89f1d98e746cd5769c748bc7e8a370495ff7f33c0cfa29da8d4234b5e3f9432",
+      "leaves": 1280,
+      "features": [
+        "forked_trunk",
+        "arching_branches",
+        "hanging_twigs",
+        "curved_masked_leaf_cards"
+      ]
+    },
+    {
+      "name": "SM_OasisShrub",
+      "category": "flora",
+      "file": "RawAssets/Environment/Settlement/SM_OasisShrub.fbx",
+      "bounds_min_m": [
+        -2.0908,
+        -1.8442,
+        0.0
+      ],
+      "bounds_max_m": [
+        1.9634,
+        1.5525,
+        3.1553
+      ],
+      "dimensions_m": [
+        4.0542,
+        3.3967,
+        3.1553
+      ],
+      "vertices": 1890,
+      "triangles": 1560,
+      "material_slots": [
+        "Bark",
+        "Leaf"
+      ],
+      "bytes": 90396,
+      "sha256": "3219dcb614ce75de0b5b9312245916f91f75caea367a5ad11adb321c29e27252",
+      "leaves": 270,
+      "features": [
+        "irregular_branching",
+        "curved_masked_leaf_cards"
+      ]
+    },
+    {
+      "name": "SM_OasisReeds",
+      "category": "flora",
+      "file": "RawAssets/Environment/Settlement/SM_OasisReeds.fbx",
+      "bounds_min_m": [
+        -2.3324,
+        -2.5326,
+        0.0
+      ],
+      "bounds_max_m": [
+        2.1707,
+        2.0433,
+        4.1423
+      ],
+      "dimensions_m": [
+        4.5031,
+        4.5759,
+        4.1423
+      ],
+      "vertices": 1428,
+      "triangles": 1736,
+      "material_slots": [
+        "Bark",
+        "Leaf"
+      ],
+      "bytes": 79756,
+      "sha256": "dc679b2abdea1f1cbf0bdbc11e2fccd8356ef88ed50894325667f1853eae704d",
+      "leaves": 112,
+      "features": [
+        "reed_stems",
+        "seed_heads",
+        "slender_leaf_blades"
+      ]
+    }
+  ],
+  "textures": [
+    {
+      "name": "PaintedPlaster017",
+      "material_slot": "Plaster",
+      "url": "https://ambientcg.com/view?id=PaintedPlaster017",
+      "licence": "CC0 1.0",
+      "licence_url": "https://docs.ambientcg.com/license/",
+      "version": "Local 2K JPG archive retained for environment task",
+      "source_archive_sha256": "a61330b10b1aa58410f8b60632f667e7a6d84d521bbd85cec4c4de7136d282d2",
+      "source_archive_bytes": 14871615,
+      "changes": "Extracted the original selected texture maps without pixel modification",
+      "maps": [
+        {
+          "channel": "Color",
+          "file": "RawAssets/Textures/Environment/PaintedPlaster017_2K-JPG_Color.jpg",
+          "bytes": 1685200,
+          "sha256": "1690e0a8839a1db6ac7e339929ddfad885b5c34145ea206f2aa03d7669f73f44"
+        },
+        {
+          "channel": "NormalDX",
+          "file": "RawAssets/Textures/Environment/PaintedPlaster017_2K-JPG_NormalDX.jpg",
+          "bytes": 4638777,
+          "sha256": "981f97f3038a3409e1d99b6ba21c9acdd0ba2b556160234d4162cf300329b414"
+        },
+        {
+          "channel": "Roughness",
+          "file": "RawAssets/Textures/Environment/PaintedPlaster017_2K-JPG_Roughness.jpg",
+          "bytes": 972599,
+          "sha256": "c22b06fa7c7ad48fd1218575899627a68d0340af1133330881bc04587689179e"
+        }
+      ]
+    },
+    {
+      "name": "CorrugatedSteel005",
+      "material_slot": "Roof",
+      "url": "https://ambientcg.com/view?id=CorrugatedSteel005",
+      "licence": "CC0 1.0",
+      "licence_url": "https://docs.ambientcg.com/license/",
+      "version": "Local 2K JPG archive retained for environment task",
+      "source_archive_sha256": "9bec057d9db923cdf2208c0cc5b41e4df2072237c951ef4a4e22db0830a2a00a",
+      "source_archive_bytes": 19494451,
+      "changes": "Extracted the original selected texture maps without pixel modification",
+      "maps": [
+        {
+          "channel": "Color",
+          "file": "RawAssets/Textures/Environment/CorrugatedSteel005_2K-JPG_Color.jpg",
+          "bytes": 4188943,
+          "sha256": "02712624718790be0d84d8ec3ed7cdf5240a94f46d1fac670a62c6cb6f66bb0f"
+        },
+        {
+          "channel": "NormalDX",
+          "file": "RawAssets/Textures/Environment/CorrugatedSteel005_2K-JPG_NormalDX.jpg",
+          "bytes": 4217124,
+          "sha256": "aca22a097dfd35fa00de546f17db47ada17e3ade0f408b4364311747db57e8d1"
+        },
+        {
+          "channel": "Roughness",
+          "file": "RawAssets/Textures/Environment/CorrugatedSteel005_2K-JPG_Roughness.jpg",
+          "bytes": 2475236,
+          "sha256": "4beef4bbb697d6bab7c7b8c1460ab056576b58b0025fc4be10cba4ba7167faa7"
+        }
+      ]
+    },
+    {
+      "name": "Rock030",
+      "material_slot": "Rock",
+      "url": "https://ambientcg.com/view?id=Rock030",
+      "licence": "CC0 1.0",
+      "licence_url": "https://docs.ambientcg.com/license/",
+      "version": "Local 2K JPG archive retained for environment task",
+      "source_archive_sha256": "18992ddc09f8f0cc60eceb875243c0c2449666c662ab7fedbd8bdea4b3d15a99",
+      "source_archive_bytes": 33491328,
+      "changes": "Extracted the original selected texture maps without pixel modification",
+      "maps": [
+        {
+          "channel": "Color",
+          "file": "RawAssets/Textures/Environment/Rock030_2K-JPG_Color.jpg",
+          "bytes": 5905796,
+          "sha256": "c7169827afa47148833a3d778bd2827f12b124852efcabf3364910b1cb6d4beb"
+        },
+        {
+          "channel": "NormalDX",
+          "file": "RawAssets/Textures/Environment/Rock030_2K-JPG_NormalDX.jpg",
+          "bytes": 10228560,
+          "sha256": "c825dedeb63d47b7f235341543f3f9fe8d10727993e5e5efac6dd9cd13869c04"
+        },
+        {
+          "channel": "Roughness",
+          "file": "RawAssets/Textures/Environment/Rock030_2K-JPG_Roughness.jpg",
+          "bytes": 2506870,
+          "sha256": "a057169aa693438170a969249eb7e1113078f04c38b3fc2766fdccf21d5a918f"
+        }
+      ]
+    },
+    {
+      "name": "Grass004",
+      "material_slot": "Grass",
+      "url": "https://ambientcg.com/view?id=Grass004",
+      "licence": "CC0 1.0",
+      "licence_url": "https://docs.ambientcg.com/license/",
+      "version": "Local 2K JPG archive retained for environment task",
+      "source_archive_sha256": "d7d3f08e8bb1e59aed0c3dbb85ea0b46d5308481f89b6a3fd62c0ec9e862245b",
+      "source_archive_bytes": 39900302,
+      "changes": "Extracted the original selected texture maps without pixel modification",
+      "maps": [
+        {
+          "channel": "Color",
+          "file": "RawAssets/Textures/Environment/Grass004_2K-JPG_Color.jpg",
+          "bytes": 7644307,
+          "sha256": "735b141c8f1972e70a45879424f1238fea9f887324173097785f4ac36e67e9a3"
+        },
+        {
+          "channel": "NormalDX",
+          "file": "RawAssets/Textures/Environment/Grass004_2K-JPG_NormalDX.jpg",
+          "bytes": 10011482,
+          "sha256": "8681bb16df1050d50053b38a5a24aa1d235ce35e1888fcbff8a97a1dd11bf034"
+        },
+        {
+          "channel": "Roughness",
+          "file": "RawAssets/Textures/Environment/Grass004_2K-JPG_Roughness.jpg",
+          "bytes": 3413801,
+          "sha256": "c449fdf1e779eb7be5a19c1d58ee28cc155ed0523a141b151f3cbc843c4ae2e3"
+        }
+      ]
+    },
+    {
+      "name": "LeafSet014",
+      "material_slot": "Leaf",
+      "url": "https://ambientcg.com/view?id=LeafSet014",
+      "licence": "CC0 1.0",
+      "licence_url": "https://docs.ambientcg.com/license/",
+      "version": "Local 2K JPG archive retained for environment task",
+      "source_archive_sha256": "8065d616032cc3a2dfa7ff40ba716e483b7fc854ae8c8f03fa95ada2cb7fccc6",
+      "source_archive_bytes": 11343601,
+      "changes": "Extracted the original selected texture maps without pixel modification",
+      "maps": [
+        {
+          "channel": "Color",
+          "file": "RawAssets/Textures/Environment/LeafSet014_2K-JPG_Color.jpg",
+          "bytes": 2338174,
+          "sha256": "cd886f93c8e8d5ded48bd8478f0a949abf8de40367cbdbb2b105dbbaeb75da4f"
+        },
+        {
+          "channel": "NormalDX",
+          "file": "RawAssets/Textures/Environment/LeafSet014_2K-JPG_NormalDX.jpg",
+          "bytes": 2978645,
+          "sha256": "dd3e222855f74727688446e6ab12e492ba4236e5939cd0b0d15f40a7d962c002"
+        },
+        {
+          "channel": "Roughness",
+          "file": "RawAssets/Textures/Environment/LeafSet014_2K-JPG_Roughness.jpg",
+          "bytes": 1034913,
+          "sha256": "12ed3f39198ae1c16502394a023cfae23efda6aa6346d50b44e5e1897f80768c"
+        },
+        {
+          "channel": "Opacity",
+          "file": "RawAssets/Textures/Environment/LeafSet014_2K-JPG_Opacity.jpg",
+          "bytes": 204092,
+          "sha256": "a855f0863d731adce2776a23e910819ed0fd01728b160b7e9d001cbc831fe861"
+        }
+      ]
+    },
+    {
+      "name": "Bark012",
+      "material_slot": "Bark",
+      "url": "https://ambientcg.com/view?id=Bark012",
+      "licence": "CC0 1.0",
+      "licence_url": "https://docs.ambientcg.com/license/",
+      "version": "Local 2K JPG archive retained for environment task",
+      "source_archive_sha256": "8514e883c1171f64e3190e075dd32ac60599426e5e7d4aa0271c1615ce7549c2",
+      "source_archive_bytes": 33676387,
+      "changes": "Extracted the original selected texture maps without pixel modification",
+      "maps": [
+        {
+          "channel": "Color",
+          "file": "RawAssets/Textures/Environment/Bark012_2K-JPG_Color.jpg",
+          "bytes": 6405419,
+          "sha256": "8ab624e92663bd5e7f1636decc4da761ee314ac27ea528a962930f03d96dd08b"
+        },
+        {
+          "channel": "NormalDX",
+          "file": "RawAssets/Textures/Environment/Bark012_2K-JPG_NormalDX.jpg",
+          "bytes": 9305144,
+          "sha256": "df6928dd54024d95da1498c8142158fa503f96001b3d9c07c4dfee07362eb874"
+        },
+        {
+          "channel": "Roughness",
+          "file": "RawAssets/Textures/Environment/Bark012_2K-JPG_Roughness.jpg",
+          "bytes": 2520615,
+          "sha256": "b0503fd7694f7c84ef82c960129f3e23b191267b625c4ca209296ea6ae758519"
+        }
+      ]
+    }
+  ]
+}

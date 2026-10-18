@@ -36,6 +36,8 @@ void ADSEnemyAircraft::Initialize(bool Bomber, const FVector& Destination)
     Mesh->SetStaticMesh(LoadObject<UStaticMesh>(nullptr, Path));
     GunCooldown = FMath::FRandRange(.3f, 2.f);
     MissileCooldown = FMath::FRandRange(8.f, 16.f);
+    TerrainCheckCooldown = 0.f;
+    TerrainAltitudeFloor = 0.f;
 }
 
 FVector ADSEnemyAircraft::GetFormationSlotOffset(int32 SlotIndex)
@@ -54,6 +56,45 @@ void ADSEnemyAircraft::InitializeFormation(int32 GroupId, int32 SlotIndex, int32
     FormationHeading=Heading.GetSafeNormal2D();
     FormationElapsed=0.f;
     bFormationActive=bBomber && Count>1 && !FormationHeading.IsNearlyZero();
+    TerrainCheckCooldown=0.f;
+}
+
+void ADSEnemyAircraft::ApplyTerrainClearance(FVector& Aim, const FVector& Position, ADSGameMode* Mode, float DeltaSeconds)
+{
+    constexpr float ClearanceCm = 15000.f;
+    constexpr float NearProbeCm = 50000.f;
+    constexpr float FarProbeCm = 150000.f;
+    FVector IntendedHeading = (Aim - Position).GetSafeNormal2D();
+    FVector ForwardHeading = GetActorForwardVector().GetSafeNormal2D();
+    if (ForwardHeading.IsNearlyZero()) ForwardHeading = IntendedHeading;
+    if (IntendedHeading.IsNearlyZero()) IntendedHeading = ForwardHeading;
+
+    TerrainCheckCooldown -= FMath::Max(DeltaSeconds, 0.f);
+    if (TerrainCheckCooldown <= 0.f)
+    {
+        // Cache sparse probes rather than tracing the ground every frame.
+        // Probe both the current course and an upcoming turn before steering.
+        float HighestGround = Mode->GroundHeightAt(Position);
+        for (const float Distance : {NearProbeCm, FarProbeCm})
+        {
+            HighestGround = FMath::Max(HighestGround, Mode->GroundHeightAt(Position + ForwardHeading * Distance));
+            if (FVector::DotProduct(ForwardHeading, IntendedHeading) < .98f)
+                HighestGround = FMath::Max(HighestGround, Mode->GroundHeightAt(Position + IntendedHeading * Distance));
+        }
+        TerrainAltitudeFloor = HighestGround + ClearanceCm;
+        TerrainCheckCooldown = .2f;
+    }
+
+    if (Aim.Z < TerrainAltitudeFloor || Position.Z < TerrainAltitudeFloor)
+    {
+        // A distant target can yield too shallow a climb to clear a near ridge.
+        // Use a local steering point, preserving the ordinary turn-rate limit
+        // and speed-based movement instead of moving the aircraft vertically.
+        const float SteeringDistance = FMath::Clamp(FVector::Dist2D(Position, Aim), 10000.f, NearProbeCm);
+        const float DesiredAltitude = FMath::Max(Aim.Z, TerrainAltitudeFloor);
+        Aim = Position + IntendedHeading * SteeringDistance;
+        Aim.Z = DesiredAltitude;
+    }
 }
 
 void ADSEnemyAircraft::Tick(float Dt)
@@ -117,6 +158,9 @@ void ADSEnemyAircraft::Tick(float Dt)
             }
         }
     }
+    // Group ingress has a shared, terrain-cleared altitude. Independent
+    // avoidance would distort its triangular slots before the release point.
+    if (!bFormationActive) ApplyTerrainClearance(Aim, Pos, Mode, Dt);
     FRotator Desired = (Aim - Pos).Rotation();
     const float YawError = FMath::FindDeltaAngleDegrees(GetActorRotation().Yaw, Desired.Yaw);
     Desired.Roll = FMath::Clamp(YawError * (bBomber ? .5f : 1.3f), -65.f, 65.f);

@@ -6,6 +6,7 @@
 class UStaticMeshComponent;
 class USphereComponent;
 class UDSCannonFXComponent;
+class ADSGameMode;
 UCLASS()
 class DUNESENTINEL_API ADSEnemyAircraft : public AActor
 {
@@ -34,6 +35,7 @@ public:
     UPROPERTY(VisibleAnywhere) TObjectPtr<UStaticMeshComponent> Mesh;
     bool bEgress = false;
 private:
+    void ApplyTerrainClearance(FVector& Aim, const FVector& Position, ADSGameMode* Mode, float DeltaSeconds);
     UPROPERTY(VisibleAnywhere) TObjectPtr<UDSCannonFXComponent> CannonFX;
     FVector Objective;
     FVector FormationOrigin = FVector::ZeroVector;
@@ -43,6 +45,8 @@ private:
     float MissileCooldown = 5.f;
     float BombCooldown = 0.f;
     float LifeTime = 0.f;
+    float TerrainCheckCooldown = 0.f;
+    float TerrainAltitudeFloor = 0.f;
 };
 
 UCLASS()

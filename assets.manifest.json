@@ -101,7 +101,7 @@
       "name": "original-desert-airbase-art",
       "origin": "studio",
       "source": "Original game artwork",
-      "description": "Authored terrain, airbase and town structures, oasis plants and lakes, missile, undercarriage, surface panel artwork, cannon flash, smoke and tracer materials, and synthesized nonvoice audio created for this game by retained art scripts",
+      "description": "Project-authored terrain, airbase, lakes, missile, undercarriage, surface panel artwork, cannon flash, smoke and tracer materials, and synthesized nonvoice audio; earlier authored town structures and oasis plants retained as source assets. This entry covers original work within the listed shared folders; third-party files and downloaded model derivatives are credited separately in their own entries.",
       "licence": "Project original work",
       "store": false,
       "files": [

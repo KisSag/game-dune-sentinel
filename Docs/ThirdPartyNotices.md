@@ -49,7 +49,9 @@ The following ambientCG textures are CC0 1.0. Original selected maps and SHA-256
 - [LeafSet014](https://ambientcg.com/view?id=LeafSet014) — Leaf surface.
 - [Bark012](https://ambientcg.com/view?id=Bark012) — Bark surface.
 
-[License](https://docs.ambientcg.com/license/). Settlement architecture, plants, terrain, lakes and roads are original project-authored geometry.
+[License](https://docs.ambientcg.com/license/). The earlier revision's settlement architecture and plants were
+project-authored geometry and remain as retained source assets. The current map uses the downloaded model
+derivatives credited below. Terrain, lakes and roads remain project-authored geometry.
 
 ## Downloaded environment model revision
 

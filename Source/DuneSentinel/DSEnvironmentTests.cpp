@@ -291,6 +291,44 @@ private:
             Observations.Add(FString::Printf(TEXT("{\"case\":\"lake_%d\",\"terrain_hit\":%s,\"water_hit\":%s,\"terrain_floor_cm\":%.3f,\"water_surface_cm\":%.3f,\"depth_cm\":%.3f,\"bounds_center_offset_cm\":%.3f}"),
                 I+1, bFloor?TEXT("true"):TEXT("false"), bSurface?TEXT("true"):TEXT("false"), Floor, bSurface?LakeHit.ImpactPoint.Z:0., bSurface?LakeHit.ImpactPoint.Z-Floor:0., Distance));
         }
+        for (int32 I = 0; I < Banks.Num(); ++I)
+        {
+            UStaticMeshComponent* Bank = Banks[I]->GetStaticMeshComponent();
+            const FName OriginalProfile = Bank->GetCollisionProfileName();
+            const ECollisionEnabled::Type OriginalCollision = Bank->GetCollisionEnabled();
+            const FCollisionResponseContainer OriginalResponses = Bank->GetCollisionResponseToChannels();
+            // Decorative banks do not collide during play. Temporarily expose
+            // the same component's complex triangles to queries, then restore
+            // its settings before any gameplay or rendered observation.
+            Bank->SetCollisionResponseToAllChannels(ECR_Block);
+            Bank->SetCollisionEnabled(ECollisionEnabled::QueryOnly);
+            const FBox Bounds = Bank->Bounds.GetBox();
+            int32 BankHits = 0, GroundMisses = 0;
+            double MaximumGap = 0., MaximumBurial = 0., AbsoluteErrorSum = 0.;
+            FCollisionQueryParams Params(SCENE_QUERY_STAT(DSEnvironmentBank), true);
+            for (double X = Bounds.Min.X+1250.; X < Bounds.Max.X; X += 2500.)
+                for (double Y = Bounds.Min.Y+1250.; Y < Bounds.Max.Y; Y += 2500.)
+                {
+                    FHitResult BankHit;
+                    if (!Bank->LineTraceComponent(BankHit,FVector(X,Y,1500000.),FVector(X,Y,-50000.),Params)) continue;
+                    ++BankHits;
+                    double Ground = 0.;
+                    if (!TerrainHeight(FVector(X,Y,0),Ground)) { ++GroundMisses; continue; }
+                    const double Difference = BankHit.ImpactPoint.Z-Ground;
+                    MaximumGap = FMath::Max(MaximumGap,Difference);
+                    MaximumBurial = FMath::Max(MaximumBurial,-Difference);
+                    AbsoluteErrorSum += FMath::Abs(Difference);
+                }
+            Bank->SetCollisionEnabled(OriginalCollision);
+            Bank->SetCollisionResponseToChannels(OriginalResponses);
+            Bank->SetCollisionProfileName(OriginalProfile);
+            Check(*FString::Printf(TEXT("Green bank %d conforms to actual terrain triangles within half a metre"),I+1),
+                BankHits > 20 && GroundMisses == 0 && MaximumGap <= 50. && MaximumBurial <= 50.);
+            Check(*FString::Printf(TEXT("Green bank %d collision settings are restored after geometry queries"),I+1),
+                Bank->GetCollisionEnabled() == OriginalCollision && Bank->GetCollisionResponseToChannels() == OriginalResponses && Bank->GetCollisionProfileName() == OriginalProfile);
+            Observations.Add(FString::Printf(TEXT("{\"case\":\"bank_%d\",\"sample_spacing_cm\":2500,\"mesh_hits\":%d,\"terrain_misses\":%d,\"maximum_gap_cm\":%.3f,\"maximum_burial_cm\":%.3f,\"mean_absolute_error_cm\":%.3f}"),
+                I+1,BankHits,GroundMisses,MaximumGap,MaximumBurial,AbsoluteErrorSum/FMath::Max(BankHits-GroundMisses,1)));
+        }
         int32 GroundedFlora = 0, MaskedFlora = 0, TexturedFlora = 0, BankedFlora = 0;
         double MaximumFloraBaseError = 0.;
         TSet<UStaticMesh*> FloraVariants;
@@ -337,6 +375,27 @@ private:
         return Enemy;
     }
 
+    int32 TickSpawnedBombs(float DeltaSeconds)
+    {
+        int32 Remaining = 0;
+        for (TActorIterator<ADSBomb> It(World.Get()); It; ++It)
+        {
+            if (It->IsActorBeingDestroyed()) continue;
+            It->SetActorTickEnabled(false);
+            It->Tick(DeltaSeconds);
+            if (!It->IsActorBeingDestroyed()) ++Remaining;
+        }
+        return Remaining;
+    }
+
+    void SettleSpawnedBombs(float DeltaSeconds)
+    {
+        // Use the real gravity, flight velocity, terrain contact, damage and
+        // lifespan paths. The bound matches the ordinary bomb lifetime.
+        for (int32 I = 0; I < FMath::CeilToInt(40.f/DeltaSeconds)+1; ++I)
+            if (TickSpawnedBombs(DeltaSeconds) == 0) break;
+    }
+
     void RunEnemyClearanceChecks()
     {
         // Choose a genuinely difficult approach from collision measurements,
@@ -355,6 +414,8 @@ private:
         }
         Check(TEXT("Enemy clearance fixture traverses an actual ridge above 450 metres"), RidgeHeight > 45000.);
         Mode->Player->SetActorLocation(FVector(0,0,400000));
+        Mode->AirportHealth = Mode->AirportMaxHealth;
+        const float SoloInitialHealth = Mode->AirportHealth;
         ADSEnemyAircraft* Bomber = MakeEnemy(true, Outward*850000.+FVector(0,0,100000), -Outward);
         if (!Bomber) { Check(TEXT("Single bomber clearance fixture spawned"), false); return; }
         double MinimumClearance = DBL_MAX, MaxStepError = 0.;
@@ -364,6 +425,7 @@ private:
         {
             const FVector Before = Bomber->GetActorLocation();
             Bomber->Tick(Step);
+            TickSpawnedBombs(Step);
             const FVector After = Bomber->GetActorLocation();
             MaxStepError = FMath::Max(MaxStepError, FMath::Abs(FVector::Distance(Before,After)-Bomber->Speed*100.*Step));
             double Ground = 0.;
@@ -372,8 +434,10 @@ private:
         }
         Check(TEXT("Single bomber crosses the ridge without intersecting terrain or teleporting"), Samples > 300 && TraceMisses == 0 && MinimumClearance > 2500. && MaxStepError < 2.);
         Check(TEXT("Terrain-aware single bomber still reaches the airport and releases three bombs"), Bomber->BombsDropped == 3 && Bomber->bEgress);
-        Observations.Add(FString::Printf(TEXT("{\"case\":\"single_bomber_ridge\",\"ridge_height_cm\":%.3f,\"ridge_radius_cm\":%.3f,\"approach_xy\":[%.6f,%.6f],\"samples\":%d,\"trace_misses\":%d,\"minimum_clearance_cm\":%.3f,\"maximum_movement_error_cm\":%.6f,\"bombs\":%d,\"egress\":%s}"),
-            RidgeHeight, RidgeRadius, Outward.X, Outward.Y, Samples, TraceMisses, MinimumClearance, MaxStepError, Bomber->BombsDropped, Bomber->bEgress?TEXT("true"):TEXT("false")));
+        SettleSpawnedBombs(Step);
+        Check(TEXT("Single bomber payload falls onto the airport and causes actual damage"), Mode->AirportHealth < SoloInitialHealth && SoloInitialHealth-Mode->AirportHealth >= 300.f);
+        Observations.Add(FString::Printf(TEXT("{\"case\":\"single_bomber_ridge\",\"ridge_height_cm\":%.3f,\"ridge_radius_cm\":%.3f,\"approach_xy\":[%.6f,%.6f],\"samples\":%d,\"trace_misses\":%d,\"minimum_clearance_cm\":%.3f,\"maximum_movement_error_cm\":%.6f,\"bombs\":%d,\"egress\":%s,\"airport_health_before\":%.3f,\"airport_health_after_impacts\":%.3f}"),
+            RidgeHeight, RidgeRadius, Outward.X, Outward.Y, Samples, TraceMisses, MinimumClearance, MaxStepError, Bomber->BombsDropped, Bomber->bEgress?TEXT("true"):TEXT("false"),SoloInitialHealth,Mode->AirportHealth));
         ClearCombatActors();
 
         const FVector PlayerPoint = Outward*FMath::Max(200000., RidgeRadius-180000.);
@@ -407,6 +471,8 @@ private:
             Samples, TraceMisses, HighestTraversedGround, MinimumClearance, MaxStepError, ClosestTarget));
         ClearCombatActors();
         Mode->Player->SetActorLocation(FVector(0,0,400000));
+        Mode->AirportHealth = Mode->AirportMaxHealth;
+        const float GroupInitialHealth = Mode->AirportHealth;
 
         const FVector FormationOrigin = Outward*850000.+FVector(0,0,100000), Heading = -Outward;
         const FVector Right = FVector::CrossProduct(FVector::UpVector, Heading);
@@ -440,6 +506,7 @@ private:
                 bBombsOnlyAfterRelease &= !(Member->bFormationActive && Member->BombsDropped > 0);
                 if (Member->bEgress && Member->BombsDropped == 3) ++Egress;
             }
+            TickSpawnedBombs(Step);
             bAllReleased |= Released == 3;
             if (Egress == 3) break;
         }
@@ -448,8 +515,10 @@ private:
         Check(TEXT("Three-bomber triangular slots remain intact and terrain-clear during ridge ingress"),
             Group.Num()==3 && ActiveSamples>900 && GroupTraceMisses==0 && MaximumSlotError<3000. && GroupMinimumClearance>2500.);
         Check(TEXT("Formation still releases near the airport before all members bomb and depart"), bAllReleased && bBombsOnlyAfterRelease && FinalEgress==3);
-        Observations.Add(FString::Printf(TEXT("{\"case\":\"formation_ridge\",\"members\":%d,\"active_slot_samples\":%d,\"maximum_slot_error_cm\":%.3f,\"minimum_clearance_cm\":%.3f,\"trace_misses\":%d,\"members_bombed_and_departing\":%d}"),
-            Group.Num(), ActiveSamples, MaximumSlotError, GroupMinimumClearance, GroupTraceMisses, FinalEgress));
+        SettleSpawnedBombs(Step);
+        Check(TEXT("Released formation payloads fall onto the airport and cause actual damage"), Mode->AirportHealth < GroupInitialHealth && GroupInitialHealth-Mode->AirportHealth >= 300.f);
+        Observations.Add(FString::Printf(TEXT("{\"case\":\"formation_ridge\",\"members\":%d,\"active_slot_samples\":%d,\"maximum_slot_error_cm\":%.3f,\"minimum_clearance_cm\":%.3f,\"trace_misses\":%d,\"members_bombed_and_departing\":%d,\"airport_health_before\":%.3f,\"airport_health_after_impacts\":%.3f}"),
+            Group.Num(), ActiveSamples, MaximumSlotError, GroupMinimumClearance, GroupTraceMisses, FinalEgress,GroupInitialHealth,Mode->AirportHealth));
         ClearCombatActors();
     }
 

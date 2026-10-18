@@ -69,7 +69,7 @@ void ADSGameMode::SelectAircraft(int32 Index)
     if (Player)
     {
         Player->ConfigureAircraft(Aircraft[Index]);
-        Player->SetActorLocation(FVector(-28000,16000,2600));
+        Player->SetActorLocation(FVector(-28000,16000,2516));
         Player->SetActorRotation(FRotator(0,18,0));
         Player->Park();
     }

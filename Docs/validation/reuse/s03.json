@@ -1,0 +1,271 @@
+{
+  "schema": "native-asset-reuse/v1",
+  "stage": "s03",
+  "engine": "5.7",
+  "operation": "reuse_existing_assets",
+  "started": "2026-10-18T13:23:24.142684-07:00",
+  "import_performed": false,
+  "native_authoring_performed": false,
+  "runtime_tests_run": false,
+  "packages": [
+    {
+      "path": "Content/Art/Aircraft/SM_bomber.uasset",
+      "sha256": "dc4e4383728d6b5830d19e09e947968d4c606f5741af8b88f2365bec7d6524d7",
+      "bytes": 134000
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_falcon.uasset",
+      "sha256": "468102e1a0a987df9113b1d8f55f2e9fad2a81c2bc9b76c1003f06ab46152010",
+      "bytes": 201050
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_hostile.uasset",
+      "sha256": "3ec252f4cd67b27dc95b707c2d6aa9ef4ff8591b1d38c095a09c134c99363cac",
+      "bytes": 192190
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_lancer.uasset",
+      "sha256": "69426dbbd5e17b541ae328ff50a717a6bda3ee75cc0442cad10a34ba88577d83",
+      "bytes": 149752
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_landinggear.uasset",
+      "sha256": "cdd6169aed96cea53554a6218ca9d8bed46aad7276e7dc30fcbac62e45a3c960",
+      "bytes": 26147
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_mirage.uasset",
+      "sha256": "49b75358ee6890e50434eb93e1f209b6347d379db5a4fb6efca748f1f711e37b",
+      "bytes": 200996
+    },
+    {
+      "path": "Content/Art/Effects/M_Explosion.uasset",
+      "sha256": "980f40bdcdfe16eda62bc0d68e6c1b276d2781f2d85fcde7ec4fb4d82972e501",
+      "bytes": 8104
+    },
+    {
+      "path": "Content/Art/Effects/M_MissileGlow.uasset",
+      "sha256": "87236acad5a7f535f673f8f88a2828c5fc99dfce41fa8d0334a598fd4fadef7c",
+      "bytes": 7756
+    },
+    {
+      "path": "Content/Art/Effects/M_Tracer.uasset",
+      "sha256": "5a26d317c0bff567c4647e23bc7a7fbcb2bc3843f7b7f35166d6d5a5844f5aaa",
+      "bytes": 7731
+    },
+    {
+      "path": "Content/Art/Effects/SM_missile.uasset",
+      "sha256": "53bea0b3bb12f5b9b6eb8db895e0c67475cf9faa97131a0d4da23b532ac3304a",
+      "bytes": 21198
+    },
+    {
+      "path": "Content/Art/Environment/SM_Airbase.uasset",
+      "sha256": "4e86ecd9938f8b83f64501437380d082079b54874d896210764916e122e6bf2c",
+      "bytes": 643269
+    },
+    {
+      "path": "Content/Art/Environment/SM_DesertTerrain.uasset",
+      "sha256": "f05f29ac889ff63f7bdbc310beec3fad8dd119f3fc1383fb17e5234b46866347",
+      "bytes": 2055893
+    },
+    {
+      "path": "Content/Art/Environment/SM_DistantGobi.uasset",
+      "sha256": "1e7b3ec06d11124dc9352045b62f39abdf818a3610bc25993af901a7e92a6834",
+      "bytes": 435252
+    },
+    {
+      "path": "Content/Art/Materials/M_Airframe.uasset",
+      "sha256": "92a6c143eca61b0098038b04b7602b5bff52631e66bd9f64799c885c3b5b67a3",
+      "bytes": 7493
+    },
+    {
+      "path": "Content/Art/Materials/M_Asphalt.uasset",
+      "sha256": "3ee59e239fb5c8f4436a869614f0359a7a8830d558ff40a30e9e1c0620545726",
+      "bytes": 9601
+    },
+    {
+      "path": "Content/Art/Materials/M_Canopy.uasset",
+      "sha256": "726f9c98275966aeb77152551432a3600de3a28dc1e7594ce306aadaecbaede5",
+      "bytes": 7483
+    },
+    {
+      "path": "Content/Art/Materials/M_Concrete.uasset",
+      "sha256": "bf68735f2180df07cb66693084d37dc52bb8ecbae1dc3a228ddcfb60a09d28fe",
+      "bytes": 9612
+    },
+    {
+      "path": "Content/Art/Materials/M_Desert.uasset",
+      "sha256": "9aeaf305f9b231945480ea39a8eb4fb0e7ec80a763fb96a5afbf0f9aad92796e",
+      "bytes": 25782
+    },
+    {
+      "path": "Content/Art/Materials/M_Engine.uasset",
+      "sha256": "d42fada7bbce4cca65fcc476364f758fde7208a512fb3c9a5249a40b0e57d18f",
+      "bytes": 7483
+    },
+    {
+      "path": "Content/Art/Materials/M_Glass.uasset",
+      "sha256": "6ffc0e8c3cead719e62ebe386d6ab33e56fc4608214bc8498ac86d2af55049f5",
+      "bytes": 7478
+    },
+    {
+      "path": "Content/Art/Materials/M_Hangar.uasset",
+      "sha256": "c25106a025a6f41a830e328faf0001541dadfa747be1d958d898f486188df4d5",
+      "bytes": 8269
+    },
+    {
+      "path": "Content/Art/Materials/M_Intake.uasset",
+      "sha256": "ed9f5ec46b5c606125259c13c27fe63fe7fc53a1b20de84548f53fce1d4ba939",
+      "bytes": 7471
+    },
+    {
+      "path": "Content/Art/Materials/M_Marking.uasset",
+      "sha256": "84d1d8254e845b700f9876654e910d9fa6c20beb8b1fbdb482dbb17de043538c",
+      "bytes": 7398
+    },
+    {
+      "path": "Content/Art/Materials/M_Paint.uasset",
+      "sha256": "e64b1f24304608e3f08fca126284af9e3d37705dc8d3cd78249d9213910f32b7",
+      "bytes": 7388
+    },
+    {
+      "path": "Content/Art/Materials/M_Rubber.uasset",
+      "sha256": "e582a900c6467d37294c80e4811c209f4d5a2942eaa1c190cff5f227ac83c449",
+      "bytes": 8228
+    },
+    {
+      "path": "Content/Art/Materials/M_RunwayLight.uasset",
+      "sha256": "cc03b225367051e39c83c44f3357528bc857f8df50c78b3566990d16e16d9f39",
+      "bytes": 6777
+    },
+    {
+      "path": "Content/Art/Materials/M_Steel.uasset",
+      "sha256": "0f2da8b4d7233f99cd48b2a9d2abc0baac1f78d5a1c0e4519036d2b519d1bf35",
+      "bytes": 7478
+    },
+    {
+      "path": "Content/Art/Materials/M_White.uasset",
+      "sha256": "28a461a30f0740037036bea21d3f39458836ec0e3d6e3b39d452967491ffeafa",
+      "bytes": 7388
+    },
+    {
+      "path": "Content/Art/Textures/T_AircraftPanel.uasset",
+      "sha256": "ec6c983865eb88828fac2cf9514dc941b6bc2991cac1425a1353b3b5b20d08be",
+      "bytes": 1186163
+    },
+    {
+      "path": "Content/Art/Textures/T_Asphalt.uasset",
+      "sha256": "066f4ae39974e9d6c1d8d50b0002c074c0136be13671a4170c8d6f5c55e9bc76",
+      "bytes": 382667
+    },
+    {
+      "path": "Content/Art/Textures/T_DesertARM.uasset",
+      "sha256": "552f895b8868769ba8ae17071d442bcbe4e2df4907236ba98dc34b11ff324335",
+      "bytes": 813208
+    },
+    {
+      "path": "Content/Art/Textures/T_DesertBase.uasset",
+      "sha256": "e39d4a718c101deb293259b9b1982d0badce848da8c7da5f495735508a26b4a5",
+      "bytes": 2526269
+    },
+    {
+      "path": "Content/Art/Textures/T_DesertNormal.uasset",
+      "sha256": "7be7a32110a0904b7c4acf921b1ed83e316269e643c3cd9bdb6b959df43fc924",
+      "bytes": 2424608
+    },
+    {
+      "path": "Content/Audio/S_defeat.uasset",
+      "sha256": "0ad3db4e1924a4b002fc81e58942224b653a7cfe131d55004155f913eee39edb",
+      "bytes": 53240
+    },
+    {
+      "path": "Content/Audio/S_engine.uasset",
+      "sha256": "a983aa5b11001f86166dabc4a38db1e3289afeef6a0a3d9a823a823c32239fd1",
+      "bytes": 305900
+    },
+    {
+      "path": "Content/Audio/S_explosion.uasset",
+      "sha256": "ee2a9c056a09c0dd3488e726329aecdbc1cb6a5ff3ba6bed403ba2a4f45d8e23",
+      "bytes": 174892
+    },
+    {
+      "path": "Content/Audio/S_gun.uasset",
+      "sha256": "c4d791693afae2364d3d65489f8a3ceafb64ee60f7cf7ad61eea53d39e9a57eb",
+      "bytes": 17428
+    },
+    {
+      "path": "Content/Audio/S_hit.uasset",
+      "sha256": "a19d8d60b391e71ead60658bb2ca5692e98fe7f5edc6ddf2e87552dedb8180f9",
+      "bytes": 29464
+    },
+    {
+      "path": "Content/Audio/S_lock.uasset",
+      "sha256": "1ef9b9d65cf4e8ff1cddcdec9246ea6b903724e4ab8429e3d51905953dcb7f75",
+      "bytes": 12626
+    },
+    {
+      "path": "Content/Audio/S_menu.uasset",
+      "sha256": "3b2b1b3617fdc433fd09e303ebf0f1d1ad09be40c596634f91293f99e7d74831",
+      "bytes": 10543
+    },
+    {
+      "path": "Content/Audio/S_missile.uasset",
+      "sha256": "403f834416fef6cb60466adf32e4c37727c5f11a1e8a12a2bf6f338067bc9685",
+      "bytes": 103911
+    },
+    {
+      "path": "Content/Audio/S_resupply.uasset",
+      "sha256": "5e208e1cc4c2c73ae8a6afcc325d4cc1067925aa8c11a5dc9b00ca77ce8ee035",
+      "bytes": 48222
+    },
+    {
+      "path": "Content/Audio/S_start.uasset",
+      "sha256": "91344ff8b47e2a4329e0852dbce7ab86358eb7c041f99e4a599c0dcff1c894b0",
+      "bytes": 63575
+    },
+    {
+      "path": "Content/Audio/S_wave.uasset",
+      "sha256": "8f667f79a1a1334421da4ba6e0922ebb9d7bbc3b0c4dad37978c1ad4d7067387",
+      "bytes": 38696
+    },
+    {
+      "path": "Content/Audio/S_wind.uasset",
+      "sha256": "3d05ea88ab86b5c5c175d5b2b0dcdec15ea06da7d6e2c5bbce1d830fc863a670",
+      "bytes": 441595
+    },
+    {
+      "path": "Content/Blueprints/BP_DSGameMode.uasset",
+      "sha256": "41ce8bb4fc284e7d92f4fbf9d1ce59dee9cec890512ac9e65d8638ed16fe8ef1",
+      "bytes": 20829
+    },
+    {
+      "path": "Content/Maps/DesertDefense.umap",
+      "sha256": "16cf3c85aa691410c9a773844e5843203a8fcd620e22beab934e61be16e48043",
+      "bytes": 34840
+    },
+    {
+      "path": "Content/UI/Fonts/OrbitronFont.uasset",
+      "sha256": "f670a1ba35c1e678d434619ac779fbe1417031492cd7d49b31488c2517e0aa49",
+      "bytes": 2464
+    },
+    {
+      "path": "Content/UI/Fonts/OrbitronFont_Face.uasset",
+      "sha256": "9e8d0d9faf01f1ed063c7dad3b048eeba96aa0c46c30b51e86f026cc134af68e",
+      "bytes": 40112
+    },
+    {
+      "path": "Content/UI/Fonts/RajdhaniFont.uasset",
+      "sha256": "e8bbf4ca89a96e5fb503c5a96987f2138a3d68e6b17f45f67b2ed4dc3c18106a",
+      "bytes": 2464
+    },
+    {
+      "path": "Content/UI/Fonts/RajdhaniFont_Face.uasset",
+      "sha256": "15f3965a05da9582b741dad6ad995c9b6506eb07af133d7bfcd0707d66c76e91",
+      "bytes": 379396
+    }
+  ],
+  "copied": [],
+  "deleted": [],
+  "status": "reused_bytes_verified",
+  "completed": "2026-10-18T13:23:24.589448-07:00"
+}

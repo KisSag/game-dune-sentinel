@@ -35,6 +35,7 @@ ADSFlightPawn::ADSFlightPawn()
     AircraftMesh->SetCollisionEnabled(ECollisionEnabled::NoCollision);
     LandingGear = CreateDefaultSubobject<UStaticMeshComponent>(TEXT("LandingGear"));
     LandingGear->SetupAttachment(AircraftMesh);
+    LandingGear->SetRelativeScale3D(FVector(.8f));
     LandingGear->SetCollisionEnabled(ECollisionEnabled::NoCollision);
     CameraArm = CreateDefaultSubobject<USpringArmComponent>(TEXT("ChaseArm"));
     CameraArm->SetupAttachment(Collision);

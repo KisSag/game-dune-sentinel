@@ -58,7 +58,10 @@ bool FDSMissionRulesTest::RunTest(const FString& Parameters)
     TestEqual(TEXT("Restart restores airport health"),Mode->AirportHealth,Mode->AirportMaxHealth);
     TestEqual(TEXT("Restart resets score"),Mode->Score,0);
     TestEqual(TEXT("Start spawns the initial wave"),Mode->Wave,1);
-    TestTrue(TEXT("Initial wave contains randomized bounded enemies"),Mode->Enemies.Num()>=3 && Mode->Enemies.Num()<=6);
+    TestTrue(TEXT("Initial wave contains randomized bounded enemies"),Mode->Enemies.Num()>=3 && Mode->Enemies.Num()<=7);
+    int32 InitialBombers=0;
+    for (ADSEnemyAircraft* Enemy : Mode->Enemies) if (IsValid(Enemy) && Enemy->bBomber) ++InitialBombers;
+    TestTrue(TEXT("Initial bomber wave contains one or three aircraft"),InitialBombers==1 || InitialBombers==3);
     Mode->Tick(299.f);
     TestEqual(TEXT("No second wave before five minutes"),Mode->Wave,1);
     Mode->Tick(1.1f);

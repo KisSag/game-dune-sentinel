@@ -4,6 +4,7 @@
 #include "DSProjectile.h"
 #include "DSImpactFX.h"
 #include "DSCannonFXComponent.h"
+#include "AutoPlay/AutoPlaySubsystem.h"
 #include "Components/SphereComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Engine/StaticMesh.h"
@@ -37,6 +38,24 @@ void ADSEnemyAircraft::Initialize(bool Bomber, const FVector& Destination)
     MissileCooldown = FMath::FRandRange(8.f, 16.f);
 }
 
+FVector ADSEnemyAircraft::GetFormationSlotOffset(int32 SlotIndex)
+{
+    if (SlotIndex<=0) return FVector::ZeroVector;
+    const int32 Row=(SlotIndex+1)/2;
+    return FVector(-16000.f*Row,(SlotIndex%2==1 ? -14000.f : 14000.f)*Row,0.f);
+}
+
+void ADSEnemyAircraft::InitializeFormation(int32 GroupId, int32 SlotIndex, int32 Count, const FVector& Origin, const FVector& Heading)
+{
+    FormationGroup=GroupId;
+    FormationSlot=SlotIndex;
+    FormationCount=Count;
+    FormationOrigin=Origin;
+    FormationHeading=Heading.GetSafeNormal2D();
+    FormationElapsed=0.f;
+    bFormationActive=bBomber && Count>1 && !FormationHeading.IsNearlyZero();
+}
+
 void ADSEnemyAircraft::Tick(float Dt)
 {
     Super::Tick(Dt);
@@ -49,12 +68,34 @@ void ADSEnemyAircraft::Tick(float Dt)
     ADSFlightPawn* Player = Mode->Player;
     const FVector Pos = GetActorLocation();
     const float PlayerDist = IsValid(Player) ? FVector::Dist(Pos, Player->GetActorLocation()) : BIG_NUMBER;
+    if (bFormationActive)
+    {
+        const FVector Anchor=GetFormationAnchor();
+        if (FVector::Dist2D(Anchor,Objective)<=FormationBreakDistance || bEgress)
+        {
+            bFormationActive=false;
+            Speed=170.f;
+            if (UAutoPlaySubsystem* AP=UAutoPlaySubsystem::Get(this))
+                AP->Telemetry(TEXT("bomber_formation_released"),FString::Printf(TEXT("\"group\":%d,\"slot\":%d,\"distance_m\":%.1f"),FormationGroup,FormationSlot,FVector::Dist2D(Pos,Objective)/100.f));
+        }
+        else
+        {
+            const FVector Offset=GetFormationSlotOffset(FormationSlot);
+            const FVector Right=FVector::CrossProduct(FVector::UpVector,FormationHeading);
+            const FVector SlotPosition=Anchor+FormationHeading*Offset.X+Right*Offset.Y;
+            const FVector Error=SlotPosition-Pos;
+            // Follow a moving reference rather than a live leader; casualties leave honest gaps.
+            Aim=SlotPosition+FormationHeading*50000.f;
+            Speed=FMath::Clamp(170.f+FVector::DotProduct(Error,FormationHeading)*.008f,140.f,200.f);
+            FormationElapsed+=Dt;
+        }
+    }
     if (!bBomber && IsValid(Player))
     {
         Aim = Player->GetActorLocation() + Player->GetActorForwardVector() * Player->Speed * 100.f * FMath::Clamp(PlayerDist / 60000.f, .1f, 2.f);
         if (PlayerDist < 18000.f) Aim = Pos + GetActorForwardVector() * 160000.f + FVector(0,0,30000.f);
     }
-    if (bBomber && !bEgress)
+    if (bBomber && !bEgress && !bFormationActive)
     {
         Aim.Z = Objective.Z + 65000.f;
         if (FVector::Dist2D(Pos, Objective) < 210000.f)

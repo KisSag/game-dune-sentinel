@@ -176,27 +176,79 @@ float ADSGameMode::SecondsToNextWave() const
     return FMath::Max(0.f,NextWaveAt-Elapsed);
 }
 
+int32 ADSGameMode::GetBomberCountForCapacity(int32 RequestedCount, int32 Capacity)
+{
+    const int32 Count=FMath::Clamp(FMath::Min(RequestedCount,Capacity),0,5);
+    return Count>0 && Count%2==0 ? Count-1 : Count;
+}
+
 void ADSGameMode::SpawnWave()
 {
     ++Wave;
     Enemies.RemoveAll([](ADSEnemyAircraft* Enemy){return !IsValid(Enemy) || Enemy->bDying;});
-    const int32 Fighters=FMath::Min(Random.RandRange(2,4)+(Wave-1)/2,8);
-    const int32 Bombers=FMath::Min(Random.RandRange(1,2)+(Wave-1)/3,4);
+    const int32 RequestedFighters=FMath::Min(Random.RandRange(2,4)+(Wave-1)/2,8);
+    const int32 RequestedBombers=FMath::Min(1+2*(Random.RandRange(0,1)+(Wave-1)/3),5);
+    const int32 BomberCapacity=GetBomberCountForCapacity(RequestedBombers,24-Enemies.Num());
     const float Heading=Random.FRandRange(0,2*PI);
-    for (int32 I=0;I<Fighters+Bombers && Enemies.Num()<24;++I)
+    const FVector FormationOrigin(FMath::Cos(Heading)*850000.f,FMath::Sin(Heading)*850000.f,100000.f);
+    const FVector FormationHeading=(AirportLocation-FormationOrigin).GetSafeNormal2D();
+    const FVector FormationRight=FVector::CrossProduct(FVector::UpVector,FormationHeading);
+    auto SpawnEnemy=[this](bool bBomber,const FVector& Position,const FRotator& Rotation)
     {
-        const bool Bomber=I>=Fighters;
-        const float Angle=Heading+(I-(Fighters+Bombers)*.5f)*.065f;
-        FVector Pos(FMath::Cos(Angle)*850000.f,FMath::Sin(Angle)*850000.f,Bomber?100000.f:130000.f+I*6000);
-        const FRotator Facing=(AirportLocation+FVector(0,0,65000)-Pos).Rotation();
         FActorSpawnParameters Params;
         Params.SpawnCollisionHandlingOverride=ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-        ADSEnemyAircraft* Enemy=GetWorld()->SpawnActor<ADSEnemyAircraft>(Pos,Facing,Params);
-        if (Enemy) {Enemy->Initialize(Bomber,AirportLocation);Enemies.Add(Enemy);}
+        ADSEnemyAircraft* Enemy=GetWorld()->SpawnActor<ADSEnemyAircraft>(Position,Rotation,Params);
+        if (Enemy) Enemy->Initialize(bBomber,AirportLocation);
+        return Enemy;
+    };
+    auto SpawnBomber=[&](int32 Slot)
+    {
+        const FVector Offset=ADSEnemyAircraft::GetFormationSlotOffset(Slot);
+        return SpawnEnemy(true,FormationOrigin+FormationHeading*Offset.X+FormationRight*Offset.Y,FormationHeading.Rotation());
+    };
+    TArray<ADSEnemyAircraft*> NewBombers;
+    if (BomberCapacity>0)
+    {
+        if (ADSEnemyAircraft* Lead=SpawnBomber(0))
+        {
+            NewBombers.Add(Lead);
+            for (int32 Slot=1;Slot<BomberCapacity;Slot+=2)
+            {
+                ADSEnemyAircraft* Left=SpawnBomber(Slot);
+                ADSEnemyAircraft* Right=SpawnBomber(Slot+1);
+                // A wing pair joins atomically, before either aircraft can tick or become a target.
+                if (!Left || !Right)
+                {
+                    if (Left) Left->Destroy();
+                    if (Right) Right->Destroy();
+                    break;
+                }
+                NewBombers.Add(Left);
+                NewBombers.Add(Right);
+            }
+        }
+    }
+    for (int32 Slot=0;Slot<NewBombers.Num();++Slot)
+    {
+        ADSEnemyAircraft* Bomber=NewBombers[Slot];
+        Bomber->InitializeFormation(Wave,Slot,NewBombers.Num(),FormationOrigin,FormationHeading);
+        Enemies.Add(Bomber);
+    }
+    int32 Fighters=0;
+    for (int32 I=0;I<RequestedFighters && Enemies.Num()<24;++I)
+    {
+        const float Angle=Heading+(I-RequestedFighters*.5f)*.065f;
+        const FVector Pos(FMath::Cos(Angle)*850000.f,FMath::Sin(Angle)*850000.f,130000.f+I*6000);
+        const FRotator Facing=(AirportLocation+FVector(0,0,65000)-Pos).Rotation();
+        if (ADSEnemyAircraft* Enemy=SpawnEnemy(false,Pos,Facing))
+        {
+            Enemies.Add(Enemy);
+            ++Fighters;
+        }
     }
     if (Wave>1) Radio(FString::Printf(TEXT("OVERWATCH: Wave %02d inbound. Prioritize the bombers."),Wave));
     if (UAutoPlaySubsystem* AP=UAutoPlaySubsystem::Get(this))
-        AP->Telemetry(TEXT("wave_spawned"),FString::Printf(TEXT("\"wave\":%d,\"fighters\":%d,\"bombers\":%d"),Wave,Fighters,Bombers));
+        AP->Telemetry(TEXT("wave_spawned"),FString::Printf(TEXT("\"wave\":%d,\"fighters\":%d,\"bombers\":%d,\"formation_group\":%d"),Wave,Fighters,NewBombers.Num(),Wave));
 }
 
 void ADSGameMode::RegisterKill(ADSEnemyAircraft* Enemy,bool bPlayerKill)

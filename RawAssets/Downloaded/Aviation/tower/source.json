@@ -1,0 +1,116 @@
+{
+  "schema": "aviation-source/v1",
+  "asset_slug": "tower",
+  "credit": {
+    "title": "Control Tower San Francisco",
+    "author": "Lucas Sobral",
+    "author_url": "https://sketchfab.com/lucassobral3d",
+    "source_url": "https://sketchfab.com/3d-models/control-tower-san-francisco-96e0b2ef0b784a48968634583617d208",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "embedded_credits": [],
+  "original": {
+    "file": "RawAssets/Downloaded/Aviation/tower/source.glb",
+    "bytes": 65617124,
+    "sha256": "1a7d7e63d3d63c9b0fa0632708b5864e8e6138a6af64fda61e4736c9b23ca3aa"
+  },
+  "source_content_modified": false,
+  "images": [
+    {
+      "file": "RawAssets/Downloaded/Aviation/tower/textures/image_000.png",
+      "bytes": 26399259,
+      "sha256": "8de8df76e730c838d494da5b9262c325ec33964948984ddeb8ccbbd9e5cf8e58",
+      "source_image_index": 0,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tower/textures/image_001.png",
+      "bytes": 12379528,
+      "sha256": "67252a17e8e0098bc929063187c9170f014f79410a16b08a6646d13ade961312",
+      "source_image_index": 1,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tower/textures/image_002.png",
+      "bytes": 15062564,
+      "sha256": "b06d49fe9f33c028abac77bdfeadd31cc11cdee5b9f4dd68f44e215d6f332c02",
+      "source_image_index": 2,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tower/textures/image_003.png",
+      "bytes": 4426555,
+      "sha256": "9cc71d4aa5dfe431adeaa301d0205ced50ef6a7bcb15feff4d90a59ca1bff499",
+      "source_image_index": 3,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tower/textures/image_004.png",
+      "bytes": 2541571,
+      "sha256": "3592109d09fd9eecff562a1ce9dd84befdead7dbc2bf659fdec881254325cdf6",
+      "source_image_index": 4,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tower/textures/image_005.png",
+      "bytes": 135496,
+      "sha256": "2de1d23b4f52161214ff19e8908f3d17c4cd466966258c1f4124b6b351f74b18",
+      "source_image_index": 5,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    }
+  ],
+  "derived_images": [],
+  "material_file": {
+    "file": "RawAssets/Downloaded/Aviation/tower/materials.json",
+    "bytes": 4265,
+    "sha256": "46491893efe5a7089f0679c8a69396ed6312b98d363bfe8eda5d862ea5a0b0f5"
+  },
+  "source_material_count": 2,
+  "source_mesh_count": 2,
+  "gltf_extensions_used": [
+    "KHR_materials_specular"
+  ],
+  "conversion_notes": [
+    "Original GLB and embedded PNG/JPEG files retained byte for byte.",
+    "Material descriptors preserve source factors, channels and UV transforms.",
+    "Numeric factors are linear; only colour texture RGB is decoded from sRGB.",
+    "Rafale neutral dielectric F0 and inverse glossiness are encoded into derived linear masks."
+  ]
+}

@@ -1,0 +1,999 @@
+{
+  "schema": "aircraft-meshes/v1",
+  "meshes": [
+    {
+      "name": "SM_AU_F16",
+      "fbx": "RawAssets/Aircraft/Downloaded/SM_AU_F16.fbx",
+      "dest": "/Game/Art/Aircraft/Downloaded",
+      "materials": {
+        "M_AU_f16_06_aeleron": "M_AU_f16_06_aeleron",
+        "M_AU_f16_07_elevator": "M_AU_f16_07_elevator",
+        "M_AU_f16_08_fuselage": "M_AU_f16_08_fuselage",
+        "M_AU_f16_09_fuselage_0": "M_AU_f16_09_fuselage_0",
+        "M_AU_f16_10_fuselage_1": "M_AU_f16_10_fuselage_1",
+        "M_AU_f16_11_engine": "M_AU_f16_11_engine",
+        "M_AU_f16_12_rudder": "M_AU_f16_12_rudder",
+        "M_AU_f16_13_canopy_metal": "M_AU_f16_13_canopy_metal",
+        "M_AU_f16_14_canopy_glass": "M_AU_f16_14_canopy_glass"
+      },
+      "nanite": false,
+      "sockets": [
+        {
+          "name": "Exhaust_01",
+          "location_cm": [
+            -692.3554420471191,
+            2.7068779218097916e-05,
+            0.0
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            59.03803740353434,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Cannon",
+          "location_cm": [
+            138.0636215209961,
+            -74.93286728858948,
+            37.871766090393066
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Missile_L",
+          "location_cm": [
+            15.446186065673828,
+            -331.52127265930176,
+            -48.414599895477295
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Missile_R",
+          "location_cm": [
+            15.446186065673828,
+            331.5213203430176,
+            -48.414599895477295
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "GearFloor",
+          "location_cm": [
+            0.0,
+            -0.0,
+            -185.69620847702026
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "source_assets": [
+        "f16"
+      ],
+      "triangles": 165587,
+      "vertices": 496761,
+      "uv_layers": 2,
+      "dimensions_m": [
+        15.059999465942383,
+        9.253447532653809,
+        4.646915435791016
+      ],
+      "bounds_ue_m": {
+        "min": [
+          -7.529999732971191,
+          -4.626723766326904,
+          -1.2950119972229004
+        ],
+        "max": [
+          7.53000020980835,
+          4.626723766326904,
+          3.351903200149536
+        ]
+      },
+      "source_normal_min_dot": 0.999986891518347,
+      "sha256": "424bcb46d970594cc7fb3599a5d3bc7105c9ff8ea1120af7188944cd84fb5d06",
+      "notes": {
+        "length_target_m": 15.06,
+        "source_scale": 4.541387492579564,
+        "source_origin": [
+          -5.960464477539063e-08,
+          1.5240119695663452,
+          0.046607501804828644
+        ],
+        "forward_axis": "UE +X; Blender export reflects Y",
+        "gear": "Full separate parked pose; flight has retracted or removed gear",
+        "weapon_mounts": "Authored on the nose/wing-root gun and bilateral weapon release positions",
+        "engine_mounts": "Source outlet positions; radius kept inside the measured nozzle aperture"
+      }
+    },
+    {
+      "name": "SM_AU_F16_Parked",
+      "fbx": "RawAssets/Aircraft/Downloaded/SM_AU_F16_Parked.fbx",
+      "dest": "/Game/Art/Aircraft/Downloaded",
+      "materials": {
+        "M_AU_f16_00_gear_metal": "M_AU_f16_00_gear_metal",
+        "M_AU_f16_01_gear_rubber": "M_AU_f16_01_gear_rubber",
+        "M_AU_f16_02_gear_metal_001": "M_AU_f16_02_gear_metal_001",
+        "M_AU_f16_03_gear_column_front": "M_AU_f16_03_gear_column_front",
+        "M_AU_f16_04_gear_bay_door_front_001": "M_AU_f16_04_gear_bay_door_front_001",
+        "M_AU_f16_05_gear_bay_door_rear": "M_AU_f16_05_gear_bay_door_rear",
+        "M_AU_f16_06_aeleron": "M_AU_f16_06_aeleron",
+        "M_AU_f16_07_elevator": "M_AU_f16_07_elevator",
+        "M_AU_f16_08_fuselage": "M_AU_f16_08_fuselage",
+        "M_AU_f16_09_fuselage_0": "M_AU_f16_09_fuselage_0",
+        "M_AU_f16_10_fuselage_1": "M_AU_f16_10_fuselage_1",
+        "M_AU_f16_11_engine": "M_AU_f16_11_engine",
+        "M_AU_f16_12_rudder": "M_AU_f16_12_rudder",
+        "M_AU_f16_13_canopy_metal": "M_AU_f16_13_canopy_metal",
+        "M_AU_f16_14_canopy_glass": "M_AU_f16_14_canopy_glass"
+      },
+      "nanite": false,
+      "sockets": [
+        {
+          "name": "Exhaust_01",
+          "location_cm": [
+            -692.3554420471191,
+            2.7068779218097916e-05,
+            0.0
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            59.03803740353434,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Cannon",
+          "location_cm": [
+            138.0636215209961,
+            -74.93286728858948,
+            37.871766090393066
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Missile_L",
+          "location_cm": [
+            15.446186065673828,
+            -331.52127265930176,
+            -48.414599895477295
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Missile_R",
+          "location_cm": [
+            15.446186065673828,
+            331.5213203430176,
+            -48.414599895477295
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "GearFloor",
+          "location_cm": [
+            0.0,
+            -0.0,
+            -185.69620847702026
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "source_assets": [
+        "f16"
+      ],
+      "triangles": 192251,
+      "vertices": 576753,
+      "uv_layers": 2,
+      "dimensions_m": [
+        15.059999465942383,
+        9.253447532653809,
+        5.208865165710449
+      ],
+      "bounds_ue_m": {
+        "min": [
+          -7.529999732971191,
+          -4.626723766326904,
+          -1.8569620847702026
+        ],
+        "max": [
+          7.53000020980835,
+          4.626723766326904,
+          3.351903200149536
+        ]
+      },
+      "source_normal_min_dot": 0.9999683052301407,
+      "sha256": "cae5b986d436f1be863eb790f68b22b6139d08e34d15fb006480deaa0df39f53",
+      "notes": {
+        "length_target_m": 15.06,
+        "source_scale": 4.541387492579564,
+        "source_origin": [
+          -5.960464477539063e-08,
+          1.5240119695663452,
+          0.046607501804828644
+        ],
+        "forward_axis": "UE +X; Blender export reflects Y",
+        "gear": "Full separate parked pose; flight has retracted or removed gear",
+        "weapon_mounts": "Authored on the nose/wing-root gun and bilateral weapon release positions",
+        "engine_mounts": "Source outlet positions; radius kept inside the measured nozzle aperture"
+      }
+    },
+    {
+      "name": "SM_AU_F22",
+      "fbx": "RawAssets/Aircraft/Downloaded/SM_AU_F22.fbx",
+      "dest": "/Game/Art/Aircraft/Downloaded",
+      "materials": {
+        "M_AU_f22_00_Material_012": "M_AU_f22_00_Material_012",
+        "M_AU_f22_01_material": "M_AU_f22_01_material",
+        "M_AU_f22_02_Tyre": "M_AU_f22_02_Tyre",
+        "M_AU_f22_03_Material_009": "M_AU_f22_03_Material_009",
+        "M_AU_f22_04_White_disk": "M_AU_f22_04_White_disk",
+        "M_AU_f22_05_Material_010": "M_AU_f22_05_Material_010",
+        "M_AU_f22_06_Material_011": "M_AU_f22_06_Material_011",
+        "M_AU_f22_07_Glass": "M_AU_f22_07_Glass",
+        "M_AU_f22_08_Cabin_black": "M_AU_f22_08_Cabin_black",
+        "M_AU_f22_09_Tail": "M_AU_f22_09_Tail",
+        "M_AU_f22_10_Body": "M_AU_f22_10_Body",
+        "M_AU_f22_12_Air_tube_001": "M_AU_f22_12_Air_tube_001",
+        "M_AU_f22_13_Gray": "M_AU_f22_13_Gray",
+        "M_AU_f22_14_Black_001": "M_AU_f22_14_Black_001",
+        "M_AU_f22_15_Black": "M_AU_f22_15_Black",
+        "M_AU_f22_16_Grid": "M_AU_f22_16_Grid",
+        "M_AU_f22_17_Material_005": "M_AU_f22_17_Material_005",
+        "M_AU_f22_18_Rocket_Main": "M_AU_f22_18_Rocket_Main",
+        "M_AU_f22_19_Rocket_Blue": "M_AU_f22_19_Rocket_Blue",
+        "M_AU_f22_20_Rocket_Black": "M_AU_f22_20_Rocket_Black",
+        "M_AU_f22_21_Air_tube_002": "M_AU_f22_21_Air_tube_002",
+        "M_AU_f22_22_Body_1": "M_AU_f22_22_Body_1",
+        "M_AU_f22_23_Body_cabin": "M_AU_f22_23_Body_cabin",
+        "M_AU_f22_24_Gray_nose": "M_AU_f22_24_Gray_nose",
+        "M_AU_f22_25_Body_001": "M_AU_f22_25_Body_001"
+      },
+      "nanite": false,
+      "sockets": [
+        {
+          "name": "Exhaust_01",
+          "location_cm": [
+            -726.0820388793945,
+            -72.60460257530212,
+            0.0
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            47.94643590197842,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Exhaust_02",
+          "location_cm": [
+            -726.0820388793945,
+            72.60460257530212,
+            0.0
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            47.94643590197842,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Cannon",
+          "location_cm": [
+            479.9379348754883,
+            95.89287042617798,
+            59.87529158592224
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Missile_L",
+          "location_cm": [
+            308.70065689086914,
+            -123.29083681106567,
+            -73.68977069854736
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Missile_R",
+          "location_cm": [
+            308.70065689086914,
+            123.29083681106567,
+            -73.68977069854736
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "GearFloor",
+          "location_cm": [
+            0.0,
+            -0.0,
+            -174.02570247650146
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "source_assets": [
+        "f22"
+      ],
+      "triangles": 84250,
+      "vertices": 252750,
+      "uv_layers": 1,
+      "dimensions_m": [
+        18.919998168945312,
+        13.818078994750977,
+        3.967902183532715
+      ],
+      "bounds_ue_m": {
+        "min": [
+          -9.459999084472656,
+          -6.909039497375488,
+          -0.9121343493461609
+        ],
+        "max": [
+          9.460000038146973,
+          6.909039497375488,
+          3.055767774581909
+        ]
+      },
+      "source_normal_min_dot": 0.999986476788763,
+      "sha256": "cc2c6852a93f92294880d5eddee7bff45470a05a7b19d7daa9bc372ebbfa795d",
+      "notes": {
+        "length_target_m": 18.92,
+        "source_scale": 6.849490843139773,
+        "source_origin": [
+          0.0,
+          0.09069138765335083,
+          0.13758429884910583
+        ],
+        "forward_axis": "UE +X; Blender export reflects Y",
+        "gear": "Full separate parked pose; flight has retracted or removed gear",
+        "weapon_mounts": "Authored on the nose/wing-root gun and bilateral weapon release positions",
+        "engine_mounts": "Source outlet positions; radius kept inside the measured nozzle aperture"
+      }
+    },
+    {
+      "name": "SM_AU_F22_Parked",
+      "fbx": "RawAssets/Aircraft/Downloaded/SM_AU_F22_Parked.fbx",
+      "dest": "/Game/Art/Aircraft/Downloaded",
+      "materials": {
+        "M_AU_f22_00_Material_012": "M_AU_f22_00_Material_012",
+        "M_AU_f22_01_material": "M_AU_f22_01_material",
+        "M_AU_f22_02_Tyre": "M_AU_f22_02_Tyre",
+        "M_AU_f22_03_Material_009": "M_AU_f22_03_Material_009",
+        "M_AU_f22_04_White_disk": "M_AU_f22_04_White_disk",
+        "M_AU_f22_05_Material_010": "M_AU_f22_05_Material_010",
+        "M_AU_f22_06_Material_011": "M_AU_f22_06_Material_011",
+        "M_AU_f22_07_Glass": "M_AU_f22_07_Glass",
+        "M_AU_f22_08_Cabin_black": "M_AU_f22_08_Cabin_black",
+        "M_AU_f22_09_Tail": "M_AU_f22_09_Tail",
+        "M_AU_f22_10_Body": "M_AU_f22_10_Body",
+        "M_AU_f22_12_Air_tube_001": "M_AU_f22_12_Air_tube_001",
+        "M_AU_f22_13_Gray": "M_AU_f22_13_Gray",
+        "M_AU_f22_14_Black_001": "M_AU_f22_14_Black_001",
+        "M_AU_f22_15_Black": "M_AU_f22_15_Black",
+        "M_AU_f22_16_Grid": "M_AU_f22_16_Grid",
+        "M_AU_f22_17_Material_005": "M_AU_f22_17_Material_005",
+        "M_AU_f22_18_Rocket_Main": "M_AU_f22_18_Rocket_Main",
+        "M_AU_f22_19_Rocket_Blue": "M_AU_f22_19_Rocket_Blue",
+        "M_AU_f22_20_Rocket_Black": "M_AU_f22_20_Rocket_Black",
+        "M_AU_f22_21_Air_tube_002": "M_AU_f22_21_Air_tube_002",
+        "M_AU_f22_22_Body_1": "M_AU_f22_22_Body_1",
+        "M_AU_f22_23_Body_cabin": "M_AU_f22_23_Body_cabin",
+        "M_AU_f22_24_Gray_nose": "M_AU_f22_24_Gray_nose",
+        "M_AU_f22_25_Body_001": "M_AU_f22_25_Body_001"
+      },
+      "nanite": false,
+      "sockets": [
+        {
+          "name": "Exhaust_01",
+          "location_cm": [
+            -726.0820388793945,
+            -72.60460257530212,
+            0.0
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            47.94643590197842,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Exhaust_02",
+          "location_cm": [
+            -726.0820388793945,
+            72.60460257530212,
+            0.0
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            47.94643590197842,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Cannon",
+          "location_cm": [
+            479.9379348754883,
+            95.89287042617798,
+            59.87529158592224
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Missile_L",
+          "location_cm": [
+            308.70065689086914,
+            -123.29083681106567,
+            -73.68977069854736
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Missile_R",
+          "location_cm": [
+            308.70065689086914,
+            123.29083681106567,
+            -73.68977069854736
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "GearFloor",
+          "location_cm": [
+            0.0,
+            -0.0,
+            -174.02570247650146
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "source_assets": [
+        "f22"
+      ],
+      "triangles": 84250,
+      "vertices": 252750,
+      "uv_layers": 1,
+      "dimensions_m": [
+        18.919998168945312,
+        13.818078994750977,
+        4.796024799346924
+      ],
+      "bounds_ue_m": {
+        "min": [
+          -9.459999084472656,
+          -6.909039497375488,
+          -1.7402570247650146
+        ],
+        "max": [
+          9.460000038146973,
+          6.909039497375488,
+          3.055767774581909
+        ]
+      },
+      "source_normal_min_dot": 0.999986476788763,
+      "sha256": "8433ae2537182fecfa18dd9df7c0e9cd8bb48242d61da4bdc075a64bc344f64c",
+      "notes": {
+        "length_target_m": 18.92,
+        "source_scale": 6.849490843139773,
+        "source_origin": [
+          0.0,
+          0.09069138765335083,
+          0.13758429884910583
+        ],
+        "forward_axis": "UE +X; Blender export reflects Y",
+        "gear": "Full separate parked pose; flight has retracted or removed gear",
+        "weapon_mounts": "Authored on the nose/wing-root gun and bilateral weapon release positions",
+        "engine_mounts": "Source outlet positions; radius kept inside the measured nozzle aperture"
+      }
+    },
+    {
+      "name": "SM_AU_Rafale",
+      "fbx": "RawAssets/Aircraft/Downloaded/SM_AU_Rafale.fbx",
+      "dest": "/Game/Art/Aircraft/Downloaded",
+      "materials": {
+        "M_AU_rafale_00_low_Material__32": "M_AU_rafale_00_low_Material__32",
+        "M_AU_rafale_01_low_Material__31": "M_AU_rafale_01_low_Material__31",
+        "M_AU_rafale_02_low_Material__29": "M_AU_rafale_02_low_Material__29",
+        "M_AU_rafale_03_low_Material__30": "M_AU_rafale_03_low_Material__30"
+      },
+      "nanite": false,
+      "sockets": [
+        {
+          "name": "Exhaust_01",
+          "location_cm": [
+            -660.8677387237549,
+            -79.40232753753662,
+            0.0
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            42.1352169453793,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Exhaust_02",
+          "location_cm": [
+            -660.8677387237549,
+            79.40244674682617,
+            0.0
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            42.1352169453793,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Cannon",
+          "location_cm": [
+            222.39282131195068,
+            110.45160293579102,
+            -22.041219472885132
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Missile_L",
+          "location_cm": [
+            66.94249510765076,
+            -400.8981227874756,
+            -87.49398589134216
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Missile_R",
+          "location_cm": [
+            66.94249510765076,
+            400.8982181549072,
+            -87.49398589134216
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "GearFloor",
+          "location_cm": [
+            0.0,
+            -0.0,
+            -197.69620895385742
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "source_assets": [
+        "rafale"
+      ],
+      "triangles": 64510,
+      "vertices": 193530,
+      "uv_layers": 1,
+      "dimensions_m": [
+        15.270000457763672,
+        10.97503662109375,
+        4.798664569854736
+      ],
+      "bounds_ue_m": {
+        "min": [
+          -7.635000228881836,
+          -5.487518310546875,
+          -1.5157742500305176
+        ],
+        "max": [
+          7.635000228881836,
+          5.487517833709717,
+          3.2828903198242188
+        ]
+      },
+      "source_normal_min_dot": 0.9999229214093361,
+      "sha256": "bf453f6839bf8ff10417b454c8f1ca1bb984ad9ccb9c0abb22c94440e862258a",
+      "notes": {
+        "length_target_m": 15.27,
+        "source_scale": 0.08181595523374621,
+        "source_origin": [
+          -7.62939453125e-06,
+          -11.817916870117188,
+          10.694000244140625
+        ],
+        "forward_axis": "UE +X; Blender export reflects Y",
+        "gear": "Full separate parked pose; flight has retracted or removed gear",
+        "weapon_mounts": "Authored on the nose/wing-root gun and bilateral weapon release positions",
+        "engine_mounts": "Source outlet positions; radius kept inside the measured nozzle aperture"
+      }
+    },
+    {
+      "name": "SM_AU_Rafale_Parked",
+      "fbx": "RawAssets/Aircraft/Downloaded/SM_AU_Rafale_Parked.fbx",
+      "dest": "/Game/Art/Aircraft/Downloaded",
+      "materials": {
+        "M_AU_f16_00_gear_metal": "M_AU_f16_00_gear_metal",
+        "M_AU_f16_01_gear_rubber": "M_AU_f16_01_gear_rubber",
+        "M_AU_f16_02_gear_metal_001": "M_AU_f16_02_gear_metal_001",
+        "M_AU_f16_03_gear_column_front": "M_AU_f16_03_gear_column_front",
+        "M_AU_rafale_00_low_Material__32": "M_AU_rafale_00_low_Material__32",
+        "M_AU_rafale_01_low_Material__31": "M_AU_rafale_01_low_Material__31",
+        "M_AU_rafale_02_low_Material__29": "M_AU_rafale_02_low_Material__29",
+        "M_AU_rafale_03_low_Material__30": "M_AU_rafale_03_low_Material__30"
+      },
+      "nanite": false,
+      "sockets": [
+        {
+          "name": "Exhaust_01",
+          "location_cm": [
+            -660.8677387237549,
+            -79.40232753753662,
+            0.0
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            42.1352169453793,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Exhaust_02",
+          "location_cm": [
+            -660.8677387237549,
+            79.40244674682617,
+            0.0
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            42.1352169453793,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Cannon",
+          "location_cm": [
+            222.39282131195068,
+            110.45160293579102,
+            -22.041219472885132
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Missile_L",
+          "location_cm": [
+            66.94249510765076,
+            -400.8981227874756,
+            -87.49398589134216
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "Missile_R",
+          "location_cm": [
+            66.94249510765076,
+            400.8982181549072,
+            -87.49398589134216
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        },
+        {
+          "name": "GearFloor",
+          "location_cm": [
+            0.0,
+            -0.0,
+            -197.69620895385742
+          ],
+          "rotation_degrees": [
+            0,
+            0,
+            0
+          ],
+          "scale": [
+            1,
+            1,
+            1
+          ]
+        }
+      ],
+      "source_assets": [
+        "rafale",
+        "f16"
+      ],
+      "triangles": 89174,
+      "vertices": 267522,
+      "uv_layers": 1,
+      "dimensions_m": [
+        15.270000457763672,
+        10.97503662109375,
+        5.259852409362793
+      ],
+      "bounds_ue_m": {
+        "min": [
+          -7.635000228881836,
+          -5.487518310546875,
+          -1.9769620895385742
+        ],
+        "max": [
+          7.635000228881836,
+          5.487517833709717,
+          3.2828903198242188
+        ]
+      },
+      "source_normal_min_dot": 0.9999229214093361,
+      "sha256": "b36e8812cc73f60eb8278d1e59f5d6730c35b53b8bd8192b189080d18e05ec57",
+      "notes": {
+        "length_target_m": 15.27,
+        "source_scale": 0.08181595523374621,
+        "source_origin": [
+          -7.62939453125e-06,
+          -11.817916870117188,
+          10.694000244140625
+        ],
+        "forward_axis": "UE +X; Blender export reflects Y",
+        "gear": "Full separate parked pose; flight has retracted or removed gear",
+        "weapon_mounts": "Authored on the nose/wing-root gun and bilateral weapon release positions",
+        "engine_mounts": "Source outlet positions; radius kept inside the measured nozzle aperture"
+      }
+    }
+  ],
+  "source_normal_repairs": {
+    "corners_per_pose": [
+      3,
+      3
+    ],
+    "method": "Geometric face normal only for zero-length source corner normals"
+  }
+}

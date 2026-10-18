@@ -9,9 +9,14 @@ USTRUCT(BlueprintType)
 struct FDSAircraftSpec
 {
     GENERATED_BODY()
-    UPROPERTY(EditAnywhere, BlueprintReadWrite) FString Name = TEXT("F-24 PEREGRINE");
+    UPROPERTY(EditAnywhere, BlueprintReadWrite) FString Name = TEXT("RAFALE");
     UPROPERTY(EditAnywhere, BlueprintReadWrite) FString Role = TEXT("MULTIROLE / BALANCED");
-    UPROPERTY(EditAnywhere, BlueprintReadWrite) FString MeshPath = TEXT("/Game/Art/Aircraft/SM_falcon.SM_falcon");
+    UPROPERTY(EditAnywhere, BlueprintReadWrite) FString MeshPath = TEXT("/Game/Art/Aircraft/Downloaded/SM_AU_Rafale.SM_AU_Rafale");
+    // Optional separate extended gear in the airframe's coordinate frame.
+    // An empty path retains the original shared landing gear.
+    UPROPERTY(EditAnywhere, BlueprintReadWrite) FString GearMeshPath;
+    // Optional complete parked pose when gear doors and struts are animated.
+    UPROPERTY(EditAnywhere, BlueprintReadWrite) FString ParkedMeshPath = TEXT("/Game/Art/Aircraft/Downloaded/SM_AU_Rafale_Parked.SM_AU_Rafale_Parked");
     UPROPERTY(EditAnywhere, BlueprintReadWrite) float MaxHealth = 140.f;
     UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 Cannon = 1200;
     UPROPERTY(EditAnywhere, BlueprintReadWrite) int32 Missiles = 16;

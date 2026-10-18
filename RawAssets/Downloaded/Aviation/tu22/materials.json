@@ -1,0 +1,1078 @@
+{
+  "schema": "airbase-materials/v1",
+  "asset_slug": "tu22",
+  "source_glb": "RawAssets/Downloaded/Aviation/tu22/source.glb",
+  "texture_file_basis": "project_relative",
+  "materials": [
+    {
+      "name": "M_AU_tu22_00_DefaultWhite",
+      "source_material_index": 0,
+      "source_name": "DefaultWhite",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_000.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_01_DefaultWhite_achs_png",
+      "source_material_index": 1,
+      "source_name": "DefaultWhite_achs.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_001.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_02_DefaultWhite_adf_png",
+      "source_material_index": 2,
+      "source_name": "DefaultWhite_adf.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_002.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_03_DefaultWhite_ai_png",
+      "source_material_index": 3,
+      "source_name": "DefaultWhite_ai.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_003.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_04_DefaultWhite_ai2_png",
+      "source_material_index": 4,
+      "source_name": "DefaultWhite_ai2.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_004.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_05_DefaultWhite_alt_png",
+      "source_material_index": 5,
+      "source_name": "DefaultWhite_alt.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_005.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_06_DefaultWhite_asi_png",
+      "source_material_index": 6,
+      "source_name": "DefaultWhite_asi.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_006.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_07_DefaultWhite_at_png",
+      "source_material_index": 7,
+      "source_name": "DefaultWhite_at.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_007.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_08_DefaultWhite_com_png",
+      "source_material_index": 8,
+      "source_name": "DefaultWhite_com.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_008.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_09_DefaultWhite_idr_png",
+      "source_material_index": 9,
+      "source_name": "DefaultWhite_idr.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_009.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_10_DefaultWhite_interior_png",
+      "source_material_index": 10,
+      "source_name": "DefaultWhite_interior.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_010.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_11_DefaultWhite_panel_png",
+      "source_material_index": 11,
+      "source_name": "DefaultWhite_panel.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_011.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_12_DefaultWhite_psp_png",
+      "source_material_index": 12,
+      "source_name": "DefaultWhite_psp.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_012.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_13_DefaultWhite_rpm_png",
+      "source_material_index": 13,
+      "source_name": "DefaultWhite_rpm.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_013.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_14_DefaultWhite_seat_png",
+      "source_material_index": 14,
+      "source_name": "DefaultWhite_seat.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_014.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_15_DefaultWhite_texture_png",
+      "source_material_index": 15,
+      "source_name": "DefaultWhite_texture.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_015.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_16_DefaultWhite_turn_png",
+      "source_material_index": 16,
+      "source_name": "DefaultWhite_turn.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_016.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_17_DefaultWhite_uap_png",
+      "source_material_index": 17,
+      "source_name": "DefaultWhite_uap.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_017.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_18_DefaultWhite_uiz_png",
+      "source_material_index": 18,
+      "source_name": "DefaultWhite_uiz.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_018.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_19_DefaultWhite_ut7a_png",
+      "source_material_index": 19,
+      "source_name": "DefaultWhite_ut7a.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_019.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_20_DefaultWhite_uvid_15m_png",
+      "source_material_index": 20,
+      "source_name": "DefaultWhite_uvid-15m.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_020.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_21_DefaultWhite_vsi_png",
+      "source_material_index": 21,
+      "source_name": "DefaultWhite_vsi.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_021.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_22_DefaultWhite_warnings_png",
+      "source_material_index": 22,
+      "source_name": "DefaultWhite_warnings.png",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_022.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tu22_23_Transparent",
+      "source_material_index": 23,
+      "source_name": "Transparent",
+      "basecolor_factor": [
+        0.8,
+        0.8,
+        0.8,
+        0.15
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "BLEND",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0
+    },
+    {
+      "name": "M_AU_tu22_24_TransparentExt",
+      "source_material_index": 24,
+      "source_name": "TransparentExt",
+      "basecolor_factor": [
+        0.8,
+        0.8,
+        0.8,
+        0.3
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "BLEND",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0
+    }
+  ]
+}

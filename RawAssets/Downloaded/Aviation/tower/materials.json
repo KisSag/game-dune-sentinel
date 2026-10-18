@@ -1,0 +1,186 @@
+{
+  "schema": "airbase-materials/v1",
+  "asset_slug": "tower",
+  "source_glb": "RawAssets/Downloaded/Aviation/tower/source.glb",
+  "texture_file_basis": "project_relative",
+  "materials": [
+    {
+      "name": "M_AU_tower_00_KSFO_Control_Tower",
+      "source_material_index": 0,
+      "source_name": "KSFO_Control_Tower",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 1.0,
+      "roughness_factor": 1.0,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.0,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tower/textures/image_000.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "metallic_roughness": {
+        "file": "RawAssets/Downloaded/Aviation/tower/textures/image_001.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "normal": {
+        "file": "RawAssets/Downloaded/Aviation/tower/textures/image_002.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "occlusion": {
+        "file": "RawAssets/Downloaded/Aviation/tower/textures/image_001.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_tower_01_KSFO_Control_Tower_02",
+      "source_material_index": 1,
+      "source_name": "KSFO_Control_Tower_02",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 1.0,
+      "roughness_factor": 1.0,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": true,
+      "specular_factor": 0.0,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/tower/textures/image_003.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "metallic_roughness": {
+        "file": "RawAssets/Downloaded/Aviation/tower/textures/image_004.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "normal": {
+        "file": "RawAssets/Downloaded/Aviation/tower/textures/image_005.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "occlusion": {
+        "file": "RawAssets/Downloaded/Aviation/tower/textures/image_004.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    }
+  ]
+}

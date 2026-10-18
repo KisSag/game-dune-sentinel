@@ -1,0 +1,342 @@
+{
+  "schema": "aviation-source/v1",
+  "asset_slug": "tu22",
+  "credit": {
+    "title": "Tupolev-Tu22-Blinder",
+    "author": "helijah",
+    "author_url": "https://sketchfab.com/helijah",
+    "source_url": "https://sketchfab.com/3d-models/tupolev-tu22-blinder-eb6fe03160f943c4adc5c731a435124e",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "embedded_credits": [],
+  "original": {
+    "file": "RawAssets/Downloaded/Aviation/tu22/source.glb",
+    "bytes": 4520096,
+    "sha256": "371c5489bf35a9ada345d0b27971abdbe9320e34687eddff73f6391a8374a167"
+  },
+  "source_content_modified": false,
+  "images": [
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_000.png",
+      "bytes": 346483,
+      "sha256": "3d6c0b322f7fa492e3d016e029751decf5eae9eec288bd20cb390dbf61d8e3c8",
+      "source_image_index": 0,
+      "mime_type": "image/png",
+      "size_pixels": [
+        1024,
+        512
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_001.png",
+      "bytes": 114513,
+      "sha256": "96280d5cd3cf07aa7ecc8c477cbc1ded1c0ec28dda46a0f81090bac6e6d51ab3",
+      "source_image_index": 1,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_002.png",
+      "bytes": 32244,
+      "sha256": "9303f2b33ebccf5c3e684ca87317ae7682db47c66c32597161fb75908cecaf0f",
+      "source_image_index": 2,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_003.png",
+      "bytes": 79523,
+      "sha256": "7a4d8e2a08e61c54356b8e14dfb8bc61f67abea1a962790891fb3317dde1b1e7",
+      "source_image_index": 3,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        512
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_004.png",
+      "bytes": 69543,
+      "sha256": "59c0f67318841ee176101d90d1d31228f63cf8554ff12bb858fa49c4276a283e",
+      "source_image_index": 4,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        512
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_005.png",
+      "bytes": 68798,
+      "sha256": "25ac8337ab4db2a2ab6231c71c9b0605cd5ead8b8249d680229fdb0f366ac1ad",
+      "source_image_index": 5,
+      "mime_type": "image/png",
+      "size_pixels": [
+        256,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_006.png",
+      "bytes": 55877,
+      "sha256": "d28629603dbd32581b7e079c69248c4c8eb5785951b56d50d3c6835f80b2e0a4",
+      "source_image_index": 6,
+      "mime_type": "image/png",
+      "size_pixels": [
+        256,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_007.png",
+      "bytes": 42909,
+      "sha256": "ad33dd78d9631bf9b5a954b2ba4100ca129402fdedf6e432cd35bff2af5d0b74",
+      "source_image_index": 7,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_008.png",
+      "bytes": 103633,
+      "sha256": "58eaa647a386fa724a91542055e5f0b9ad9c7c748d4a0040a979439095172aa4",
+      "source_image_index": 8,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        1024
+      ],
+      "pixel_mode": "L",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_009.png",
+      "bytes": 44360,
+      "sha256": "34b92cbb071a580a24e1af25960c31081b913b36be920a09b7682f20adb2e2a6",
+      "source_image_index": 9,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_010.png",
+      "bytes": 65563,
+      "sha256": "2bfbef6e962fadfcee768259dcf0c894c1a632513218e659d564b570b19c201e",
+      "source_image_index": 10,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        512
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_011.png",
+      "bytes": 1264,
+      "sha256": "552d5935a440a8f158735a26083ca1be6673066941a8edfc6bab35eb3bd1f14a",
+      "source_image_index": 11,
+      "mime_type": "image/png",
+      "size_pixels": [
+        1024,
+        1024
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_012.png",
+      "bytes": 29606,
+      "sha256": "67417a5ebc50adc3656666e27d0129f86a454a17347c8e4549e580cfd675da4e",
+      "source_image_index": 12,
+      "mime_type": "image/png",
+      "size_pixels": [
+        256,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_013.png",
+      "bytes": 41868,
+      "sha256": "b0efe3f816910c7613d34905ab5d103ba37e652d8a21494e09da905e5aef0c3d",
+      "source_image_index": 13,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        512
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_014.png",
+      "bytes": 313076,
+      "sha256": "441f2da570eadb2ffb556923e29897c4ccc61d96f1bdd30f83e114224b3bb366",
+      "source_image_index": 14,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        512
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_015.png",
+      "bytes": 523765,
+      "sha256": "7b98274228d2abf6d4e235544de45a37f091fe50738bd89cafa59c9d94b245fb",
+      "source_image_index": 15,
+      "mime_type": "image/png",
+      "size_pixels": [
+        1024,
+        1024
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_016.png",
+      "bytes": 34181,
+      "sha256": "b42691e5fff66cd67289576acd7b3bd30ad5dbd3c5cef1b4caf8d4528690688b",
+      "source_image_index": 16,
+      "mime_type": "image/png",
+      "size_pixels": [
+        256,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_017.png",
+      "bytes": 87015,
+      "sha256": "6c41787714a8ed4789f25c58e007f54778c30a76568ca05b04c97f03402eee98",
+      "source_image_index": 17,
+      "mime_type": "image/png",
+      "size_pixels": [
+        256,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_018.png",
+      "bytes": 62228,
+      "sha256": "7e54f53dcdcdf94160be68fd93bab1a35fac3db7da0746d0eaa86185c4eb6715",
+      "source_image_index": 18,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_019.png",
+      "bytes": 40584,
+      "sha256": "bb205f6f4a43cd2baaf3b98d55a7b2e304174ad7e5f54a8b94acd4ca943efe43",
+      "source_image_index": 19,
+      "mime_type": "image/png",
+      "size_pixels": [
+        256,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_020.png",
+      "bytes": 70942,
+      "sha256": "45379b23237b78d90c3898fcedaa611c1af4ba974d11ff72f75307d44d43b8da",
+      "source_image_index": 20,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_021.png",
+      "bytes": 56832,
+      "sha256": "6c9e4c218ea4778c7e0f6f4c3a79d93615780638c02b4a38dcf00db941d689ab",
+      "source_image_index": 21,
+      "mime_type": "image/png",
+      "size_pixels": [
+        256,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/tu22/textures/image_022.png",
+      "bytes": 114733,
+      "sha256": "c9c601e5eb12d7101e1c0e7fda145e6458b3d362fd8860eba7761ff305b72520",
+      "source_image_index": 22,
+      "mime_type": "image/png",
+      "size_pixels": [
+        512,
+        512
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    }
+  ],
+  "derived_images": [],
+  "material_file": {
+    "file": "RawAssets/Downloaded/Aviation/tu22/materials.json",
+    "bytes": 25268,
+    "sha256": "8a46bd3538579fe6cd9020a878010915d1e5ed829f1b1112cdbe39101f052d23"
+  },
+  "source_material_count": 25,
+  "source_mesh_count": 38,
+  "gltf_extensions_used": [],
+  "conversion_notes": [
+    "This independently supplied GLB is retained byte for byte under its embedded CC BY 4.0 license.",
+    "Every retained image is embedded in this GLB; no other edition's geometry or images are used.",
+    "Material descriptors preserve original authored color textures and constant surface factors.",
+    "No normal, metallic, roughness or occlusion image is present in this source edition.",
+    "Model metre scale is retained rather than replacing it with an unverified nominal aircraft length."
+  ],
+  "embedded_asset_credits": {
+    "author": "helijah (https://sketchfab.com/helijah)",
+    "license": "CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)",
+    "source": "https://sketchfab.com/3d-models/tupolev-tu22-blinder-eb6fe03160f943c4adc5c731a435124e",
+    "title": "Tupolev-Tu22-Blinder"
+  }
+}

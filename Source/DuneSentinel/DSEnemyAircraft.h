@@ -46,6 +46,7 @@ private:
     float FormationElapsed = 0.f;
     float GunCooldown = 1.f;
     float MissileCooldown = 5.f;
+    bool bNextMissileLeft = true;
     float BombCooldown = 0.f;
     float LifeTime = 0.f;
     float TerrainCheckCooldown = 0.f;

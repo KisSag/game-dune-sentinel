@@ -8,6 +8,7 @@
 #include "Camera/CameraActor.h"
 #include "Camera/CameraComponent.h"
 #include "Camera/PlayerCameraManager.h"
+#include "Components/StaticMeshComponent.h"
 #include "Engine/Engine.h"
 #include "Engine/GameViewportClient.h"
 #include "Engine/LocalPlayer.h"
@@ -262,14 +263,17 @@ private:
     bool CreateEnemy()
     {
         const FVector PlayerLocation = Mode->Player->GetActorLocation();
-        const FVector Position = PlayerLocation - FVector(25000.f, 3500.f, 0.f);
+        const bool bBomberCase = CaseIndex == 4;
+        // Let the faster player approach the defensive tail gun from behind.
+        const FVector Position = PlayerLocation + (bBomberCase ? FVector(65000.f, 3500.f, 0.f) : -FVector(25000.f, 3500.f, 0.f));
+        const FRotator Heading = (bBomberCase ? Position - PlayerLocation : PlayerLocation - Position).Rotation();
         FActorSpawnParameters Params;
         Params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
-        Enemy = World->SpawnActor<ADSEnemyAircraft>(Position, (PlayerLocation - Position).Rotation(), Params);
+        Enemy = World->SpawnActor<ADSEnemyAircraft>(Position, Heading, Params);
         if (!Enemy.IsValid()) return false;
         // A distant objective avoids the bombing zone. Initial gun cooldown,
         // tracking, spread, projectile speed and damage all retain normal rules.
-        Enemy->Initialize(CaseIndex == 4, Position + FVector(2000000.f, 0.f, -65000.f));
+        Enemy->Initialize(bBomberCase, Position + (bBomberCase ? Heading.Vector() * 2000000.f : FVector(2000000.f, 0.f, 0.f)) + FVector(0.f, 0.f, -65000.f));
         Mode->Enemies.Add(Enemy.Get());
         Shooter = Enemy.Get();
         FX = Shooter->FindComponentByClass<UDSCannonFXComponent>();
@@ -281,7 +285,8 @@ private:
     {
         if (!bSideView || !ReviewCamera.IsValid() || !Shooter.IsValid()) return;
         PC->SetViewTarget(ReviewCamera.Get());
-        const FTransform Pose = Shooter->GetActorTransform();
+        const FTransform Pose = CaseIndex == 4 && Enemy.IsValid() && Enemy->Mesh->DoesSocketExist(TEXT("Cannon")) ?
+            Enemy->Mesh->GetSocketTransform(TEXT("Cannon"), RTS_World) : Shooter->GetActorTransform();
         const FVector Offset = CaptureStep < 2 ? FVector(-1600.f, -3500.f, 900.f) : FVector(-3500.f, -7500.f, 2400.f);
         const FVector LookAt = Pose.TransformPosition(FVector(CaptureStep < 2 ? 1000.f : 2000.f, 0.f, 0.f));
         const FVector CameraPosition = Pose.TransformPosition(Offset);

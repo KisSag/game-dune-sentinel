@@ -60,6 +60,8 @@ public:
     bool IsFlying() const { return bFlying; }
     UCameraComponent* GetFlightCamera() const { return Camera; }
     UDSAircraftExhaustComponent* GetAircraftExhaust() const { return AircraftExhaust; }
+    UStaticMeshComponent* GetAirframeMesh() const { return AircraftMesh; }
+    float GetParkedActorHeight(float SurfaceHeightCm) const;
     void SetMissileThreat(float Seconds = 1.5f);
     void FireMissile();
 

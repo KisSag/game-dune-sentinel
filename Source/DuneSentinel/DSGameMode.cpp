@@ -24,17 +24,21 @@ ADSGameMode::ADSGameMode()
     PlayerControllerClass=ADSPlayerController::StaticClass();
     HUDClass=ADSHUD::StaticClass();
     FDSAircraftSpec Agile;
-    Agile.Name=TEXT("F-11 KESTREL"); Agile.Role=TEXT("INTERCEPTOR / AGILE");
-    Agile.MeshPath=TEXT("/Game/Art/Aircraft/SM_lancer.SM_lancer");
+    Agile.Name=TEXT("F-16 FALCON"); Agile.Role=TEXT("INTERCEPTOR / AGILE");
+    Agile.MeshPath=TEXT("/Game/Art/Aircraft/Downloaded/SM_AU_F16.SM_AU_F16");
+    Agile.ParkedMeshPath=TEXT("/Game/Art/Aircraft/Downloaded/SM_AU_F16_Parked.SM_AU_F16_Parked");
     Agile.MaxHealth=100; Agile.Cannon=900; Agile.Missiles=12;
     Agile.CruiseSpeed=250; Agile.MaxSpeed=430; Agile.PitchRate=55; Agile.RollRate=150;
     Aircraft.Add(Agile);
     FDSAircraftSpec Balanced;
-    Balanced.MeshPath=TEXT("/Game/Art/Aircraft/SM_mirage.SM_mirage");
+    Balanced.Name=TEXT("RAFALE");
+    Balanced.MeshPath=TEXT("/Game/Art/Aircraft/Downloaded/SM_AU_Rafale.SM_AU_Rafale");
+    Balanced.ParkedMeshPath=TEXT("/Game/Art/Aircraft/Downloaded/SM_AU_Rafale_Parked.SM_AU_Rafale_Parked");
     Aircraft.Add(Balanced);
     FDSAircraftSpec Heavy;
-    Heavy.Name=TEXT("F-37 OSPREY"); Heavy.Role=TEXT("STRIKE FIGHTER / ENDURANCE");
-    Heavy.MeshPath=TEXT("/Game/Art/Aircraft/SM_falcon.SM_falcon");
+    Heavy.Name=TEXT("F-22 RAPTOR"); Heavy.Role=TEXT("STRIKE FIGHTER / ENDURANCE");
+    Heavy.MeshPath=TEXT("/Game/Art/Aircraft/Downloaded/SM_AU_F22.SM_AU_F22");
+    Heavy.ParkedMeshPath=TEXT("/Game/Art/Aircraft/Downloaded/SM_AU_F22_Parked.SM_AU_F22_Parked");
     Heavy.MaxHealth=180; Heavy.Cannon=1600; Heavy.Missiles=20;
     Heavy.CruiseSpeed=250; Heavy.MaxSpeed=500; Heavy.PitchRate=34; Heavy.RollRate=100;
     Aircraft.Add(Heavy);
@@ -69,7 +73,7 @@ void ADSGameMode::SelectAircraft(int32 Index)
     if (Player)
     {
         Player->ConfigureAircraft(Aircraft[Index]);
-        Player->SetActorLocation(FVector(-28000,16000,2516));
+        Player->SetActorLocation(FVector(-28000,16000,Player->GetParkedActorHeight(AirportLocation.Z)));
         Player->SetActorRotation(FRotator(0,18,0));
         Player->Park();
     }

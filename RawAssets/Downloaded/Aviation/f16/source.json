@@ -1,0 +1,208 @@
+{
+  "schema": "aviation-source/v1",
+  "asset_slug": "f16",
+  "credit": {
+    "title": "F-16 Fighting Falcon",
+    "author": "k.botond431",
+    "author_url": "https://sketchfab.com/k.botond431",
+    "source_url": "https://sketchfab.com/3d-models/f-16-fighting-falcon-f4a4568d8a624026a675090852fb9546",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "embedded_credits": [],
+  "original": {
+    "file": "RawAssets/Downloaded/Aviation/f16/source.glb",
+    "bytes": 20950608,
+    "sha256": "ceaca511e5ef33913ba6df207cd0ae98afce6959c37399f908b631120e6e9c38"
+  },
+  "source_content_modified": false,
+  "images": [
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_000.png",
+      "bytes": 826021,
+      "sha256": "41ef13b641573f17dbc2be137940e4af67fe5648044397949f512ec4e71cd9b4",
+      "source_image_index": 0,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "L",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_001.png",
+      "bytes": 190768,
+      "sha256": "828c25c34d4854dd2443ceb40328b75d3424fc17e9e633284d9db31a58d7b658",
+      "source_image_index": 1,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "L",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_002.png",
+      "bytes": 84,
+      "sha256": "17e78e0e537ddccbd77b1230540c87463bafd980ed51139a7ac44c42e208a3f7",
+      "source_image_index": 2,
+      "mime_type": "image/png",
+      "size_pixels": [
+        32,
+        16
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_003.png",
+      "bytes": 84,
+      "sha256": "407f8489664b69bf2051585a83b286be093911f182643711f63f857a7ae07935",
+      "source_image_index": 3,
+      "mime_type": "image/png",
+      "size_pixels": [
+        32,
+        16
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_004.png",
+      "bytes": 84,
+      "sha256": "10f759829d95c52b33d603f82cc2af434032ad83415866591ac9e683a528e158",
+      "source_image_index": 4,
+      "mime_type": "image/png",
+      "size_pixels": [
+        32,
+        16
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_005.png",
+      "bytes": 2416584,
+      "sha256": "70b90678d622bb6f1a6c0837dd1fc19d4c3e541a148acd6b0d83953d227b778d",
+      "source_image_index": 5,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_006.png",
+      "bytes": 1432758,
+      "sha256": "693c71fa114edd76eb5a5e478af92ae87e12dfa6dec70bba5961a4982f6d5170",
+      "source_image_index": 6,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_007.png",
+      "bytes": 506536,
+      "sha256": "62ba9ee51c838bc73c6565842ab37351753e3fb781c356a77e586269739950cb",
+      "source_image_index": 7,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "LA",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_008.png",
+      "bytes": 1443002,
+      "sha256": "a1f2770cdea91808bde1d5dbd593af12b92b6bcaa1efc0bd981e6f8539508773",
+      "source_image_index": 8,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_009.png",
+      "bytes": 2140347,
+      "sha256": "dab9923fb9a2bb7a22142fa753a95daf24aaaa05ac81578141918447eea6072d",
+      "source_image_index": 9,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_010.png",
+      "bytes": 1445432,
+      "sha256": "bb645dbad8f1745eeb98875295c6deb2d1f409dff67e2c70481edf896b0226b6",
+      "source_image_index": 10,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_011.png",
+      "bytes": 957214,
+      "sha256": "6ea7a1b96f597cef897114287bb2e31bcf695d4aa6f8d043d82741a2751d2155",
+      "source_image_index": 11,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f16/textures/image_012.png",
+      "bytes": 887046,
+      "sha256": "52e3c3133d51e1baf728873c3d640617bfa7144ccd3dea403800c02a9e14cef3",
+      "source_image_index": 12,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    }
+  ],
+  "derived_images": [],
+  "material_file": {
+    "file": "RawAssets/Downloaded/Aviation/f16/materials.json",
+    "bytes": 15780,
+    "sha256": "d4b6b01b44e73b1b2a182b54c597e122302817c47397258e18ba18c6d8b52a15"
+  },
+  "source_material_count": 15,
+  "source_mesh_count": 21,
+  "gltf_extensions_used": [
+    "KHR_materials_specular",
+    "KHR_materials_clearcoat"
+  ],
+  "conversion_notes": [
+    "Original GLB and embedded PNG/JPEG files retained byte for byte.",
+    "Material descriptors preserve source factors, channels and UV transforms.",
+    "Numeric factors are linear; only colour texture RGB is decoded from sRGB.",
+    "Rafale neutral dielectric F0 and inverse glossiness are encoded into derived linear masks."
+  ]
+}

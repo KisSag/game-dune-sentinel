@@ -1,0 +1,243 @@
+{
+  "schema": "aviation-source/v1",
+  "asset_slug": "hangar",
+  "credit": {
+    "title": "Aircraft Hangar",
+    "author": "jimbogies",
+    "author_url": "https://sketchfab.com/jimbogies",
+    "source_url": "https://sketchfab.com/3d-models/aircraft-hangar-a5b17ba2e3494873abd313f720097614",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "embedded_credits": [
+    {
+      "title": "Diamond Da42 \"Twin Star\"",
+      "author": "helijah",
+      "source_url": "https://skfb.ly/AZU6",
+      "license": "CC-BY-4.0",
+      "license_url": "https://creativecommons.org/licenses/by/4.0/",
+      "scope": "Aircraft contained in retained original hangar GLB; excluded from planned airport geometry."
+    }
+  ],
+  "original": {
+    "file": "RawAssets/Downloaded/Aviation/hangar/source.glb",
+    "bytes": 65886996,
+    "sha256": "78bf96e6335e935ae56407deb13a45ac1ab828cd0804fa8acfbe1d90ce2548d8"
+  },
+  "source_content_modified": false,
+  "images": [
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_000.jpg",
+      "bytes": 1601982,
+      "sha256": "e9d959346dc19a9658476abbd9a67b91753fbd0c500ce433971c72bbde57613b",
+      "source_image_index": 0,
+      "mime_type": "image/jpeg",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_001.png",
+      "bytes": 8139671,
+      "sha256": "ae80a61fe25634456d188d89038e83c58ab73010307b0aec97d701ac904c7bff",
+      "source_image_index": 1,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_002.jpg",
+      "bytes": 5660406,
+      "sha256": "f91060e5c86ee82719730de172bec8363b90994c048f23d006f6538a535d3ad7",
+      "source_image_index": 2,
+      "mime_type": "image/jpeg",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_003.png",
+      "bytes": 2950939,
+      "sha256": "31bc82290ec4ae54b15ec8bc58a21b0ce6d760b204ad146167065a12d2ec44ef",
+      "source_image_index": 3,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_004.png",
+      "bytes": 6740832,
+      "sha256": "061d5cea2fcbf8b41cba9b617d9a198bab5862f52215f610beb64e52ab86d9ee",
+      "source_image_index": 4,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_005.jpg",
+      "bytes": 4658491,
+      "sha256": "76f47da2f0bf1f70510cbde55e1d57b1a85703289bb55b8cb9d43d9a932783c2",
+      "source_image_index": 5,
+      "mime_type": "image/jpeg",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_006.png",
+      "bytes": 2210117,
+      "sha256": "765ac4429e1c0bf5794ca4c5dad6b2c61b69621f467039210595223a37133b36",
+      "source_image_index": 6,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_007.png",
+      "bytes": 10445788,
+      "sha256": "eba2011560f6d21acc3e493bd0524ead4a596ab6fe48c6cb99d5ef21bc3c26f3",
+      "source_image_index": 7,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_008.png",
+      "bytes": 609878,
+      "sha256": "3dd946ac03f48e5d052e202c3d3a26a67f5ca70d05be1d53a8fedafc5439f889",
+      "source_image_index": 8,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_009.jpg",
+      "bytes": 893200,
+      "sha256": "1a1cd44bd69568af929d382fad76afd0e5e749602ee528a892834e8119bb8196",
+      "source_image_index": 9,
+      "mime_type": "image/jpeg",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_010.png",
+      "bytes": 9276653,
+      "sha256": "c7379c33269e2c7c328587703f2cc5f6fd29dc7fb43e08dea60a87d502209a83",
+      "source_image_index": 10,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_011.jpg",
+      "bytes": 15570,
+      "sha256": "d59e1f816d80522e9c77d374fe8a6d5894e99d77b82e6c0dfcf703067f2774c7",
+      "source_image_index": 11,
+      "mime_type": "image/jpeg",
+      "size_pixels": [
+        256,
+        128
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_012.jpg",
+      "bytes": 1457669,
+      "sha256": "8302d69516df1de4d34fe8021f4476a45ea2f55e21f8db16f342231370c631f8",
+      "source_image_index": 12,
+      "mime_type": "image/jpeg",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_013.png",
+      "bytes": 1268062,
+      "sha256": "20434459800f8bf351721a58bfc1684cf24ad53d5694214bf82d1145ac957752",
+      "source_image_index": 13,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_014.png",
+      "bytes": 3929072,
+      "sha256": "65398a7b5675f2cd29b17a8087851ddbc8753e98716653f667af23837658539a",
+      "source_image_index": 14,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    }
+  ],
+  "derived_images": [],
+  "material_file": {
+    "file": "RawAssets/Downloaded/Aviation/hangar/materials.json",
+    "bytes": 17312,
+    "sha256": "bd31f21df13a4865aace9185f23d94e7664754f58aca7511c590c7ac5fdb2ade"
+  },
+  "source_material_count": 17,
+  "source_mesh_count": 17,
+  "gltf_extensions_used": [
+    "KHR_materials_specular",
+    "KHR_materials_emissive_strength"
+  ],
+  "conversion_notes": [
+    "Original GLB and embedded PNG/JPEG files retained byte for byte.",
+    "Material descriptors preserve source factors, channels and UV transforms.",
+    "Numeric factors are linear; only colour texture RGB is decoded from sRGB.",
+    "Rafale neutral dielectric F0 and inverse glossiness are encoded into derived linear masks."
+  ]
+}

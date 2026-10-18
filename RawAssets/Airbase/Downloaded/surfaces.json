@@ -1,0 +1,63 @@
+{
+  "schema": "airbase-meshes/v1",
+  "meshes": [
+    {
+      "name": "SM_AU_AirfieldSurfaces",
+      "fbx": "RawAssets/Airbase/Downloaded/SM_AU_AirfieldSurfaces.fbx",
+      "dest": "/Game/Art/Airbase/Downloaded",
+      "materials": {
+        "Asphalt": "Asphalt",
+        "Concrete": "Concrete",
+        "Glow": "Glow",
+        "Paint": "Paint",
+        "Steel": "Steel",
+        "White": "White"
+      },
+      "nanite": true,
+      "source_assets": [
+        "project_authored_airfield"
+      ],
+      "source_fbx": "RawAssets/Environment/SM_Airbase.fbx",
+      "source_sha256": "c1dba1739d1d4c15e400db3b2b874e8b189d3680ea499ffc5a2b2cfff06bf65e",
+      "provenance": "Project-authored original airport geometry; no new external source.",
+      "origin": "original_world_origin",
+      "surface_height_m": 22.0,
+      "bounds_m": {
+        "min": [
+          -930.0,
+          -470.00006103515625,
+          20.0
+        ],
+        "max": [
+          930.0,
+          44.60014343261719,
+          23.169998168945312
+        ]
+      },
+      "dimensions_m": [
+        1860.0,
+        514.6002044677734,
+        3.1699981689453125
+      ],
+      "triangles": 4752,
+      "vertices": 2688,
+      "triangles_by_material": {
+        "Asphalt": 648,
+        "Concrete": 108,
+        "White": 528,
+        "Paint": 156,
+        "Steel": 1288,
+        "Glow": 2024
+      },
+      "retained_components": 156,
+      "rejected_components": 353,
+      "uv_layers": 1,
+      "source_uv_max_error": 0.0,
+      "source_normal_min_dot": 0.9999998286366463,
+      "sha256": "23b45557a99231dee127d8727019ed5c31e8132e8849be5d1dbf86f5946c32e3",
+      "fbx_axis_forward": "X",
+      "fbx_axis_up": "Z",
+      "notes": "Retain 1800x80m runway, 1860x30m taxiway, four connectors, 850x280m apron, guidance paint and 46 runway lights. No old hangar, office, tower, fuel-tank, blast-wall or fence components retained."
+    }
+  ]
+}

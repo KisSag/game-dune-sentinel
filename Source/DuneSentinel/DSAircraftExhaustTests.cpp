@@ -171,8 +171,33 @@ private:
 
     FString AirframeName() const
     {
-        return AirframeIndex < 3 ? FString::Printf(TEXT("player_%d"), AirframeIndex) :
-            (AirframeIndex == 3 ? TEXT("hostile_fighter") : TEXT("hostile_bomber"));
+        static const TCHAR* Names[] = { TEXT("player_F16"), TEXT("player_Rafale"), TEXT("player_F22"), TEXT("hostile_F22"), TEXT("hostile_Tu22") };
+        return Names[FMath::Clamp(AirframeIndex, 0, 4)];
+    }
+
+    const TCHAR* ExpectedMeshName() const
+    {
+        static const TCHAR* Names[] = { TEXT("SM_AU_F16"), TEXT("SM_AU_Rafale"), TEXT("SM_AU_F22"), TEXT("SM_AU_F22"), TEXT("SM_AU_Tu22") };
+        return Names[FMath::Clamp(AirframeIndex, 0, 4)];
+    }
+
+    TArray<FVector> MeasuredNozzleLips() const
+    {
+        // Independent source conversion measurements from
+        // RawAssets/Aircraft/Downloaded/meshes.json. Do not obtain expected
+        // geometry from the runtime sockets being tested. Tu-22 measurements
+        // are retained in the adjacent bomber-meshes.json source report.
+        if (AirframeIndex == 0) return { FVector(-692.355442, .000027, 0.) };
+        if (AirframeIndex == 1) return { FVector(-660.867739, -79.402328, 0.), FVector(-660.867739, 79.402447, 0.) };
+        if (AirframeIndex == 2 || AirframeIndex == 3)
+            return { FVector(-726.082039, -72.604603, 0.), FVector(-726.082039, 72.604603, 0.) };
+        return { FVector(-1939.948654, 79.498124, -.000012), FVector(-1939.948654, -79.497933, .000012) };
+    }
+
+    float MeasuredNozzleRadius() const
+    {
+        static const float Radii[] = { 59.038037f, 42.135217f, 47.946436f, 47.946436f, 54.562438f };
+        return Radii[FMath::Clamp(AirframeIndex, 0, 4)];
     }
 
     void Check(const TCHAR* Name, bool bPassed)
@@ -295,8 +320,11 @@ private:
         if (!Exhaust.IsValid()) { Finish(TEXT("An aircraft has no engine exhaust component.")); return; }
         // The same fixed oblique chase view is retained for all three power
         // settings. The nose is to the right and the trailing flame is clear.
-        const FVector Center = TestOrigin + FVector(-1700.f, 0.f, 0.f);
-        const FVector Position = TestOrigin + FVector(-4300.f, -7200.f, 2100.f);
+        // The longer bomber's nozzles sit farther aft. Translate the whole
+        // observation rig without changing its distance, angle or field of view.
+        const FVector CameraShift(AirframeIndex == 4 ? -1200.f : 0.f, 0.f, 0.f);
+        const FVector Center = TestOrigin + CameraShift + FVector(-1700.f, 0.f, 0.f);
+        const FVector Position = TestOrigin + CameraShift + FVector(-4300.f, -7200.f, 2100.f);
         Camera->SetActorLocationAndRotation(Position, (Center - Position).Rotation());
         PC->SetViewTarget(Camera.Get());
         if (PC->PlayerCameraManager) PC->PlayerCameraManager->UpdateCamera(0.f);
@@ -510,20 +538,21 @@ private:
 
     UStaticMeshComponent* AirframeMesh() const
     {
-        TArray<UStaticMeshComponent*> Meshes;
-        VisualActor->GetComponents(Meshes);
-        for (UStaticMeshComponent* Mesh : Meshes)
-            if (Mesh->GetStaticMesh() && Mesh->GetStaticMesh()->GetPathName().StartsWith(TEXT("/Game/Art/Aircraft/SM_")) &&
-                !Mesh->GetStaticMesh()->GetName().Contains(TEXT("landinggear"))) return Mesh;
+        if (const ADSFlightPawn* Player = Cast<ADSFlightPawn>(VisualActor.Get())) return Player->GetAirframeMesh();
+        if (const ADSEnemyAircraft* Enemy = Cast<ADSEnemyAircraft>(VisualActor.Get())) return Enemy->Mesh;
         return nullptr;
     }
 
     void RunAttachmentAndPoolChecks()
     {
         const TArray<FVector> Nozzles = Exhaust->GetNozzleWorldLocations();
+        const TArray<FVector> MeasuredLips = MeasuredNozzleLips();
+        const int32 ExpectedNozzles = MeasuredLips.Num();
         UStaticMeshComponent* Mesh = AirframeMesh();
-        bool bRearAndOnBody = Mesh && Nozzles.Num() == 2 && Nozzles.Num() == Exhaust->GetNozzleCount();
-        if (Mesh)
+        const bool bExpectedMesh = Mesh && Mesh->GetStaticMesh() && Mesh->GetStaticMesh()->GetName() == ExpectedMeshName();
+        CheckForAirframe(TEXT("Normal flight uses the expected detailed imported airframe"), bExpectedMesh);
+        bool bRearAndOnBody = bExpectedMesh && Nozzles.Num() == ExpectedNozzles && Nozzles.Num() == Exhaust->GetNozzleCount();
+        if (Mesh && Mesh->GetStaticMesh())
         {
             const FBox LocalBounds = Mesh->GetStaticMesh()->GetBoundingBox();
             for (const FVector& Position : Nozzles)
@@ -538,28 +567,20 @@ private:
             }
         }
         CheckForAirframe(TEXT("Nozzles lie at the rear of the actual loaded airframe"), bRearAndOnBody);
-        // Independent original-FBX rear rim measurements, before any effect
-        // configuration was authored. The tiny rear clearance is permitted;
-        // front intakes, tail fin tips and mirrored vertical offsets are not.
-        FVector MeasuredLip = FVector::ZeroVector;
-        if (Mesh)
-        {
-            const FString Name = Mesh->GetStaticMesh()->GetName();
-            if (Name == TEXT("SM_falcon")) MeasuredLip = FVector(-805.892, 72.934, -134.91);
-            else if (Name == TEXT("SM_lancer")) MeasuredLip = FVector(-683.194, 49.201, -139.3305);
-            else if (Name == TEXT("SM_mirage")) MeasuredLip = FVector(-651.075, 65.202, -125.3795);
-            else if (Name == TEXT("SM_hostile")) MeasuredLip = FVector(-939.817, 76.244, -76.495);
-            else if (Name == TEXT("SM_bomber")) MeasuredLip = FVector(-1023.289, 70.812, -114.9375);
-        }
-        bool bAtMeasuredLips = !MeasuredLip.IsNearlyZero() && Nozzles.Num() == 2;
+        // Permit only the authored two-centimetre rear clearance; reject
+        // misplaced, duplicated or swapped left/right nozzle roots.
+        bool bAtMeasuredLips = bExpectedMesh && Nozzles.Num() == ExpectedNozzles;
         double MaxLipError = 0.;
         for (int32 I = 0; bAtMeasuredLips && I < Nozzles.Num(); ++I)
         {
             const FVector Local = Mesh->GetComponentTransform().InverseTransformPosition(Nozzles[I]);
-            const FVector Expected(MeasuredLip.X, Local.Y < 0.f ? -MeasuredLip.Y : MeasuredLip.Y, MeasuredLip.Z);
-            MaxLipError = FMath::Max(MaxLipError, FVector::Distance(Local, Expected));
+            MaxLipError = FMath::Max(MaxLipError, FVector::Distance(Local, MeasuredLips[I]));
         }
-        CheckForAirframe(TEXT("Both engine roots match independently measured source nozzle rims"), bAtMeasuredLips && MaxLipError <= 8.);
+        CheckForAirframe(TEXT("Every engine root matches its independently measured source nozzle rim"), bAtMeasuredLips && MaxLipError <= 3.);
+        const TArray<float>& Radii = Exhaust->GetNozzleRadiiCm();
+        bool bMeasuredRadii = Radii.Num() == ExpectedNozzles;
+        for (float Radius : Radii) bMeasuredRadii &= FMath::Abs(Radius - MeasuredNozzleRadius()) < .01f;
+        CheckForAirframe(TEXT("Flame dimensions use independently measured source nozzle radii"), bMeasuredRadii);
         TArray<USceneComponent*> Children;
         Exhaust->GetChildrenComponents(true, Children);
         TArray<FVector> LocalVisualPositions;
@@ -584,13 +605,13 @@ private:
             {
                 ++ActualFlameCards;
                 const FVector Local = VisualActor->GetActorTransform().InverseTransformPosition(Child->GetComponentLocation());
-                bFlamesBehindNozzles &= Local.X < MeasuredLip.X - 10.f &&
+                bFlamesBehindNozzles &= Local.X < MeasuredLips[0].X - 10.f &&
                     FVector::DotProduct(Child->GetForwardVector(), VisualActor->GetActorForwardVector()) > .999;
             }
         }
         CheckForAirframe(TEXT("Rendered primitives use dedicated additive unlit exhaust materials without collision"),
-            bAuthoredAdditiveLight && ActualPrimitiveCount == Exhaust->GetVisualPoolSize());
-        CheckForAirframe(TEXT("Actual flame cards extend aft along the aircraft longitudinal axis"), bFlamesBehindNozzles && ActualFlameCards >= 2);
+            bAuthoredAdditiveLight && ActualPrimitiveCount == ExpectedNozzles * 3 && ActualPrimitiveCount == Exhaust->GetVisualPoolSize());
+        CheckForAirframe(TEXT("Actual flame cards extend aft along the aircraft longitudinal axis"), bFlamesBehindNozzles && ActualFlameCards == ExpectedNozzles * 2);
         TArray<FVector> LocalNozzles;
         for (const FVector& Position : Nozzles) LocalNozzles.Add(VisualActor->GetActorTransform().InverseTransformPosition(Position));
         const FTransform Rolled(FRotator(24.f, 63.f, 71.f), TestOrigin + FVector(1300.f, -700.f, 1900.f));
@@ -606,7 +627,7 @@ private:
         VisualActor->SetActorLocationAndRotation(TestOrigin, FRotator::ZeroRotator);
         const int32 OriginalComponents = VisualActor->GetComponents().Num();
         const int32 OriginalPool = Exhaust->GetVisualPoolSize();
-        bool bBounded = OriginalPool > 0 && OriginalPool <= 32;
+        bool bBounded = OriginalPool == ExpectedNozzles * 3;
         for (int32 I = 0; I < 240; ++I)
         {
             Exhaust->UpdateExhaust(.02f, I % 3 == 0 ? 1.f : 0.f, I % 3 == 1 ? 1.f : 0.f);

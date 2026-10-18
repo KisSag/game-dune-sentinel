@@ -1,0 +1,726 @@
+{
+  "schema": "airbase-materials/v1",
+  "asset_slug": "hangar",
+  "source_glb": "RawAssets/Downloaded/Aviation/hangar/source.glb",
+  "texture_file_basis": "project_relative",
+  "materials": [
+    {
+      "name": "M_AU_hangar_00_Steel_Roughness",
+      "source_material_index": 0,
+      "source_name": "Steel_Roughness",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.08990503590106179,
+      "roughness_factor": 0.8761931464933987,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_000.jpg",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "metallic_roughness": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_001.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_hangar_01_Panel01",
+      "source_material_index": 1,
+      "source_name": "Panel01",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 1.0,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_002.jpg",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "metallic_roughness": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_003.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "normal": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_004.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_hangar_02_Block",
+      "source_material_index": 2,
+      "source_name": "Block",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 1.0,
+      "normal_opengl": true,
+      "normal_scale": 0.1569528592849045,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_005.jpg",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "metallic_roughness": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_006.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "normal": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_007.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_hangar_03_Translucent_Glass_Gray",
+      "source_material_index": 3,
+      "source_name": "Translucent_Glass_Gray",
+      "basecolor_factor": [
+        0.6592412686351545,
+        0.6461842421458297,
+        0.6461842421458297,
+        1.0
+      ],
+      "metallic_factor": 1.0,
+      "roughness_factor": 0.047238239202252806,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.0,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0
+    },
+    {
+      "name": "M_AU_hangar_04_Plane_Body",
+      "source_material_index": 4,
+      "source_name": "Plane_Body",
+      "basecolor_factor": [
+        1.0,
+        0.960784,
+        0.933333,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.3337153027513988,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0
+    },
+    {
+      "name": "M_AU_hangar_05_Body_Plane",
+      "source_material_index": 5,
+      "source_name": "Body_Plane",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.3337153027513988,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_008.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_hangar_06_Plane_Body02",
+      "source_material_index": 6,
+      "source_name": "Plane_Body02",
+      "basecolor_factor": [
+        0.0693571372228666,
+        0.061570905402705586,
+        0.061570905402705586,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.44952517950530896,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0
+    },
+    {
+      "name": "M_AU_hangar_07_edge_color000255",
+      "source_material_index": 7,
+      "source_name": "edge_color000255",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0
+    },
+    {
+      "name": "M_AU_hangar_08_edge_color255245238255",
+      "source_material_index": 8,
+      "source_name": "edge_color255245238255",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0
+    },
+    {
+      "name": "M_AU_hangar_09_Concrete",
+      "source_material_index": 9,
+      "source_name": "Concrete",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.49828723287537635,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_009.jpg",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "normal": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_010.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_hangar_10_Tape",
+      "source_material_index": 10,
+      "source_name": "Tape",
+      "basecolor_factor": [
+        0.06725368186183119,
+        0.06725368186183119,
+        0.06725368186183119,
+        0.46171569284782576
+      ],
+      "metallic_factor": 0.1630481159561629,
+      "roughness_factor": 0.00457144250344382,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "BLEND",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0
+    },
+    {
+      "name": "M_AU_hangar_11_cardboard",
+      "source_material_index": 11,
+      "source_name": "cardboard",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.8152405797808145,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_011.jpg",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_hangar_12_Color_M08",
+      "source_material_index": 12,
+      "source_name": "Color_M08",
+      "basecolor_factor": [
+        0.117647,
+        0.117647,
+        0.117647,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0
+    },
+    {
+      "name": "M_AU_hangar_13_material",
+      "source_material_index": 13,
+      "source_name": "material",
+      "basecolor_factor": [
+        0.643137,
+        0.698039,
+        0.733333,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0
+    },
+    {
+      "name": "M_AU_hangar_14_Panel02",
+      "source_material_index": 14,
+      "source_name": "Panel02",
+      "basecolor_factor": [
+        1.0,
+        1.0,
+        1.0,
+        1.0
+      ],
+      "metallic_factor": 0.5165730028891516,
+      "roughness_factor": 0.42514415282027523,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0,
+      "basecolor": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_012.jpg",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "metallic_roughness": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_013.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      },
+      "normal": {
+        "file": "RawAssets/Downloaded/Aviation/hangar/textures/image_014.png",
+        "uv_index": 0,
+        "uv_scale": [
+          1.0,
+          1.0
+        ],
+        "uv_offset": [
+          0.0,
+          0.0
+        ],
+        "uv_rotation": 0.0,
+        "wrap_s": 10497,
+        "wrap_t": 10497
+      }
+    },
+    {
+      "name": "M_AU_hangar_15_MetalPoleColor",
+      "source_material_index": 15,
+      "source_name": "MetalPoleColor",
+      "basecolor_factor": [
+        0.137255,
+        0.137255,
+        0.137255,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "emissive_strength": 1.0,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0
+    },
+    {
+      "name": "M_AU_hangar_16_0046_Gold",
+      "source_material_index": 16,
+      "source_name": "0046_Gold",
+      "basecolor_factor": [
+        1.0,
+        0.843137,
+        0.0,
+        1.0
+      ],
+      "metallic_factor": 0.0,
+      "roughness_factor": 0.6,
+      "normal_opengl": true,
+      "normal_scale": 1.0,
+      "occlusion_strength": 1.0,
+      "emissive_factor": [
+        0.37668593288339286,
+        0.5394015010733652,
+        0.7409556523337896
+      ],
+      "emissive_strength": 1.9352439931245502,
+      "alpha_mode": "OPAQUE",
+      "alpha_cutoff": 0.5,
+      "double_sided": false,
+      "specular_factor": 0.5,
+      "specular_channel": "A",
+      "clearcoat_factor": 0.0,
+      "clearcoat_roughness": 0.0
+    }
+  ]
+}

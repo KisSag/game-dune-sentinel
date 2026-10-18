@@ -25,6 +25,8 @@ public:
 
     int32 GetNozzleCount() const { return NozzleLocations.Num(); }
     TArray<FVector> GetNozzleWorldLocations() const;
+    TArray<FVector> GetNozzleWorldAftDirections() const;
+    const TArray<float>& GetNozzleRadiiCm() const { return NozzleRadiiCm; }
     float GetFlameLengthCm() const;
     float GetCoreRadiusCm() const;
     float GetGlowStrength() const;
@@ -34,7 +36,7 @@ public:
     int32 GetVisualPoolSize() const { return FlameCards.Num() + Cores.Num(); }
 
 private:
-    static constexpr int32 NozzlePoolSize = 2;
+    static constexpr int32 MaximumNozzles = 4;
     static constexpr int32 CardsPerNozzle = 2;
     UPROPERTY() TObjectPtr<UMaterialInterface> FlameMaterial;
     UPROPERTY() TObjectPtr<UMaterialInterface> CoreMaterial;
@@ -44,12 +46,14 @@ private:
     UPROPERTY(Transient) TArray<TObjectPtr<UMaterialInstanceDynamic>> CoreMIDs;
 
     TArray<FVector> NozzleLocations;
-    float NozzleRadiusCm = 40.f;
+    TArray<FQuat> NozzleRotations;
+    TArray<float> NozzleRadiiCm;
     float Thrust = .45f;
     bool bExhaustVisible = false;
     bool bConfigured = false;
 
     bool EnsureVisuals();
+    void DestroyVisuals();
     void ApplyVisuals();
     static void SetCoreRadius(UMaterialBillboardComponent* Core, float Radius);
 };

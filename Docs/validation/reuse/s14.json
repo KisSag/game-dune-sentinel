@@ -1,0 +1,2379 @@
+{
+  "schema": "native-asset-reuse/v1",
+  "stage": "s14",
+  "engine": "5.7",
+  "operation": "reuse_existing_assets",
+  "started": "2026-10-18T13:27:36.250608-07:00",
+  "import_performed": false,
+  "native_authoring_performed": false,
+  "runtime_tests_run": false,
+  "packages": [
+    {
+      "path": "Content/Art/Airbase/Downloaded/SM_AU_AirfieldSurfaces.uasset",
+      "sha256": "a55edf86bb84ae33bc04bf32dc3c1ae864fbd3653b0706c0be4ebcc4c3d17182",
+      "bytes": 107863
+    },
+    {
+      "path": "Content/Art/Airbase/Downloaded/SM_AU_ControlTower.uasset",
+      "sha256": "7254d0f4ff46639163556d285263c13afb7b890b018c910861d6d8f46e5f698e",
+      "bytes": 2515192
+    },
+    {
+      "path": "Content/Art/Airbase/Downloaded/SM_AU_Hangar.uasset",
+      "sha256": "74a441653058e745005272e8b196353b9eb2214083c6a9f7bbce1f4fffa6e844",
+      "bytes": 637373
+    },
+    {
+      "path": "Content/Art/Aircraft/Downloaded/SM_AU_F16.uasset",
+      "sha256": "1c47f25f2ddaaf9d720c1fc2402a6976be5e484cf8306544da874fd12c8e8216",
+      "bytes": 9066632
+    },
+    {
+      "path": "Content/Art/Aircraft/Downloaded/SM_AU_F16_Parked.uasset",
+      "sha256": "790c53c9e7653894f4d304d323a56aac6e7d07808c7847effcb0121a943d6561",
+      "bytes": 10833967
+    },
+    {
+      "path": "Content/Art/Aircraft/Downloaded/SM_AU_F22.uasset",
+      "sha256": "0c3beefa903e9c4eb958d0b9e43d4a0717860439d5aff0923b4544e4f50f9c6f",
+      "bytes": 4501827
+    },
+    {
+      "path": "Content/Art/Aircraft/Downloaded/SM_AU_F22_Parked.uasset",
+      "sha256": "30beb54e99d60f0b673cc4714a97d52082d980c668dadc39856757871d5c5183",
+      "bytes": 4413502
+    },
+    {
+      "path": "Content/Art/Aircraft/Downloaded/SM_AU_Rafale.uasset",
+      "sha256": "33bb9604f3afe1ab8aafe1641327ffb5a484afb9a8b030269c169d945451fea2",
+      "bytes": 3412773
+    },
+    {
+      "path": "Content/Art/Aircraft/Downloaded/SM_AU_Rafale_Parked.uasset",
+      "sha256": "2cb0dffb3776e21176e0fc5c73a2d8d502aab26cdd424b18c6d007ded4072401",
+      "bytes": 4562391
+    },
+    {
+      "path": "Content/Art/Aircraft/Downloaded/SM_AU_Tu22.uasset",
+      "sha256": "bf402de85f616f4d8750d539ac16f121709f1b4cd2d86a2dfa41d416f8db6436",
+      "bytes": 2032874
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_bomber.uasset",
+      "sha256": "dc4e4383728d6b5830d19e09e947968d4c606f5741af8b88f2365bec7d6524d7",
+      "bytes": 134000
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_falcon.uasset",
+      "sha256": "468102e1a0a987df9113b1d8f55f2e9fad2a81c2bc9b76c1003f06ab46152010",
+      "bytes": 201050
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_hostile.uasset",
+      "sha256": "3ec252f4cd67b27dc95b707c2d6aa9ef4ff8591b1d38c095a09c134c99363cac",
+      "bytes": 192190
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_lancer.uasset",
+      "sha256": "69426dbbd5e17b541ae328ff50a717a6bda3ee75cc0442cad10a34ba88577d83",
+      "bytes": 149752
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_landinggear.uasset",
+      "sha256": "cdd6169aed96cea53554a6218ca9d8bed46aad7276e7dc30fcbac62e45a3c960",
+      "bytes": 26147
+    },
+    {
+      "path": "Content/Art/Aircraft/SM_mirage.uasset",
+      "sha256": "49b75358ee6890e50434eb93e1f209b6347d379db5a4fb6efca748f1f711e37b",
+      "bytes": 200996
+    },
+    {
+      "path": "Content/Art/Effects/M_AircraftExhaustCore.uasset",
+      "sha256": "d64e3b7cc00ce737bbe3b9649d0e6e25b663f8e90487baa34dec1785aecfa14e",
+      "bytes": 12331
+    },
+    {
+      "path": "Content/Art/Effects/M_AircraftExhaustFlame.uasset",
+      "sha256": "fb23a4723113cf9f7132d963107d6a5009436fdc98ff672dd023e77a1028970f",
+      "bytes": 13404
+    },
+    {
+      "path": "Content/Art/Effects/M_CannonFlash.uasset",
+      "sha256": "577f248a84735e9e56c647799f3fd553fc6eef9a66ca15f2ead8ea41cd2da3eb",
+      "bytes": 11592
+    },
+    {
+      "path": "Content/Art/Effects/M_CannonHead.uasset",
+      "sha256": "9225cd0ae0899a832c9183bb5ac1ffa20b8edf645728a70e9d9d46c774bc6e0f",
+      "bytes": 11382
+    },
+    {
+      "path": "Content/Art/Effects/M_CannonSmoke.uasset",
+      "sha256": "0e00c9c45fa4b9f0785f723e7b4abf46f594e35930be67f49bc972fa2f467f4a",
+      "bytes": 12089
+    },
+    {
+      "path": "Content/Art/Effects/M_CannonTrail.uasset",
+      "sha256": "e628d0c96637c9778b946b510ae167e25958b6d6e06d2448b54be5cd6fd7d8e3",
+      "bytes": 11215
+    },
+    {
+      "path": "Content/Art/Effects/M_Explosion.uasset",
+      "sha256": "980f40bdcdfe16eda62bc0d68e6c1b276d2781f2d85fcde7ec4fb4d82972e501",
+      "bytes": 8104
+    },
+    {
+      "path": "Content/Art/Effects/M_MissileGlow.uasset",
+      "sha256": "87236acad5a7f535f673f8f88a2828c5fc99dfce41fa8d0334a598fd4fadef7c",
+      "bytes": 7756
+    },
+    {
+      "path": "Content/Art/Effects/M_Tracer.uasset",
+      "sha256": "5a26d317c0bff567c4647e23bc7a7fbcb2bc3843f7b7f35166d6d5a5844f5aaa",
+      "bytes": 7731
+    },
+    {
+      "path": "Content/Art/Effects/SM_missile.uasset",
+      "sha256": "53bea0b3bb12f5b9b6eb8db895e0c67475cf9faa97131a0d4da23b532ac3304a",
+      "bytes": 21198
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_AirfieldWorkshop.uasset",
+      "sha256": "7164891a3d6f9d7ad92bbcbda0903d7804ebee74f04bb4cb8ef6cfcbde10dcc1",
+      "bytes": 1293293
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_BermudaPatch.uasset",
+      "sha256": "364fd04913eb94fe5e89a215e7f4f482169ee88701d7d78112076dcf7eb87188",
+      "bytes": 562326
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_CivicBlock.uasset",
+      "sha256": "2f63305c32784b48ce90c1dd29862effb4d4fad3c87fd43ac99f92e71c2a1503",
+      "bytes": 2375832
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_CourtyardHomes.uasset",
+      "sha256": "98c2cc4dc0616fe7a8efc4ffced0e4677c3d54ca1712a694d213cd109ad89288",
+      "bytes": 563888
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_DesertBoulder.uasset",
+      "sha256": "a644431d001bf68aeaf6d637301cdc8f78ee0d86567bdbd09902574adecca2d6",
+      "bytes": 476935
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_DesertCliff.uasset",
+      "sha256": "99954acd376e2f0bf2a3387f7eabe0348b96578d7177bd2e24799011a6e68984",
+      "bytes": 1902016
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_IslandTreeA.uasset",
+      "sha256": "2156206ae2be77c5acdd89e1544d62ddb85344b3a61a251095fa69f0ae9f9e45",
+      "bytes": 3933942
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_IslandTreeB.uasset",
+      "sha256": "044ce74a655a411a368e5be8af5b259b25924a730f8b0bdb842684f8efe78f5d",
+      "bytes": 3602858
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_Jacaranda.uasset",
+      "sha256": "901d907c5b3dc6df21e91709eabf104cd5f1996fd380d3d77275b1badce7091e",
+      "bytes": 9312283
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_RooibosBush.uasset",
+      "sha256": "59aa38dfcc4248cbb6663ac52e1844851720badfbc7b1704ef6a4cbb7a8b1ce9",
+      "bytes": 392049
+    },
+    {
+      "path": "Content/Art/Environment/Downloaded/SM_PH_TownApartments.uasset",
+      "sha256": "04659a3f14b22d589664a0328b18e696d12ade59a5a7f101f4ba528980535101",
+      "bytes": 1533649
+    },
+    {
+      "path": "Content/Art/Environment/SM_Airbase.uasset",
+      "sha256": "4e86ecd9938f8b83f64501437380d082079b54874d896210764916e122e6bf2c",
+      "bytes": 643269
+    },
+    {
+      "path": "Content/Art/Environment/SM_DesertTerrain.uasset",
+      "sha256": "f05f29ac889ff63f7bdbc310beec3fad8dd119f3fc1383fb17e5234b46866347",
+      "bytes": 2055893
+    },
+    {
+      "path": "Content/Art/Environment/SM_DistantGobi.uasset",
+      "sha256": "1e7b3ec06d11124dc9352045b62f39abdf818a3610bc25993af901a7e92a6834",
+      "bytes": 435252
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_Apartment.uasset",
+      "sha256": "3f8e87e441d2bd257d2b5758c3d32c894d9d625fa0aca4e8368390de279c543a",
+      "bytes": 975484
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_BankEast.uasset",
+      "sha256": "5b4a4b5f84a7588a5ff6a79c246b1b9b19d35e7bc06a0031af6e49c7a1f8d4eb",
+      "bytes": 588638
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_BankNorth.uasset",
+      "sha256": "f0d770c354626a211d73e6b10df62674a34fb3059e6640beea7e487e96644161",
+      "bytes": 325344
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_BankWest.uasset",
+      "sha256": "84c1b109d11f3cac4a404193e0da1bdb7dbf70700b34718d2112710320feef14",
+      "bytes": 473015
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_DistantGobi.uasset",
+      "sha256": "bba338931b48f66a1a944074ad5760835709446482ad272ed8836b5d51a00a12",
+      "bytes": 1725254
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_HouseA.uasset",
+      "sha256": "557552ac94904865486c658c6740bc110e984023e4717160865a75f8aca6f179",
+      "bytes": 225374
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_HouseB.uasset",
+      "sha256": "d3003f377c9ff9ffd36bc1d0dfed43fb9207cdbdcb2bf01b61f23e947cae0bb1",
+      "bytes": 394632
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_LakeEast.uasset",
+      "sha256": "6b4cb0088e08f7eab1cc80aee0e84f0d4c330201dc7f756fd56a967bceba7745",
+      "bytes": 17198
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_LakeNorth.uasset",
+      "sha256": "62d5d5cc97dd14eefd39aff035d82e7a3fdd89db9830ffa240d5daa1daf9e886",
+      "bytes": 16529
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_LakeWest.uasset",
+      "sha256": "eab9f6872cb89dc48880a428c526e43413cc45fecd6e1e8ed42af1f519c30ef8",
+      "bytes": 16408
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_OasisPoplar.uasset",
+      "sha256": "876f890672d071b4e4c4bb9a96df246544dd9855c159d27de5097070ec294579",
+      "bytes": 248700
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_OasisReeds.uasset",
+      "sha256": "7d03746c17cf46d45f9283ae2deed005ddf0fdae563507fd0fd32d43077f4e80",
+      "bytes": 73822
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_OasisShrub.uasset",
+      "sha256": "a8ef70eab4b0dcb0b23112d462982dbd98f27c40243ab3e864064863d512fdc3",
+      "bytes": 76058
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_OasisWillow.uasset",
+      "sha256": "38225e84afb5a57e3dfd2962c6b0837174d6b8e8bfb17333d793362761515b46",
+      "bytes": 359472
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_RidgedTerrain.uasset",
+      "sha256": "e428be70a5bf611b443f0c7cb4fd7303880619498abdef47277274fe738e3d2c",
+      "bytes": 22904709
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_TownRoads.uasset",
+      "sha256": "2573367a80b973d20695bbc57b72fb528147b8d3ce9ef7a44e08037f1b638c9f",
+      "bytes": 170115
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_WaterTower.uasset",
+      "sha256": "aae9f1ca41c5b6978245d37389ea9d84adb78e5c8daf128fb73df4bf405aefd3",
+      "bytes": 79399
+    },
+    {
+      "path": "Content/Art/Environment/Variation/SM_Workshop.uasset",
+      "sha256": "0557b80bb2dd445c6d852a8f96da839504af295bdaa385f49d1fd2a338948997",
+      "bytes": 190207
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_00_gear_metal.uasset",
+      "sha256": "5ac8c0cbe865a22d5a3fcd16f97a66890002497fe98f407d53c618616efbc8ad",
+      "bytes": 9786
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_01_gear_rubber.uasset",
+      "sha256": "28037eb734962c677dddc4b68fce925d6fc35ad6d35b6282c25baf744d221f61",
+      "bytes": 7628
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_02_gear_metal_001.uasset",
+      "sha256": "cc6fdda8dcaa1e97d17c3770bf17d703cabf9cf55a07ed246ec018a93d22419e",
+      "bytes": 9806
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_03_gear_column_front.uasset",
+      "sha256": "15b502950030848ef96d8dc1e4cc85fa2d94dfa97ee303be56cbb906157be2f9",
+      "bytes": 7687
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_04_gear_bay_door_front_001.uasset",
+      "sha256": "5668bddb171825dbb77e8c3acd31557616e1c6cc7f45f57630d5bdc58bf29591",
+      "bytes": 9851
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_05_gear_bay_door_rear.uasset",
+      "sha256": "065bc64a817b4c65253d3db21bafc5c0ab88121af344cc10078ec25876574574",
+      "bytes": 9797
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_06_aeleron.uasset",
+      "sha256": "9433ae9fba8a77516dd374016201fdccad2ffc38e05ad4124320f00782377df5",
+      "bytes": 12535
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_07_elevator.uasset",
+      "sha256": "e7c954af813edfa48d930cd7ff7469c10c03eb2eaeb1738e5f151b4e47caab40",
+      "bytes": 9747
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_08_fuselage.uasset",
+      "sha256": "a2012febf15106c5e4e80e539538f577918243163fef0c0d7cc67f3e44311f0e",
+      "bytes": 13284
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_09_fuselage_0.uasset",
+      "sha256": "8f2169c9313b3cf9fcb287233bd9c684110189672877cad81ffd2009a129b50c",
+      "bytes": 11392
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_10_fuselage_1.uasset",
+      "sha256": "2875ec0928d8a9e955e5c904e9dc8c0ae779e8df835723ea92aec8618916b971",
+      "bytes": 11445
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_11_engine.uasset",
+      "sha256": "1fa65ed3a3455816d9aa920bb39083b56e993258f094d5870174a8c29fda357c",
+      "bytes": 7632
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_12_rudder.uasset",
+      "sha256": "a57924b6d4565d32cfc0a4eefb0e9d8379ccd7e73f6d398235013b58ccb749f6",
+      "bytes": 9737
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_13_canopy_metal.uasset",
+      "sha256": "6cac9a3da6bb8b401b026f6044648ab6bbcf4f1ed75e06a0fa2013fc08261f20",
+      "bytes": 9767
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_14_canopy_glass.uasset",
+      "sha256": "baa6d65c76ea3c4f47f740dc5684fe244c7e4ec566e588a6f9f27d5a355762c8",
+      "bytes": 8369
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_00_Material_012.uasset",
+      "sha256": "c0f337b5693f6ce8764f4148d46d98153509595ae7a6e59bc682e1486fd2275f",
+      "bytes": 7633
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_01_material.uasset",
+      "sha256": "2782dddff1cf309e637e018a82b2aabd96695a07e3d51676c4270052332ab69d",
+      "bytes": 14138
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_02_Tyre.uasset",
+      "sha256": "ed24ee2dfddaa2b359d2f5c8feff61cc82fb05a2208cd8fed4fb2a8cd19d5938",
+      "bytes": 14118
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_03_Material_009.uasset",
+      "sha256": "819321559ff2d704bfe779459ff39907e91ba19dddbd82d09ceb14236bdce97a",
+      "bytes": 14158
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_04_White_disk.uasset",
+      "sha256": "f1091a94e1bb8d9874132a5c87a133100f6ca30e1cbbd53294cec32d9b47ebf6",
+      "bytes": 14148
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_05_Material_010.uasset",
+      "sha256": "c9812e2351f66321896601af33be31b40b920c3e3bda165b9b9e33425e0f428d",
+      "bytes": 7633
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_06_Material_011.uasset",
+      "sha256": "240899fa2decde2b1c6a61063bdfaee7c7132f2da8e7e225486cb029096340ff",
+      "bytes": 7633
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_07_Glass.uasset",
+      "sha256": "21370a680265cc2c328a60b3393333a865230fe1224d026a066ce011d83d3304",
+      "bytes": 12997
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_08_Cabin_black.uasset",
+      "sha256": "540c2a2ce8e67ac9ac9b7767879737eb2e12958bbf00f65bbdd924cf572ec29b",
+      "bytes": 14153
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_09_Tail.uasset",
+      "sha256": "f163bf52c5a0e2129b5d86332eb314ff878ae406f4ae9924e987b2c023e3fb99",
+      "bytes": 14089
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_10_Body.uasset",
+      "sha256": "8a651776fc0b12b0a8be11ace13405c7991705dd0edb0d9e794a23fc7dbd998b",
+      "bytes": 14118
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_12_Air_tube_001.uasset",
+      "sha256": "5e79decce6940180dcd9fa8c3964546e96f5d45cb84e41a771187c4ac00866d9",
+      "bytes": 14158
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_13_Gray.uasset",
+      "sha256": "7a705f5f068eb78e8e85938af5ab5706f3db7d9d7bb919212d3eb4251273cb65",
+      "bytes": 14118
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_14_Black_001.uasset",
+      "sha256": "fafc2afb6b8f8772e85387b09700ab8231542e2dbd326b3ec3101737e610b65d",
+      "bytes": 7618
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_15_Black.uasset",
+      "sha256": "4eb05ec8ad09fcc77c5dbbcb0ef96376d37b6e14020a51afdbd834d8bdee29ab",
+      "bytes": 14123
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_16_Grid.uasset",
+      "sha256": "2bcc0f8961338f3cc6fb813df4077bf7c7b2499e7b5a879bd56b48dba1705a11",
+      "bytes": 9756
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_17_Material_005.uasset",
+      "sha256": "1d88320f15ba1bac7b9ff2e3c1d34f66d58693f1fa5ab167a95586b4fc2abc81",
+      "bytes": 7662
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_18_Rocket_Main.uasset",
+      "sha256": "6d58423a9374cb39d6bb7b148380623c156068a67a4d03fe9cce93d61b550a46",
+      "bytes": 14153
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_19_Rocket_Blue.uasset",
+      "sha256": "7219f4026fad19b8cfa7a165c3ecc7e1739ac37fa7e03b997703a51c30539082",
+      "bytes": 12584
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_20_Rocket_Black.uasset",
+      "sha256": "9da0d5de4d2593c5065cceb73ef5e8d6c03a7e49c7a18d9a37fcb0472f335bd0",
+      "bytes": 14158
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_21_Air_tube_002.uasset",
+      "sha256": "0e2c86b870d9478cc5ec9fbdc00c47b98ce729590e90c22c48c210952972ab45",
+      "bytes": 9796
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_22_Body_1.uasset",
+      "sha256": "ca47e101cb0ffc5d667a5043eacc200cfdd98673bf73549e95a17b2ad4ea8b1e",
+      "bytes": 14124
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_23_Body_cabin.uasset",
+      "sha256": "1a807f9c5bc3825511633cc51347cd6b844334423a18d9047c0c71e1ea5a2b13",
+      "bytes": 14148
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_24_Gray_nose.uasset",
+      "sha256": "89509c5af2fc94cba98d905d925503c8cb84a6723df2ce7a8591536640ac7812",
+      "bytes": 14143
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_25_Body_001.uasset",
+      "sha256": "2dde300ba633e4dbb4801b014fdd3677a18890b9dce74e4240c4dce6ea9048af",
+      "bytes": 14138
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_00_Steel_Roughness.uasset",
+      "sha256": "86e9dfa1b0aedb790e965281807035429c0be001cfcf3a8572e72152c76fb1e2",
+      "bytes": 12626
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_01_Panel01.uasset",
+      "sha256": "9c77ab7921b818168b6266bff8a517671010a2779625d54e93acecb7935b2101",
+      "bytes": 14126
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_02_Block.uasset",
+      "sha256": "818b1dff393ceb440f7e9801348028c898418b6a9e4b3e5fb8c3a4e30e2f1853",
+      "bytes": 16776
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_06_Plane_Body02.uasset",
+      "sha256": "bf42508a4eca0685cb74290b472728ab0803ed5bacc25371b3cff9c0487fcafa",
+      "bytes": 7655
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_09_Concrete.uasset",
+      "sha256": "976396c374a04b2dfa4ffab78f10e8e76e61cc1c6bd1a077e3be08781addc1df",
+      "bytes": 11408
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_14_Panel02.uasset",
+      "sha256": "1ddfd607634f0b939339b21606326ad3eda9a8fead9b6daa12be4acff6479d18",
+      "bytes": 14155
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_15_MetalPoleColor.uasset",
+      "sha256": "3f79a9e51937386d73421238e2f6fd3778eb53b0fb710302c69c7e909b964d89",
+      "bytes": 7665
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_16_0046_Gold.uasset",
+      "sha256": "d218662358792ace3137b90c0484dae0d9a8d6c8701ef70267ea44a6f9ffed5c",
+      "bytes": 7640
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_rafale_00_low_Material__32.uasset",
+      "sha256": "20911e9dec07642da3e0bcf4fd9bdce885e9f40f330e81f6843ef11b3c6e804f",
+      "bytes": 15107
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_rafale_01_low_Material__31.uasset",
+      "sha256": "336d55c5e76849e2f51032317a85aa62e113e3de4ce3923b7a8c11b7da7a5de8",
+      "bytes": 15065
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_rafale_02_low_Material__29.uasset",
+      "sha256": "1c6b73594edebdec54bc3416f358fb62f363e534cfe6c655600e2a02651a2d74",
+      "bytes": 15107
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_rafale_03_low_Material__30.uasset",
+      "sha256": "d6112db57dbfb837d089012936db368a2e010aa8ac1ce090b775aee56a662881",
+      "bytes": 15107
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tower_00_KSFO_Control_Tower.uasset",
+      "sha256": "37a1f09731a1698cf8156a6fdd484747dd8242b5cf5c8f260e8066e2416f94bf",
+      "bytes": 16370
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tower_01_KSFO_Control_Tower_02.uasset",
+      "sha256": "79d5c4b3f0a0baaa08c2ad459c95938e0aa779c98f1524b636bd57b5b823e2e9",
+      "bytes": 16385
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_00_DefaultWhite.uasset",
+      "sha256": "a0ffeb2ea31665bf8463892b68bc84569121f14bf101c8a7a6bd01099e63c18d",
+      "bytes": 9772
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_01_DefaultWhite_achs_png.uasset",
+      "sha256": "eccfd7f59dfdfde910a97769d9369970a891c3f6ee47d918b9bfe9de0bb37918",
+      "bytes": 9817
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_02_DefaultWhite_adf_png.uasset",
+      "sha256": "bce6189b85a0304ce5064c40bb974f7def8359b580ea991dd8a737b39252869e",
+      "bytes": 9812
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_03_DefaultWhite_ai_png.uasset",
+      "sha256": "b5f71e0f2d4827114ab8a5d5a611e8b38257e6aaefeef0bf1c8a9d23260039a1",
+      "bytes": 9807
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_04_DefaultWhite_ai2_png.uasset",
+      "sha256": "0ff32390cc3c49bf454578d721ba73114c95b5110cfbfe6e774ea60693c183fa",
+      "bytes": 9812
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_05_DefaultWhite_alt_png.uasset",
+      "sha256": "743e825dcca13a03409b3d05664b6870e82f79cf99b9e2bb07fad6b11d610615",
+      "bytes": 9812
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_06_DefaultWhite_asi_png.uasset",
+      "sha256": "afad3e3195be359b074c7cd297223c34ab7c7dcbe35ef203aad590af53b54857",
+      "bytes": 9812
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_07_DefaultWhite_at_png.uasset",
+      "sha256": "fa4c2bc55ee0252247db17b9c953854cadb1e49fe02b38f070ef54ca4f9857ba",
+      "bytes": 9807
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_08_DefaultWhite_com_png.uasset",
+      "sha256": "5f5ed2a8563f54e4d90dc747072068aee253893764e4ef1dec26fa1c5fd09e31",
+      "bytes": 9812
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_09_DefaultWhite_idr_png.uasset",
+      "sha256": "8df86d974b39552b6e34927c1c545268dc7db2ab71062c654b2d48d74ef8beda",
+      "bytes": 9812
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_10_DefaultWhite_interior_png.uasset",
+      "sha256": "fc49df3ba7785654c34178f46d506d82d4ef33f7902bebc63e880e754f6c8e2d",
+      "bytes": 9837
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_11_DefaultWhite_panel_png.uasset",
+      "sha256": "2c45a9ccb4ec1f75dcef866254b23d11c00d608598371a7035e7a685d19ada87",
+      "bytes": 9822
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_12_DefaultWhite_psp_png.uasset",
+      "sha256": "61e35f768329778105fcd5f7da38f9296d18a6a9fb9b15f8783c6b56d9605284",
+      "bytes": 9812
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_13_DefaultWhite_rpm_png.uasset",
+      "sha256": "d9ce8ec6270f1fff4376244c1a6734615fae53983014df6049995379a53501e3",
+      "bytes": 9812
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_14_DefaultWhite_seat_png.uasset",
+      "sha256": "21f96a734dfe47d1fd61f78a1938c244b8e69df171044a5af03182bc05dda002",
+      "bytes": 9817
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_15_DefaultWhite_texture_png.uasset",
+      "sha256": "0afddac7cf349e0a6e5b4c57d99797d14312dfec9cbc7bed5769732ec259719a",
+      "bytes": 9832
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_16_DefaultWhite_turn_png.uasset",
+      "sha256": "ba441bdbce800e33de370f476591d0349f2df0a88e2849b26c958858ca17d2c2",
+      "bytes": 9817
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_17_DefaultWhite_uap_png.uasset",
+      "sha256": "5081e052330a503386d0dfe4b1141ef94e724c501f7af2c120b8c6641bfeee45",
+      "bytes": 9812
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_18_DefaultWhite_uiz_png.uasset",
+      "sha256": "ee0723295bff32b3400ff2b9a26dc9f3a0a820699ffeaa6172867c091c29df7d",
+      "bytes": 9812
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_19_DefaultWhite_ut7a_png.uasset",
+      "sha256": "df60c6384b52214b50d1512826a441531c13a1a76181d06149fba2021043cd0d",
+      "bytes": 9817
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_20_DefaultWhite_uvid_15m_png.uasset",
+      "sha256": "5b52e23b9cc0e745cb632573050a3bee64c367cfdfcf2a41382780f8dc8a0ff2",
+      "bytes": 9837
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_21_DefaultWhite_vsi_png.uasset",
+      "sha256": "109c6814541ffcb2d31d3a8c74632708c44d7368f39cb79bbf93cb9e1fb8e375",
+      "bytes": 9812
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_22_DefaultWhite_warnings_png.uasset",
+      "sha256": "0d67f8e07ca8b348d61a6ff998c4adf4cfc7a33c26ca0b17eaeb146da01174ee",
+      "bytes": 9837
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_23_Transparent.uasset",
+      "sha256": "c81346c252d0846b4a1a1e1e12ca75562e654d8fc15c94a9846d499613deb758",
+      "bytes": 8369
+    },
+    {
+      "path": "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_24_TransparentExt.uasset",
+      "sha256": "d5d5e77235bd4b690240bb3f23d5174f7a0c2b36a04c202cc1e6543c9052f698",
+      "bytes": 8384
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_grass_bermuda_01.uasset",
+      "sha256": "dc7a99d27e5124f0d73679f80189c7b93cc4499965d9b57f1bbc44cad7992367",
+      "bytes": 13418
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_island_tree_01.uasset",
+      "sha256": "0ac8de84d04c42a7b6a8a64f47582cc7b1715531ce4f9c6e432e7cf7063013e3",
+      "bytes": 10675
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_island_tree_01_branches.uasset",
+      "sha256": "2c70cf5163c114076f398019976280e5f861c8a4bf9c948fa352861983dfdd03",
+      "bytes": 10774
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_island_tree_01_leaves.uasset",
+      "sha256": "ef56808dab135d71c00d03c30b29168e2448407689ee21ad2f4b0a92dda1ef4e",
+      "bytes": 13467
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_island_tree_02.uasset",
+      "sha256": "4fca64df5c81a4701c090e420e8498bd8268bedebd165f469395ed7a535a4b37",
+      "bytes": 10675
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_island_tree_02_branches.uasset",
+      "sha256": "45638e317dc31aa36096d0dce89ad5fcd0aa72dea4e067d2ff4146e06670f2a4",
+      "bytes": 10774
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_island_tree_02_leaves.uasset",
+      "sha256": "8cb4984c9fd117e78ad86e1a3dd8dd84523843f06140d4846bcac1a0e609369a",
+      "bytes": 13483
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_jacaranda_tree_branches.uasset",
+      "sha256": "9bf75762bc30ff7ca190a20ef17ee6d34aeaceb8ba3a49d64a60a676c5fb568c",
+      "bytes": 10774
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_jacaranda_tree_leaves.uasset",
+      "sha256": "c6c381d8e8691019a8cce55587367c7e00c09f70fca5463ebe8ce2b3044fff53",
+      "bytes": 13483
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_jacaranda_tree_trunk.uasset",
+      "sha256": "9cb432e23b88135c175e564f6af2b7297f30eb79f7fbf6dc0a163ac97197078b",
+      "bytes": 10741
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_brick.uasset",
+      "sha256": "2fb3a3c700f9166a443c0e28d9ba4b9824b079f179105f27f0ff63bfc984d9a1",
+      "bytes": 10878
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_brick_doors.uasset",
+      "sha256": "615e3d135ddfed6250ffb4ea25c0db7e790382d2c730a7fad6959bd64016ce82",
+      "bytes": 12566
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_garage.uasset",
+      "sha256": "e7ff394565a40b762769eed23e3725ae0c0924182661ad909695adbbd01d0350",
+      "bytes": 12549
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_trim_01.uasset",
+      "sha256": "2a02191764e1258781836f9fde104228fc04b53378359e14630db7dffe969a7b",
+      "bytes": 10900
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_windows.uasset",
+      "sha256": "db594560f7dd45de97c39448ddab02ebe79904574fa167a71ff16956628b4705",
+      "bytes": 10900
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_windows_glass.uasset",
+      "sha256": "fefcdbef5437f66c9fa2a52cd391a4aa46c146af3d7be55f62768a151de59386",
+      "bytes": 12390
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_glass.uasset",
+      "sha256": "ad08b7753259a5adcb405c0719e2fa34f56f17075bc15e69ff448349ffc507d8",
+      "bytes": 14147
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_objects.uasset",
+      "sha256": "44c78756bc3cebf2aeaed13964870367ed6adc65204bd959b869c469cb69367c",
+      "bytes": 14157
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_plaster.uasset",
+      "sha256": "272517975d69a392cc04cdcd6797f9b50223a4c1e0f0587a757b6a9ea76f13d9",
+      "bytes": 10999
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_trim_01.uasset",
+      "sha256": "736bf9f1ff750ee1dbb9e76cfaaf4d1a8351bcf4f97d7e9e2f24c6cbdfd6c49d",
+      "bytes": 10999
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_trim_02.uasset",
+      "sha256": "32a652526e4d419f5b9a596f4d0e57715f1d1a043d4e0214e88829468968a916",
+      "bytes": 10983
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_namaqualand_boulder_02.uasset",
+      "sha256": "6e6c37cb6e79f22da480867051f1f2b8ae9f4c211f508f4ed7675221e1d48f6c",
+      "bytes": 10812
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_namaqualand_cliff_02.uasset",
+      "sha256": "30031229622b09dd97c99334b12a94a54e9ee2aef509d7f67498cd8e9f47a189",
+      "bytes": 10790
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_wild_rooibos_bush.uasset",
+      "sha256": "c524cd1bfb5946aa6c680a28a83c74da8a847393297402d497ad1219553d98d8",
+      "bytes": 10750
+    },
+    {
+      "path": "Content/Art/Materials/Downloaded/M_PH_wild_rooibos_bush_leaves.uasset",
+      "sha256": "c4fbf0e5eb8acfc03144809dc1eec7217f781b75d14f8431ca2244f362680c42",
+      "bytes": 13466
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_OasisBankV2.uasset",
+      "sha256": "b4dfc43d3fe6bc1637bdab0c36cc29de01a3f7a103be15755ac22451e610f34b",
+      "bytes": 22907
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_OasisBark.uasset",
+      "sha256": "fadb69a8f647a4f45f986c421f9fc1e0d589e4a64f52c4e3430759bfa2d24678",
+      "bytes": 8554
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_OasisGrass.uasset",
+      "sha256": "62ceb91a52a771c610771033ea7be8c026e1e12ab5bffe876773ecb2ab879c09",
+      "bytes": 9842
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_OasisLeaves.uasset",
+      "sha256": "b5ab8b5dab27ffaf1b33e5746fee5d0a4ba8c7b1652b349e2bc3033fe68ceca9",
+      "bytes": 10810
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_OasisWater.uasset",
+      "sha256": "b395cc579ab1bf019175fe2042a9d5d09d09277ebdce7bc392ea6baadf64557c",
+      "bytes": 20130
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_OasisWaterV2.uasset",
+      "sha256": "dfc68f1aa90874b7687ba751e1160af68fe264ba5515c9a893874512f97e5a3e",
+      "bytes": 21816
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_RidgedDesert.uasset",
+      "sha256": "d80db4e0f320e51ba628c479c79a721225830dffde50a956075399b332b5694e",
+      "bytes": 34885
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_RuggedDesert.uasset",
+      "sha256": "688ddc6d525388bd3f3702cc319c1d003a9b66243d1613636a08026925ed0287",
+      "bytes": 165256
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_TownPlaster.uasset",
+      "sha256": "1ec80fb1a6a02ff8e0b249192eec92b5d71a45b5122162c6257f84a507dc4839",
+      "bytes": 8624
+    },
+    {
+      "path": "Content/Art/Materials/Environment/M_TownRoof.uasset",
+      "sha256": "1ab0c338b3c650f1648a7773eb71041895b44b6c0f114e91297ec49d37ee11f7",
+      "bytes": 8654
+    },
+    {
+      "path": "Content/Art/Materials/M_Airframe.uasset",
+      "sha256": "92a6c143eca61b0098038b04b7602b5bff52631e66bd9f64799c885c3b5b67a3",
+      "bytes": 7493
+    },
+    {
+      "path": "Content/Art/Materials/M_Asphalt.uasset",
+      "sha256": "2cfad7ffb21f19c99144aa134f79299c013a3ea822448d1033e97c02c86ef4b7",
+      "bytes": 9538
+    },
+    {
+      "path": "Content/Art/Materials/M_Canopy.uasset",
+      "sha256": "726f9c98275966aeb77152551432a3600de3a28dc1e7594ce306aadaecbaede5",
+      "bytes": 7483
+    },
+    {
+      "path": "Content/Art/Materials/M_Concrete.uasset",
+      "sha256": "5df8bf44b794979b5c52b550231961af334c6ab98f6b39d54f51bd390fb0c95f",
+      "bytes": 9549
+    },
+    {
+      "path": "Content/Art/Materials/M_Desert.uasset",
+      "sha256": "9aeaf305f9b231945480ea39a8eb4fb0e7ec80a763fb96a5afbf0f9aad92796e",
+      "bytes": 25782
+    },
+    {
+      "path": "Content/Art/Materials/M_Engine.uasset",
+      "sha256": "d42fada7bbce4cca65fcc476364f758fde7208a512fb3c9a5249a40b0e57d18f",
+      "bytes": 7483
+    },
+    {
+      "path": "Content/Art/Materials/M_Glass.uasset",
+      "sha256": "6ffc0e8c3cead719e62ebe386d6ab33e56fc4608214bc8498ac86d2af55049f5",
+      "bytes": 7478
+    },
+    {
+      "path": "Content/Art/Materials/M_Hangar.uasset",
+      "sha256": "c25106a025a6f41a830e328faf0001541dadfa747be1d958d898f486188df4d5",
+      "bytes": 8269
+    },
+    {
+      "path": "Content/Art/Materials/M_Intake.uasset",
+      "sha256": "ed9f5ec46b5c606125259c13c27fe63fe7fc53a1b20de84548f53fce1d4ba939",
+      "bytes": 7471
+    },
+    {
+      "path": "Content/Art/Materials/M_Marking.uasset",
+      "sha256": "84d1d8254e845b700f9876654e910d9fa6c20beb8b1fbdb482dbb17de043538c",
+      "bytes": 7398
+    },
+    {
+      "path": "Content/Art/Materials/M_Paint.uasset",
+      "sha256": "6f72a7ed28fd0637787747e61cbb5207632d681cf050e403427915477db5846b",
+      "bytes": 7437
+    },
+    {
+      "path": "Content/Art/Materials/M_Rubber.uasset",
+      "sha256": "e582a900c6467d37294c80e4811c209f4d5a2942eaa1c190cff5f227ac83c449",
+      "bytes": 8228
+    },
+    {
+      "path": "Content/Art/Materials/M_RunwayLight.uasset",
+      "sha256": "78a693a74d1a3ea804df7498c6628d21375d28a61db7259c71c0d8cd17584855",
+      "bytes": 6826
+    },
+    {
+      "path": "Content/Art/Materials/M_Steel.uasset",
+      "sha256": "af09585442e6125da0e19e0114f1ad961eeb3077232e9491373fd595e5e41a8f",
+      "bytes": 7527
+    },
+    {
+      "path": "Content/Art/Materials/M_White.uasset",
+      "sha256": "326e6992a5ed9d84df31d007b50a656eccd795e1538eae155bad9a6470296f9d",
+      "bytes": 7437
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_000_2955dab58d.uasset",
+      "sha256": "33f3a991af964a2f9a699d871729105c7668c59a3a3d2f98d7894bf5b1dbb4d1",
+      "bytes": 1606024
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_000_320ea01e10.uasset",
+      "sha256": "caa65cce81f74a21003b5c76b94dcfee71caaba1c2b6181b76175fcf22296084",
+      "bytes": 32133476
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_000_43b4c84b2c.uasset",
+      "sha256": "ee6e1511d1ba8b2aec61fcdc3a3307dc2167cf1fd32e5a724d5b831412f9c701",
+      "bytes": 411084
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_000_454665c0b6.uasset",
+      "sha256": "646b4ddd46e45331bffee8a541f5c4dd894c825301ce1fa9c59444a26574e63b",
+      "bytes": 1021552
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_000_475dc3468e.uasset",
+      "sha256": "59cfdd2d3e65a30f9bd979ec1ade5c45265a0224d9548ed24b915ca8144ea17b",
+      "bytes": 296640
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_000_7fe8658f53.uasset",
+      "sha256": "af0c8ea293b8f9ff229c31d15540045cc4a403c462317ec1b8d59d94cb5010e6",
+      "bytes": 5727
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_001_1676f31f05.uasset",
+      "sha256": "8e15ad15f7ce447fc56c496adb3208087af00a41d493e443a9c602393d9da5f1",
+      "bytes": 7847758
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_001_2221fc07ce.uasset",
+      "sha256": "425172c293ddf5d7a2fa34212cd78211e0f45479e68443f9702ec54f679a97c5",
+      "bytes": 13191362
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_001_3392aec464.uasset",
+      "sha256": "1c4ac6df2fff360e660c0b31ba65fd0b350160c5745dfe8f13e7aaf49db263af",
+      "bytes": 222861
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_001_8a79ede491.uasset",
+      "sha256": "fe93e84516cd32043df75b0af2efb1399c89c548c44c95492039e79344162298",
+      "bytes": 802429
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_001_e804461807.uasset",
+      "sha256": "2eff254a00768cae8f8e4f7bc5f539fac1931d20bfad9b42b53c360a1184b26c",
+      "bytes": 143303
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_002_2da3215fe3.uasset",
+      "sha256": "7a9db322426638a71d24086dcab3749b3f431d5d512f0102dfbedc65b57fd998",
+      "bytes": 4425
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_002_327e02c68c.uasset",
+      "sha256": "3abe8fa98e50e5311f169054c9f488c1fcb9095a6cd59e44219764b4215f23d2",
+      "bytes": 34220
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_002_39963da968.uasset",
+      "sha256": "6683f5f6a8f8f44140789f9550f487d3f4351cffe1d4bd46b81eb197bb1de65a",
+      "bytes": 1391299
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_002_612262fa03.uasset",
+      "sha256": "5462399583df0552913ab674edeba2532ed7a83aaffa12b40914656b5cdca428",
+      "bytes": 5664448
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_002_9381ae385e.uasset",
+      "sha256": "6037c78af7ebd54247040df789e142bf01f0e834c2756bc297f1b7d30dd65283",
+      "bytes": 1930750
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_002_f7ebd71e45.uasset",
+      "sha256": "fb297548ae88632c50fba09f3b9ec756fff6f64e1df96ae8efc0418ba4ef2b20",
+      "bytes": 16913765
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_003_30da095711.uasset",
+      "sha256": "0a2dc01f49a47341c5e7e4fc65c4ad55669eb56a7c045d055be97fbef4782dd1",
+      "bytes": 5506843
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_003_34d88fc72d.uasset",
+      "sha256": "01ba9fcf4f1a91cb918b3cf36fe771665c2c881bee9db229f33c537db3681243",
+      "bytes": 557302
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_003_7f75d53223.uasset",
+      "sha256": "50a14d5fe75ea97f46cb6b777582535b276d6ebd7a8ac5f2cfa55d7e6a67b9bd",
+      "bytes": 3938689
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_003_81e21cb743.uasset",
+      "sha256": "ed397fe87eaef470828d43e6cfd11bc57491c57b173724878dc2f2e27ad3871f",
+      "bytes": 2815740
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_003_899fd68e0c.uasset",
+      "sha256": "3b0497a277215815ee44d7eddcdbb3bec90866d3620ad3d65b65445155c556d5",
+      "bytes": 78459
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_003_c241363f7e.uasset",
+      "sha256": "2b48b5d9bde63fcf2936da3ce55682fb591e3b18301a7231b60958a70eda29e3",
+      "bytes": 4425
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_004_31c4445cb4.uasset",
+      "sha256": "8567f832c5587fe537964677c555c1607917badd4a884543d521b47f502a2f7a",
+      "bytes": 2874815
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_004_65e1a3cdf4.uasset",
+      "sha256": "02a1bfbd9a081b0173b1b998653b5ebc95f48a1005dbd2f74f71f51a5d83fd12",
+      "bytes": 7601050
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_004_d8f805cfb2.uasset",
+      "sha256": "70bb38ca9e1af1a90ab05439190111408c262027bffbcecae3b4d37f3aa4d9a8",
+      "bytes": 724264
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_004_e3849ca931.uasset",
+      "sha256": "a6ffd386f71992106f8bdb04cf5ff7c69a05c3945284deb81f2e9f6974c8c770",
+      "bytes": 67290
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_004_e8b5da53c4.uasset",
+      "sha256": "17d93f090509720d351589b94d04071c5edd41ab0f0541bb11404754c9b225db",
+      "bytes": 4599
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_005_2add3bde1e.uasset",
+      "sha256": "0cd68390290e30fbc49249e1720cf16ff9769330dc02fe7e012af52c642e3d10",
+      "bytes": 2729644
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_005_715f26c458.uasset",
+      "sha256": "3889e64a8b17a482e97852fbf6faf0b9cbc32949dbc4a88ccfda5b7edd2fd3b3",
+      "bytes": 163276
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_005_8c920d7fe6.uasset",
+      "sha256": "664cba92bb8e8664b94f847814b4a91cc3a58f228cf5aafa3c8169bffe5979e4",
+      "bytes": 2662015
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_005_e847d78209.uasset",
+      "sha256": "bc4b03845aa1a98fdb166c43abcf2b27e1e66d48ebc6b8bf7aed446da3ddf89b",
+      "bytes": 4662533
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_005_ea2d90c286.uasset",
+      "sha256": "553688d2746f773a1f58ca1947a971c235c30965fe5c34e1866e741796eec2b2",
+      "bytes": 2616168
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_005_f66d77d872.uasset",
+      "sha256": "6472c8c7ca2943940aaf62ca254363908e0ba8dbb6b2f5f48f6c1b3e483c5ce3",
+      "bytes": 77607
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_006_10949dec20.uasset",
+      "sha256": "7d0926fc26ca832efeb01154f5b7a7d76adc3cd54e81628064c0750d9efa044d",
+      "bytes": 1611575
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_006_48552df4e9.uasset",
+      "sha256": "edbd2b5a08acfe9391930018b9939e26558cd8ce8b6f68efd99edf957fc75cb7",
+      "bytes": 3186141
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_006_934e487ba5.uasset",
+      "sha256": "83bba12aebd5172495a482578458e293cba78a0453b3e1992f3e24dacee9462d",
+      "bytes": 52939
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_006_d3e153df23.uasset",
+      "sha256": "9465a8507d58826b58907c71ba2af2c9f67298f382076afa408ce48a5fa0b8e6",
+      "bytes": 5727
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_006_fd844aa9d8.uasset",
+      "sha256": "e425d6634e2a65c8a162ca0d11f0051f0be876362bc05b69b82005752f593913",
+      "bytes": 33854
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_007_1dfc229c8a.uasset",
+      "sha256": "0c8226b73ee5278f766c6010fec6ac69ac1303c840fda59a9dd77e3adb32ab27",
+      "bytes": 1300746
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_007_6385b9835c.uasset",
+      "sha256": "19df413b3edfd8d624379ddabcc1cabe01ae23eaafc38b7de54601f66745958b",
+      "bytes": 39826
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_007_a40d3455bd.uasset",
+      "sha256": "d1b907dbe0198054648a199728aa40357e5a8fa41264aac837e7ac134918a96e",
+      "bytes": 626086
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_007_c3c102980d.uasset",
+      "sha256": "7c88934113f8694a70d0f896b8478565e9c75965c5cca460664350fee2a524f7",
+      "bytes": 12701529
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_008_01de23c9ef.uasset",
+      "sha256": "6bb1faffc4e93b079ef35b2c67ef5c5468fcd06387a8329a2c853086e6c0a705",
+      "bytes": 1620133
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_008_6ab995d7a3.uasset",
+      "sha256": "a775a8d37d159a5ef9faa8101f95e30473fd6397a30a9f6a0deaab471ce17866",
+      "bytes": 113939
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_008_798480d491.uasset",
+      "sha256": "b19caa6326abf99bdf0acbfd69a898cb18d4ed701da15f9d2f7f2f61966873f8",
+      "bytes": 60021
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_008_d82cbb11bc.uasset",
+      "sha256": "6ea58021ad328cd0127d0a62b4640f46710114593116d4f1534d9821cc42e5aa",
+      "bytes": 5786226
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_009_1ea81ac387.uasset",
+      "sha256": "b6baad4bd374e80446d3da5d7a07e89b163b2d884cc85739f8ee18bbcf6f8517",
+      "bytes": 226543
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_009_204738d83e.uasset",
+      "sha256": "78dde229c2c710a05150415ee314fea6ed73fc01ff7dfe72dbcabcfa0e647ede",
+      "bytes": 45016
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_009_47c876f551.uasset",
+      "sha256": "297dd06bec692cdfb6b5086ab5d116db87de09ba08d315d409b061741702a540",
+      "bytes": 2161810
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_009_ad3eb25a76.uasset",
+      "sha256": "b726d8ce13603393b60cb1115959fa1d80924639a69d507432110d97638d5f96",
+      "bytes": 897242
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_009_c92bef923f.uasset",
+      "sha256": "eb80f91b7b71c45ae68d6cd528b4c00c87204048ea882acbcbe98dee9a46d1f3",
+      "bytes": 5727
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_010_18816f7824.uasset",
+      "sha256": "c3188db601c786be1525a08cad5dae0de63a9adbe744a5cd4a85a0fa0f55a49b",
+      "bytes": 95191
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_010_5ef32bbca5.uasset",
+      "sha256": "0dba14e8c8cb2392f75c47c5b2c4ea582db4fa676a05b06277930dadff88aeb6",
+      "bytes": 1808825
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_010_7fcc125aaf.uasset",
+      "sha256": "14bd01c02556e89dd51e510da32a352295bdf832aefad991ab6152f16904e1e9",
+      "bytes": 881735
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_010_f539432477.uasset",
+      "sha256": "a7d6f38e818cb254a9dfb060b6f3c6f75d562db384caef1987d704101459a1d6",
+      "bytes": 11361790
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_011_0719a96529.uasset",
+      "sha256": "6b3d0b42d45ba7ca068d67969b2a0ae76c0b731c7363242d8c64e7a2aef8252c",
+      "bytes": 1120011
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_011_0d029b69e2.uasset",
+      "sha256": "85c27c3c16bee3c24889ab605ebc3158184a893d351f00f3e9ee4a1da7934197",
+      "bytes": 5969
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_011_3419f96e16.uasset",
+      "sha256": "5fd4107c7c886a53778d2b59e4888728b52e1ae0be287d1ac1bf928c36e5cd3c",
+      "bytes": 2202019
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_011_95701dc2b2.uasset",
+      "sha256": "098f9275ec8fca6893f87090ea255f2b7876e1d5bbf5d5bc787cdf306f27c558",
+      "bytes": 948481
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_012_37f167a009.uasset",
+      "sha256": "5347538ab9e6069dca07465320d808cf5d6773188bcd4e0de0407fa29d156f57",
+      "bytes": 1461711
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_012_798e5114cc.uasset",
+      "sha256": "e59dd1113372589f04f4922a5e9ba89101a9636edd4eed699d2ac3526715b9b5",
+      "bytes": 1028716
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_012_c157277636.uasset",
+      "sha256": "e7d9c70f21d14a9ef812dde21c46c724f5769af3cee614f28edd6c42f5f7972f",
+      "bytes": 29212
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_012_c550753234.uasset",
+      "sha256": "f1605f3caba49a5aa8aa21bd82a61deafe26266e62cfe1aeeb789b4234f1f1c8",
+      "bytes": 109593
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_013_144a29c27c.uasset",
+      "sha256": "ae2011b3a860d38c37edda386580af0ea292fba710594ab31e33afd68f241db0",
+      "bytes": 2706701
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_013_7ce193d441.uasset",
+      "sha256": "d0c689092febad07880140f0f8045f511856c7b0194f05594e811af2b07f122e",
+      "bytes": 44339
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_013_ca46ae4f56.uasset",
+      "sha256": "2676a888a18888ace5222a5861d777f3adda5dd61aa2f936eef74a8897b56686",
+      "bytes": 1867396
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_014_78f7ba5b3b.uasset",
+      "sha256": "6aac04f0ba518c92cd9e7503aed380d2b34a85ba4385b216fbf5ee58a7da5aa9",
+      "bytes": 338618
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_014_ac5e1ecbd2.uasset",
+      "sha256": "980c47895d52e0029d61f13f8ea502f12ee39507b06f2b98972f7d513679f23f",
+      "bytes": 4785107
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_014_cae1ab45e4.uasset",
+      "sha256": "ebdfabe63eacba7880f7d143d87d04a6f713ec320a466b36198c2f96ff5cecf2",
+      "bytes": 5727
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_015_0e943c02d6.uasset",
+      "sha256": "963ffbb3c34d9d657ad911722928725466fe3310eacbbf63db694230e895d372",
+      "bytes": 8771
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_015_3ae1f26bb5.uasset",
+      "sha256": "4b292ae06728f3aa0af1d59470d10cc1ff8b7234006784b4d4b2428ea1a77c5d",
+      "bytes": 638779
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_016_04560558e2.uasset",
+      "sha256": "a7c135af6470a73a2ec913ee1a0dbc6f90b0efc331fb30df065e9c273766300c",
+      "bytes": 39636
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_016_4737c9341a.uasset",
+      "sha256": "4b14e24d7219947e008cc765c26fe837e90b90f93fd002bd18258bb88e73c23c",
+      "bytes": 1019095
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_017_2b77f9ed0f.uasset",
+      "sha256": "61b6494666a92cfce70730ff91aa16f1bead7386fa11e8fa71d8e3b04dac66be",
+      "bytes": 974075
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_017_fbef1d7a13.uasset",
+      "sha256": "3e68cb7e375189ea9f46d7a98f58261df4568673130c0924b0154c90fc4995c3",
+      "bytes": 104358
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_018_4db6e9e992.uasset",
+      "sha256": "0de0afd4770b8c05bee69224764df83131b2c64839718e9f6b52e891e8b01aa5",
+      "bytes": 68770
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_018_5bfc989912.uasset",
+      "sha256": "aa6a83fd3ddbc1a823f059de950a1cd5395b7f7be3a784ab790cd235053b0ea1",
+      "bytes": 241923
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_019_48a84af36b.uasset",
+      "sha256": "03e8e99448a647bb43cff261af2f04ec79bb5f07d928c9bd65b91933762a746a",
+      "bytes": 42087
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_019_5aaa409246.uasset",
+      "sha256": "950aff4134d39740f67e6dcddcaf02c4eea82fe54a522875f86643ef393dbe35",
+      "bytes": 3151851
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_020_525261ddaa.uasset",
+      "sha256": "9f12787b33ce9c8797c3234ff550300f7af5a0eb967cd87462450973265cc2a6",
+      "bytes": 72742
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_020_62b59bb2c2.uasset",
+      "sha256": "15f5e4619da3800338980b827a59daae4b400bbcf2d33a33a7390f858549e4fa",
+      "bytes": 1213218
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_021_a93e8dc59e.uasset",
+      "sha256": "4904167d653dad8dd57f79f188621772dace9687e3c9f24ac603f46a1fad41fc",
+      "bytes": 1319824
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_021_fdeff4ec7f.uasset",
+      "sha256": "1600772f5f3a770d6bb815e5f19eee54e0cae8106b339001f6c93a501b4da0e5",
+      "bytes": 61854
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_022_a51859813c.uasset",
+      "sha256": "d0f9b62422cddc6cf99b371275b9ab826dc5de52f64a83feb15c3a40e3301dc6",
+      "bytes": 2691831
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_022_c190f8e94a.uasset",
+      "sha256": "5b4594c7a879e1ad9ceee3d0bb6e1c2c05e1657d1c670d52f4b4a56b6b55e621",
+      "bytes": 127660
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_026_177600cbb5.uasset",
+      "sha256": "f36a5dd89b6fac38847be0d61110c0ad9a65ec9fb155ef46a0999714ce4079ff",
+      "bytes": 5727
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_027_32427529ba.uasset",
+      "sha256": "1628656a8363c47bb133e09a63436e40ebd0f04fcf5529406526425d32b7542c",
+      "bytes": 41454
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_028_6b9890d89d.uasset",
+      "sha256": "e2201205da255baaa5855854f9dc3e3670d7271b9b62bb0b1a80a5c19aa27c9a",
+      "bytes": 1112787
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_029_91d83f15a7.uasset",
+      "sha256": "605b50ae26c2aa0d5086cce65994778d72c76e0a7ba7b2cc2549c9fb675d644c",
+      "bytes": 5727
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_030_c94cdca5e8.uasset",
+      "sha256": "b250f317beb8376f73eaf3c6d62bd3827f7a8800177997ce209b023cdb1bf261",
+      "bytes": 61119
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_031_83631cf342.uasset",
+      "sha256": "adebe8b1abec2127a7ff7994aa917bea8b76d04ea6a6f4cf7d00ed7e7762fa2f",
+      "bytes": 2095920
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_032_c455f59492.uasset",
+      "sha256": "37bfa3c6bcbc1cf3c093832606bd76fdc4a94f4220d3b746a03d9a72b9e984ff",
+      "bytes": 5727
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_033_20a587c555.uasset",
+      "sha256": "71355fa13fc71989bb32e62a583291fdce38a2f833a02bd7766c9d77d12b8262",
+      "bytes": 81544
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_034_c950238933.uasset",
+      "sha256": "36d614e4e761a097cf8b680cbf26445c611a8cb5e6daed9719f68d3e9fbfdd76",
+      "bytes": 2931833
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_035_4f92a9e8b9.uasset",
+      "sha256": "1a23b0aa09dbf94bb120fdfb73d5021b174d65ac379eaa5d3b680ba14c9b6b73",
+      "bytes": 42880
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_036_2872291996.uasset",
+      "sha256": "c9b6582d23f921ee382f386a526bb9e71a4070133528b8821fed607f1a4939db",
+      "bytes": 2029353
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_037_64e6945eca.uasset",
+      "sha256": "870b9568f57e8c788a539452b31745e5834f501d8d922f5358247820d65855c1",
+      "bytes": 1210599
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_038_24a4185427.uasset",
+      "sha256": "0b491364506e5edd04f294c64eea8551fde2148d3250abb35f533f979d46bd57",
+      "bytes": 2569298
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_039_00fa028659.uasset",
+      "sha256": "301d9d8ff35476798bb60db0622317849370687683a491de068815ffcba6fcd7",
+      "bytes": 8597
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_040_08532940b0.uasset",
+      "sha256": "6c47ddaaf3e4609e4febdab79911720a5ef3ab85c75e0f52d73c68b49f8ed56d",
+      "bytes": 13889
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_041_5ee7fb0c96.uasset",
+      "sha256": "67b97915868d654fcef2318a830790905670b8b0d5ac2a71cdd5349444b9455a",
+      "bytes": 5727
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_042_86efbd9a30.uasset",
+      "sha256": "8bf4d6f6b355fbb8c57b25919a54569c9d93d625824a05b89325d89a34ae2e92",
+      "bytes": 15555
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_043_fe7db3cbc4.uasset",
+      "sha256": "af97652320741626d835991c2cbf217c5a4c507e5611c273b37263f5db397eba",
+      "bytes": 211555
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_044_f9e3cc1eb1.uasset",
+      "sha256": "9920e00863ca69ee2d331863028bbe2560594c5f35ce5c05afb015d9351b428b",
+      "bytes": 28319
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_045_8d3aef2dad.uasset",
+      "sha256": "454eddd0ce2a967ac32f00f25c3a627960af2d72957c9613913ffe520a6e6e2d",
+      "bytes": 1256550
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_046_d042d64cc9.uasset",
+      "sha256": "cb82b647c771651375fd6326fcbb26c0ec045d47b8b55671cee3be0cac3c50fc",
+      "bytes": 1293998
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_047_a691747097.uasset",
+      "sha256": "4b85b3b911678486d1734cfed4a8ba8c6b78a1089c267c44c908dd38323892ea",
+      "bytes": 2330581
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_048_937caee1d3.uasset",
+      "sha256": "eec8ee23b373541566fd9d0e2be5df42db67ee1ae2f00aa09099fa4fbb05bfa5",
+      "bytes": 1228243
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_049_f5775b2f83.uasset",
+      "sha256": "f19a968ec9776b6b7d8ae143e237aaf715aee1b788053f8c477eaf2c9617ac4f",
+      "bytes": 1220241
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_050_dcf5df0be4.uasset",
+      "sha256": "9b7f6c835481badefc7e12d26df273256e9d86d0191bd7fcefb88776ed1c1d09",
+      "bytes": 2658809
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_051_751a540ce0.uasset",
+      "sha256": "ff2592211a3244ae58ad03f4faf0af57569268be325f630ae618df4287c45831",
+      "bytes": 1904649
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_052_83f56662cc.uasset",
+      "sha256": "665a2f6cf282a4df1f7e7a39147bdaf5f43c28a51f4dc040974fe67cf889698b",
+      "bytes": 1606131
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_053_427395ca73.uasset",
+      "sha256": "87e386a6c901d1c97fd56300bd6c7accc260d0888b4001c8dfa895798f19b737",
+      "bytes": 1814700
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_054_d611c0b175.uasset",
+      "sha256": "2819e024e3884c06bf583a80c6b4941b208a501e5cc91bd4e8b71892a88d895f",
+      "bytes": 1190645
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_055_b3da610a06.uasset",
+      "sha256": "06f28bed79ccfd18b8440d322e43c422a095786c6cdab011541e245c3429edb6",
+      "bytes": 1152558
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_image_056_7567e21d5a.uasset",
+      "sha256": "993090fbc98f1e2a296b7aca45bf56d8ae137c705bb5c3b33fb0253c0301dea8",
+      "bytes": 2242504
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_material_00_specular_roughness_f5138e0ee3.uasset",
+      "sha256": "e3424305b77144558e6e4481ad87228ea8eabd7ffe50da3d9a233add0e5a69d1",
+      "bytes": 269698
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_material_01_specular_roughness_c638a894b1.uasset",
+      "sha256": "ef8bb8769c1fa706f2ce18f5fea52107c9a7c81f2fe47fddc823e79482ace6ee",
+      "bytes": 99184
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_material_02_specular_roughness_c6a253866e.uasset",
+      "sha256": "562dc0ed34b83af84934789c91f94b7704e14d080dd9ebda475ab6f398ac4151",
+      "bytes": 108097
+    },
+    {
+      "path": "Content/Art/Textures/AirbaseUpgrade/T_material_03_specular_roughness_3d93e1bcdb.uasset",
+      "sha256": "993ba4acadbbf95a32c67feb251fd543bb93e99a0b08f0cf4e22f5b4443a1b07",
+      "bytes": 104127
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_grass_bermuda_01_alpha_2k_2f15d45.uasset",
+      "sha256": "b3ede5539a608f7f9c7c83598a661461e6af61ec67e5e09bc4d5ab6bb0df8892",
+      "bytes": 120669
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_grass_bermuda_01_diff_2k_f7196a6.uasset",
+      "sha256": "530264369b0f365fffcd2862474bcf36211b69f1ffa3aaac7023476a69f4b9ef",
+      "bytes": 498807
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_grass_bermuda_01_nor_gl_2k_149d7c3.uasset",
+      "sha256": "e1900707a009d764fc063d5be7b0f1c1c548df657b1aec0d99948ffedf89f096",
+      "bytes": 13176189
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_grass_bermuda_01_rough_2k_6bbeb37.uasset",
+      "sha256": "52ab324b959ab34679334c47aece5aadc181baecfaaecad951503b092478f01b",
+      "bytes": 1636189
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_branches_diff_2k_c891b56.uasset",
+      "sha256": "06b2068519291bb84d576ca284f8222a440fb4029924cf796543df5d098321de",
+      "bytes": 19754021
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_branches_nor_gl_2k_bd5d1cf.uasset",
+      "sha256": "0b15f3d6eef3135b6f54c8a597513dbf6ba4f9420c595e026b9d37e47e8fc809",
+      "bytes": 22748391
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_branches_rough_2k_b4915c0.uasset",
+      "sha256": "af476d7892cda75fa0b8bfc14bd23b4198cfd79b90795b767f5a2fe3b7473b3b",
+      "bytes": 3847306
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_diff_2k_1af8298.uasset",
+      "sha256": "005590ea92731ffeb29d6acb24211e4d3d0e7ce700eaf199ad803ddb294d62bb",
+      "bytes": 2959060
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_leaves_alpha_2k_bb56cb2.uasset",
+      "sha256": "5a09ea4fcf06fb115a8a6ee36fa5c2757a932e95dc5917e3924dce22daa14f02",
+      "bytes": 136823
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_leaves_diff_2k_8484ff0.uasset",
+      "sha256": "b3253d374b64738dc813f39ccde0e562e41341fc6d761c64f965747614c5d20a",
+      "bytes": 5800410
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_leaves_nor_gl_2k_1356353.uasset",
+      "sha256": "797e20e6fea5dd56bca34708429b49c3c3a78bad6feda04e675f669e97740c34",
+      "bytes": 9946217
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_leaves_rough_2k_54d1967.uasset",
+      "sha256": "36c0e1c838d809d5d30725b080114bee9c17cca154a979002fce102b84707861",
+      "bytes": 2724652
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_nor_gl_2k_7abf9fd.uasset",
+      "sha256": "059d029a59a2826177a9dd38b22b94ac069a94ef27dceb69879802f260210ca9",
+      "bytes": 17738987
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_01_rough_2k_3396f2a.uasset",
+      "sha256": "b0bfe4b4ce202f6debd06e663e9c2e58da885057c82b711550cbb67d9ebcb73c",
+      "bytes": 3730444
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_branches_diff_2k_55cdd32.uasset",
+      "sha256": "66068db935c2afb9bd97d21669d6f663ff49068ab17ff566d168c13e801444ed",
+      "bytes": 19754021
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_branches_nor_gl_2k_c5d67f7.uasset",
+      "sha256": "99e5d5e1f5f665f88fa721bfddbd722e460f1dccc2f4335b5787c96fba986d0e",
+      "bytes": 22748391
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_branches_rough_2k_1d2cdcc.uasset",
+      "sha256": "0bf044583b674381032321863f069654f92bfe1801b00ee03af930ef2527c3d8",
+      "bytes": 3847306
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_diff_2k_ae34720.uasset",
+      "sha256": "e4978d9da17ac7a6c988fd7f95fcf772d4163dbe8b0b9cc47a86b8eb0eaac3b4",
+      "bytes": 2688585
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_leaves_alpha_2k_cb795e0.uasset",
+      "sha256": "be01451cce3d8efff8e5a82e9c8d7cdbc7a32a438f4d6d41647c45312545bbbd",
+      "bytes": 136823
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_leaves_diff_2k_581352c.uasset",
+      "sha256": "fca4231e3ffc8437c999d203f11aa866bfd7878ac06665b7d1ad0cc8492a62e2",
+      "bytes": 5800410
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_leaves_nor_gl_2k_cd8d31a.uasset",
+      "sha256": "73efeb101b71752025bcc0e96b53583d37d9555e47970052845d819a3dd830ca",
+      "bytes": 9946233
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_leaves_rough_2k_82363ab.uasset",
+      "sha256": "27e9d42d5b45f0fa409b4ce9d553c1f81268213a8cf6afce5e7b5df61e6de85a",
+      "bytes": 2724652
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_nor_gl_2k_edc576a.uasset",
+      "sha256": "e7c8e60f2f920d43dcefb4c41a206ce5b491c30504cbd852a105de90147452bd",
+      "bytes": 17292003
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_island_tree_02_rough_2k_fb4de10.uasset",
+      "sha256": "a6cf79e455ef1101c445606f051c1be26bf779fb7855e606d227ae6d058b00dc",
+      "bytes": 3612499
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_branches_diff_2k_453f13e.uasset",
+      "sha256": "35325fdd0e3d214c6797358581bb3005791935d55629bd8fecbc3df5dd1eb032",
+      "bytes": 19492913
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_branches_nor_gl_2k_041d38d.uasset",
+      "sha256": "b31895d7b7f7f8c8c25ab4dd386ee3f1b5950ee37b4e2479525205cd20528bdb",
+      "bytes": 22748391
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_branches_rough_2k_bea0558.uasset",
+      "sha256": "f4a10c170c518dd9b2fb4b8293e9bd1d4a4ce3d2b0cadc06781b70a3e142a2a5",
+      "bytes": 3847306
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_leaves_alpha_2k_38ef3de.uasset",
+      "sha256": "fb01215fa2c85a34f1132e99bd8d1e370535731ab69ebdd76c8ad9f4f76aae8b",
+      "bytes": 2346786
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_leaves_diff_2k_1db683a.uasset",
+      "sha256": "fc59fab0aca105a849e6e2013c467e0b80fe7ec6d80e3e1564d49cc3fae3c66d",
+      "bytes": 7761828
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_leaves_nor_gl_2k_e0adadd.uasset",
+      "sha256": "42f766ee2745a497bb470cf1b712bef7a4a51f7002bc1167e6673d7fcdd50c52",
+      "bytes": 14162937
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_leaves_rough_2k_671622e.uasset",
+      "sha256": "0f52dc277f93f112d1c105bc00c30c4e9d953a883c2c8274e28db26ec3f4e7cc",
+      "bytes": 2876379
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_trunk_diff_2k_b4503c8.uasset",
+      "sha256": "be15d04d7a75573ff536e746749752652eb276c0c63211c089a185c29bf3c780",
+      "bytes": 21016908
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_trunk_nor_gl_2k_5a446bd.uasset",
+      "sha256": "560e1e4dce4e304528b87b301147461c37e8bd09298ad10919dc5353d5b72ca2",
+      "bytes": 20999518
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_jacaranda_tree_trunk_rough_2k_cf71dcd.uasset",
+      "sha256": "d74c68861fc391ec2673cd0b07777c099aa7aae48dbe011762d11a59f583cba4",
+      "bytes": 6188628
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_brick_diff_2k_ea3a12d.uasset",
+      "sha256": "74deda42464db0d87a85669a2c1b6ebed4a4af1faded102c130dfc7de627998c",
+      "bytes": 9482369
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_brick_nor_gl_2k_9aacd43.uasset",
+      "sha256": "8be77be133e910e609a61a3f4365b58d97a491311ab9a68e37f771c00386e29b",
+      "bytes": 23150847
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_brick_rough_2k_ab1199f.uasset",
+      "sha256": "8253bd703aea4f93f6308a890b056b4de458fb3be338565a9667254c7df80c4e",
+      "bytes": 8376743
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_doors_diff_2k_873aa63.uasset",
+      "sha256": "206cac1469ff3e802d4ef9f14a8f7abea2fe5dd7340534451fa4d19baa936f48",
+      "bytes": 18038666
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_doors_metal_2k_0157929.uasset",
+      "sha256": "b9bd0634687c27e5fd32391101ee98be84cc5b01a4a4ed5c7723278cd059f9ea",
+      "bytes": 1159693
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_doors_nor_gl_2k_51c2bdb.uasset",
+      "sha256": "774fd4c65016f62cb9899bc005ae71211e829a47dac046b2e9ed392286417af9",
+      "bytes": 16872107
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_doors_rough_2k_d515606.uasset",
+      "sha256": "54158e286c46724b9edba1f609d38fe5f8dc09e098d65e106d8d14898eec6452",
+      "bytes": 5550750
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_garage_diff_2k_1720a2a.uasset",
+      "sha256": "cb00286c3f6ce9cfd33fadc9754f86da51b93deb9e295c15234629155f2fe5bb",
+      "bytes": 18692120
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_garage_metal_2k_90047bd.uasset",
+      "sha256": "c0f3cf2fd0a902fceb002420d0742fe89c7a65de693ccb5a220939b22a3c6080",
+      "bytes": 251163
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_garage_nor_gl_2k_1660a4e.uasset",
+      "sha256": "2249c6f0e409ca6e1b4d5ee81c7e6f5ec9cd6896b95b4ebe763ce7c4ebb40ed4",
+      "bytes": 18821669
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_garage_rough_2k_cc60b5e.uasset",
+      "sha256": "00ed92340c8933d3488f111a47e0fff0f5c47929d5e650284b01ca3551d8b575",
+      "bytes": 6018748
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_trim_01_diff_2k_5c10893.uasset",
+      "sha256": "c118ffbbe41d4f82bacc1a8d5ee1de62a57f3c672258f1f423f7244a3a8732c7",
+      "bytes": 21881534
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_trim_01_nor_gl_2k_bae34f8.uasset",
+      "sha256": "e10fc96fbe695e3c87b289a06d59077694034c50fc3bb6ecde8a36dd78e70981",
+      "bytes": 23456191
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_trim_01_rough_2k_889865e.uasset",
+      "sha256": "c654896ba641f6892f4f545a86fbd794204a1b0ba5553b379ee0fade5f521c16",
+      "bytes": 7417604
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_windows_alpha_2k_cc1145a.uasset",
+      "sha256": "fb312a0a411d1d7f0eadb18bd888b8b668299ee06083d9738a9f0ed6d59162ad",
+      "bytes": 3160535
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_windows_diff_2k_24a96ab.uasset",
+      "sha256": "185e49278b0481882d24024cb5c9473ed5d69cc2c734f5239e8f5b1b6c4a43a7",
+      "bytes": 21511061
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_windows_nor_gl_2k_29a6b67.uasset",
+      "sha256": "c1a1a56ca9395d6b0218551e9a0d8eb2f7e9a04828bbd6f92be11bbc883eb31d",
+      "bytes": 19643670
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_factory_facade_windows_rough_2k_8d872d1.uasset",
+      "sha256": "fe759f1d0967930338e6933615ab2b4cdeb95f59b9734541470495e199a4529e",
+      "bytes": 6385162
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_alpha_2k_620664f.uasset",
+      "sha256": "2f934cc8d256eabe52d45c4655ff1160e9b7509be7902de2b638a05859b21ada",
+      "bytes": 191478
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_diff_2k_559e194.uasset",
+      "sha256": "bc997bd0ddd3e966070bc5b15c044789263c19716efaa6d51c063d1c42eabd3a",
+      "bytes": 13545130
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_metal_2k_ba7d90c.uasset",
+      "sha256": "aa090727c9a790e251e31c8ab2e8d582e671af778120dd145228c873c2da3205",
+      "bytes": 43375
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_nor_gl_2k_1448b17.uasset",
+      "sha256": "f463a882815ae814e7430d13ea193da6203959d20913264ac22463256e5c3b01",
+      "bytes": 12545440
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_objects_rough_2k_2c5e5fc.uasset",
+      "sha256": "aac2894e46127813eeec6189c3ec173ea4fe861e8a83ac5114c7606352b13201",
+      "bytes": 4470766
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_plaster_diff_2k_d78d7fc.uasset",
+      "sha256": "258781682839fd2ec6a62b081a6b3be47ccd34b6d097352d154f14356121172a",
+      "bytes": 21556766
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_plaster_nor_gl_2k_24f9807.uasset",
+      "sha256": "0ee6181784b92ee7afbedbab99cd03a81e1fc273e1102066c2f8408baff30b26",
+      "bytes": 25073268
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_plaster_rough_2k_36d370a.uasset",
+      "sha256": "f58f87c8e74b9a1c957d6551e13b64b76606417e16a927af74472f3261f79146",
+      "bytes": 6656596
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_01_diff_2k_dbe25b2.uasset",
+      "sha256": "69cbf30ad261dfe86b30df856671fdc353d4eb54ef38b13cfb3bc20e5bddfa23",
+      "bytes": 19433610
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_01_nor_gl_2k_c57d4eb.uasset",
+      "sha256": "be546d265a435a5de42032756c6e981f28a4c2b76452f0f2ed83a2833bba95a3",
+      "bytes": 21799239
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_01_rough_2k_e1b54b5.uasset",
+      "sha256": "0efdb9cf79bf6f5b23ea8009094d7300a8157e940887749cc83652d77a1a4191",
+      "bytes": 6225284
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_02_diff_2k_3ed7795.uasset",
+      "sha256": "69e672de065a19e76fbfff88338dbbc8014134c0bed8212d6b54671b2f879814",
+      "bytes": 13890140
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_02_nor_gl_2k_15dc6a7.uasset",
+      "sha256": "3058a4df6725d247a4616b7dfea186d8bc93c150550de7314247a689afb77920",
+      "bytes": 19352232
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_modular_urban_apartments_facade_trim_02_rough_2k_3144259.uasset",
+      "sha256": "3e04cda2fd066d4776390abb98161f6c0c7459e46a7c3fc52e4ff0b00c2578c1",
+      "bytes": 6479816
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_namaqualand_boulder_02_diff_2k_98a3200.uasset",
+      "sha256": "f60034ceb148c2a689c9da9cffd7e909554728e029fd8d1a6fcac9f5946bd923",
+      "bytes": 3872116
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_namaqualand_boulder_02_nor_gl_2k_46e6b60.uasset",
+      "sha256": "0bec25668bb83ad7b0ac2ecaa68a1a2b983328ae5a0dbba2c3582d609eb2d9b8",
+      "bytes": 15868602
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_namaqualand_boulder_02_rough_2k_d55881b.uasset",
+      "sha256": "851b58dfb90a731c2afa90464ffa98767c07ecb0359607296ffec1ae4107bcc2",
+      "bytes": 4261051
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_namaqualand_cliff_02_diff_2k_330a8c1.uasset",
+      "sha256": "186179e3b21af170e7843e6d421d2e61e63d4232e5de7b6ea590389a20bb4fdd",
+      "bytes": 2849882
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_namaqualand_cliff_02_nor_gl_2k_0801371.uasset",
+      "sha256": "4ff20574b3e060026b46697d6f83d1dec059c42ff2cc27c79201752a5218e551",
+      "bytes": 16134746
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_namaqualand_cliff_02_rough_2k_0d2f107.uasset",
+      "sha256": "3e2fd68b1bb5c1efb1b05baf77941e1fbd419919c3877da909d1cb84b047418b",
+      "bytes": 4165027
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_wild_rooibos_bush_alpha_2k_7fc3283.uasset",
+      "sha256": "cf3fa89b086e91e8ebd309c7f0d13bc1b55114d97004515ebcc7b1dcde47a666",
+      "bytes": 345238
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_wild_rooibos_bush_diff_2k_23eb12e.uasset",
+      "sha256": "2897ee728aa4f2614c914e052a2912b0c7876a3bbcaa7056fc3b4eb599605dd3",
+      "bytes": 1387246
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_wild_rooibos_bush_nor_gl_2k_f14cdad.uasset",
+      "sha256": "631a31550c40213833b910e84a364e662b215278242e682a048797d935b91987",
+      "bytes": 7448024
+    },
+    {
+      "path": "Content/Art/Textures/Downloaded/T_wild_rooibos_bush_rough_2k_9c1c094.uasset",
+      "sha256": "3aaad5145df27d465b648981aa60e9a6eb69c4cbd8fa8a41d51c939469828d30",
+      "bytes": 1697557
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Bark012_Color.uasset",
+      "sha256": "672641ea556c6a9e29ab324b93dd77eefcf1e7a254920dc97cc3886d11ed2723",
+      "bytes": 6409419
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Bark012_NormalDX.uasset",
+      "sha256": "61bc0d8aaf5dea412a5cfe87e6741475878b1966f48a708a5d463bfdfd624bcc",
+      "bytes": 9309484
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Bark012_Roughness.uasset",
+      "sha256": "f5a5b187e498946bfc295d29c5c8843fbe6b126ba191b0fd487350e6dd5207ab",
+      "bytes": 2524672
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_CorrugatedSteel005_Color.uasset",
+      "sha256": "47e107257d67cc36dbf443f7c4481548f40b130337740f9c15f0d0d5b1994a38",
+      "bytes": 4193009
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_CorrugatedSteel005_NormalDX.uasset",
+      "sha256": "bb421d400b6b1de630842667734b2b73af78e13235d0f6c68d38538807cf80e1",
+      "bytes": 4221530
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_CorrugatedSteel005_Roughness.uasset",
+      "sha256": "f57d1369db132f2e3a7f9d73d70eb64c14b53de43d105a8c56a9147a1b2484f8",
+      "bytes": 2479359
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Grass004_Color.uasset",
+      "sha256": "052305a0f9ec5d8a5c3d86ee569476bf0a473ddd36799152fc94ade6eb93c15e",
+      "bytes": 7648313
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Grass004_NormalDX.uasset",
+      "sha256": "919a4cbc035ebcdbbf49fa83f8904fe4de7280b9e887e50eea9f2f72578a02f5",
+      "bytes": 10015828
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Grass004_Roughness.uasset",
+      "sha256": "0bb84c477462940c5fbc251168c7ddf92e598ad08a16c9c2479df716e7c44974",
+      "bytes": 3417864
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_LeafSet014_Color.uasset",
+      "sha256": "9cdaf5cb8380a5d6483e08dcc23e7163d79f470fb500744c6438f4ea198d90b7",
+      "bytes": 2342192
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_LeafSet014_NormalDX.uasset",
+      "sha256": "0f49f6f613e98ebaee35dda19b58b6755fdbeb1b0f0a1af71b63088bc7a28945",
+      "bytes": 2983003
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_LeafSet014_Opacity.uasset",
+      "sha256": "64e3b6707628f1b6d8dd71f04de0e48481fac726993c4119966440cdabbf1ab0",
+      "bytes": 208155
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_LeafSet014_Roughness.uasset",
+      "sha256": "b679bb93110428055f3c07dd58497247370f161ca5a1d3c3d217525d4741e30d",
+      "bytes": 1038988
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_PaintedPlaster017_Color.uasset",
+      "sha256": "5c0fa1b87be48451f2cbef8ca99345c149bed47222661ba5f111fb6a9c5691c2",
+      "bytes": 1689260
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_PaintedPlaster017_NormalDX.uasset",
+      "sha256": "f4cfe56243b9ea6ad995afd70a2e359e9b3c980041a58f00b1a5b27593e5c4cc",
+      "bytes": 4643177
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_PaintedPlaster017_Roughness.uasset",
+      "sha256": "16e283490d1c147886549e9521dcc059f03105cc946496eb618b30257e615197",
+      "bytes": 976716
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Rock030_Color.uasset",
+      "sha256": "2d2ad9872af2835bf476ec439751b0149cd183642fa8b826e8029c41225677d2",
+      "bytes": 5909796
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Rock030_NormalDX.uasset",
+      "sha256": "c39b8f7e69b117838b8af79e21adfa78b163747a63170b3cdf0e993ee380d305",
+      "bytes": 10232900
+    },
+    {
+      "path": "Content/Art/Textures/Environment/T_Rock030_Roughness.uasset",
+      "sha256": "9badbbd0baccb885e8c45df1e26ef800339b9e016765dfd313d3ce07ed41ca73",
+      "bytes": 2510927
+    },
+    {
+      "path": "Content/Art/Textures/T_AircraftPanel.uasset",
+      "sha256": "ec6c983865eb88828fac2cf9514dc941b6bc2991cac1425a1353b3b5b20d08be",
+      "bytes": 1186163
+    },
+    {
+      "path": "Content/Art/Textures/T_Asphalt.uasset",
+      "sha256": "066f4ae39974e9d6c1d8d50b0002c074c0136be13671a4170c8d6f5c55e9bc76",
+      "bytes": 382667
+    },
+    {
+      "path": "Content/Art/Textures/T_DesertARM.uasset",
+      "sha256": "552f895b8868769ba8ae17071d442bcbe4e2df4907236ba98dc34b11ff324335",
+      "bytes": 813208
+    },
+    {
+      "path": "Content/Art/Textures/T_DesertBase.uasset",
+      "sha256": "e39d4a718c101deb293259b9b1982d0badce848da8c7da5f495735508a26b4a5",
+      "bytes": 2526269
+    },
+    {
+      "path": "Content/Art/Textures/T_DesertNormal.uasset",
+      "sha256": "7be7a32110a0904b7c4acf921b1ed83e316269e643c3cd9bdb6b959df43fc924",
+      "bytes": 2424608
+    },
+    {
+      "path": "Content/Audio/S_defeat.uasset",
+      "sha256": "0ad3db4e1924a4b002fc81e58942224b653a7cfe131d55004155f913eee39edb",
+      "bytes": 53240
+    },
+    {
+      "path": "Content/Audio/S_engine.uasset",
+      "sha256": "a983aa5b11001f86166dabc4a38db1e3289afeef6a0a3d9a823a823c32239fd1",
+      "bytes": 305900
+    },
+    {
+      "path": "Content/Audio/S_explosion.uasset",
+      "sha256": "ee2a9c056a09c0dd3488e726329aecdbc1cb6a5ff3ba6bed403ba2a4f45d8e23",
+      "bytes": 174892
+    },
+    {
+      "path": "Content/Audio/S_gun.uasset",
+      "sha256": "c4d791693afae2364d3d65489f8a3ceafb64ee60f7cf7ad61eea53d39e9a57eb",
+      "bytes": 17428
+    },
+    {
+      "path": "Content/Audio/S_hit.uasset",
+      "sha256": "a19d8d60b391e71ead60658bb2ca5692e98fe7f5edc6ddf2e87552dedb8180f9",
+      "bytes": 29464
+    },
+    {
+      "path": "Content/Audio/S_lock.uasset",
+      "sha256": "1ef9b9d65cf4e8ff1cddcdec9246ea6b903724e4ab8429e3d51905953dcb7f75",
+      "bytes": 12626
+    },
+    {
+      "path": "Content/Audio/S_menu.uasset",
+      "sha256": "3b2b1b3617fdc433fd09e303ebf0f1d1ad09be40c596634f91293f99e7d74831",
+      "bytes": 10543
+    },
+    {
+      "path": "Content/Audio/S_missile.uasset",
+      "sha256": "403f834416fef6cb60466adf32e4c37727c5f11a1e8a12a2bf6f338067bc9685",
+      "bytes": 103911
+    },
+    {
+      "path": "Content/Audio/S_resupply.uasset",
+      "sha256": "5e208e1cc4c2c73ae8a6afcc325d4cc1067925aa8c11a5dc9b00ca77ce8ee035",
+      "bytes": 48222
+    },
+    {
+      "path": "Content/Audio/S_start.uasset",
+      "sha256": "91344ff8b47e2a4329e0852dbce7ab86358eb7c041f99e4a599c0dcff1c894b0",
+      "bytes": 63575
+    },
+    {
+      "path": "Content/Audio/S_wave.uasset",
+      "sha256": "8f667f79a1a1334421da4ba6e0922ebb9d7bbc3b0c4dad37978c1ad4d7067387",
+      "bytes": 38696
+    },
+    {
+      "path": "Content/Audio/S_wind.uasset",
+      "sha256": "3d05ea88ab86b5c5c175d5b2b0dcdec15ea06da7d6e2c5bbce1d830fc863a670",
+      "bytes": 441595
+    },
+    {
+      "path": "Content/Blueprints/BP_DSGameMode.uasset",
+      "sha256": "41ce8bb4fc284e7d92f4fbf9d1ce59dee9cec890512ac9e65d8638ed16fe8ef1",
+      "bytes": 20829
+    },
+    {
+      "path": "Content/Maps/DesertDefense.umap",
+      "sha256": "e3ec1c2e8e6dd62f1a6796702938b7a9ae314d4f4ee3067e49eccf88740d6480",
+      "bytes": 2557985
+    },
+    {
+      "path": "Content/UI/Fonts/OrbitronFont.uasset",
+      "sha256": "f670a1ba35c1e678d434619ac779fbe1417031492cd7d49b31488c2517e0aa49",
+      "bytes": 2464
+    },
+    {
+      "path": "Content/UI/Fonts/OrbitronFont_Face.uasset",
+      "sha256": "9e8d0d9faf01f1ed063c7dad3b048eeba96aa0c46c30b51e86f026cc134af68e",
+      "bytes": 40112
+    },
+    {
+      "path": "Content/UI/Fonts/RajdhaniFont.uasset",
+      "sha256": "e8bbf4ca89a96e5fb503c5a96987f2138a3d68e6b17f45f67b2ed4dc3c18106a",
+      "bytes": 2464
+    },
+    {
+      "path": "Content/UI/Fonts/RajdhaniFont_Face.uasset",
+      "sha256": "15f3965a05da9582b741dad6ad995c9b6506eb07af133d7bfcd0707d66c76e91",
+      "bytes": 379396
+    }
+  ],
+  "copied": [
+    "Content/Art/Airbase/Downloaded/SM_AU_AirfieldSurfaces.uasset",
+    "Content/Art/Airbase/Downloaded/SM_AU_ControlTower.uasset",
+    "Content/Art/Airbase/Downloaded/SM_AU_Hangar.uasset",
+    "Content/Art/Aircraft/Downloaded/SM_AU_F16.uasset",
+    "Content/Art/Aircraft/Downloaded/SM_AU_F16_Parked.uasset",
+    "Content/Art/Aircraft/Downloaded/SM_AU_F22.uasset",
+    "Content/Art/Aircraft/Downloaded/SM_AU_F22_Parked.uasset",
+    "Content/Art/Aircraft/Downloaded/SM_AU_Rafale.uasset",
+    "Content/Art/Aircraft/Downloaded/SM_AU_Rafale_Parked.uasset",
+    "Content/Art/Aircraft/Downloaded/SM_AU_Tu22.uasset",
+    "Content/Art/Effects/M_AircraftExhaustCore.uasset",
+    "Content/Art/Effects/M_AircraftExhaustFlame.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_00_gear_metal.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_01_gear_rubber.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_02_gear_metal_001.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_03_gear_column_front.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_04_gear_bay_door_front_001.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_05_gear_bay_door_rear.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_06_aeleron.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_07_elevator.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_08_fuselage.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_09_fuselage_0.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_10_fuselage_1.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_11_engine.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_12_rudder.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_13_canopy_metal.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f16_14_canopy_glass.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_00_Material_012.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_01_material.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_02_Tyre.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_03_Material_009.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_04_White_disk.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_05_Material_010.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_06_Material_011.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_07_Glass.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_08_Cabin_black.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_09_Tail.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_10_Body.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_12_Air_tube_001.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_13_Gray.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_14_Black_001.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_15_Black.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_16_Grid.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_17_Material_005.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_18_Rocket_Main.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_19_Rocket_Blue.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_20_Rocket_Black.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_21_Air_tube_002.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_22_Body_1.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_23_Body_cabin.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_24_Gray_nose.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_f22_25_Body_001.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_00_Steel_Roughness.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_01_Panel01.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_02_Block.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_06_Plane_Body02.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_09_Concrete.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_14_Panel02.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_15_MetalPoleColor.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_hangar_16_0046_Gold.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_rafale_00_low_Material__32.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_rafale_01_low_Material__31.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_rafale_02_low_Material__29.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_rafale_03_low_Material__30.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tower_00_KSFO_Control_Tower.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tower_01_KSFO_Control_Tower_02.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_00_DefaultWhite.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_01_DefaultWhite_achs_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_02_DefaultWhite_adf_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_03_DefaultWhite_ai_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_04_DefaultWhite_ai2_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_05_DefaultWhite_alt_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_06_DefaultWhite_asi_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_07_DefaultWhite_at_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_08_DefaultWhite_com_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_09_DefaultWhite_idr_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_10_DefaultWhite_interior_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_11_DefaultWhite_panel_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_12_DefaultWhite_psp_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_13_DefaultWhite_rpm_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_14_DefaultWhite_seat_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_15_DefaultWhite_texture_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_16_DefaultWhite_turn_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_17_DefaultWhite_uap_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_18_DefaultWhite_uiz_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_19_DefaultWhite_ut7a_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_20_DefaultWhite_uvid_15m_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_21_DefaultWhite_vsi_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_22_DefaultWhite_warnings_png.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_23_Transparent.uasset",
+    "Content/Art/Materials/AirbaseUpgrade/M_AU_tu22_24_TransparentExt.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_brick.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_brick_doors.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_garage.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_trim_01.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_windows.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_factory_facade_windows_glass.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_glass.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_objects.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_plaster.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_trim_01.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_modular_urban_apartments_facade_trim_02.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_namaqualand_boulder_02.uasset",
+    "Content/Art/Materials/Downloaded/M_PH_namaqualand_cliff_02.uasset",
+    "Content/Art/Materials/M_Asphalt.uasset",
+    "Content/Art/Materials/M_Concrete.uasset",
+    "Content/Art/Materials/M_Paint.uasset",
+    "Content/Art/Materials/M_RunwayLight.uasset",
+    "Content/Art/Materials/M_Steel.uasset",
+    "Content/Art/Materials/M_White.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_000_2955dab58d.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_000_320ea01e10.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_000_43b4c84b2c.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_000_454665c0b6.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_000_475dc3468e.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_000_7fe8658f53.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_001_1676f31f05.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_001_2221fc07ce.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_001_3392aec464.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_001_8a79ede491.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_001_e804461807.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_002_2da3215fe3.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_002_327e02c68c.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_002_39963da968.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_002_612262fa03.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_002_9381ae385e.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_002_f7ebd71e45.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_003_30da095711.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_003_34d88fc72d.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_003_7f75d53223.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_003_81e21cb743.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_003_899fd68e0c.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_003_c241363f7e.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_004_31c4445cb4.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_004_65e1a3cdf4.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_004_d8f805cfb2.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_004_e3849ca931.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_004_e8b5da53c4.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_005_2add3bde1e.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_005_715f26c458.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_005_8c920d7fe6.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_005_e847d78209.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_005_ea2d90c286.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_005_f66d77d872.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_006_10949dec20.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_006_48552df4e9.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_006_934e487ba5.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_006_d3e153df23.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_006_fd844aa9d8.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_007_1dfc229c8a.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_007_6385b9835c.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_007_a40d3455bd.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_007_c3c102980d.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_008_01de23c9ef.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_008_6ab995d7a3.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_008_798480d491.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_008_d82cbb11bc.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_009_1ea81ac387.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_009_204738d83e.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_009_47c876f551.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_009_ad3eb25a76.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_009_c92bef923f.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_010_18816f7824.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_010_5ef32bbca5.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_010_7fcc125aaf.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_010_f539432477.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_011_0719a96529.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_011_0d029b69e2.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_011_3419f96e16.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_011_95701dc2b2.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_012_37f167a009.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_012_798e5114cc.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_012_c157277636.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_012_c550753234.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_013_144a29c27c.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_013_7ce193d441.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_013_ca46ae4f56.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_014_78f7ba5b3b.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_014_ac5e1ecbd2.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_014_cae1ab45e4.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_015_0e943c02d6.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_015_3ae1f26bb5.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_016_04560558e2.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_016_4737c9341a.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_017_2b77f9ed0f.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_017_fbef1d7a13.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_018_4db6e9e992.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_018_5bfc989912.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_019_48a84af36b.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_019_5aaa409246.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_020_525261ddaa.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_020_62b59bb2c2.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_021_a93e8dc59e.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_021_fdeff4ec7f.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_022_a51859813c.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_022_c190f8e94a.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_026_177600cbb5.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_027_32427529ba.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_028_6b9890d89d.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_029_91d83f15a7.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_030_c94cdca5e8.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_031_83631cf342.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_032_c455f59492.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_033_20a587c555.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_034_c950238933.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_035_4f92a9e8b9.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_036_2872291996.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_037_64e6945eca.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_038_24a4185427.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_039_00fa028659.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_040_08532940b0.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_041_5ee7fb0c96.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_042_86efbd9a30.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_043_fe7db3cbc4.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_044_f9e3cc1eb1.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_045_8d3aef2dad.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_046_d042d64cc9.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_047_a691747097.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_048_937caee1d3.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_049_f5775b2f83.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_050_dcf5df0be4.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_051_751a540ce0.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_052_83f56662cc.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_053_427395ca73.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_054_d611c0b175.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_055_b3da610a06.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_image_056_7567e21d5a.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_material_00_specular_roughness_f5138e0ee3.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_material_01_specular_roughness_c638a894b1.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_material_02_specular_roughness_c6a253866e.uasset",
+    "Content/Art/Textures/AirbaseUpgrade/T_material_03_specular_roughness_3d93e1bcdb.uasset",
+    "Content/Maps/DesertDefense.umap"
+  ],
+  "deleted": [],
+  "status": "reused_bytes_verified",
+  "completed": "2026-10-18T13:27:41.942384-07:00"
+}

@@ -1,0 +1,263 @@
+{
+  "schema": "aviation-source/v1",
+  "asset_slug": "rafale",
+  "credit": {
+    "title": "Dassault Rafale",
+    "author": "quick_loop",
+    "author_url": "https://sketchfab.com/so_O",
+    "source_url": "https://sketchfab.com/3d-models/dassault-rafale-d8bbfb0970ca4128b73e7e5364828fd3",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "embedded_credits": [],
+  "original": {
+    "file": "RawAssets/Downloaded/Aviation/rafale/source.glb",
+    "bytes": 8480468,
+    "sha256": "065dfc35d932f6d696d182e1a6cd1934501cf052dc1db144b31eeb5a4a6ef8af"
+  },
+  "source_content_modified": false,
+  "images": [
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/textures/image_000.jpg",
+      "bytes": 292598,
+      "sha256": "52a6bc31166e070227f346bc714a8507d971eb54596a6dd56408e706376d954a",
+      "source_image_index": 0,
+      "mime_type": "image/jpeg",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/textures/image_001.png",
+      "bytes": 241649,
+      "sha256": "662ac82d876e6021a9ebc4554ed11669b676354bf35fafc0ee131c1c501af27f",
+      "source_image_index": 1,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "LA",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/textures/image_002.png",
+      "bytes": 1127667,
+      "sha256": "4566f586a941a2cc779f4e7e05ebd3a024fa6c2ac7a78dc92e2ef75187eff3ac",
+      "source_image_index": 2,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/textures/image_003.jpg",
+      "bytes": 553260,
+      "sha256": "e0097f6c55dc7ef9ddd4a5e68d28b830624a090eafeb9141ecd15bd6bff5b6f3",
+      "source_image_index": 3,
+      "mime_type": "image/jpeg",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/textures/image_004.png",
+      "bytes": 103784,
+      "sha256": "15b2b3cc1b422dd31d67bba877f9b3258d9db99621b6a6d57c2a3145b53f3fba",
+      "source_image_index": 4,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "LA",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/textures/image_005.png",
+      "bytes": 2174520,
+      "sha256": "66a980ce7d0a7b10c04b56f5b5ff6d8ddfb490624613ea3608503cdcd41c0a2c",
+      "source_image_index": 5,
+      "mime_type": "image/png",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/textures/image_006.jpg",
+      "bytes": 29812,
+      "sha256": "7cddb5ca9b98b062037cc9fe8958100abaf0ca4debdb2bf469917b549337d420",
+      "source_image_index": 6,
+      "mime_type": "image/jpeg",
+      "size_pixels": [
+        1024,
+        1024
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/textures/image_007.png",
+      "bytes": 78825,
+      "sha256": "918bbd3d5b45bc428ffbaf5651b8821ef29e5801277e4a6cc5ea2cabc0552e0d",
+      "source_image_index": 7,
+      "mime_type": "image/png",
+      "size_pixels": [
+        1024,
+        1024
+      ],
+      "pixel_mode": "LA",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/textures/image_008.png",
+      "bytes": 49854,
+      "sha256": "d09e96ee84fe7e871363704bba1b75a5056139516a951810f4619f720ee20f36",
+      "source_image_index": 8,
+      "mime_type": "image/png",
+      "size_pixels": [
+        1024,
+        1024
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/textures/image_009.jpg",
+      "bytes": 222501,
+      "sha256": "eaac4ef04c6d80b0414380c850388e8afeff182447e04aebd6e25e6a3046756b",
+      "source_image_index": 9,
+      "mime_type": "image/jpeg",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/textures/image_010.png",
+      "bytes": 88597,
+      "sha256": "1f00011874835e1bbd1142b4659e6ec16067c3c5ca072b8c3de018459d02e88a",
+      "source_image_index": 10,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "LA",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/textures/image_011.png",
+      "bytes": 779995,
+      "sha256": "14dbc7195c0d06b6e819c103fe27e583e9d00effe825aff3d3b52f86db21f32e",
+      "source_image_index": 11,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    }
+  ],
+  "derived_images": [
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/derived/material_00_specular_roughness.png",
+      "bytes": 298504,
+      "sha256": "5133f50b150750902b260d98beeba9d8c452a23ab89449bcf10a10f840e27a4d",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGBA",
+      "color_space": "linear",
+      "channels": {
+        "R": "UE Specular = neutral F0 / 0.08",
+        "G": "roughness = 1 - glossiness alpha * factor",
+        "B": "metallic = 0",
+        "A": "1"
+      }
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/derived/material_01_specular_roughness.png",
+      "bytes": 145374,
+      "sha256": "282b96e70f32ca6c1f8ff3176261e6fe9058a8530d61b81cc6e74e812f5e03a4",
+      "size_pixels": [
+        4096,
+        4096
+      ],
+      "pixel_mode": "RGBA",
+      "color_space": "linear",
+      "channels": {
+        "R": "UE Specular = neutral F0 / 0.08",
+        "G": "roughness = 1 - glossiness alpha * factor",
+        "B": "metallic = 0",
+        "A": "1"
+      }
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/derived/material_02_specular_roughness.png",
+      "bytes": 95140,
+      "sha256": "a5eb5e9b5e2daaa52d9e75fe95e8b20cacb198cf965242922507d60dd94d9609",
+      "size_pixels": [
+        1024,
+        1024
+      ],
+      "pixel_mode": "RGBA",
+      "color_space": "linear",
+      "channels": {
+        "R": "UE Specular = neutral F0 / 0.08",
+        "G": "roughness = 1 - glossiness alpha * factor",
+        "B": "metallic = 0",
+        "A": "1"
+      }
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/rafale/derived/material_03_specular_roughness.png",
+      "bytes": 112568,
+      "sha256": "91d414041e06b9ecdf1b4543642533b6d4fffd2b118fc67d8ad80967dc3ee1d8",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGBA",
+      "color_space": "linear",
+      "channels": {
+        "R": "UE Specular = neutral F0 / 0.08",
+        "G": "roughness = 1 - glossiness alpha * factor",
+        "B": "metallic = 0",
+        "A": "1"
+      }
+    }
+  ],
+  "material_file": {
+    "file": "RawAssets/Downloaded/Aviation/rafale/materials.json",
+    "bytes": 13234,
+    "sha256": "1782973a9d04960bd026b1682d7dc1474eb0158f4e0905e964925511ef5dc024"
+  },
+  "source_material_count": 4,
+  "source_mesh_count": 20,
+  "gltf_extensions_used": [
+    "KHR_materials_pbrSpecularGlossiness"
+  ],
+  "conversion_notes": [
+    "Original GLB and embedded PNG/JPEG files retained byte for byte.",
+    "Material descriptors preserve source factors, channels and UV transforms.",
+    "Numeric factors are linear; only colour texture RGB is decoded from sRGB.",
+    "Rafale neutral dielectric F0 and inverse glossiness are encoded into derived linear masks."
+  ]
+}

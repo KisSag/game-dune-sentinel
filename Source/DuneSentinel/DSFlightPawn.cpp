@@ -229,14 +229,34 @@ void ADSFlightPawn::ConfigureAircraft(const FDSAircraftSpec& Aircraft)
     if (UStaticMesh* Model = LoadObject<UStaticMesh>(nullptr, *Spec.MeshPath))
         AircraftMesh->SetStaticMesh(Model);
     AircraftExhaust->ConfigureAircraft(Spec.MeshPath);
-    if (UStaticMesh* Gear = LoadObject<UStaticMesh>(nullptr, TEXT("/Game/Art/Aircraft/SM_landinggear.SM_landinggear")))
-        LandingGear->SetStaticMesh(Gear);
+    const bool bSeparateAuthoredGear = !Spec.GearMeshPath.IsEmpty();
+    const FString GearPath = bSeparateAuthoredGear ? Spec.GearMeshPath :
+        TEXT("/Game/Art/Aircraft/SM_landinggear.SM_landinggear");
+    LandingGear->SetStaticMesh(LoadObject<UStaticMesh>(nullptr, *GearPath));
+    LandingGear->SetRelativeScale3D(FVector(bSeparateAuthoredGear ? 1.f : .8f));
     Target.Reset();
     LockProgress = 0.f;
 }
 
+float ADSFlightPawn::GetParkedActorHeight(float SurfaceHeightCm) const
+{
+    if (AircraftMesh->DoesSocketExist(TEXT("GearFloor")))
+    {
+        // Parking levels pitch and roll. The socket records the lowest wheel
+        // contact in the same coordinate frame as the separate extended gear.
+        const FVector Contact = AircraftMesh->GetSocketTransform(TEXT("GearFloor"), RTS_Actor).GetLocation();
+        return SurfaceHeightCm - Contact.Z;
+    }
+    return SurfaceHeightCm + 316.f;
+}
+
 void ADSFlightPawn::Park()
 {
+    if (!Spec.ParkedMeshPath.IsEmpty())
+    {
+        if (UStaticMesh* ParkedModel = LoadObject<UStaticMesh>(nullptr, *Spec.ParkedMeshPath))
+            AircraftMesh->SetStaticMesh(ParkedModel);
+    }
     CannonFX->ResetEffects();
     AircraftExhaust->SetExhaustVisible(false);
     AircraftExhaust->ResetToCruise();
@@ -244,7 +264,7 @@ void ADSFlightPawn::Park()
     Speed = 0.f;
     FlightVelocity = FVector::ZeroVector;
     Collision->SetCollisionEnabled(ECollisionEnabled::NoCollision);
-    LandingGear->SetVisibility(true);
+    LandingGear->SetVisibility(Spec.ParkedMeshPath.IsEmpty());
     bCockpitView = bHighG = bStalling = bMissileWarning = false;
     GunCooldown = MissileCooldown = GunSoundCooldown = 0.f;
     Target.Reset();
@@ -254,6 +274,9 @@ void ADSFlightPawn::Park()
 
 void ADSFlightPawn::BeginFlight()
 {
+    if (UStaticMesh* FlightModel = LoadObject<UStaticMesh>(nullptr, *Spec.MeshPath))
+        AircraftMesh->SetStaticMesh(FlightModel);
+    AircraftExhaust->ConfigureAircraft(Spec.MeshPath);
     CannonFX->ResetEffects();
     ResetControls();
     bFlying = true;
@@ -416,8 +439,10 @@ void ADSFlightPawn::FireGun()
     if (!bFlying || CannonAmmo <= 0 || GunCooldown > 0.f) return;
     ADSGameMode* Mode = GetWorld()->GetAuthGameMode<ADSGameMode>();
     if (!Mode || Mode->Phase != EDSPhase::Flying) return;
-    const FVector Muzzle = GetActorLocation() + GetActorForwardVector() * 1100.f
-        + GetActorRightVector() * 160.f + GetActorUpVector() * 80.f;
+    const FVector Muzzle = AircraftMesh->DoesSocketExist(TEXT("Cannon")) ?
+        AircraftMesh->GetSocketLocation(TEXT("Cannon")) :
+        GetActorLocation() + GetActorForwardVector() * 1100.f
+            + GetActorRightVector() * 160.f + GetActorUpVector() * 80.f;
     FActorSpawnParameters Params;
     Params.Owner = this;
     Params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
@@ -441,8 +466,10 @@ void ADSFlightPawn::FireMissile()
     if (!bFlying || Health <= 0.f || MissileAmmo <= 0 || MissileCooldown > 0.f) return;
     ADSGameMode* Mode = GetWorld()->GetAuthGameMode<ADSGameMode>();
     if (!Mode || Mode->Phase != EDSPhase::Flying) return;
-    const FVector Muzzle = GetActorLocation() + GetActorForwardVector() * 700.f
-        + GetActorRightVector() * ((MissileAmmo % 2) ? 350.f : -350.f) - GetActorUpVector() * 100.f;
+    const FName Rail = (MissileAmmo % 2) ? TEXT("Missile_R") : TEXT("Missile_L");
+    const FVector Muzzle = AircraftMesh->DoesSocketExist(Rail) ? AircraftMesh->GetSocketLocation(Rail) :
+        GetActorLocation() + GetActorForwardVector() * 700.f
+            + GetActorRightVector() * ((MissileAmmo % 2) ? 350.f : -350.f) - GetActorUpVector() * 100.f;
     FActorSpawnParameters Params;
     Params.Owner = this;
     Params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;

@@ -1,0 +1,138 @@
+{
+  "schema": "airbase-meshes/v1",
+  "meshes": [
+    {
+      "name": "SM_AU_Hangar",
+      "fbx": "RawAssets/Airbase/Downloaded/SM_AU_Hangar.fbx",
+      "dest": "/Game/Art/Airbase/Downloaded",
+      "materials": {
+        "M_AU_hangar_00_Steel_Roughness": "M_AU_hangar_00_Steel_Roughness",
+        "M_AU_hangar_01_Panel01": "M_AU_hangar_01_Panel01",
+        "M_AU_hangar_02_Block": "M_AU_hangar_02_Block",
+        "M_AU_hangar_06_Plane_Body02": "M_AU_hangar_06_Plane_Body02",
+        "M_AU_hangar_09_Concrete": "M_AU_hangar_09_Concrete",
+        "M_AU_hangar_14_Panel02": "M_AU_hangar_14_Panel02",
+        "M_AU_hangar_15_MetalPoleColor": "M_AU_hangar_15_MetalPoleColor",
+        "M_AU_hangar_16_0046_Gold": "M_AU_hangar_16_0046_Gold"
+      },
+      "nanite": true,
+      "source_assets": [
+        "hangar"
+      ],
+      "source_glb": "RawAssets/Downloaded/Aviation/hangar/source.glb",
+      "source_sha256": "78bf96e6335e935ae56407deb13a45ac1ab828cd0804fa8acfbe1d90ce2548d8",
+      "material_manifest": "RawAssets/Downloaded/Aviation/hangar/materials.json",
+      "source_units_to_metres": 0.0254,
+      "origin": "center_xy_ground_z",
+      "dimensions_m": [
+        19.46434,
+        35.671131,
+        6.307143
+      ],
+      "bounds_m": {
+        "min": [
+          -9.73217,
+          -17.835566,
+          0.0
+        ],
+        "max": [
+          9.73217,
+          17.835566,
+          6.307143
+        ]
+      },
+      "triangles": 26306,
+      "vertices": 33769,
+      "uv_layers": 1,
+      "source_triangles_by_material": {
+        "Steel_Roughness": 19266,
+        "Panel01": 2356,
+        "Block": 40,
+        "Translucent_Glass_Gray": 716,
+        "Plane_Body": 16830,
+        "Body_Plane": 29866,
+        "Plane_Body02": 6578,
+        "Concrete": 240,
+        "Tape": 1968,
+        "cardboard": 34224,
+        "Color_M08": 3288,
+        "Panel02": 1000,
+        "MetalPoleColor": 320,
+        "0046_Gold": 576,
+        "material": 3288
+      },
+      "removed_triangles_by_material": {
+        "Translucent_Glass_Gray": 716,
+        "Plane_Body": 16830,
+        "Body_Plane": 29866,
+        "Plane_Body02": 4070,
+        "Tape": 1968,
+        "cardboard": 34224,
+        "Color_M08": 3288,
+        "material": 3288
+      },
+      "uv_max_error": 0.0,
+      "source_normal_min_dot": 0.9999998267740011,
+      "generated_planar_uv_triangles_by_material": {
+        "Plane_Body02": 2508,
+        "MetalPoleColor": 320,
+        "0046_Gold": 576
+      },
+      "sha256": "a3618950166b3746777ffa8b564888e2b517db77297ac01541dc9f9c939537fd",
+      "fbx_axis_forward": "X",
+      "fbx_axis_up": "Z",
+      "notes": "Source numerical units interpreted as inches from building dimensions and included aircraft scale. Remove the unrelated DA42, twelve tiny low-resolution cardboard boxes, their tape and paired label surfaces. Retain structural frames, cladding, ductwork, floor slabs, shelves and ceiling fixtures."
+    },
+    {
+      "name": "SM_AU_ControlTower",
+      "fbx": "RawAssets/Airbase/Downloaded/SM_AU_ControlTower.fbx",
+      "dest": "/Game/Art/Airbase/Downloaded",
+      "materials": {
+        "M_AU_tower_00_KSFO_Control_Tower": "M_AU_tower_00_KSFO_Control_Tower",
+        "M_AU_tower_01_KSFO_Control_Tower_02": "M_AU_tower_01_KSFO_Control_Tower_02"
+      },
+      "nanite": true,
+      "source_assets": [
+        "tower"
+      ],
+      "source_glb": "RawAssets/Downloaded/Aviation/tower/source.glb",
+      "source_sha256": "1a7d7e63d3d63c9b0fa0632708b5864e8e6138a6af64fda61e4736c9b23ca3aa",
+      "material_manifest": "RawAssets/Downloaded/Aviation/tower/materials.json",
+      "source_units_to_metres": 1.0,
+      "origin": "center_xy_ground_z",
+      "dimensions_m": [
+        25.113491,
+        23.913134,
+        56.964443
+      ],
+      "bounds_m": {
+        "min": [
+          -12.556746,
+          -11.956567,
+          0.0
+        ],
+        "max": [
+          12.556746,
+          11.956567,
+          56.964443
+        ]
+      },
+      "triangles": 86168,
+      "vertices": 75685,
+      "uv_layers": 1,
+      "source_triangles_by_material": {
+        "KSFO_Control_Tower": 9560,
+        "KSFO_Control_Tower_02": 76608
+      },
+      "removed_triangles_by_material": {},
+      "uv_max_error": 0.0,
+      "source_normal_min_dot": 0.9999983769666869,
+      "generated_planar_uv_triangles_by_material": {},
+      "sha256": "7f71e0b262d910a8d0fb5ea1f0cf6f58dd5f386b072100440fb65490ecb59007",
+      "fbx_axis_forward": "X",
+      "fbx_axis_up": "Z",
+      "notes": "Preserve both complete textured tower meshes at source metre scale, including building shell, top control room, rails and equipment."
+    }
+  ],
+  "coordinate_convention": "Blender metre geometry, Z up; FBX X-forward/Z-up export matches the established native importer."
+}

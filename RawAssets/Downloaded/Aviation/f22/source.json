@@ -1,0 +1,780 @@
+{
+  "schema": "aviation-source/v1",
+  "asset_slug": "f22",
+  "credit": {
+    "title": "F22 Raptor FREE",
+    "author": "NLM",
+    "author_url": "https://sketchfab.com/NLM-Group",
+    "source_url": "https://sketchfab.com/3d-models/f22-raptor-free-2a64abf0866a405c865466c7642ca689",
+    "license": "CC-BY-4.0",
+    "license_url": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "embedded_credits": [],
+  "original": {
+    "file": "RawAssets/Downloaded/Aviation/f22/source.glb",
+    "bytes": 63774392,
+    "sha256": "7e2e7b06d4ef474cee47ad6d92f7f8bd0e6375ba0b265a5f95d08842a1050ed5"
+  },
+  "source_content_modified": false,
+  "images": [
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_000.png",
+      "bytes": 6990,
+      "sha256": "e1b74fd628b2733ec6fec3f0cdd1a3f1f67ab77eb4dd3756cfa860a2312734d1",
+      "source_image_index": 0,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "L",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_001.png",
+      "bytes": 522949,
+      "sha256": "fde39341745f3bcfe27065229e9ef4879e7b1881d277f6409c36e4bc79fbe1f8",
+      "source_image_index": 1,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_002.png",
+      "bytes": 1621305,
+      "sha256": "613f8320bb6f1f47a8becb208cb37fb6f9eb5e5c3a4ff2a874d395cd07999d5a",
+      "source_image_index": 2,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_003.png",
+      "bytes": 2617540,
+      "sha256": "508fd77661d9faac0a4e0ae26b2e8128c0e5c3589a2a85e02e7a32f8cacecb39",
+      "source_image_index": 3,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_004.png",
+      "bytes": 468291,
+      "sha256": "c6bf79984cbfd0a4d7bf4e959c84c48d09450b64614fb03602619a9add3fae71",
+      "source_image_index": 4,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_005.png",
+      "bytes": 2256987,
+      "sha256": "293bbeed585e3f14adba5b6aab343241f85c83b1681d215c5171dc1dd4c277a7",
+      "source_image_index": 5,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_006.png",
+      "bytes": 4686,
+      "sha256": "2f5faef7b6e0b4a31aadf5ccd768721697db232855a8c1574b3decc7a8224adc",
+      "source_image_index": 6,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "L",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_007.png",
+      "bytes": 860840,
+      "sha256": "3b1c5fce35afd3df4a51894f85759d563aff883e2cef31e03bcee88238876e12",
+      "source_image_index": 7,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_008.png",
+      "bytes": 4817685,
+      "sha256": "3b723058650aa0232ed5c42850ea868f8ba79356ddc23926b6f5d70955adf4f4",
+      "source_image_index": 8,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_009.png",
+      "bytes": 6990,
+      "sha256": "bfc366be44517b2935528220fe20f146cf7f38332714909f422466135450efe2",
+      "source_image_index": 9,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "L",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_010.png",
+      "bytes": 520996,
+      "sha256": "407a6005d165558913b6fc365f95b51021a73b9c21a5abeeb54f995085271549",
+      "source_image_index": 10,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_011.png",
+      "bytes": 1848661,
+      "sha256": "fb08be90bc55a1807ee87b24a1ad835af2c77d7a014a666d97da9aadd488a436",
+      "source_image_index": 11,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_012.png",
+      "bytes": 62139,
+      "sha256": "2f463668bacf4850ab681d47f7d11265dd94378efab5829b5dbd4f2ee8ad8ea3",
+      "source_image_index": 12,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_013.png",
+      "bytes": 2210788,
+      "sha256": "d731222a656e2863b03a25967e2f96b47197efd6ab00c591c33ac70cd47b883e",
+      "source_image_index": 13,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_014.png",
+      "bytes": 6990,
+      "sha256": "9a62df225fce19756a19f6a465263566367e5113b5b6bced1bb2e66829c62e99",
+      "source_image_index": 14,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "L",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_015.png",
+      "bytes": 605,
+      "sha256": "dd9e737f95e0031fd4075aa4ebda94b4fdc0d701829215998ef1a6ea48772df4",
+      "source_image_index": 15,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_016.png",
+      "bytes": 863143,
+      "sha256": "e6b13f652dd8ca4898f5720046c6682f7e9ad1c5a04b73562a8483df3f2aa13f",
+      "source_image_index": 16,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_017.png",
+      "bytes": 602044,
+      "sha256": "b9912f6664cef6a5129ec36e1f5e198e4df606c6923e48d0d23ab06c4e0da974",
+      "source_image_index": 17,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_018.png",
+      "bytes": 159238,
+      "sha256": "743de02f1c4ee7ce1eb133cd8f29275402c7c9ae297d206f5023ba2198cf39e2",
+      "source_image_index": 18,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_019.png",
+      "bytes": 2597193,
+      "sha256": "5828e0af365c4f6961aa6f590ecc5d11eca48e5babf0a33d05f04edb3450f02a",
+      "source_image_index": 19,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_020.png",
+      "bytes": 735323,
+      "sha256": "3dfd695a45bb0842fd6d144bd014b72857b2aed608e87932b9258bb8088b7c4e",
+      "source_image_index": 20,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_021.png",
+      "bytes": 826876,
+      "sha256": "7179e899f82289dfbfb9e623974039bebfd2a0248fb1396dbfbb71dd0fd9144a",
+      "source_image_index": 21,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_022.png",
+      "bytes": 2208668,
+      "sha256": "beea2d5c72d14fa0dfcdadda6912091ad03f18fa141ff38237835221f97845af",
+      "source_image_index": 22,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_023.png",
+      "bytes": 3693882,
+      "sha256": "3434200c48153a1dac34d3f0236b6fb8cd7e7c866cab9b527f9955d73a155ebc",
+      "source_image_index": 23,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_024.png",
+      "bytes": 2917581,
+      "sha256": "1ce36d6252c04792b5ec08244c657bb41dc507b3106796073494354919badef5",
+      "source_image_index": 24,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_025.png",
+      "bytes": 1359110,
+      "sha256": "83d17e27a98187bece51e862066d4df017430d102105ecfcbe6698f2bf65738c",
+      "source_image_index": 25,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_026.png",
+      "bytes": 6989,
+      "sha256": "d9bc78a17f51e4a1ea0a65dbb4594eee7fbf4599b372a2ad420f14d501d1e324",
+      "source_image_index": 26,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "L",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_027.png",
+      "bytes": 20445,
+      "sha256": "8d2ca82b8556fbc135bf3aba46d4e8c030d3a09cb39d86cb2d076b1894644c76",
+      "source_image_index": 27,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_028.png",
+      "bytes": 949720,
+      "sha256": "260f6c946a0997876974ba912d80da0315e9df56282cb05cb8141509203fcef3",
+      "source_image_index": 28,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_029.png",
+      "bytes": 6990,
+      "sha256": "df1660f8138e840e36542f50cd9b215e08391e635f9bd9624ea9c959a71053d7",
+      "source_image_index": 29,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "L",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_030.png",
+      "bytes": 31505,
+      "sha256": "217e10f2c1bbe32223b8a73671152376eef27733dc2caaca0c2378dcfa1fdd99",
+      "source_image_index": 30,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_031.png",
+      "bytes": 1695957,
+      "sha256": "694d6149e1db9eaf9c4672269c560980a29735f4fefe67c2f5d404e5d57f6209",
+      "source_image_index": 31,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_032.png",
+      "bytes": 6990,
+      "sha256": "5c50c7d790b01cd77465182512809cdd49e7871abda96797e321c9a9e2ffba4c",
+      "source_image_index": 32,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "L",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_033.png",
+      "bytes": 44555,
+      "sha256": "567136d0f73cacfb8dd12ede0597c1ff6492bd89289d4e68d175651196a13214",
+      "source_image_index": 33,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_034.png",
+      "bytes": 2417002,
+      "sha256": "bbe4244f7e5ba5103bb4a31ebbda4dc16f269c1980b1175f7aed76aa8b6927f4",
+      "source_image_index": 34,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_035.jpg",
+      "bytes": 38846,
+      "sha256": "83460daf378416aad867c000ce440460d9818f474eb645152d5366e29725c5de",
+      "source_image_index": 35,
+      "mime_type": "image/jpeg",
+      "size_pixels": [
+        256,
+        256
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_036.png",
+      "bytes": 1670555,
+      "sha256": "08ade78498a4c4d165e51c3eeb2c2386874909c1b6ed26029ca534a9a4590c52",
+      "source_image_index": 36,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_037.png",
+      "bytes": 904111,
+      "sha256": "144711064afb2c8703a98484f324ac3bfc4a2eb24140eb28fbf26d2bad33e91c",
+      "source_image_index": 37,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_038.png",
+      "bytes": 2115226,
+      "sha256": "0f76d15bbb76d3f3fe7ff0f95a32283c5160e351601a750c79bfb0e3ac32f000",
+      "source_image_index": 38,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_039.png",
+      "bytes": 605,
+      "sha256": "37818d10727eeb5812722387e1583840faa3539f44d97805956b5d2ab7ffebcc",
+      "source_image_index": 39,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_040.png",
+      "bytes": 5345,
+      "sha256": "fbb64fc7486fffd4186ede652522360546a484048503471223075eabc910a6bb",
+      "source_image_index": 40,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_041.png",
+      "bytes": 6990,
+      "sha256": "f5300e26ec6a102389b28dc35bef3964706b8188693f7c2326f171fdef8fd964",
+      "source_image_index": 41,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "L",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_042.png",
+      "bytes": 6803,
+      "sha256": "3426de0f20e954d33fcb87fd5d0921fc6b88053fbf3521279a2eed541f2bc8c5",
+      "source_image_index": 42,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_043.png",
+      "bytes": 172361,
+      "sha256": "3fddce3d981d03754214b54a44c87131eac89fa021251d0bbade83311d9dc59f",
+      "source_image_index": 43,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_044.png",
+      "bytes": 26325,
+      "sha256": "e199bfcfa832c2c969723acf4ff019729a0caecf3d40e5ea6ca04a1636d33c65",
+      "source_image_index": 44,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "L",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_045.png",
+      "bytes": 753684,
+      "sha256": "309cd640858e456e9adc668d01545a7b7787c0326dd085ce1795f67f54aab189",
+      "source_image_index": 45,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_046.png",
+      "bytes": 808731,
+      "sha256": "e718111d384dd3389a17da4da8834f38e90d74748a535cbd4c14a82e3e8b5039",
+      "source_image_index": 46,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_047.png",
+      "bytes": 1867970,
+      "sha256": "eb48cea5f875aa02fd7c1af5a09061323ac87ad3fe8e2b3524fbe5c555e77a1a",
+      "source_image_index": 47,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_048.png",
+      "bytes": 729532,
+      "sha256": "1c57a5bb6be67e765defb683a2be061fccb5bdbd348805b93dd98d3697b3507d",
+      "source_image_index": 48,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_049.png",
+      "bytes": 818621,
+      "sha256": "7ce8a7e926be2ba36c613464207531cfa5169c6d62c54eeb93292f1804bf9590",
+      "source_image_index": 49,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_050.png",
+      "bytes": 2155252,
+      "sha256": "130b70b8253b890587dfa566fca839fb88a66fe83af7d8a03caa8e344efb0335",
+      "source_image_index": 50,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_051.png",
+      "bytes": 1631618,
+      "sha256": "6bf87d059cf8be9e35503d6390429222d73450fdd9264b2c53a831d7213d6f89",
+      "source_image_index": 51,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_052.png",
+      "bytes": 1464121,
+      "sha256": "48fd9cf91de81d7046f8c91cabc464092eb88580c38aaa049661b16fc7d87e3a",
+      "source_image_index": 52,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_053.png",
+      "bytes": 1584386,
+      "sha256": "b5a52882e5d85abe67c5b83d40a7c8a3697b3bdc27bef3b63fbd3d811619d4e4",
+      "source_image_index": 53,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_054.png",
+      "bytes": 670574,
+      "sha256": "2548d8f34df7364e4e7debfcf5ce23a2f241bb0d0a0d1c8435ddcb9259d7d9af",
+      "source_image_index": 54,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_055.png",
+      "bytes": 726521,
+      "sha256": "9db27bade58dcf1d295ad59d5db2f5ff05351b9febe17346a6cc9e831ebf6f94",
+      "source_image_index": 55,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "P",
+      "retained_byte_exact": true
+    },
+    {
+      "file": "RawAssets/Downloaded/Aviation/f22/textures/image_056.png",
+      "bytes": 1920498,
+      "sha256": "8d01646cfe06d6aec8de093c8c75b549a18416c924adcc1f573863e1713bae50",
+      "source_image_index": 56,
+      "mime_type": "image/png",
+      "size_pixels": [
+        2048,
+        2048
+      ],
+      "pixel_mode": "RGB",
+      "retained_byte_exact": true
+    }
+  ],
+  "derived_images": [],
+  "material_file": {
+    "file": "RawAssets/Downloaded/Aviation/f22/materials.json",
+    "bytes": 37332,
+    "sha256": "dc4929795699ef54eda3cd9d9c1a22f7f12a639e4a127e852a43340726451fcf"
+  },
+  "source_material_count": 26,
+  "source_mesh_count": 84,
+  "gltf_extensions_used": [
+    "KHR_materials_specular",
+    "KHR_materials_transmission"
+  ],
+  "conversion_notes": [
+    "Original GLB and embedded PNG/JPEG files retained byte for byte.",
+    "Material descriptors preserve source factors, channels and UV transforms.",
+    "Numeric factors are linear; only colour texture RGB is decoded from sRGB.",
+    "Rafale neutral dielectric F0 and inverse glossiness are encoded into derived linear masks."
+  ]
+}

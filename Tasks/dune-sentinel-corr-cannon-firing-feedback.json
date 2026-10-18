@@ -1,0 +1,172 @@
+{
+  "name": "dune-sentinel-corr-cannon-firing-feedback",
+  "title": "Make cannon fire visible during a sortie",
+  "engine": "5.7",
+  "template": "blank-cpp",
+  "difficulty": "medium",
+  "seed": {
+    "game": "dune-sentinel",
+    "commit": "5a94224d5f5252f719caba3e9621f6689f63154a",
+    "reference": "934279bf8897b0b8af6efe713d3b14446cca5776",
+    "kind": "correction"
+  },
+  "play_map": "/Game/Maps/DesertDefense",
+  "asset_packs": [],
+  "tags": [
+    "correction",
+    "combat",
+    "visual-feedback"
+  ],
+  "instruction": "Cannon fire is difficult to read: shots lack a clear muzzle flash and smoke, and bullets are hard to follow. Give successful player and enemy cannon shots a visible muzzle flash, dissipating smoke and traveling bullet trails. The flash must stay at the firing aircraft, while the rounds travel forward and the smoke dissipates after firing stops. Keep the current damage, fire rates, ammunition, projectile speed and enemy firing behavior.\n\nEnter starts flight from the menu. W accelerates; S brakes; A/D roll; Down pitches up and Up pitches down; Q/E yaw. Tab selects a target and holding F looks toward it. LeftControl fires the cannon and SpaceBar fires a missile. Use short braking inputs to avoid a stall.\n\nVerification deliverable: leave Tests/cannon_firing_feedback_route.json as a JSON list of events {\"t\": seconds after level start, \"key\": an Unreal key name, \"press\": true or false}. Use at most 400 events, all within 118 seconds, include every key release and observation pauses, and begin from a fresh level load. Use keyboard presses only; do not rely on cursor movement, menu clicks, controller input, resolution changes or restarting the application. Start the sortie, fire a short cannon burst, pause, then fire a sustained burst and release. Keep the ordinary chase view visible and leave at least three seconds after the last burst to observe cleanup. The visual demonstration concerns the player cannon; an encounter with enemy fire is not required. Validate the route in the running game after the final change and adjust its timing to show the requested result. Keep the existing visual style; do not add debug labels or demonstration-only overlays.",
+  "limits": {
+    "max_turns": 120,
+    "max_minutes": 180,
+    "max_usd": 40,
+    "tool_timeout_seconds": 1800
+  },
+  "milestones": [
+    {
+      "name": "builds",
+      "checks": [
+        {
+          "kind": "build",
+          "name": "editor_builds",
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "boots",
+      "checks": [
+        {
+          "kind": "boot",
+          "name": "boots_clean",
+          "needs": [
+            "editor_builds"
+          ],
+          "seconds": 60,
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "fixed",
+      "checks": [
+        {
+          "kind": "code_judge",
+          "name": "change_review",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "Does the change provide real cannon-shot feedback for the player and both existing enemy types while preserving combat rules and effect cleanup? Compare the relevant reference behavior, not its exact implementation. Reference-only capture fixtures, saved images, validation reports and documentation are outside the requested scope.",
+          "rubric": [
+            {
+              "key": "real_shots",
+              "criterion": "Player and enemy cannon flash/smoke are triggered by successful real shots at the firing aircraft; traveling feedback follows the corresponding projectiles rather than unrelated decorative movement.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "finite_lifetime",
+              "criterion": "Effects remain visible long enough to render, naturally expire after firing, and are removed or reset when their owners or the sortie end.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "combat_unchanged",
+              "criterion": "Damage, fire cadence, projectile speed, finite ammunition, replenishment and enemy firing conditions retain their existing behavior.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "bounded_work",
+              "criterion": "Sustained fire does not leave an ever-growing collection of persistent effects, and the change does not replace the game with a staged demonstration.",
+              "weight": 1,
+              "required": true
+            }
+          ],
+          "weight": 3,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "looks_right",
+      "checks": [
+        {
+          "kind": "judge",
+          "name": "cannon_fire_visible",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "In the before/after route plays, does firing now produce a bright flash immediately ahead of the player aircraft, visible smoke and bright rounds traveling forward, followed by natural disappearance after release? Use the route for firing evidence. Reference idle/default-drive frames provide general appearance context only; do not assume a reference-route play or require enemy fire to occur.",
+          "before": true,
+          "reference": true,
+          "route": "Tests/cannon_firing_feedback_route.json",
+          "rubric": [
+            {
+              "key": "muzzle_flash",
+              "criterion": "While the route fires, a bright flash is visible at the player aircraft gun position above the bottom-center weapons panel.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "smoke_and_rounds",
+              "criterion": "Sustained player fire shows smoke close to the muzzle and bright rounds or short trails progressing into the forward flight view, beyond the aircraft.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "clears_after_release",
+              "criterion": "After the route releases the cannon and waits three seconds, its temporary flash, smoke and rounds clear instead of remaining frozen in view.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "view_preserved",
+              "criterion": "The aircraft, forward flight view and bottom-center WEAPONS / FINITE LOADOUT panel remain readable without a test overlay or full-screen effect.",
+              "weight": 1,
+              "required": true
+            }
+          ],
+          "weight": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "worked",
+      "checks": [
+        {
+          "kind": "actions_judge",
+          "name": "worked_well",
+          "weight": 2,
+          "question": "Did the developer work as a careful game developer would on this task: finding what causes the problem or what the change touches, changing only what the task needs, and checking the result in the built, running game?",
+          "rubric": [
+            {
+              "key": "looked_first",
+              "criterion": "Before changing code or assets it looked at the parts of the game the task concerns (read the relevant code, data or logs, or played the game), rather than editing blindly."
+            },
+            {
+              "key": "kept_building",
+              "criterion": "It built the game after its changes and fixed the build errors it caused; its last build succeeded, and the grader's build of where it ended succeeded."
+            },
+            {
+              "key": "checked_in_game",
+              "weight": 2,
+              "required": true,
+              "criterion": "After its last change it ran the game and looked at the outcome the task asks for (screenshots, the log or the player's track), and acted on what it saw."
+            },
+            {
+              "key": "stayed_on_task",
+              "weight": 2,
+              "criterion": "It changed only what the task needs: no unrelated rewrites, no disabling or deleting features, checks or content to make a problem go away, and no attempt to read the grader, the game's later history or anything outside the project."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

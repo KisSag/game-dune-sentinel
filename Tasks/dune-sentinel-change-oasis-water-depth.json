@@ -1,0 +1,167 @@
+{
+  "name": "dune-sentinel-change-oasis-water-depth",
+  "title": "Make oasis water show depth and gentle surface motion",
+  "engine": "5.7",
+  "template": "blank-cpp",
+  "difficulty": "medium",
+  "seed": {
+    "game": "dune-sentinel",
+    "commit": "03bbda46b24a8a2eb45d18b3f5d325b42a47297c",
+    "reference": "061c686c679c44b52e2e530d0d71217e79268cf8",
+    "kind": "change"
+  },
+  "play_map": "/Game/Maps/DesertDefense",
+  "asset_packs": [],
+  "tags": [
+    "environment",
+    "water",
+    "visual-change",
+    "historical-change"
+  ],
+  "instruction": "The oasis lakes look like flat cyan patches during a close flyover. Give the water a more convincing appearance for this sunny desert: subdued deeper water, a visibly lighter shallow edge, fine ripples and highlights that change over time. Keep the three existing lake shapes, water levels and shores in place. The improvement should be clear during an ordinary low oblique flyover, without making the whole lake glow or turning its surroundings into a different scene. Keep the existing textured visual style and the playable flight experience.\n\nEnter starts flight from the menu. W accelerates; S brakes; A/D roll; Down pitches up and Up pitches down; Q/E yaw. Tab selects a target and holding F looks toward it. LeftControl fires the cannon and SpaceBar fires a missile. Use short braking inputs to avoid a stall.\n\nVerification deliverable: leave Tests/oasis_water_depth.json as a JSON list of events {\"t\": seconds after level start, \"key\": an Unreal key name, \"press\": true or false}. Use at most 400 events, all within 118 seconds, include every key release and observation pauses, and begin from a fresh level load. Use keyboard presses only; do not rely on cursor movement, menu clicks, controller input, resolution changes or restarting the application. Fly toward the eastern oasis and show an oblique view containing the middle of the lake and its near shore together. Include several seconds of observation so fine surface changes can be compared between frames. Do not rely on menu interaction or a free-look mouse movement. Validate the route in the running game after the final change and adjust its timing to show the requested result. Keep the existing visual style; do not add debug labels or demonstration-only overlays.",
+  "limits": {
+    "max_turns": 120,
+    "max_minutes": 180,
+    "max_usd": 40,
+    "tool_timeout_seconds": 1800
+  },
+  "milestones": [
+    {
+      "name": "builds",
+      "checks": [
+        {
+          "kind": "build",
+          "name": "editor_builds",
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "boots",
+      "checks": [
+        {
+          "kind": "boot",
+          "name": "boots_clean",
+          "needs": [
+            "editor_builds"
+          ],
+          "seconds": 60,
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "fixed",
+      "checks": [
+        {
+          "kind": "code_judge",
+          "name": "change_review",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "Does the water change provide animated fine detail and appropriate shallow/deep response on all three existing lakes while preserving their geometry, elevation and collision? The reference also reroutes an access road and fixes a nearby terrain render LOD; those unrelated road changes are outside this water-only task.",
+          "rubric": [
+            {
+              "key": "depth_and_motion",
+              "criterion": "The three saved lake surfaces have a nonuniform shallow/deep appearance and genuinely animated fine normal/highlight detail using available source content.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "saved_values",
+              "criterion": "The water appearance survives saving and reloading, with values appropriate to each lake elevation; a failed API return or unsaved temporary change is not treated as success.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "preserved_water",
+              "criterion": "Lake bounds, water elevations, placement, collision and surrounding banks remain unchanged, without editing unrelated road geometry or mission behavior.",
+              "weight": 2,
+              "required": true
+            }
+          ],
+          "weight": 3,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "looks_right",
+      "checks": [
+        {
+          "kind": "judge",
+          "name": "oasis_depth_motion_visible",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "Does the lake in the submitted flyover have readable deep and shallow regions plus fine evolving surface detail, instead of the initial flat cyan appearance? Use available before frames only where water is visible. Reference idle/drive frames may not visit this oasis; do not infer a matching reference view or certify the overall scene as finished.",
+          "before": true,
+          "reference": true,
+          "route": "Tests/oasis_water_depth.json",
+          "rubric": [
+            {
+              "key": "visible_depth",
+              "criterion": "One oblique frame includes both a subdued darker lake interior and a visibly lighter shallow edge, rather than a uniformly bright cyan sheet.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "surface_detail",
+              "criterion": "Successive route frames show fine ripples or highlights changing over the water; camera movement alone or a uniform flashing color is not sufficient.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "coherent_water",
+              "criterion": "Water remains a distinct reflective surface with readable local detail rather than an opaque glowing overlay or large distracting distortion.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "shore_preserved",
+              "criterion": "The visible lake boundary, shoreline and surrounding desert remain in their existing places; the requested water improvement is not achieved by deleting or obscuring them.",
+              "weight": 2,
+              "required": true
+            }
+          ],
+          "weight": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "worked",
+      "checks": [
+        {
+          "kind": "actions_judge",
+          "name": "worked_well",
+          "weight": 2,
+          "question": "Did the developer work as a careful game developer would on this task: finding what causes the problem or what the change touches, changing only what the task needs, and checking the result in the built, running game?",
+          "rubric": [
+            {
+              "key": "looked_first",
+              "criterion": "Before changing code or assets it looked at the parts of the game the task concerns (read the relevant code, data or logs, or played the game), rather than editing blindly."
+            },
+            {
+              "key": "kept_building",
+              "criterion": "It built the game after its changes and fixed the build errors it caused; its last build succeeded, and the grader's build of where it ended succeeded."
+            },
+            {
+              "key": "checked_in_game",
+              "weight": 2,
+              "required": true,
+              "criterion": "After its last change it ran the game and looked at the outcome the task asks for (screenshots, the log or the player's track), and acted on what it saw."
+            },
+            {
+              "key": "stayed_on_task",
+              "weight": 2,
+              "criterion": "It changed only what the task needs: no unrelated rewrites, no disabling or deleting features, checks or content to make a problem go away, and no attempt to read the grader, the game's later history or anything outside the project."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,168 @@
+{
+  "name": "dune-sentinel-fix-settlement-and-shore-contact",
+  "title": "Restore ground contact around the settlement and oases",
+  "engine": "5.7",
+  "template": "blank-cpp",
+  "difficulty": "hard",
+  "seed": {
+    "game": "dune-sentinel",
+    "commit": "482feef02bf73622b6c3d341de60f2d9004a849c",
+    "reference": "c4f52997e9bfe2b5fab8960ea17b16e6f7cd17aa",
+    "kind": "bug_fix"
+  },
+  "play_map": "/Game/Maps/DesertDefense",
+  "asset_packs": [],
+  "tags": [
+    "environment",
+    "placement",
+    "shoreline",
+    "historical-fix",
+    "hard-tier"
+  ],
+  "instruction": "During a low pass over the settlement north of the airport, many buildings appear buried or suspended above the land. Around the nearby oases, trees can stand away from the shore or sink into the ground, water appears in the wrong place, and green banks have exposed gaps or thin floating edges. Make these places look physically connected: building bases and vegetation should meet the ground, lakes should sit inside their low basins, and the green shore should join the surrounding land without visible holes or floating sheets. Preserve the existing settlement, three oases, mountains and clear runway; this is a repair of their placement and visible contact, not a replacement of the scene.\n\nEnter starts flight from the menu. W accelerates; S brakes; A/D roll; Down pitches up and Up pitches down; Q/E yaw. Tab selects a target and holding F looks toward it. LeftControl fires the cannon and SpaceBar fires a missile. Use short braking inputs to avoid a stall.\n\nVerification deliverable: leave Tests/settlement_shore_contact.json as a JSON list of events {\"t\": seconds after level start, \"key\": an Unreal key name, \"press\": true or false}. Use at most 400 events, all within 118 seconds, include every key release and observation pauses, and begin from a fresh level load. Use keyboard presses only; do not rely on cursor movement, menu clicks, controller input, resolution changes or restarting the application. Start a sortie and provide a close oblique pass of the northern settlement followed by an oasis shore. Leave observation time with building bases, tree roots and the meeting of water, green banks and dry ground visible. A distant skyline alone is insufficient. Validate the route in the running game after the final change and adjust its timing to show the requested result. Keep the existing visual style; do not add debug labels or demonstration-only overlays.",
+  "limits": {
+    "max_turns": 120,
+    "max_minutes": 180,
+    "max_usd": 40,
+    "tool_timeout_seconds": 1800
+  },
+  "milestones": [
+    {
+      "name": "builds",
+      "checks": [
+        {
+          "kind": "build",
+          "name": "editor_builds",
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "boots",
+      "checks": [
+        {
+          "kind": "boot",
+          "name": "boots_clean",
+          "needs": [
+            "editor_builds"
+          ],
+          "seconds": 60,
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "fixed",
+      "checks": [
+        {
+          "kind": "code_judge",
+          "name": "change_review",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "Does the change repair the historical world-placement mismatch and bank/water contact across the three oases, without changing unrelated combat? The reference also increases grove density; matching its instance counts or reproducing that separate density change is not required.",
+          "rubric": [
+            {
+              "key": "consistent_placement",
+              "criterion": "Building and plant origins agree with the actual terrain surface, and all three lake surfaces occupy their intended basins.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "bank_continuity",
+              "criterion": "Bank interiors and perimeter contact remain continuous over the actual terrain, including the gaps between sparse boundary samples; water edges do not terminate visibly above the land.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "preserved_scene",
+              "criterion": "The repair preserves existing scenery and runway clearance, with no removal of collision, disabled rendering, or broad gameplay change to conceal the defects.",
+              "weight": 2,
+              "required": true
+            }
+          ],
+          "weight": 3,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "looks_right",
+      "checks": [
+        {
+          "kind": "judge",
+          "name": "settlement_shore_contact_visible",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "In the route evidence, are the settlement and oasis visibly joined to the land without the reported buried, floating or open-edge appearance? Compare available before frames where they show the same region. The reference idle/drive frames provide context only; do not assume a matched reference route or unseen close views.",
+          "before": true,
+          "reference": true,
+          "route": "Tests/settlement_shore_contact.json",
+          "rubric": [
+            {
+              "key": "building_contact",
+              "criterion": "In the close oblique settlement pass, visible building bases meet the surrounding ground rather than hovering above it or disappearing substantially into it.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "oasis_contact",
+              "criterion": "In the oasis pass, visible trees and shrubs grow from land beside the water, and the lake occupies a low basin instead of a displaced sheet on a slope.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "continuous_shore",
+              "criterion": "At the visible meeting of water, green bank and desert, there are no open triangular gaps, exposed floating strips or abrupt unsupported water edges.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "scene_preserved",
+              "criterion": "The requested contact repair retains a recognisable settlement, vegetated water and desert relief rather than hiding the defects by removing those scene features.",
+              "weight": 1,
+              "required": true
+            }
+          ],
+          "weight": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "worked",
+      "checks": [
+        {
+          "kind": "actions_judge",
+          "name": "worked_well",
+          "weight": 2,
+          "question": "Did the developer work as a careful game developer would on this task: finding what causes the problem or what the change touches, changing only what the task needs, and checking the result in the built, running game?",
+          "rubric": [
+            {
+              "key": "looked_first",
+              "criterion": "Before changing code or assets it looked at the parts of the game the task concerns (read the relevant code, data or logs, or played the game), rather than editing blindly."
+            },
+            {
+              "key": "kept_building",
+              "criterion": "It built the game after its changes and fixed the build errors it caused; its last build succeeded, and the grader's build of where it ended succeeded."
+            },
+            {
+              "key": "checked_in_game",
+              "weight": 2,
+              "required": true,
+              "criterion": "After its last change it ran the game and looked at the outcome the task asks for (screenshots, the log or the player's track), and acted on what it saw."
+            },
+            {
+              "key": "stayed_on_task",
+              "weight": 2,
+              "criterion": "It changed only what the task needs: no unrelated rewrites, no disabling or deleting features, checks or content to make a problem go away, and no attempt to read the grader, the game's later history or anything outside the project."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,173 @@
+{
+  "name": "dune-sentinel-corr-unguided-missile-flight",
+  "title": "Allow unlocked missile launches with visible propulsion",
+  "engine": "5.7",
+  "template": "blank-cpp",
+  "difficulty": "medium",
+  "seed": {
+    "game": "dune-sentinel",
+    "commit": "6d949aed5d403f018f308691de5c9a866a0558a6",
+    "reference": "460deebc6d7ed4b338e33e19f6a51fcb5c7d341b",
+    "kind": "correction"
+  },
+  "play_map": "/Game/Maps/DesertDefense",
+  "asset_packs": [],
+  "tags": [
+    "correction",
+    "combat",
+    "missiles",
+    "visual-feedback"
+  ],
+  "instruction": "A missile currently refuses to launch unless a target is fully locked, and missile flight lacks a clear exhaust flame and cloud trail. Allow a launch before a lock is complete. An unlocked missile must keep its initial direction until it collides or has traveled 8 km; selecting a target afterward must not redirect that shot. A missile launched with a complete valid lock should retain normal guidance, then continue along its last direction if that target is lost. Show a clear hot exhaust while each missile flies and a fading cloud trail marking the path it actually followed. Preserve finite ammunition, the normal launch cooldown, weapon damage and ordinary flight controls.\n\nEnter starts flight from the menu. W accelerates; S brakes; A/D roll; Down pitches up and Up pitches down; Q/E yaw. Tab selects a target and holding F looks toward it. LeftControl fires the cannon and SpaceBar fires a missile. Use short braking inputs to avoid a stall.\n\nVerification deliverable: leave Tests/unguided_missile_flight_route.json as a JSON list of events {\"t\": seconds after level start, \"key\": an Unreal key name, \"press\": true or false}. Use at most 400 events, all within 118 seconds, include every key release and observation pauses, and begin from a fresh level load. Use keyboard presses only; do not rely on cursor movement, menu clicks, controller input, resolution changes or restarting the application. Launch the first missile early in the sortie, before completing a target lock, then launch again after the normal cooldown. Use the ordinary chase view and observation pauses to show each flight trail and exhaust. A random enemy attack or a completed guided engagement is not required for the visual demonstration. Validate the route in the running game after the final change and adjust its timing to show the requested result. Keep the existing visual style; do not add debug labels or demonstration-only overlays.",
+  "limits": {
+    "max_turns": 120,
+    "max_minutes": 180,
+    "max_usd": 40,
+    "tool_timeout_seconds": 1800
+  },
+  "milestones": [
+    {
+      "name": "builds",
+      "checks": [
+        {
+          "kind": "build",
+          "name": "editor_builds",
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "boots",
+      "checks": [
+        {
+          "kind": "boot",
+          "name": "boots_clean",
+          "needs": [
+            "editor_builds"
+          ],
+          "seconds": 60,
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "fixed",
+      "checks": [
+        {
+          "kind": "code_judge",
+          "name": "change_review",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "Does unlocked firing, guidance selection, distance-limited flight and visible propulsion behave as requested while preserving combat rules? The reference includes a test viewport-readback repair and retained diagnostic evidence; those test-fixture, report and documentation changes are outside this task. Exact component or shader choices are not required.",
+          "rubric": [
+            {
+              "key": "guidance_at_launch",
+              "criterion": "Absent, incomplete or invalid locks do not block a valid launch. Such shots remain straight when another target is later selected; a valid completed launch lock permits normal guidance and target loss preserves the last direction.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "range_and_collision",
+              "criterion": "Missile travel terminates on collision or after 8 km of traveled path, including turns, without overshooting the range or depending solely on a fixed ten-second lifetime.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "propulsion_lifecycle",
+              "criterion": "Each flying missile has visible exhaust and a fading trail along its actual past path; effects age out and clean up without persistent buildup after missile or sortie termination.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "combat_preserved",
+              "criterion": "Accepted shots spend one missile, retain the normal cooldown and damage, cannot fire while parked, dead or empty, and preserve existing guided and enemy missile behavior.",
+              "weight": 2,
+              "required": true
+            }
+          ],
+          "weight": 3,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "looks_right",
+      "checks": [
+        {
+          "kind": "judge",
+          "name": "unlocked_missiles_visible",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "In the before/after route plays, do the early unlocked launch inputs now send missiles forward with a bright exhaust and a pale cloud trail, with accepted launches reflected in the bottom-center MISSILE counter? Judge flight effects from the route, not from reference idle/default-drive frames. No reference-route play, random enemy missile or successful kill is assumed; ordinary later replenishment is permitted.",
+          "before": true,
+          "reference": true,
+          "route": "Tests/unguided_missile_flight_route.json",
+          "rubric": [
+            {
+              "key": "early_launch",
+              "criterion": "The early missile input in the route produces a visible shot leaving the player aircraft, where the seed refuses the unlocked launch.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "exhaust_and_cloud",
+              "criterion": "The forward flight view shows a bright exhaust traveling with the missile and a separate pale trail behind it, rather than a stationary glow or an empty path.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "finite_ammunition",
+              "criterion": "The bottom-center WEAPONS / FINITE LOADOUT panel remains readable and its MISSILE count reflects accepted firing before any ordinary airfield replenishment.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "trail_fades",
+              "criterion": "As the missile advances, the trail marks its earlier path and older portions soften or fade instead of moving as one rigid cloud attached to the aircraft.",
+              "weight": 1,
+              "required": true
+            }
+          ],
+          "weight": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "worked",
+      "checks": [
+        {
+          "kind": "actions_judge",
+          "name": "worked_well",
+          "weight": 2,
+          "question": "Did the developer work as a careful game developer would on this task: finding what causes the problem or what the change touches, changing only what the task needs, and checking the result in the built, running game?",
+          "rubric": [
+            {
+              "key": "looked_first",
+              "criterion": "Before changing code or assets it looked at the parts of the game the task concerns (read the relevant code, data or logs, or played the game), rather than editing blindly."
+            },
+            {
+              "key": "kept_building",
+              "criterion": "It built the game after its changes and fixed the build errors it caused; its last build succeeded, and the grader's build of where it ended succeeded."
+            },
+            {
+              "key": "checked_in_game",
+              "weight": 2,
+              "required": true,
+              "criterion": "After its last change it ran the game and looked at the outcome the task asks for (screenshots, the log or the player's track), and acted on what it saw."
+            },
+            {
+              "key": "stayed_on_task",
+              "weight": 2,
+              "criterion": "It changed only what the task needs: no unrelated rewrites, no disabling or deleting features, checks or content to make a problem go away, and no attempt to read the grader, the game's later history or anything outside the project."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

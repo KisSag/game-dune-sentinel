@@ -1,0 +1,160 @@
+{
+  "name": "dune-sentinel-fix-menu-aircraft-obscured",
+  "title": "The menu hides the parked aircraft behind the selection cards",
+  "engine": "5.7",
+  "template": "blank-cpp",
+  "difficulty": "easy",
+  "seed": {
+    "game": "dune-sentinel",
+    "commit": "a74f5138daddf2dd1612997d3bff8f5c3662ad5a",
+    "reference": "e32a197aca0a6bc8dfe9097ff6e6df69ec770bdb",
+    "kind": "bug_fix"
+  },
+  "play_map": "/Game/Maps/DesertDefense",
+  "asset_packs": [],
+  "tags": [
+    "bug_fix",
+    "menu",
+    "camera"
+  ],
+  "instruction": "On a fresh opening of the main menu, the parked aircraft sits too low in the picture: the row of aircraft selection cards covers much of it. The aircraft should be clearly presented in the open area above those cards and to the right of the large title panel, so its nose, wings and tail can be seen together. Keep the existing menu labels and buttons readable, and keep the normal flight view when a sortie starts. Do not require the player to select another aircraft or change any settings to see the improvement.\n\nEnter starts flight from the menu. W accelerates; S brakes; A/D roll; Down pitches up and Up pitches down; Q/E yaw. Tab selects a target and holding F looks toward it. LeftControl fires the cannon and SpaceBar fires a missile. Use short braking inputs to avoid a stall.\n\nVerification deliverable: leave Tests/menu_aircraft_obscured_route.json as a JSON list of events {\"t\": seconds after level start, \"key\": an Unreal key name, \"press\": true or false}. Use at most 400 events, all within 118 seconds, include every key release and observation pauses, and begin from a fresh level load. Use keyboard presses only; do not rely on cursor movement, menu clicks, controller input, resolution changes or restarting the application. Leave the default aircraft selected and wait in the menu long enough to inspect the whole aircraft above the lower cards. Then press Enter, allow the transition to finish and show ordinary forward flight with a short W press followed by a short S press. Validate the route in the running game after the final change and adjust its timing to show the requested result. Keep the existing visual style; do not add debug labels or demonstration-only overlays.",
+  "limits": {
+    "max_turns": 120,
+    "max_minutes": 180,
+    "max_usd": 40,
+    "tool_timeout_seconds": 1800
+  },
+  "milestones": [
+    {
+      "name": "builds",
+      "checks": [
+        {
+          "kind": "build",
+          "name": "editor_builds",
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "boots",
+      "checks": [
+        {
+          "kind": "boot",
+          "name": "boots_clean",
+          "needs": [
+            "editor_builds"
+          ],
+          "seconds": 60,
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "fixed",
+      "checks": [
+        {
+          "kind": "code_judge",
+          "name": "change_review",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "Does the change correct only the parked-aircraft menu framing problem, preserving the flight view and menu layout? The reference also changes radio subtitle placement, terrain and pavement materials, distant ground, ground-height fallback, recording labels and tests; those changes are unrelated and are not required for this task.",
+          "rubric": [
+            {
+              "key": "menu_framing",
+              "criterion": "The parked-view composition places the aircraft clear of the lower selection-card region, addressing the menu framing error rather than deleting or hiding the cards. The reference changes the menu-only camera offset; an equivalent focused correction is acceptable.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "flight_preserved",
+              "criterion": "Normal flight framing and keyboard launch behavior remain intact; the correction does not reposition the gameplay world or change aircraft handling.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "scope",
+              "criterion": "The solution retains the existing aircraft and menu presentation and does not depend on the unrelated radio, terrain, material or recording changes in the reference span.",
+              "weight": 1,
+              "required": true
+            }
+          ],
+          "weight": 3,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "looks_right",
+      "checks": [
+        {
+          "kind": "judge",
+          "name": "menu_aircraft_clear",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "In AFTER, is the parked aircraft fully readable in the open center-right area above AIRFRAME SELECTION, unlike the aircraft obscured by the lower cards in BEFORE? Use idle menu views and the developer route for BEFORE/AFTER; REFERENCE supplies its ordinary menu views, not a route.",
+          "before": true,
+          "reference": true,
+          "route": "Tests/menu_aircraft_obscured_route.json",
+          "rubric": [
+            {
+              "key": "aircraft_uncovered",
+              "criterion": "In the menu, the aircraft nose, wings and tail occupy the open center-right showcase area above the bottom selection cards; the cards no longer hide the aircraft as they do in BEFORE.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "menu_kept",
+              "criterion": "The left DUNE SENTINEL title and START SORTIE panel, and the three AIRFRAME SELECTION cards at the bottom, remain in place and legible.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "flight_transition",
+              "criterion": "After Enter in the route, the view changes to ordinary flight with the player aircraft visible ahead and the combat readouts still present.",
+              "weight": 1,
+              "required": true
+            }
+          ],
+          "weight": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "worked",
+      "checks": [
+        {
+          "kind": "actions_judge",
+          "name": "worked_well",
+          "weight": 2,
+          "question": "Did the developer work as a careful game developer would on this task: finding what causes the problem or what the change touches, changing only what the task needs, and checking the result in the built, running game?",
+          "rubric": [
+            {
+              "key": "looked_first",
+              "criterion": "Before changing code or assets it looked at the parts of the game the task concerns (read the relevant code, data or logs, or played the game), rather than editing blindly."
+            },
+            {
+              "key": "kept_building",
+              "criterion": "It built the game after its changes and fixed the build errors it caused; its last build succeeded, and the grader's build of where it ended succeeded."
+            },
+            {
+              "key": "checked_in_game",
+              "weight": 2,
+              "required": true,
+              "criterion": "After its last change it ran the game and looked at the outcome the task asks for (screenshots, the log or the player's track), and acted on what it saw."
+            },
+            {
+              "key": "stayed_on_task",
+              "weight": 2,
+              "criterion": "It changed only what the task needs: no unrelated rewrites, no disabling or deleting features, checks or content to make a problem go away, and no attempt to read the grader, the game's later history or anything outside the project."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

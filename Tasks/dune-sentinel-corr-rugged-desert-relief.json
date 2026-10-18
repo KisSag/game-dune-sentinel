@@ -1,0 +1,174 @@
+{
+  "name": "dune-sentinel-corr-rugged-desert-relief",
+  "title": "Give the desert a stronger mountain and valley silhouette",
+  "engine": "5.7",
+  "template": "blank-cpp",
+  "difficulty": "hard",
+  "seed": {
+    "game": "dune-sentinel",
+    "commit": "6431c4f58ed4f28150a6f37ad9942df87a06da9f",
+    "reference": "c541a1fbc1922b5578f51953d08fad96b94cb4d8",
+    "kind": "correction"
+  },
+  "play_map": "/Game/Maps/DesertDefense",
+  "asset_packs": [],
+  "tags": [
+    "environment",
+    "terrain",
+    "mountains",
+    "historical-correction",
+    "hard-tier"
+  ],
+  "instruction": "Outside the airport, the desert still reads as broad, modest rises during flight. Make the surrounding country feel substantially more mountainous, with tall connected ridges, steep faces, deep valleys and smaller uneven slopes. The changes should be visible both in the distant skyline and while flying beside a mountain. Rock and sand detail must remain readable on the steep faces, and the land should continue naturally toward the horizon. Keep the airport and its approach clear and level, and keep the town and three oases joined to the new surroundings. Aircraft must remain able to fly through the playable area and the airfield-defense mission must still work. Retain the current buildings and plants; this request concerns the shape and surface appearance of the land.\n\nEnter starts flight from the menu. W accelerates; S brakes; A/D roll; Down pitches up and Up pitches down; Q/E yaw. Tab selects a target and holding F looks toward it. LeftControl fires the cannon and SpaceBar fires a missile. Use short braking inputs to avoid a stall.\n\nVerification deliverable: leave Tests/rugged_desert_relief.json as a JSON list of events {\"t\": seconds after level start, \"key\": an Unreal key name, \"press\": true or false}. Use at most 400 events, all within 118 seconds, include every key release and observation pauses, and begin from a fresh level load. Use keyboard presses only; do not rely on cursor movement, menu clicks, controller input, resolution changes or restarting the application. Begin with the runway and surrounding skyline visible, then climb and turn to give a sustained oblique view of a mountain face, a valley and the horizon. Stay inside the operation area and avoid entering the ground. Include more than a single close crop of one peak. Validate the route in the running game after the final change and adjust its timing to show the requested result. Keep the existing visual style; do not add debug labels or demonstration-only overlays.",
+  "limits": {
+    "max_turns": 120,
+    "max_minutes": 180,
+    "max_usd": 40,
+    "tool_timeout_seconds": 1800
+  },
+  "milestones": [
+    {
+      "name": "builds",
+      "checks": [
+        {
+          "kind": "build",
+          "name": "editor_builds",
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "boots",
+      "checks": [
+        {
+          "kind": "boot",
+          "name": "boots_clean",
+          "needs": [
+            "editor_builds"
+          ],
+          "seconds": 60,
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "fixed",
+      "checks": [
+        {
+          "kind": "code_judge",
+          "name": "change_review",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "Does the change deliver the reference mountain-relief correction using the starting project, preserve the airport and attached scenery, and keep normal flight and bombing viable over the altered land? Exclude subsequent downloaded building/plant replacements, their counts and the downloaded-art requirements added to the historical environment fixture; those are not part of this task.",
+          "rubric": [
+            {
+              "key": "terrain_relief",
+              "criterion": "The saved playable terrain has substantially greater connected mountain relief with valleys and nonuniform intermediate slopes; it is not only a distant backdrop.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "terrain_contacts",
+              "criterion": "Runway protection, terrain collision, oasis basin levels, banks and roads remain coherent after the height changes.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "flight_continuity",
+              "criterion": "Enemy approach and bombing behavior remain viable over the new terrain without removing terrain collision, teleporting through mountains or bypassing the normal mission rules.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "scope_assets",
+              "criterion": "Existing project content is sufficient; unrelated downloaded architecture/plant replacement and their fixture assertions are not treated as required work.",
+              "weight": 1,
+              "required": true
+            }
+          ],
+          "weight": 3,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "looks_right",
+      "checks": [
+        {
+          "kind": "judge",
+          "name": "rugged_relief_visible",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "Do the route views show a substantial increase in mountain relief and readable steep land while retaining the flat airfield? Compare the starting skyline with available before/after departure views. Reference idle/drive images are context, not proof of a matching mountain-pass camera. Judge terrain, not unrelated downloaded architecture or vegetation.",
+          "before": true,
+          "reference": true,
+          "route": "Tests/rugged_desert_relief.json",
+          "rubric": [
+            {
+              "key": "strong_relief",
+              "criterion": "The departure or elevated flight view shows tall connected ridges and visibly deep valleys, with a substantially stronger silhouette than the starting modest hills.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "readable_faces",
+              "criterion": "The oblique mountain pass reveals varying slopes and readable rock/sand detail on steep faces, without conspicuously stretched vertical smears or flat untextured faces.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "continuous_distance",
+              "criterion": "The terrain continues from the nearer mountains into the distant landscape without an obvious exposed square edge, gap or sharply incompatible horizon strip in the observed views.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "clear_airfield",
+              "criterion": "The opening runway view still shows a level, unobstructed runway and clear adjacent departure ground instead of the new hills covering the airport.",
+              "weight": 2,
+              "required": true
+            }
+          ],
+          "weight": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "worked",
+      "checks": [
+        {
+          "kind": "actions_judge",
+          "name": "worked_well",
+          "weight": 2,
+          "question": "Did the developer work as a careful game developer would on this task: finding what causes the problem or what the change touches, changing only what the task needs, and checking the result in the built, running game?",
+          "rubric": [
+            {
+              "key": "looked_first",
+              "criterion": "Before changing code or assets it looked at the parts of the game the task concerns (read the relevant code, data or logs, or played the game), rather than editing blindly."
+            },
+            {
+              "key": "kept_building",
+              "criterion": "It built the game after its changes and fixed the build errors it caused; its last build succeeded, and the grader's build of where it ended succeeded."
+            },
+            {
+              "key": "checked_in_game",
+              "weight": 2,
+              "required": true,
+              "criterion": "After its last change it ran the game and looked at the outcome the task asks for (screenshots, the log or the player's track), and acted on what it saw."
+            },
+            {
+              "key": "stayed_on_task",
+              "weight": 2,
+              "criterion": "It changed only what the task needs: no unrelated rewrites, no disabling or deleting features, checks or content to make a problem go away, and no attempt to read the grader, the game's later history or anything outside the project."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

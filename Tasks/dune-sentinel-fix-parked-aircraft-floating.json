@@ -1,0 +1,160 @@
+{
+  "name": "dune-sentinel-fix-parked-aircraft-floating",
+  "title": "The parked aircraft appears to float above the apron",
+  "engine": "5.7",
+  "template": "blank-cpp",
+  "difficulty": "easy",
+  "seed": {
+    "game": "dune-sentinel",
+    "commit": "e32a197aca0a6bc8dfe9097ff6e6df69ec770bdb",
+    "reference": "fd085ea420f6215359555ab29cabce9c557973d6",
+    "kind": "bug_fix"
+  },
+  "play_map": "/Game/Maps/DesertDefense",
+  "asset_packs": [],
+  "tags": [
+    "bug_fix",
+    "aircraft",
+    "menu"
+  ],
+  "instruction": "The default aircraft shown in the main menu looks suspended above the apron rather than standing on its wheels. Its wheels also look too large for the airframe. Make the parked aircraft rest naturally on the pavement, with appropriately sized wheels that neither hover above it nor disappear through it. Keep the aircraft shape and the surrounding airfield intact. Starting a sortie must still lead to normal flight.\n\nEnter starts flight from the menu. W accelerates; S brakes; A/D roll; Down pitches up and Up pitches down; Q/E yaw. Tab selects a target and holding F looks toward it. LeftControl fires the cannon and SpaceBar fires a missile. Use short braking inputs to avoid a stall.\n\nVerification deliverable: leave Tests/parked_aircraft_floating_route.json as a JSON list of events {\"t\": seconds after level start, \"key\": an Unreal key name, \"press\": true or false}. Use at most 400 events, all within 118 seconds, include every key release and observation pauses, and begin from a fresh level load. Use keyboard presses only; do not rely on cursor movement, menu clicks, controller input, resolution changes or restarting the application. Keep the initial aircraft selected. Pause in the menu to show the wheels and pavement beneath the aircraft in the center-right of the view. Press Enter and leave several seconds of normal flight visible; do not use the aircraft-selection buttons. Validate the route in the running game after the final change and adjust its timing to show the requested result. Keep the existing visual style; do not add debug labels or demonstration-only overlays.",
+  "limits": {
+    "max_turns": 120,
+    "max_minutes": 180,
+    "max_usd": 40,
+    "tool_timeout_seconds": 1800
+  },
+  "milestones": [
+    {
+      "name": "builds",
+      "checks": [
+        {
+          "kind": "build",
+          "name": "editor_builds",
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "boots",
+      "checks": [
+        {
+          "kind": "boot",
+          "name": "boots_clean",
+          "needs": [
+            "editor_builds"
+          ],
+          "seconds": 60,
+          "weight": 1,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "fixed",
+      "checks": [
+        {
+          "kind": "code_judge",
+          "name": "change_review",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "Does the change correct the parked aircraft stance and wheel proportions without altering its flight handling or the airfield? The reference also changes a daylight lighting-cache configuration value; that independent warning correction is outside this task and is not required.",
+          "rubric": [
+            {
+              "key": "grounded_stance",
+              "criterion": "The parked placement and wheel proportions work together so the tire bottoms meet the apron. The reference reduces the separate landing-gear scale and lowers the parked actor using measured wheel bounds; equivalent ground-contact corrections are acceptable.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "mode_separation",
+              "criterion": "The correction preserves the normal parked-to-flight transition, flight controls, aircraft shape and airfield geometry.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "scope",
+              "criterion": "The solution fixes the stance rather than hiding wheels or moving the pavement, and does not require the independent daylight-cache configuration change.",
+              "weight": 1,
+              "required": true
+            }
+          ],
+          "weight": 3,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "looks_right",
+      "checks": [
+        {
+          "kind": "judge",
+          "name": "parked_wheels_grounded",
+          "needs": [
+            "boots_clean"
+          ],
+          "question": "Do the default parked aircraft wheels meet the apron naturally in AFTER, without the floating stance and oversized wheels visible in BEFORE? Compare ordinary menu views with REFERENCE and the BEFORE/AFTER route; no reference-route evidence exists.",
+          "before": true,
+          "reference": true,
+          "route": "Tests/parked_aircraft_floating_route.json",
+          "rubric": [
+            {
+              "key": "wheel_contact",
+              "criterion": "At the wheels beneath the parked aircraft in the center-right menu view, the tire bottoms appear to meet the pavement rather than leaving the visible gap seen in BEFORE; the tires are not buried in the apron.",
+              "weight": 3,
+              "required": true
+            },
+            {
+              "key": "proportions",
+              "criterion": "The wheels beneath the aircraft have plausible proportions relative to its fuselage and wings, closer to the grounded REFERENCE appearance, while the airframe silhouette remains intact.",
+              "weight": 2,
+              "required": true
+            },
+            {
+              "key": "launch_kept",
+              "criterion": "The menu labels remain legible and Enter in the route starts flight with the player aircraft visible, without leaving it stuck on the pavement.",
+              "weight": 1,
+              "required": true
+            }
+          ],
+          "weight": 5,
+          "required": true
+        }
+      ]
+    },
+    {
+      "name": "worked",
+      "checks": [
+        {
+          "kind": "actions_judge",
+          "name": "worked_well",
+          "weight": 2,
+          "question": "Did the developer work as a careful game developer would on this task: finding what causes the problem or what the change touches, changing only what the task needs, and checking the result in the built, running game?",
+          "rubric": [
+            {
+              "key": "looked_first",
+              "criterion": "Before changing code or assets it looked at the parts of the game the task concerns (read the relevant code, data or logs, or played the game), rather than editing blindly."
+            },
+            {
+              "key": "kept_building",
+              "criterion": "It built the game after its changes and fixed the build errors it caused; its last build succeeded, and the grader's build of where it ended succeeded."
+            },
+            {
+              "key": "checked_in_game",
+              "weight": 2,
+              "required": true,
+              "criterion": "After its last change it ran the game and looked at the outcome the task asks for (screenshots, the log or the player's track), and acted on what it saw."
+            },
+            {
+              "key": "stayed_on_task",
+              "weight": 2,
+              "criterion": "It changed only what the task needs: no unrelated rewrites, no disabling or deleting features, checks or content to make a problem go away, and no attempt to read the grader, the game's later history or anything outside the project."
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

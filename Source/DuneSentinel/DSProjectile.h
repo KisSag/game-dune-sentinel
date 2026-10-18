@@ -9,6 +9,7 @@ class UStaticMeshComponent;
 class UPointLightComponent;
 class UMaterialInstanceDynamic;
 class UMaterialBillboardComponent;
+class UDSMissileFXComponent;
 
 UCLASS()
 class DUNESENTINEL_API ADSProjectile : public AActor
@@ -19,7 +20,12 @@ public:
     virtual void Tick(float DeltaSeconds) override;
     void Initialize(AActor* OwnerActor, AActor* TargetActor, bool bPlayerOwned, bool bMissile, float Damage, float SpeedMps);
     bool IsPlayerOwned() const { return bFriendly; }
-    bool IsGuided() const { return bGuided; }
+    // Legacy type query retained for existing cannon checks; guidance availability is separate.
+    bool IsGuided() const { return bMissileProjectile; }
+    bool IsMissile() const { return bMissileProjectile; }
+    bool HasGuidanceTarget() const;
+    float GetMaxTravelDistanceCm() const { return MaxMissileTravelDistanceCm; }
+    UDSMissileFXComponent* GetMissileFX() const { return MissileFX; }
     FVector GetTravelDirection() const { return TravelDirection; }
     float GetSpeedMps() const { return VelocityMps; }
     float GetDistanceTravelledCm() const { return DistanceTravelledCm; }
@@ -31,6 +37,8 @@ private:
     UPROPERTY() TObjectPtr<USphereComponent> Collision;
     UPROPERTY() TObjectPtr<UStaticMeshComponent> Mesh;
     UPROPERTY() TObjectPtr<UPointLightComponent> Glow;
+    UPROPERTY() TObjectPtr<UDSMissileFXComponent> MissileFX;
+    UPROPERTY(EditDefaultsOnly, Category="Missile", meta=(ClampMin="1.0")) float MaxMissileTravelDistanceCm = 800000.f;
     UPROPERTY() TArray<TObjectPtr<UStaticMeshComponent>> CannonTrailPlanes;
     UPROPERTY() TObjectPtr<UMaterialInstanceDynamic> CannonTrailMaterial;
     UPROPERTY() TObjectPtr<UMaterialBillboardComponent> CannonHead;
@@ -39,7 +47,7 @@ private:
     UPROPERTY() TWeakObjectPtr<AActor> FiredBy;
     FVector TravelDirection = FVector::ForwardVector;
     bool bFriendly = false;
-    bool bGuided = false;
+    bool bMissileProjectile = false;
     float HitDamage = 20.f;
     float VelocityMps = 800.f;
     float Age = 0.f;

@@ -59,6 +59,7 @@ public:
     bool IsFlying() const { return bFlying; }
     UCameraComponent* GetFlightCamera() const { return Camera; }
     void SetMissileThreat(float Seconds = 1.5f);
+    void FireMissile();
 
 private:
     UPROPERTY(VisibleAnywhere) TObjectPtr<USphereComponent> Collision;
@@ -100,7 +101,6 @@ private:
     void UpdateTarget(float DeltaSeconds);
     void UpdateCamera(float DeltaSeconds);
     void FireGun();
-    void FireMissile();
     void SelectNextTarget();
     bool bFlying = false;
     bool bGunHeld = false;

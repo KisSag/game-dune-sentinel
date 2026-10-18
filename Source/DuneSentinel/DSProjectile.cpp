@@ -4,6 +4,7 @@
 #include "DSFlightPawn.h"
 #include "DSGameMode.h"
 #include "DSImpactFX.h"
+#include "DSMissileFXComponent.h"
 #include "Camera/PlayerCameraManager.h"
 #include "Components/PointLightComponent.h"
 #include "Components/MaterialBillboardComponent.h"
@@ -55,21 +56,26 @@ ADSProjectile::ADSProjectile()
     Glow->SetIntensity(0.f);
     Glow->SetAttenuationRadius(850.f);
     Glow->SetCastShadows(false);
+    MissileFX = CreateDefaultSubobject<UDSMissileFXComponent>(TEXT("MissileFlightEffects"));
+    MissileFX->SetupAttachment(Collision);
 }
 
 void ADSProjectile::Initialize(AActor* OwnerActor, AActor* TargetActor, bool bPlayerOwned, bool bMissile, float Damage, float SpeedMps)
 {
     FiredBy = OwnerActor;
     SetOwner(OwnerActor);
-    HomingTarget = TargetActor;
+    HomingTarget = bMissile ? TargetActor : nullptr;
     bFriendly = bPlayerOwned;
-    bGuided = bMissile;
+    bMissileProjectile = bMissile;
     HitDamage = FMath::Max(0.f, Damage);
     VelocityMps = FMath::Max(1.f, SpeedMps);
     TravelDirection = GetActorForwardVector();
-    LifeSeconds = bGuided ? 10.f : 1.6f;
-    Mesh->SetVisibility(bGuided);
-    if (!bGuided)
+    Age = DistanceTravelledCm = 0.f;
+    bSpent = false;
+    MaxMissileTravelDistanceCm = FMath::Max(1.f, MaxMissileTravelDistanceCm);
+    LifeSeconds = bMissileProjectile ? MaxMissileTravelDistanceCm / (VelocityMps * 100.f) + 1.f : 1.6f;
+    Mesh->SetVisibility(bMissileProjectile);
+    if (!bMissileProjectile)
     {
         if (UMaterialInterface* Material = LoadObject<UMaterialInterface>(nullptr, TEXT("/Game/Art/Effects/M_CannonTrail.M_CannonTrail")))
         {
@@ -90,7 +96,7 @@ void ADSProjectile::Initialize(AActor* OwnerActor, AActor* TargetActor, bool bPl
         }
         UpdateCannonTrail();
     }
-    if (bGuided)
+    if (bMissileProjectile)
     {
         if (UStaticMesh* MissileMesh = LoadObject<UStaticMesh>(nullptr, TEXT("/Game/Art/Effects/SM_missile.SM_missile")))
         {
@@ -101,8 +107,18 @@ void ADSProjectile::Initialize(AActor* OwnerActor, AActor* TargetActor, bool bPl
         Glow->SetIntensity(4500.f);
         Glow->SetLightColor(FLinearColor(1.f, .32f, .055f));
         Glow->SetRelativeLocation(FVector(-180.f, 0.f, 0.f));
+        MissileFX->InitializeEffects(!bFriendly);
     }
     SetLifeSpan(LifeSeconds + .1f);
+}
+
+bool ADSProjectile::HasGuidanceTarget() const
+{
+    AActor* TargetActor = HomingTarget.Get();
+    if (!bMissileProjectile || !IsValid(TargetActor) || TargetActor->IsActorBeingDestroyed()) return false;
+    if (const ADSEnemyAircraft* Enemy = Cast<ADSEnemyAircraft>(TargetActor)) return !Enemy->bDying && Enemy->Health > 0.f;
+    if (const ADSFlightPawn* Player = Cast<ADSFlightPawn>(TargetActor)) return Player->Health > 0.f;
+    return true;
 }
 
 void ADSProjectile::Tick(float DeltaSeconds)
@@ -112,32 +128,35 @@ void ADSProjectile::Tick(float DeltaSeconds)
     ADSGameMode* Mode = GetWorld()->GetAuthGameMode<ADSGameMode>();
     if (!Mode || Mode->Phase != EDSPhase::Flying) { Destroy(); return; }
     Age += DeltaSeconds;
-    if (Age > LifeSeconds) { Destroy(); return; }
-    AActor* TargetActor = HomingTarget.Get();
-    if (bGuided && IsValid(TargetActor))
+    if (!bMissileProjectile && Age > LifeSeconds) { Destroy(); return; }
+    AActor* TargetActor = HasGuidanceTarget() ? HomingTarget.Get() : nullptr;
+    if (!TargetActor) HomingTarget.Reset();
+    if (TargetActor)
     {
-        if (ADSEnemyAircraft* Enemy = Cast<ADSEnemyAircraft>(TargetActor))
-            if (Enemy->bDying || Enemy->Health <= 0.f) { HomingTarget.Reset(); TargetActor = nullptr; }
-        if (TargetActor)
+        const float Distance = FVector::Distance(GetActorLocation(), TargetActor->GetActorLocation());
+        const float LeadSeconds = FMath::Clamp(Distance / (VelocityMps * 100.f), 0.f, 1.1f);
+        const FVector Aim = TargetActor->GetActorLocation() + TargetActor->GetVelocity() * LeadSeconds * .7f;
+        const FVector Desired = (Aim - GetActorLocation()).GetSafeNormal();
+        const float Angle = FMath::Acos(FMath::Clamp(FVector::DotProduct(TravelDirection, Desired), -1.f, 1.f));
+        const float MaxAngle = FMath::DegreesToRadians(62.f) * FMath::Min(DeltaSeconds, .1f);
+        if (Angle > KINDA_SMALL_NUMBER)
         {
-            const float Distance = FVector::Distance(GetActorLocation(), TargetActor->GetActorLocation());
-            const float LeadSeconds = FMath::Clamp(Distance / (VelocityMps * 100.f), 0.f, 1.1f);
-            const FVector Aim = TargetActor->GetActorLocation() + TargetActor->GetVelocity() * LeadSeconds * .7f;
-            const FVector Desired = (Aim - GetActorLocation()).GetSafeNormal();
-            const float Angle = FMath::Acos(FMath::Clamp(FVector::DotProduct(TravelDirection, Desired), -1.f, 1.f));
-            const float MaxAngle = FMath::DegreesToRadians(62.f) * FMath::Min(DeltaSeconds, .1f);
-            if (Angle > KINDA_SMALL_NUMBER)
-            {
-                const FQuat Turn = FQuat::FindBetweenNormals(TravelDirection, Desired);
-                TravelDirection = FQuat::Slerp(FQuat::Identity, Turn, FMath::Min(1.f, MaxAngle / Angle)).RotateVector(TravelDirection).GetSafeNormal();
-            }
-            if (!bFriendly)
-                if (ADSFlightPawn* Player = Cast<ADSFlightPawn>(TargetActor)) Player->SetMissileThreat(.35f);
+            const FQuat Turn = FQuat::FindBetweenNormals(TravelDirection, Desired);
+            TravelDirection = FQuat::Slerp(FQuat::Identity, Turn, FMath::Min(1.f, MaxAngle / Angle)).RotateVector(TravelDirection).GetSafeNormal();
         }
+        if (!bFriendly)
+            if (ADSFlightPawn* Player = Cast<ADSFlightPawn>(TargetActor)) Player->SetMissileThreat(.35f);
     }
     SetActorRotation(TravelDirection.Rotation());
     const FVector Start = GetActorLocation();
-    const FVector End = Start + TravelDirection * VelocityMps * 100.f * DeltaSeconds;
+    float StepCm = VelocityMps * 100.f * FMath::Max(0.f, DeltaSeconds);
+    if (bMissileProjectile)
+    {
+        const float Remaining = FMath::Max(0.f, MaxMissileTravelDistanceCm - DistanceTravelledCm);
+        if (Remaining <= KINDA_SMALL_NUMBER) { Destroy(); return; }
+        StepCm = FMath::Min(StepCm, Remaining);
+    }
+    const FVector End = Start + TravelDirection * StepCm;
     FCollisionQueryParams Params(SCENE_QUERY_STAT(ProjectileFlight), false, this);
     Params.AddIgnoredActor(FiredBy.Get());
     // Friendly fire is disabled; collision still checks all terrain and buildings.
@@ -151,31 +170,40 @@ void ADSProjectile::Tick(float DeltaSeconds)
     }
     FHitResult Hit;
     const bool bHit = GetWorld()->SweepSingleByChannel(Hit, Start, End, FQuat::Identity, ECC_Visibility,
-        FCollisionShape::MakeSphere(bGuided ? 110.f : 75.f), Params);
+        FCollisionShape::MakeSphere(bMissileProjectile ? 110.f : 75.f), Params);
     if (bHit)
     {
         SetActorLocation(Hit.Location);
+        DistanceTravelledCm += FVector::Distance(Start, Hit.Location);
         Impact(Hit.GetActor());
         return;
     }
     // A proximity fuse accounts for targets crossing the swept segment within a frame.
-    if (bGuided && TargetActor && FVector::DistSquared(TargetActor->GetActorLocation(), FMath::ClosestPointOnSegment(TargetActor->GetActorLocation(), Start, End)) < FMath::Square(650.f))
+    if (bMissileProjectile && TargetActor && FVector::DistSquared(TargetActor->GetActorLocation(), FMath::ClosestPointOnSegment(TargetActor->GetActorLocation(), Start, End)) < FMath::Square(650.f))
     {
+        const FVector FuseLocation = FMath::ClosestPointOnSegment(TargetActor->GetActorLocation(), Start, End);
+        SetActorLocation(FuseLocation);
+        DistanceTravelledCm += FVector::Distance(Start, FuseLocation);
         Impact(TargetActor);
         return;
     }
     SetActorLocation(End);
-    if (!bGuided)
+    DistanceTravelledCm += StepCm;
+    if (bMissileProjectile)
     {
-        DistanceTravelledCm += FVector::Distance(Start, End);
+        MissileFX->UpdateFlight(Start, End, TravelDirection, FMath::Max(0.f, DeltaSeconds));
+    }
+    else
+    {
         UpdateCannonTrail();
     }
     if (End.Z <= Mode->GroundHeightAt(End) + 20.f) Impact(nullptr);
+    else if (bMissileProjectile && DistanceTravelledCm >= MaxMissileTravelDistanceCm - KINDA_SMALL_NUMBER) Destroy();
 }
 
 void ADSProjectile::UpdateCannonTrail()
 {
-    if (bGuided) return;
+    if (bMissileProjectile) return;
     // The tail ends at the real projectile and cannot extend behind its firing position.
     const float Length = FMath::Min(DistanceTravelledCm, FMath::Clamp(VelocityMps * 100.f * .018f, 1800.f, 4200.f));
     float Width = 14.f;
@@ -249,7 +277,7 @@ void ADSProjectile::Impact(AActor* HitActor)
     {
         if (ADSFlightPawn* Player = Cast<ADSFlightPawn>(HitActor)) Player->ApplyCombatDamage(HitDamage);
     }
-    if (bGuided)
+    if (bMissileProjectile)
     {
         const FTransform Transform(GetActorRotation(), GetActorLocation());
         if (ADSImpactFX* Effect = GetWorld()->SpawnActorDeferred<ADSImpactFX>(ADSImpactFX::StaticClass(), Transform))

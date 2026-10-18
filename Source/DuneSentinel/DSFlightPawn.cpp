@@ -424,8 +424,7 @@ void ADSFlightPawn::FireGun()
 
 void ADSFlightPawn::FireMissile()
 {
-    if (!bFlying || MissileAmmo <= 0 || MissileCooldown > 0.f) return;
-    if (!Target.IsValid() || Target->bDying || LockProgress < .99f) return;
+    if (!bFlying || Health <= 0.f || MissileAmmo <= 0 || MissileCooldown > 0.f) return;
     ADSGameMode* Mode = GetWorld()->GetAuthGameMode<ADSGameMode>();
     if (!Mode || Mode->Phase != EDSPhase::Flying) return;
     const FVector Muzzle = GetActorLocation() + GetActorForwardVector() * 700.f
@@ -435,12 +434,13 @@ void ADSFlightPawn::FireMissile()
     Params.SpawnCollisionHandlingOverride = ESpawnActorCollisionHandlingMethod::AlwaysSpawn;
     ADSProjectile* Shot = GetWorld()->SpawnActor<ADSProjectile>(Muzzle, GetActorRotation(), Params);
     if (!Shot) return;
-    AActor* LockedTarget = LockProgress >= .99f && Target.IsValid() ? Target.Get() : nullptr;
+    // Snapshot guidance at launch. A selected or partially acquired target is not a lock.
+    AActor* LockedTarget = LockProgress >= 1.f && Target.IsValid() && !Target->bDying && Target->Health > 0.f ? Target.Get() : nullptr;
     Shot->Initialize(this, LockedTarget, true, true, 70.f, 760.f + Speed * .3f);
     --MissileAmmo;
     MissileCooldown = 1.2f;
     if (UAutoPlaySubsystem* AP = UAutoPlaySubsystem::Get(this); AP && AP->IsRunning())
-        AP->Telemetry(TEXT("weapon_fired"), FString::Printf(TEXT("\"weapon\":\"missile\",\"ammo\":%d,\"locked\":true"), MissileAmmo));
+        AP->Telemetry(TEXT("weapon_fired"), FString::Printf(TEXT("\"weapon\":\"missile\",\"ammo\":%d,\"locked\":%s"), MissileAmmo, LockedTarget ? TEXT("true") : TEXT("false")));
     Mode->PlayCue(TEXT("missile"), .7f);
 }
 

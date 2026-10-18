@@ -1,0 +1,332 @@
+{
+  "schema": "authored-desert-composition/v1",
+  "status": "passed",
+  "sources": [
+    {
+      "name": "Mesa01",
+      "source_map": "/Game/LandscapePackTwo/Maps/Mesa_01",
+      "metadata": "RawAssets/TerrainSources/Mesa01/source.json",
+      "metadata_sha256": "9385b13c182bbf42c95ff9a62decb95e4955b27110a6e448beebd98508392570",
+      "height": "RawAssets/TerrainSources/Mesa01/height.r16",
+      "height_sha256": "295f2c9e03e593d85600a23fcd4759f590cfeefde2cfc7e3a72be1b39cb9a64e",
+      "width": 8161,
+      "height_samples": 8161,
+      "source_scale_cm": [
+        100,
+        100,
+        250
+      ],
+      "source_location_cm": [
+        -408000,
+        -408000,
+        100
+      ],
+      "source_height_sample_percentiles_m": {
+        "0": -191.53906,
+        "1": -80.69922,
+        "5": -34.09766,
+        "10": -13.62891,
+        "25": 22.81641,
+        "50": 54.49609,
+        "75": 94.4375,
+        "90": 149.20312,
+        "95": 160.14062,
+        "99": 181.72266,
+        "100": 221.95703
+      },
+      "statistics_stride": 8,
+      "used_weight_files": [
+        {
+          "name": "Slope",
+          "file": "RawAssets/TerrainSources/Mesa01/weight_01.r8",
+          "sha256": "2244a59442f1b6c738885d7fc7b871f1d5f8d54b527903ac518ada887c9ed479"
+        },
+        {
+          "name": "Gravel_1",
+          "file": "RawAssets/TerrainSources/Mesa01/weight_03.r8",
+          "sha256": "5bd323334063c52c7a9fb0d6bb5906abfb9d1559f5a897642c4eb94c919a5718"
+        },
+        {
+          "name": "Erosion",
+          "file": "RawAssets/TerrainSources/Mesa01/weight_04.r8",
+          "sha256": "8ce78b3c870f501d17e3550741b73767516828ee3bb7f78e1cd17e2853af3140"
+        }
+      ]
+    },
+    {
+      "name": "Desert02",
+      "source_map": "/Game/LandscapePackTwo/Maps/Desert_02",
+      "metadata": "RawAssets/TerrainSources/Desert02/source.json",
+      "metadata_sha256": "fb9cfc99a7cfb09742f72183ec5bd75cdc14c760c99097fecf5644c46aef5f60",
+      "height": "RawAssets/TerrainSources/Desert02/height.r16",
+      "height_sha256": "5dea45c8b0d80e3011d86752eaea78363b6c83f8d4f94b99aed3b7d6e22e6f2b",
+      "width": 8161,
+      "height_samples": 8161,
+      "source_scale_cm": [
+        100,
+        100,
+        200
+      ],
+      "source_location_cm": [
+        -408000,
+        -408000,
+        100
+      ],
+      "source_height_sample_percentiles_m": {
+        "0": -193.5625,
+        "1": -192.45312,
+        "5": -190.17188,
+        "10": -187.78125,
+        "25": -182.5625,
+        "50": -174.85938,
+        "75": -165.54688,
+        "90": -156.32812,
+        "95": -150.6875,
+        "99": -137.10938,
+        "100": -115.04688
+      },
+      "statistics_stride": 8,
+      "used_weight_files": []
+    }
+  ],
+  "recipe": {
+    "mesa_transforms": [
+      {
+        "name": "continuous_central_mesa",
+        "scale": 0.32,
+        "angle_deg": 12,
+        "source_center": [
+          80,
+          -120
+        ]
+      },
+      {
+        "name": "western_eroded_tableland",
+        "scale": 0.27,
+        "angle_deg": -37,
+        "source_center": [
+          -100,
+          80
+        ]
+      },
+      {
+        "name": "northeastern_canyon_region",
+        "scale": 0.27,
+        "angle_deg": 61,
+        "source_center": [
+          220,
+          -100
+        ]
+      }
+    ],
+    "mesa_elevation_remap": "110 + 6.2 * 18 * log(1 + exp((source_m + 100) / 18))",
+    "dune_transform": {
+      "scale": 0.338,
+      "angle_deg": -7,
+      "source_center": [
+        40,
+        -80
+      ]
+    },
+    "dune_elevation_remap": "46 + 4.2 * max(0, source_m + 194)",
+    "drainage_paths_m": [
+      [
+        [
+          0,
+          0
+        ],
+        [
+          -1200,
+          -600
+        ],
+        [
+          -1900,
+          -1600
+        ],
+        [
+          -2700,
+          -2200
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          1500,
+          500
+        ],
+        [
+          2900,
+          1000
+        ],
+        [
+          4200,
+          1800
+        ]
+      ],
+      [
+        [
+          0,
+          0
+        ],
+        [
+          350,
+          1900
+        ],
+        [
+          200,
+          3600
+        ],
+        [
+          1000,
+          5300
+        ]
+      ]
+    ],
+    "source_repeat_mode": "none",
+    "airport_flat_radius_m": 1800,
+    "airport_interpolation_padding_m": 14.880952380952381,
+    "oasis_full_bank_radius_factor": 1.85,
+    "town": {
+      "center_m": [
+        0,
+        2600
+      ],
+      "half_size_m": [
+        800,
+        500
+      ],
+      "height_m": 48
+    },
+    "oases": [
+      {
+        "id": "West",
+        "center_m": [
+          -2700,
+          -2200
+        ],
+        "lake_radii_m": [
+          300,
+          180
+        ],
+        "water_m": 60
+      },
+      {
+        "id": "East",
+        "center_m": [
+          4200,
+          1800
+        ],
+        "lake_radii_m": [
+          350,
+          240
+        ],
+        "water_m": 92
+      },
+      {
+        "id": "North",
+        "center_m": [
+          1000,
+          5300
+        ],
+        "lake_radii_m": [
+          220,
+          150
+        ],
+        "water_m": 118
+      }
+    ]
+  },
+  "diagnostic": "Saved/Validation/AuthoredDesert/heightfield_v1.png",
+  "acceptance": {
+    "height_percentiles_m": {
+      "0": 21.8,
+      "1": 21.8,
+      "5": 90.15,
+      "10": 163.95,
+      "25": 494.10001,
+      "50": 938.29999,
+      "75": 1223.65002,
+      "90": 1536.84998,
+      "95": 1669.09998,
+      "99": 1831.40002,
+      "100": 2106.0
+    },
+    "slope_percentiles_degrees": {
+      "0": 0.0,
+      "1": 0.0,
+      "5": 2.64863,
+      "10": 5.62937,
+      "25": 12.06964,
+      "50": 21.84103,
+      "75": 34.30681,
+      "90": 47.41197,
+      "95": 54.77033,
+      "99": 66.94742,
+      "100": 84.50356
+    },
+    "actual_relief_m": 2084.199951171875,
+    "area_fraction_above_300m": 0.8269151970275465,
+    "area_fraction_above_700m": 0.6588236479758444,
+    "area_fraction_above_1200m": 0.26758939691845884,
+    "area_fraction_slope_above_8deg": 0.8502567049685998,
+    "airport_vertex_count": 103421,
+    "airport_vertex_error_max_m": 0.0,
+    "airport_triangle_samples": 1805,
+    "airport_triangle_error_max_m": 4.618527782440651e-14,
+    "town_vertex_count": 16261,
+    "town_error_max_m": 0.0,
+    "lake_checks": [
+      {
+        "id": "West",
+        "edge_check_count": 716,
+        "minimum_edge_burial_m": 1.401590238744724,
+        "center_height_m": 52.0,
+        "center_water_depth_m": 8.0,
+        "bank_height_range_m": [
+          61.399206052564786,
+          69.39073044863952
+        ]
+      },
+      {
+        "id": "East",
+        "edge_check_count": 804,
+        "minimum_edge_burial_m": 1.4063803486417328,
+        "center_height_m": 84.0,
+        "center_water_depth_m": 8.0,
+        "bank_height_range_m": [
+          93.40999054144197,
+          101.38588774040412
+        ]
+      },
+      {
+        "id": "North",
+        "edge_check_count": 624,
+        "minimum_edge_burial_m": 1.3977239651667475,
+        "center_height_m": 110.0,
+        "center_water_depth_m": 8.0,
+        "bank_height_range_m": [
+          119.39264186606052,
+          127.38973557050707
+        ]
+      }
+    ],
+    "height_quantization_error_max_m": 0.0250244140625,
+    "material_weight_sum_min": 255,
+    "material_weight_sum_max": 255,
+    "material_weight_mean": {
+      "Sand": 85.09959690670944,
+      "Rock": 93.82871423342836,
+      "Scree": 51.77814186750253,
+      "Alluvium": 24.293546992359687
+    }
+  },
+  "elapsed_s": 7.313,
+  "landscape": "RawAssets/Environment/AuthoredDesert/landscape.json",
+  "height_sha256": "57bef7ca9f17633ab64152f8a6dd4841bd3a93a1229c5c5a90744629a3c917b3",
+  "macro_rgb_min": 191,
+  "macro_rgb_max": 247,
+  "note": "CPU composition and geometric data checks only; engine materials, runtime collision, dressing and flight views require separate validation."
+}

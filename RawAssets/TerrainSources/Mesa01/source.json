@@ -1,0 +1,73 @@
+{
+	"schema": "terrain-source/v1",
+	"sourceActor": "/Game/LandscapePackTwo/Maps/Mesa_01.Mesa_01:PersistentLevel.Landscape_1",
+	"sourceMap": "/Game/LandscapePackTwo/Maps/Mesa_01",
+	"heightR16LE": "height.r16",
+	"sampleOrder": "row-major, X increases within each row, Y increases between rows",
+	"width": 8161,
+	"height": 8161,
+	"heightByteCount": 133203842,
+	"localHeightOffset": 32768,
+	"localHeightDivisor": 128,
+	"extentMin": [
+		0,
+		0
+	],
+	"extentMaxInclusive": [
+		8160,
+		8160
+	],
+	"locationCm": [
+		-408000,
+		-408000,
+		100
+	],
+	"scaleCm": [
+		100,
+		100,
+		250
+	],
+	"rotationQuaternionXYZW": [
+		0,
+		0,
+		0,
+		1
+	],
+	"weightLayers": [
+		{
+			"name": "__LANDSCAPE_VISIBILITY__",
+			"sourceAsset": "/Engine/EngineResources/LandscapeVisibilityLayerInfo.LandscapeVisibilityLayerInfo",
+			"file": "weight_00.r8",
+			"byteCount": 66601921,
+			"blendMethod": 0
+		},
+		{
+			"name": "Slope",
+			"sourceAsset": "/Game/LandscapePackTwo/Environments/LayerInfos/Mesa/Slope_LayerInfo.Slope_LayerInfo",
+			"file": "weight_01.r8",
+			"byteCount": 66601921,
+			"blendMethod": 1
+		},
+		{
+			"name": "Ground_1",
+			"sourceAsset": "/Game/LandscapePackTwo/Environments/LayerInfos/Mesa/Ground_1_LayerInfo.Ground_1_LayerInfo",
+			"file": "weight_02.r8",
+			"byteCount": 66601921,
+			"blendMethod": 1
+		},
+		{
+			"name": "Gravel_1",
+			"sourceAsset": "/Game/LandscapePackTwo/Environments/LayerInfos/Mesa/Gravel_1_LayerInfo.Gravel_1_LayerInfo",
+			"file": "weight_03.r8",
+			"byteCount": 66601921,
+			"blendMethod": 1
+		},
+		{
+			"name": "Erosion",
+			"sourceAsset": "/Game/LandscapePackTwo/Environments/LayerInfos/Mesa/Erosion_LayerInfo.Erosion_LayerInfo",
+			"file": "weight_04.r8",
+			"byteCount": 66601921,
+			"blendMethod": 1
+		}
+	]
+}

@@ -1,0 +1,56 @@
+{
+  "schema": "authored-landscape/v1",
+  "width": 2017,
+  "height": 2017,
+  "sections": 2,
+  "quads": 63,
+  "heightR16LE": "RawAssets/Environment/AuthoredDesert/height.r16",
+  "scaleCm": [
+    992.063492063492,
+    992.063492063492,
+    640
+  ],
+  "locationCm": [
+    -1000000,
+    -1000000,
+    120000
+  ],
+  "rotationDegrees": [
+    0,
+    0,
+    0
+  ],
+  "collisionMipLevel": 0,
+  "diagonal": "00_to_11",
+  "sampleOrder": "row-major X within rows, Y between rows",
+  "materialPath": "/Game/Art/Materials/AuthoredDesert/M_AuthoredDesert",
+  "label": "Authored desert combat landscape",
+  "weightLayers": [
+    {
+      "name": "Sand",
+      "weightR8": "RawAssets/Environment/AuthoredDesert/Sand.r8",
+      "layerInfoPath": "/Game/Art/Materials/AuthoredDesert/LI_Sand",
+      "sha256": "1b77cbd45c79a48ad4c7c76243756a91571511b70aa392d20bc8d1c6a21832d1"
+    },
+    {
+      "name": "Rock",
+      "weightR8": "RawAssets/Environment/AuthoredDesert/Rock.r8",
+      "layerInfoPath": "/Game/Art/Materials/AuthoredDesert/LI_Rock",
+      "sha256": "a7e2e0e06326092ed24d7705709c660bca4ed5ac8fe3186958f51ce96bf76ddd"
+    },
+    {
+      "name": "Scree",
+      "weightR8": "RawAssets/Environment/AuthoredDesert/Scree.r8",
+      "layerInfoPath": "/Game/Art/Materials/AuthoredDesert/LI_Scree",
+      "sha256": "b7942996f8f9da7e1e177f022ca8571c3dc4f01b125bda4d9f1e7b9462da1daf"
+    },
+    {
+      "name": "Alluvium",
+      "weightR8": "RawAssets/Environment/AuthoredDesert/Alluvium.r8",
+      "layerInfoPath": "/Game/Art/Materials/AuthoredDesert/LI_Alluvium",
+      "sha256": "c0f742ae517463e83f7d8379705b648c12ba21044dc718503d392616aafaf4df"
+    }
+  ],
+  "macroTexture": "RawAssets/Environment/AuthoredDesert/biome_macro.png",
+  "height_sha256": "57bef7ca9f17633ab64152f8a6dd4841bd3a93a1229c5c5a90744629a3c917b3"
+}

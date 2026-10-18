@@ -1,0 +1,66 @@
+{
+	"schema": "terrain-source/v1",
+	"sourceActor": "/Game/Maps/DesertDefense.DesertDefense:PersistentLevel.Landscape_0",
+	"sourceMap": "/Game/Maps/DesertDefense",
+	"heightR16LE": "height.r16",
+	"sampleOrder": "row-major, X increases within each row, Y increases between rows",
+	"width": 2017,
+	"height": 2017,
+	"heightByteCount": 8136578,
+	"localHeightOffset": 32768,
+	"localHeightDivisor": 128,
+	"extentMin": [
+		0,
+		0
+	],
+	"extentMaxInclusive": [
+		2016,
+		2016
+	],
+	"locationCm": [
+		-1000000,
+		-1000000,
+		120000
+	],
+	"scaleCm": [
+		992.06349206349205,
+		992.06349206349205,
+		640
+	],
+	"rotationQuaternionXYZW": [
+		0,
+		0,
+		0,
+		1
+	],
+	"weightLayers": [
+		{
+			"name": "Sand",
+			"sourceAsset": "/Game/Art/Materials/AuthoredDesert/LI_Sand.LI_Sand",
+			"file": "weight_00.r8",
+			"byteCount": 4068289,
+			"blendMethod": 1
+		},
+		{
+			"name": "Rock",
+			"sourceAsset": "/Game/Art/Materials/AuthoredDesert/LI_Rock.LI_Rock",
+			"file": "weight_01.r8",
+			"byteCount": 4068289,
+			"blendMethod": 1
+		},
+		{
+			"name": "Scree",
+			"sourceAsset": "/Game/Art/Materials/AuthoredDesert/LI_Scree.LI_Scree",
+			"file": "weight_02.r8",
+			"byteCount": 4068289,
+			"blendMethod": 1
+		},
+		{
+			"name": "Alluvium",
+			"sourceAsset": "/Game/Art/Materials/AuthoredDesert/LI_Alluvium.LI_Alluvium",
+			"file": "weight_03.r8",
+			"byteCount": 4068289,
+			"blendMethod": 1
+		}
+	]
+}

@@ -1,0 +1,392 @@
+{
+  "schema": "authored-ground-details/v2",
+  "status": "passed",
+  "meshes": [
+    {
+      "name": "SM_AuthoredBankWest",
+      "file": "RawAssets/Environment/AuthoredDetailsV2/SM_AuthoredBankWest.fbx",
+      "slot": "Grass",
+      "vertices": 99093,
+      "triangles": 33031,
+      "bytes": 1748956,
+      "sha256": "1e871ec54de0c3969014652d8cf95c26127a1598bcf0de90b96f3647ec270c7f",
+      "stability_angle_threshold_degrees": 0.1,
+      "stability_minimum_angle_before_degrees": 0.006687504891230665,
+      "stability_minimum_angle_after_degrees": 0.1019082651991524,
+      "stability_removed_triangles": 25,
+      "stability_removed_area_m2": 1.4879154860973358,
+      "stability_bad_corner_normal_triangles": 0,
+      "corner_normal_checks": 99093,
+      "invalid_corner_normals": 0,
+      "uv_local_origin_m": [
+        -2700,
+        -2230
+      ],
+      "native_uv_requirement": "Use full precision UVs; original world-projected materials remain unchanged",
+      "ground_error_max_abs_m": 1.4431152267777025e-05,
+      "ground_error_mean_abs_m": 2.744083847923896e-06,
+      "ground_error_sample_count": 231217,
+      "ground_target_offset_m": 0.08,
+      "exported_normal_vectors": 99093,
+      "exported_normal_length_min": 0.9999998738599154,
+      "exported_normal_length_max": 1.0000001326643213,
+      "exported_invalid_normals": 0,
+      "source_area_m2": 326489.2728584416,
+      "clipped_area_m2": 326489.2728584402,
+      "area_error_m2": -1.3969838619232178e-09,
+      "removed_sliver_area_m2": 3.6648929404682575,
+      "removed_sliver_fraction": 1.1225155755905257e-05,
+      "removed_sliver_triangles": 412,
+      "total_removed_area_m2": 5.152808426565594,
+      "total_removed_fraction": 1.5782473897081867e-05,
+      "category": "DSEnvironmentBank"
+    },
+    {
+      "name": "SM_AuthoredLakeWest",
+      "file": "RawAssets/Environment/AuthoredDetailsV2/SM_AuthoredLakeWest.fbx",
+      "slot": "Water",
+      "vertices": 161,
+      "triangles": 160,
+      "bytes": 19900,
+      "sha256": "f281396cec6f280f042a60f4de5b155bcd54b8717cb85729804f5dc8dfcfd88f",
+      "corner_normal_checks": 480,
+      "invalid_corner_normals": 0,
+      "uv_local_origin_m": [
+        -2700,
+        -2220
+      ],
+      "native_uv_requirement": "Use full precision UVs; original world-projected materials remain unchanged",
+      "exported_normal_vectors": 161,
+      "exported_normal_length_min": 1.0,
+      "exported_normal_length_max": 1.0000000000001381,
+      "exported_invalid_normals": 0,
+      "edge_ground_above_water_min_m": 1.401590238744724,
+      "edge_ground_above_water_max_m": 1.476713605177956,
+      "edge_samples": 716,
+      "edge_sampling": "All source grid-edge and triangle-diagonal crossings; exact piecewise-linear edge minimum",
+      "basin_depth_m": 8.0,
+      "water_height_m": 60.0,
+      "category": "DSEnvironmentWater"
+    },
+    {
+      "name": "SM_AuthoredBankEast",
+      "file": "RawAssets/Environment/AuthoredDetailsV2/SM_AuthoredBankEast.fbx",
+      "slot": "Grass",
+      "vertices": 127371,
+      "triangles": 42457,
+      "bytes": 2225116,
+      "sha256": "2bba636cf145a9311ad42fe11537753f65be4230bce724e982b10bf1e7999a0b",
+      "stability_angle_threshold_degrees": 0.1,
+      "stability_minimum_angle_before_degrees": 0.03171668458741283,
+      "stability_minimum_angle_after_degrees": 0.1003936677039875,
+      "stability_removed_triangles": 38,
+      "stability_removed_area_m2": 2.767235606908798,
+      "stability_bad_corner_normal_triangles": 0,
+      "corner_normal_checks": 127371,
+      "invalid_corner_normals": 0,
+      "uv_local_origin_m": [
+        4200,
+        1760
+      ],
+      "native_uv_requirement": "Use full precision UVs; original world-projected materials remain unchanged",
+      "ground_error_max_abs_m": 1.4055175837482392e-05,
+      "ground_error_mean_abs_m": 2.786901866990653e-06,
+      "ground_error_sample_count": 297199,
+      "ground_target_offset_m": 0.08,
+      "exported_normal_vectors": 127371,
+      "exported_normal_length_min": 0.9999998723162671,
+      "exported_normal_length_max": 1.0000001348389662,
+      "exported_invalid_normals": 0,
+      "source_area_m2": 507872.2022242412,
+      "clipped_area_m2": 507872.20222423173,
+      "area_error_m2": -9.487848728895187e-09,
+      "removed_sliver_area_m2": 3.4012428629257996,
+      "removed_sliver_fraction": 6.697044744780196e-06,
+      "removed_sliver_triangles": 449,
+      "total_removed_area_m2": 6.168478469834598,
+      "total_removed_fraction": 1.2145729659586734e-05,
+      "category": "DSEnvironmentBank"
+    },
+    {
+      "name": "SM_AuthoredLakeEast",
+      "file": "RawAssets/Environment/AuthoredDetailsV2/SM_AuthoredLakeEast.fbx",
+      "slot": "Water",
+      "vertices": 161,
+      "triangles": 160,
+      "bytes": 20348,
+      "sha256": "4d0968ba9befbbe763da244fa4bef983eaf37610fd07eb934a7a63a7fd4efa75",
+      "corner_normal_checks": 480,
+      "invalid_corner_normals": 0,
+      "uv_local_origin_m": [
+        4200,
+        1770
+      ],
+      "native_uv_requirement": "Use full precision UVs; original world-projected materials remain unchanged",
+      "exported_normal_vectors": 161,
+      "exported_normal_length_min": 1.0,
+      "exported_normal_length_max": 1.0000000000001874,
+      "exported_invalid_normals": 0,
+      "edge_ground_above_water_min_m": 1.4063803486417328,
+      "edge_ground_above_water_max_m": 1.47051343270833,
+      "edge_samples": 804,
+      "edge_sampling": "All source grid-edge and triangle-diagonal crossings; exact piecewise-linear edge minimum",
+      "basin_depth_m": 8.0,
+      "water_height_m": 92.0,
+      "category": "DSEnvironmentWater"
+    },
+    {
+      "name": "SM_AuthoredBankNorth",
+      "file": "RawAssets/Environment/AuthoredDetailsV2/SM_AuthoredBankNorth.fbx",
+      "slot": "Grass",
+      "vertices": 73452,
+      "triangles": 24484,
+      "bytes": 1318844,
+      "sha256": "1c9451c87502258abca7be75808a43269ece0771154bc362fac06e0c1fed105b",
+      "stability_angle_threshold_degrees": 0.1,
+      "stability_minimum_angle_before_degrees": 0.04416604488719007,
+      "stability_minimum_angle_after_degrees": 0.10270517063655926,
+      "stability_removed_triangles": 9,
+      "stability_removed_area_m2": 0.7267178744077682,
+      "stability_bad_corner_normal_triangles": 0,
+      "corner_normal_checks": 73452,
+      "invalid_corner_normals": 0,
+      "uv_local_origin_m": [
+        1000,
+        5270
+      ],
+      "native_uv_requirement": "Use full precision UVs; original world-projected materials remain unchanged",
+      "ground_error_max_abs_m": 2.744140628692382e-05,
+      "ground_error_mean_abs_m": 5.657163489116959e-06,
+      "ground_error_sample_count": 171388,
+      "ground_target_offset_m": 0.08,
+      "exported_normal_vectors": 73452,
+      "exported_normal_length_min": 0.9999998767044826,
+      "exported_normal_length_max": 1.0000001252094735,
+      "exported_invalid_normals": 0,
+      "source_area_m2": 199521.22230238034,
+      "clipped_area_m2": 199521.22230237877,
+      "area_error_m2": -1.57160684466362e-09,
+      "removed_sliver_area_m2": 2.5038164380779886,
+      "removed_sliver_fraction": 1.254912339241477e-05,
+      "removed_sliver_triangles": 355,
+      "total_removed_area_m2": 3.230534312485757,
+      "total_removed_fraction": 1.6191432045207632e-05,
+      "category": "DSEnvironmentBank"
+    },
+    {
+      "name": "SM_AuthoredLakeNorth",
+      "file": "RawAssets/Environment/AuthoredDetailsV2/SM_AuthoredLakeNorth.fbx",
+      "slot": "Water",
+      "vertices": 161,
+      "triangles": 160,
+      "bytes": 20028,
+      "sha256": "385d1f779fa9c0952112c5d4187ed67a33517d713a5243a0ffe97f72add72536",
+      "corner_normal_checks": 480,
+      "invalid_corner_normals": 0,
+      "uv_local_origin_m": [
+        1000,
+        5280
+      ],
+      "native_uv_requirement": "Use full precision UVs; original world-projected materials remain unchanged",
+      "exported_normal_vectors": 161,
+      "exported_normal_length_min": 1.0,
+      "exported_normal_length_max": 1.000000000001044,
+      "exported_invalid_normals": 0,
+      "edge_ground_above_water_min_m": 1.3977239651667475,
+      "edge_ground_above_water_max_m": 1.4803596123887814,
+      "edge_samples": 624,
+      "edge_sampling": "All source grid-edge and triangle-diagonal crossings; exact piecewise-linear edge minimum",
+      "basin_depth_m": 8.0,
+      "water_height_m": 118.0,
+      "category": "DSEnvironmentWater"
+    },
+    {
+      "name": "SM_AuthoredTownRoads",
+      "file": "RawAssets/Environment/AuthoredDetailsV2/SM_AuthoredTownRoads.fbx",
+      "slot": "Asphalt",
+      "vertices": 116814,
+      "triangles": 38938,
+      "bytes": 1393884,
+      "sha256": "af51e9899fdfbc978d0e3e228ad4262d9604b9b750a48c691d579b42b35d63d6",
+      "stability_angle_threshold_degrees": 0.1,
+      "stability_minimum_angle_before_degrees": 0.06782333033827341,
+      "stability_minimum_angle_after_degrees": 0.10415464174383009,
+      "stability_removed_triangles": 11,
+      "stability_removed_area_m2": 1.0707326396368444,
+      "stability_bad_corner_normal_triangles": 0,
+      "corner_normal_checks": 116814,
+      "invalid_corner_normals": 0,
+      "uv_local_origin_m": [
+        190,
+        1430
+      ],
+      "native_uv_requirement": "Use full precision UVs; original world-projected materials remain unchanged",
+      "ground_error_max_abs_m": 8.89013677419781e-05,
+      "ground_error_mean_abs_m": 1.4886744690905127e-06,
+      "ground_error_sample_count": 272566,
+      "ground_target_offset_m": 0.12,
+      "exported_normal_vectors": 116814,
+      "exported_normal_length_min": 0.9999998907276474,
+      "exported_normal_length_max": 1.0000001157077731,
+      "exported_invalid_normals": 0,
+      "source_area_m2": 306004.21872555005,
+      "clipped_area_m2": 306004.21872554556,
+      "area_error_m2": -4.48198989033699e-09,
+      "removed_sliver_area_m2": 2.142438511389669,
+      "removed_sliver_fraction": 7.0013365185373e-06,
+      "removed_sliver_triangles": 337,
+      "total_removed_area_m2": 3.2131711510265135,
+      "total_removed_fraction": 1.050041455117438e-05,
+      "category": "DSEnvironmentRoad",
+      "material_reuse": "Existing textured asphalt material; no new untextured road material"
+    },
+    {
+      "name": "SM_AuthoredDistantGobi",
+      "file": "RawAssets/Environment/AuthoredDetailsV2/SM_AuthoredDistantGobi.fbx",
+      "slot": "Terrain",
+      "vertices": 104832,
+      "triangles": 193536,
+      "bytes": 4541196,
+      "sha256": "aa948fda126534a95ced5544b27754c65f496a9b202664a66bd79c5e9e97125e",
+      "corner_normal_checks": 580608,
+      "invalid_corner_normals": 0,
+      "uv_local_origin_m": [
+        0,
+        0
+      ],
+      "native_uv_requirement": "Use full precision UVs; original world-projected materials remain unchanged",
+      "exported_seam_position_error_max_m": 0.00048300516741411003,
+      "exported_seam_height_error_max_m": 0.0008600585936164862,
+      "exported_seam_sample_count": 32256,
+      "exported_normal_vectors": 104832,
+      "exported_normal_length_min": 0.9999998881206406,
+      "exported_normal_length_max": 1.0000001185832126,
+      "exported_invalid_normals": 0,
+      "seam_vertex_count": 8064,
+      "seam_sample_count": 32256,
+      "seam_error_max_m": 9.322320693172514e-12,
+      "outer_half_extent_m": 500000.0,
+      "ring_distances_m": [
+        0,
+        250,
+        750,
+        2000,
+        4000,
+        8000,
+        14000,
+        24000,
+        40000,
+        70000,
+        130000,
+        240000,
+        490000
+      ],
+      "source": "Every authored landscape boundary vertex",
+      "category": "DSEnvironmentHorizon"
+    }
+  ],
+  "town": {
+    "center_m": [
+      0,
+      2600
+    ],
+    "half_size_m": [
+      800,
+      500
+    ],
+    "height_m": 48
+  },
+  "oases": [
+    {
+      "id": "West",
+      "center_m": [
+        -2700,
+        -2200
+      ],
+      "lake_radii_m": [
+        300,
+        180
+      ],
+      "water_m": 60
+    },
+    {
+      "id": "East",
+      "center_m": [
+        4200,
+        1800
+      ],
+      "lake_radii_m": [
+        350,
+        240
+      ],
+      "water_m": 92
+    },
+    {
+      "id": "North",
+      "center_m": [
+        1000,
+        5300
+      ],
+      "lake_radii_m": [
+        220,
+        150
+      ],
+      "water_m": 118
+    }
+  ],
+  "source_xy_units": "metres",
+  "fbx_axes": {
+    "forward": "X",
+    "up": "Z"
+  },
+  "mesh_actor_scale": [
+    1,
+    -1,
+    1
+  ],
+  "mesh_actor_location_cm": [
+    0,
+    0,
+    0
+  ],
+  "coordinates": "Source world XY is unchanged; legacy FBX import reflects Y, mesh actors correct it once",
+  "bank_offset_m": 0.08,
+  "road_offset_m": 0.12,
+  "geometry_tolerance_m": 0.02,
+  "previous_output": "RawAssets/Environment/AuthoredDetails/layout.json",
+  "stability_filter": "Only banks and roads: float32 corners must span at least 0.1 degree and all exported normals must be valid",
+  "terrain": {
+    "metadata": "RawAssets/Environment/AuthoredDesert/landscape.json",
+    "metadata_sha256": "f4a90cdd1ef3ccc6cbe7119933df8ccf62afe3a19145b5906770bb0e941b51a2",
+    "height_r16": "RawAssets/Environment/AuthoredDesert/height.r16",
+    "height_r16_sha256": "57bef7ca9f17633ab64152f8a6dd4841bd3a93a1229c5c5a90744629a3c917b3",
+    "width": 2017,
+    "height": 2017,
+    "bounds_m": [
+      -10000.0,
+      -10000.0,
+      10000.0,
+      10000.0
+    ],
+    "grid_m": [
+      9.920634920634921,
+      9.920634920634921
+    ],
+    "scale_cm": [
+      992.063492063492,
+      992.063492063492,
+      640.0
+    ],
+    "location_cm": [
+      -1000000.0,
+      -1000000.0,
+      120000.0
+    ],
+    "diagonal": "00_to_11",
+    "height_quantization_step_m": 0.05,
+    "collision_mip_level": 0,
+    "coordinates": "Unreal world XY metres; no reflection"
+  },
+  "sampling_script_sha256": "75b1b98b63bee52764f22b7e9a0e462ebd3a3a7f361c9e5178e2a55c69854d0b",
+  "elapsed_s": 28.031
+}

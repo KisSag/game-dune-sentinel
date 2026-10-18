@@ -12,7 +12,8 @@ public class DuneSentinel : ModuleRules
 
 		PublicDependencyModuleNames.AddRange(new string[] { "Core", "CoreUObject", "Engine", "InputCore", "EnhancedInput", "UMG" });
 		// AutoPlay drop-in (AutoPlay/AutoPlaySubsystem.h/.cpp, contract v1.4)
-		PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore", "AudioMixer", "RenderCore" });
-		if (Target.bBuildEditor) PrivateDependencyModuleNames.Add("AssetRegistry");
+		PrivateDependencyModuleNames.AddRange(new string[] { "Slate", "SlateCore", "AudioMixer", "RenderCore", "RHI" });
+		if (Target.bBuildEditor) PrivateDependencyModuleNames.AddRange(new string[] { "AssetRegistry", "Landscape", "Foliage", "Json" });
+		if (Target.bBuildEditor) PrivateIncludePathModuleNames.Add("TargetPlatform");
 	}
 }

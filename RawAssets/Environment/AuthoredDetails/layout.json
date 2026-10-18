@@ -1,0 +1,270 @@
+{
+  "schema": "authored-ground-details/v1",
+  "status": "passed",
+  "meshes": [
+    {
+      "name": "SM_AuthoredBankWest",
+      "file": "RawAssets/Environment/AuthoredDetails/SM_AuthoredBankWest.fbx",
+      "slot": "Grass",
+      "vertices": 99168,
+      "triangles": 33056,
+      "bytes": 1734204,
+      "sha256": "f1c8dcce91a01e1ddee5f6b4abc98d5f527173fe1764ab67c0f06a1b47da4fca",
+      "ground_error_max_abs_m": 1.4431152267777025e-05,
+      "ground_error_mean_abs_m": 2.7440696646684625e-06,
+      "ground_error_sample_count": 231392,
+      "ground_target_offset_m": 0.08,
+      "source_area_m2": 326489.2728584416,
+      "clipped_area_m2": 326489.2728584402,
+      "area_error_m2": -1.3969838619232178e-09,
+      "removed_sliver_area_m2": 3.6648929404682575,
+      "removed_sliver_fraction": 1.1225155755905257e-05,
+      "removed_sliver_triangles": 412,
+      "category": "DSEnvironmentBank"
+    },
+    {
+      "name": "SM_AuthoredLakeWest",
+      "file": "RawAssets/Environment/AuthoredDetails/SM_AuthoredLakeWest.fbx",
+      "slot": "Water",
+      "vertices": 161,
+      "triangles": 160,
+      "bytes": 19692,
+      "sha256": "35277f6aceeb888ca3bfb979a6bebdcc734c22d2ca01097bb3b7e4a8f2d22244",
+      "edge_ground_above_water_min_m": 1.401590238744724,
+      "edge_ground_above_water_max_m": 1.476713605177956,
+      "edge_samples": 716,
+      "edge_sampling": "All source grid-edge and triangle-diagonal crossings; exact piecewise-linear edge minimum",
+      "basin_depth_m": 8.0,
+      "water_height_m": 60.0,
+      "category": "DSEnvironmentWater"
+    },
+    {
+      "name": "SM_AuthoredBankEast",
+      "file": "RawAssets/Environment/AuthoredDetails/SM_AuthoredBankEast.fbx",
+      "slot": "Grass",
+      "vertices": 127485,
+      "triangles": 42495,
+      "bytes": 2208620,
+      "sha256": "7b11c754415265d3835bf4398fe61419e8d1c1b1b414d63e1b285c9fb81e9db4",
+      "ground_error_max_abs_m": 1.4055175837482392e-05,
+      "ground_error_mean_abs_m": 2.786892510666871e-06,
+      "ground_error_sample_count": 297465,
+      "ground_target_offset_m": 0.08,
+      "source_area_m2": 507872.2022242412,
+      "clipped_area_m2": 507872.20222423173,
+      "area_error_m2": -9.487848728895187e-09,
+      "removed_sliver_area_m2": 3.4012428629257996,
+      "removed_sliver_fraction": 6.697044744780196e-06,
+      "removed_sliver_triangles": 449,
+      "category": "DSEnvironmentBank"
+    },
+    {
+      "name": "SM_AuthoredLakeEast",
+      "file": "RawAssets/Environment/AuthoredDetails/SM_AuthoredLakeEast.fbx",
+      "slot": "Water",
+      "vertices": 161,
+      "triangles": 160,
+      "bytes": 20156,
+      "sha256": "c01d4689228c6c2d7d20fafdcc82e7a3facea4449041211e18d894e1b3ff3060",
+      "edge_ground_above_water_min_m": 1.4063803486417328,
+      "edge_ground_above_water_max_m": 1.47051343270833,
+      "edge_samples": 804,
+      "edge_sampling": "All source grid-edge and triangle-diagonal crossings; exact piecewise-linear edge minimum",
+      "basin_depth_m": 8.0,
+      "water_height_m": 92.0,
+      "category": "DSEnvironmentWater"
+    },
+    {
+      "name": "SM_AuthoredBankNorth",
+      "file": "RawAssets/Environment/AuthoredDetails/SM_AuthoredBankNorth.fbx",
+      "slot": "Grass",
+      "vertices": 73479,
+      "triangles": 24493,
+      "bytes": 1308044,
+      "sha256": "30fb81ac0bc7edb343a6acd3cf2b81049c36fe84b2b0d47b0afa5a1666be981b",
+      "ground_error_max_abs_m": 2.744140628692382e-05,
+      "ground_error_mean_abs_m": 5.657610463364886e-06,
+      "ground_error_sample_count": 171451,
+      "ground_target_offset_m": 0.08,
+      "source_area_m2": 199521.22230238034,
+      "clipped_area_m2": 199521.22230237877,
+      "area_error_m2": -1.57160684466362e-09,
+      "removed_sliver_area_m2": 2.5038164380779886,
+      "removed_sliver_fraction": 1.254912339241477e-05,
+      "removed_sliver_triangles": 355,
+      "category": "DSEnvironmentBank"
+    },
+    {
+      "name": "SM_AuthoredLakeNorth",
+      "file": "RawAssets/Environment/AuthoredDetails/SM_AuthoredLakeNorth.fbx",
+      "slot": "Water",
+      "vertices": 161,
+      "triangles": 160,
+      "bytes": 19852,
+      "sha256": "c559e51ab50230599bb405cf6824d9bec0804583918e9cbad571a1ef78cfce7f",
+      "edge_ground_above_water_min_m": 1.3977239651667475,
+      "edge_ground_above_water_max_m": 1.4803596123887814,
+      "edge_samples": 624,
+      "edge_sampling": "All source grid-edge and triangle-diagonal crossings; exact piecewise-linear edge minimum",
+      "basin_depth_m": 8.0,
+      "water_height_m": 118.0,
+      "category": "DSEnvironmentWater"
+    },
+    {
+      "name": "SM_AuthoredTownRoads",
+      "file": "RawAssets/Environment/AuthoredDetails/SM_AuthoredTownRoads.fbx",
+      "slot": "Asphalt",
+      "vertices": 116847,
+      "triangles": 38949,
+      "bytes": 1391532,
+      "sha256": "3229e6085c0bb73cf95505a7f96c0233cc28ce6728117e7267f52358469051fa",
+      "ground_error_max_abs_m": 8.89013677419781e-05,
+      "ground_error_mean_abs_m": 1.4892431697238302e-06,
+      "ground_error_sample_count": 272643,
+      "ground_target_offset_m": 0.12,
+      "source_area_m2": 306004.21872555005,
+      "clipped_area_m2": 306004.21872554556,
+      "area_error_m2": -4.48198989033699e-09,
+      "removed_sliver_area_m2": 2.142438511389669,
+      "removed_sliver_fraction": 7.0013365185373e-06,
+      "removed_sliver_triangles": 337,
+      "category": "DSEnvironmentRoad",
+      "material_reuse": "Existing textured asphalt material; no new untextured road material"
+    },
+    {
+      "name": "SM_AuthoredDistantGobi",
+      "file": "RawAssets/Environment/AuthoredDetails/SM_AuthoredDistantGobi.fbx",
+      "slot": "Terrain",
+      "vertices": 104832,
+      "triangles": 193536,
+      "bytes": 4541196,
+      "sha256": "340a13aae76c77cfe191b252d5e96c8e0f04c3f0113c90f81e7fe92d20746830",
+      "exported_seam_position_error_max_m": 0.00048300516741411003,
+      "exported_seam_height_error_max_m": 0.0008600585936164862,
+      "exported_seam_sample_count": 32256,
+      "seam_vertex_count": 8064,
+      "seam_sample_count": 32256,
+      "seam_error_max_m": 9.322320693172514e-12,
+      "outer_half_extent_m": 500000.0,
+      "ring_distances_m": [
+        0,
+        250,
+        750,
+        2000,
+        4000,
+        8000,
+        14000,
+        24000,
+        40000,
+        70000,
+        130000,
+        240000,
+        490000
+      ],
+      "source": "Every authored landscape boundary vertex",
+      "category": "DSEnvironmentHorizon"
+    }
+  ],
+  "town": {
+    "center_m": [
+      0,
+      2600
+    ],
+    "half_size_m": [
+      800,
+      500
+    ],
+    "height_m": 48
+  },
+  "oases": [
+    {
+      "id": "West",
+      "center_m": [
+        -2700,
+        -2200
+      ],
+      "lake_radii_m": [
+        300,
+        180
+      ],
+      "water_m": 60
+    },
+    {
+      "id": "East",
+      "center_m": [
+        4200,
+        1800
+      ],
+      "lake_radii_m": [
+        350,
+        240
+      ],
+      "water_m": 92
+    },
+    {
+      "id": "North",
+      "center_m": [
+        1000,
+        5300
+      ],
+      "lake_radii_m": [
+        220,
+        150
+      ],
+      "water_m": 118
+    }
+  ],
+  "source_xy_units": "metres",
+  "fbx_axes": {
+    "forward": "X",
+    "up": "Z"
+  },
+  "mesh_actor_scale": [
+    1,
+    -1,
+    1
+  ],
+  "mesh_actor_location_cm": [
+    0,
+    0,
+    0
+  ],
+  "coordinates": "Source world XY is unchanged; legacy FBX import reflects Y, mesh actors correct it once",
+  "bank_offset_m": 0.08,
+  "road_offset_m": 0.12,
+  "geometry_tolerance_m": 0.02,
+  "terrain": {
+    "metadata": "RawAssets/Environment/AuthoredDesert/landscape.json",
+    "metadata_sha256": "f4a90cdd1ef3ccc6cbe7119933df8ccf62afe3a19145b5906770bb0e941b51a2",
+    "height_r16": "RawAssets/Environment/AuthoredDesert/height.r16",
+    "height_r16_sha256": "57bef7ca9f17633ab64152f8a6dd4841bd3a93a1229c5c5a90744629a3c917b3",
+    "width": 2017,
+    "height": 2017,
+    "bounds_m": [
+      -10000.0,
+      -10000.0,
+      10000.0,
+      10000.0
+    ],
+    "grid_m": [
+      9.920634920634921,
+      9.920634920634921
+    ],
+    "scale_cm": [
+      992.063492063492,
+      992.063492063492,
+      640.0
+    ],
+    "location_cm": [
+      -1000000.0,
+      -1000000.0,
+      120000.0
+    ],
+    "diagonal": "00_to_11",
+    "height_quantization_step_m": 0.05,
+    "collision_mip_level": 0,
+    "coordinates": "Unreal world XY metres; no reflection"
+  },
+  "sampling_script_sha256": "75b1b98b63bee52764f22b7e9a0e462ebd3a3a7f361c9e5178e2a55c69854d0b",
+  "elapsed_s": 19.25
+}

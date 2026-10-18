@@ -7,6 +7,7 @@
 #include "Camera/CameraActor.h"
 #include "Camera/CameraComponent.h"
 #include "Camera/PlayerCameraManager.h"
+#include "Components/PrimitiveComponent.h"
 #include "Components/StaticMeshComponent.h"
 #include "Engine/Engine.h"
 #include "Engine/GameViewportClient.h"
@@ -23,6 +24,7 @@
 #include "Misc/DateTime.h"
 #include "Misc/FileHelper.h"
 #include "Misc/Paths.h"
+#include "RHI.h"
 #include "UnrealClient.h"
 
 namespace
@@ -79,7 +81,8 @@ private:
     TWeakObjectPtr<APlayerController> PC;
     TWeakObjectPtr<ACameraActor> Camera;
     TWeakObjectPtr<AActor> OriginalViewTarget;
-    TWeakObjectPtr<UStaticMeshComponent> Terrain;
+    TWeakObjectPtr<AActor> Terrain;
+    TArray<TWeakObjectPtr<AActor>> TerrainActors;
     TArray<TWeakObjectPtr<AStaticMeshActor>> Town, Water, Vegetation, Banks;
     TArray<FHiddenState> HiddenStates;
     TArray<FString> Checks, Observations;
@@ -94,6 +97,9 @@ private:
     uint64 StageFrame = 0;
     double ReadbackRequestedAt = 0.;
     int32 VisualCase = 0, OriginalSelection = 0;
+    int32 TerrainMaterialComponents = 0, TerrainTexturedComponents = 0, TerrainCollisionComponents = 0;
+    mutable int32 TerrainTraceCount = 0, IgnoredNonTerrainHits = 0;
+    mutable TArray<FHitResult> TerrainHitBuffer;
     bool bInitialized = false, bStateCaptured = false, bFinished = false;
     bool bReadbackRequested = false, bReadbackReady = false;
     bool bOriginalModeTick = true, bOriginalPlayerTick = true, bOriginalAutoCamera = true;
@@ -138,27 +144,51 @@ private:
         Mode->RadioLine.Empty();
         if (PC->GetHUD()) PC->GetHUD()->bShowHUD = false;
         if (PC->PlayerCameraManager) PC->PlayerCameraManager->StopCameraFade();
-        int32 TerrainCount = 0;
+        int32 TerrainRootCount = 0;
+        for (TActorIterator<AActor> It(GameWorld); It; ++It)
+        {
+            AActor* Actor = *It;
+            if (!Actor->ActorHasTag(TEXT("DSEnvironmentTerrain"))) continue;
+            TerrainActors.Add(Actor);
+            // A streamed terrain piece carries both tags. The persistent root
+            // carries only the common tag; no terrain module type is required.
+            if (!Actor->ActorHasTag(TEXT("DSEnvironmentTerrainProxy"))) { Terrain = Actor; ++TerrainRootCount; }
+            TArray<UPrimitiveComponent*> Components;
+            Actor->GetComponents(Components);
+            for (UPrimitiveComponent* Component : Components)
+            {
+                if (!Component || !Component->IsRegistered()) continue;
+                if (Component->IsQueryCollisionEnabled() && Component->GetCollisionObjectType() == ECC_WorldStatic)
+                    ++TerrainCollisionComponents;
+                if (Component->GetNumMaterials() > 0)
+                {
+                    ++TerrainMaterialComponents;
+                    if (HasTexture(Component)) ++TerrainTexturedComponents;
+                }
+            }
+        }
         for (TActorIterator<AStaticMeshActor> It(GameWorld); It; ++It)
         {
             AStaticMeshActor* Actor = *It;
-            if (Actor->ActorHasTag(TEXT("DSEnvironmentTerrain"))) { Terrain = Actor->GetStaticMeshComponent(); ++TerrainCount; }
             if (Actor->ActorHasTag(TEXT("DSEnvironmentTown"))) Town.Add(Actor);
             if (Actor->ActorHasTag(TEXT("DSEnvironmentWater"))) Water.Add(Actor);
             if (Actor->ActorHasTag(TEXT("DSEnvironmentVegetation"))) Vegetation.Add(Actor);
             if (Actor->ActorHasTag(TEXT("DSEnvironmentBank"))) Banks.Add(Actor);
         }
-        Check(TEXT("Exactly one terrain component is present in the real map"), TerrainCount == 1 && Terrain.IsValid());
+        Check(TEXT("Exactly one tagged terrain root with resident WorldStatic collision is present in the real map"),
+            TerrainRootCount == 1 && Terrain.IsValid() && TerrainCollisionComponents > 0);
         Check(TEXT("Airport town contains at least forty assembled buildings"), Town.Num() >= 40);
         Check(TEXT("Three lake surfaces and three green banks are present"), Water.Num() == 3 && Banks.Num() == 3);
         Check(TEXT("Oasis vegetation contains at least one hundred placed meshes"), Vegetation.Num() >= 100);
-        if (!Terrain.IsValid() || Town.IsEmpty() || Water.IsEmpty() || Vegetation.IsEmpty())
+        if (TerrainRootCount != 1 || !Terrain.IsValid() || TerrainCollisionComponents == 0 || Town.IsEmpty() || Water.IsEmpty() || Vegetation.IsEmpty())
             return Finish(TEXT("The authored environment is incomplete; runtime and rendering checks cannot proceed."));
         for (int32 Category = 0; Category < 3; ++Category)
             for (const TWeakObjectPtr<AStaticMeshActor>& Actor : CategoryActors(Category))
                 if (Actor.IsValid()) HiddenStates.Add({Actor.Get(), Actor->IsHidden()});
         RunGeometryChecks();
         RunEnemyClearanceChecks();
+        Observations.Add(FString::Printf(TEXT("{\"case\":\"terrain_query_backend\",\"terrain_actors\":%d,\"terrain_roots\":%d,\"collision_components\":%d,\"material_components\":%d,\"textured_components\":%d,\"world_static_multi_traces\":%d,\"ignored_nonterrain_hits\":%d,\"accepted_actor_tag\":\"DSEnvironmentTerrain\"}"),
+            TerrainActors.Num(), TerrainRootCount, TerrainCollisionComponents, TerrainMaterialComponents, TerrainTexturedComponents, TerrainTraceCount, IgnoredNonTerrainHits));
         ClearCombatActors();
         Mode->Player->SetActorLocation(FVector(0, 0, 300000));
         Camera = GameWorld->SpawnActor<ACameraActor>();
@@ -181,19 +211,50 @@ private:
 
     bool TerrainHeight(const FVector& Position, double& Height) const
     {
-        FHitResult Hit;
+        if (!Terrain.IsValid() || !World.IsValid()) return false;
+        TArray<FHitResult>& Hits = TerrainHitBuffer;
         FCollisionQueryParams Params(SCENE_QUERY_STAT(DSEnvironmentAcceptance), true);
-        const bool bHit = Terrain.IsValid() && Terrain->LineTraceComponent(Hit,
-            FVector(Position.X, Position.Y, 1500000.), FVector(Position.X, Position.Y, -50000.), Params);
-        if (bHit) Height = Hit.ImpactPoint.Z;
-        return bHit;
+        // Object-type multi queries traverse all matching shapes. Keep touches
+        // enabled: the query prefilter uses them to avoid stopping at a roof.
+        Params.bIgnoreTouches = false;
+        World->LineTraceMultiByObjectType(Hits,
+            FVector(Position.X, Position.Y, 1500000.), FVector(Position.X, Position.Y, -50000.),
+            FCollisionObjectQueryParams(ECC_WorldStatic), Params);
+        ++TerrainTraceCount;
+        bool bTerrainHit = false;
+        double HighestTerrain = -DBL_MAX;
+        for (const FHitResult& Hit : Hits)
+        {
+            const AActor* Actor = Hit.GetActor();
+            if (!Actor || !Actor->ActorHasTag(TEXT("DSEnvironmentTerrain")))
+            {
+                ++IgnoredNonTerrainHits;
+                continue;
+            }
+            if (Hit.bStartPenetrating || !FMath::IsFinite(Hit.ImpactPoint.Z)) continue;
+            HighestTerrain = FMath::Max(HighestTerrain, Hit.ImpactPoint.Z);
+            bTerrainHit = true;
+        }
+        if (bTerrainHit) Height = HighestTerrain;
+        return bTerrainHit;
     }
 
-    static bool HasTexture(UStaticMeshComponent* Component)
+    static bool HasTexture(UPrimitiveComponent* Component)
     {
+        if (!Component || !Component->GetWorld()) return false;
+        // Inspect actual material slots. Component-wide texture enumeration
+        // can include editor debug materials that are not the terrain surface.
         TArray<UTexture*> Textures;
-        if (Component) Component->GetUsedTextures(Textures, EMaterialQualityLevel::High);
-        return Textures.Num() > 0;
+        for (int32 Slot = 0; Slot < Component->GetNumMaterials(); ++Slot)
+        {
+            UMaterialInterface* Material = Component->GetMaterial(Slot);
+            if (!Material) continue;
+            Textures.Reset();
+            Material->GetUsedTextures(Textures, EMaterialQualityLevel::High,
+                GetFeatureLevelShaderPlatform_Checked(Component->GetWorld()->GetFeatureLevel()));
+            if (Textures.ContainsByPredicate([](const UTexture* Texture) { return Texture != nullptr; })) return true;
+        }
+        return false;
     }
 
     void RunGeometryChecks()
@@ -217,7 +278,8 @@ private:
         Check(TEXT("Collision terrain covers every sampled point in the combat arena"), Hits == Samples);
         Check(TEXT("Actual terrain collision has at least 1800 metres of mountain relief"), Hits > 0 && Highest - Lowest >= 180000.);
         Check(TEXT("Ridges have at least 350 metres of local rise over a 500 metre sample interval"), LargestNeighborRise >= 35000.);
-        Check(TEXT("Terrain uses sampled texture materials"), HasTexture(Terrain.Get()));
+        Check(TEXT("Every terrain material component uses sampled texture materials"),
+            TerrainMaterialComponents > 0 && TerrainTexturedComponents == TerrainMaterialComponents);
         bool bFlat = true, bRunwayClear = true;
         double MaxFlatError = 0., HighestRunway = -DBL_MAX;
         for (int32 X = -160000; X <= 160000; X += 20000)
@@ -359,7 +421,7 @@ private:
                 if (FVector::Dist2D(Position, Center) < NearestDistance) { NearestDistance = FVector::Dist2D(Position, Center); NearestWater = Center.Z; }
             if (NearestDistance < 100000. && Ground >= NearestWater-150.) ++BankedFlora;
         }
-        Check(TEXT("Every vegetation origin is grounded within one metre of the terrain mesh"), GroundedFlora == Vegetation.Num());
+        Check(TEXT("Every vegetation origin is grounded within one metre of actual terrain collision"), GroundedFlora == Vegetation.Num());
         Check(TEXT("At least three textured vegetation variants use cutout leaf materials"),
             FloraVariants.Num() >= 3 && TexturedFlora == Vegetation.Num() && MaskedFlora == Vegetation.Num());
         Check(TEXT("Oasis vegetation sits on nearby banks instead of below lake surfaces"), BankedFlora == Vegetation.Num());

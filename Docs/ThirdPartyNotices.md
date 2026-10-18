@@ -34,9 +34,10 @@ SIL Open Font License 1.1. The complete license is retained at
 
 ## Original work
 
-Airbase structures, terrain and distant ground geometry, equipment, missile and undercarriage models,
-aircraft panel artwork, asphalt surface artwork and nonvoice sound effects were
-created for this game. No recorded speech or synthesized speech is used.
+The initial airbase structures and procedural terrain, equipment, missile and undercarriage models,
+aircraft panel artwork, asphalt surface artwork and nonvoice sound effects were created for this game.
+The current airbase and desert terrain incorporate the separately credited downloaded sources below.
+No recorded speech or synthesized speech is used.
 
 Aircraft engine exhaust uses project-authored animated shader artwork, retained in
 `RawAssets/Effects/aircraft_exhaust_*.hlsl`, with nozzle placement measured from the credited aircraft models.
@@ -54,7 +55,8 @@ The following ambientCG textures are CC0 1.0. Original selected maps and SHA-256
 
 [License](https://docs.ambientcg.com/license/). The earlier revision's settlement architecture and plants were
 project-authored geometry and remain as retained source assets. The current map uses the downloaded model
-derivatives credited below. Terrain, lakes and roads remain project-authored geometry.
+derivatives credited below. The current terrain adapts the DigitalTris source environments; lake surfaces,
+roads and fitted banks are generated for this composition.
 
 ## Downloaded environment model revision
 
@@ -70,7 +72,7 @@ The revised town and oasis use the following Poly Haven model packs under [CC0 1
 - [Namaqualand Cliff 02](https://polyhaven.com/a/namaqualand_cliff_02) — Dario Barresi, Rico Cilliers.
 - [Wild Rooibos Bush](https://polyhaven.com/a/wild_rooibos_bush) — James Ray Cock, Jenelle van Heerden.
 
-The earlier authored town and plants remain in source history and retained raw assets; the current map replaces them with these downloadable model derivatives. Terrain, roads and lake surfaces remain project-authored geometry.
+The earlier authored town and plants remain in source history and retained raw assets; the current map replaces them with these downloadable model derivatives. The terrain is adapted from the DigitalTris sources, with roads, banks and lake surfaces generated to fit the resulting landscape.
 
 ## Detailed aircraft and airbase sources
 
@@ -91,3 +93,12 @@ The original hangar archive also contains [Diamond Da42 "Twin Star"](https://skf
 The airborne derivative preserves the authored metre scale, texture coordinates and split normals. Exposed wheels, struts and links are removed; static gear-bay doors, nacelles, detailed cockpit and both engine outlets remain. Measured sockets locate the twin exhausts, rear defensive gun and bomb release. Original material color maps, scalar roughness/metallic factors and glass transparency are retained.
 
 The exterior atlas is **1024×1024**; the other source images are 256–1024 pixels. This edition supplies no normal, roughness, metallic or occlusion maps. The model is a textured bomber baseline; it is not a claim of high-resolution PBR or AAA quality.
+
+## Authored desert source environments
+
+Landscapes Pack (desert/mesa content) and Realistic Desert Pack by DigitalTris Studio, acquired 2026-10-17, are licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+
+- [digitaltris-landscapes-desert-mesa](https://www.fab.com/listings/c6a8fa58-84f1-4bb8-935d-a3467e9fe58d)
+- [digitaltris-realistic-desert](https://www.fab.com/listings/3d1ccab4-8a4c-470f-a5b8-4a91ca5040d1)
+
+The environments supply authored terrain, textures, rocks and vegetation. Terrain reconstruction and material adaptations are changes made for this game; the original authors do not endorse those changes. Source-package checksums are retained in the desert scene validation directory.

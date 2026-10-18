@@ -1,6 +1,6 @@
 # Dune Sentinel
 
-A Windows air-combat game for Unreal Engine 5.7. Defend a desert airbase, choose a fighter and intercept hostile aircraft while managing ammunition and speed.
+A Windows air-combat game for Unreal Engine 5.7. Defend a desert airbase, choose a fighter and intercept hostile aircraft while managing ammunition and speed. The scene includes a detailed airport, nearby settlements, rugged desert terrain and oases.
 
 ## Development
 
@@ -20,4 +20,6 @@ Evaluation tasks are maintained on the separate `tasks` branch. Each task identi
 
 ## Verification
 
-Delivery assembly is in progress. Reused resources are checked by content hash; gameplay evidence, creation replay and packaged-build checks are reported separately. Existing gameplay media are reference material. No new screenshots or video are being captured.
+The retained release contains 527 native resource packages. Each adopted state has an exact-byte reuse receipt under `Docs/validation/reuse/`. `ReplayConfig.json` restores the inputs from their recorded commits and removes assets absent from each state. This reproduces the recorded adoption and changes; it does not claim that adopted artwork was imported again.
+
+Gameplay evidence, replay verification and packaged-build checks are reported separately in the delivery metadata. Existing gameplay media are reference material. Current checks produce no new screenshots or video.

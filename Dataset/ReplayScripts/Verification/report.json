@@ -1,14 +1,14 @@
 {
  "schema": "ue-replay.verification/v1",
  "game": "dune-sentinel",
- "final_commit": "f501f7434a62c80e20c16c078f2420938da985fc",
- "time": "2026-10-18T13:52:06.447-07:00",
+ "final_commit": "3edf1e4b8550ec38644f52725f24c65c9f52c846",
+ "time": "2026-10-18T22:34:21.518-07:00",
  "files": {
   "content": {
    "identical": 527
   },
   "other": {
-   "identical": 499
+   "identical": 547
   },
   "differs": [],
   "missing": [],
@@ -503,6 +503,160 @@
     "missing": 0,
     "extra": 0
    }
+  },
+  {
+   "window": 20,
+   "commit": "fd3ee65f69fd840db8301c36ea2cf86787939e3f",
+   "subject": "Publish verified release dataset and replay guidance",
+   "time": "2026-10-18T22:30:30.463-07:00",
+   "seconds": 8.3,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 21,
+   "commit": "1a810312d7b6f06ecda92fdc1537138457ac50c9",
+   "subject": "Remap flight and weapon controls for keyboard pilots",
+   "time": "2026-10-18T22:30:35.265-07:00",
+   "seconds": 4.8,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 22,
+   "commit": "6cd44aeea5a4fa8892659519f8b20bfa178a4824",
+   "subject": "Record focused route for the keyboard control change",
+   "time": "2026-10-18T22:30:40.013-07:00",
+   "seconds": 4.7,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 23,
+   "commit": "7659547d965fd8957b8c16a95808bc7b3fbb84cc",
+   "subject": "Document focused runtime acceptance of the revised flight controls",
+   "time": "2026-10-18T22:30:44.976-07:00",
+   "seconds": 5.0,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 24,
+   "commit": "7883ee2a82805e2fb25156e01b8a9d5e0583903e",
+   "subject": "Record passing repository format check for control-layout patch",
+   "time": "2026-10-18T22:30:49.906-07:00",
+   "seconds": 4.9,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 25,
+   "commit": "b0d5d39ccd20f28900512c34899066a97b8bb560",
+   "subject": "Record preparation of the updated formal delivery",
+   "time": "2026-10-18T22:30:51.477-07:00",
+   "seconds": 1.6,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 26,
+   "commit": "3edf1e4b8550ec38644f52725f24c65c9f52c846",
+   "subject": "Align the release design with the revised flight controls",
+   "time": "2026-10-18T22:30:56.425-07:00",
+   "seconds": 4.9,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
   }
  ],
  "verdict": {
@@ -512,7 +666,7 @@
     "id": "files",
     "text": "every tracked file outside Content/ byte-identical; none missing; no extra files except git-ignored ones",
     "pass": true,
-    "result": "499 identical, 0 differ, 0 missing; 0 extra (0 git-ignored)",
+    "result": "547 identical, 0 differ, 0 missing; 0 extra (0 git-ignored)",
     "failures": []
    },
    {

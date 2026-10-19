@@ -1,6 +1,6 @@
 {
-  "source_commit": "33df55d0676dafd98985427d945db79ac3464b98",
-  "tasks_commit": "e8802875a19a2b194972ab52264d61175c7c1680",
+  "source_commit": "6962c38c8da665712ca65b6e4bcce56836cedcc8",
+  "tasks_commit": "b224278768f2f65aa1dc33ceccd8873bce5230e5",
   "engine": "5.7.4",
   "shipping_smoke": {
     "checks_passed": 15,
@@ -8,27 +8,31 @@
     "duration_limit_seconds": 30,
     "exit_code": 0,
     "new_task_routes_executed": 0,
-    "report_sha256": "e3daf33d5a57a2bc95286fbc9b29adc49b6fde2e2e472059fb2b2b7a853dd802"
+    "report_sha256": "735ca20976e28670f253312b00b96ef2417b8bbc92da2863df2f06599994a5c9"
   },
   "task_evidence": {
-    "tasks": 10,
+    "tasks": 11,
     "hard_tasks": 2,
     "states": 17,
     "runtime_inputs_identical": true,
     "raw_json_newline_differences": 29,
     "raw_json_values_identical": true,
-    "basis": "Previously completed task-route checks reused after exact runtime-input equivalence verification; task routes were not executed again."
+    "basis": "Ten historical tasks retain exact validated runtime inputs; the control-layout task has one actual rendered button-route run and the release has identical runtime inputs to that tested reference.",
+    "new_task_routes_executed": 1,
+    "new_route_input_events": 20,
+    "new_route_reference": "139b173ba7ac26a8f4e3b04e1ea214480520f0c4"
   },
   "replay": {
-    "windows": 19,
+    "windows": 26,
     "asset_adoptions": 18,
     "prunes": 18,
     "editor_authoring_runs": 0,
-    "non_content_files_identical": 499,
+    "non_content_files_identical": 547,
     "native_packages_identical": 527,
     "asset_objects_identical": 528,
     "map_actors_identical": 1193,
-    "scope": "Recorded adoption and organization of completed native assets."
+    "scope": "Recorded adoption and organization of completed native assets.",
+    "report_sha256": "616be46336e938c50ac2e0b5fafd3ac94a5ac653f305e82cac2f378bdc685bb1"
   },
   "privacy": {
     "reviewed_shipping_occurrences": 25,
@@ -39,7 +43,9 @@
     "game_binary_changes": false,
     "blocking_hits": 0,
     "allowlisted_occurrences_in_full_directory": 118,
-    "packaging_rules_revision": "734756fb77bc4cc7bf492819edc0144de69ef2fc"
+    "packaging_rules_revision": "fdf4c2c6ed719f004e2ccd914a01f2c8def24bf6",
+    "newly_registered_occurrences": 16,
+    "registration_sha256": "194d4bdc791eeca602b4861ef80a5ac2153a646f5b739c399b3307851d47c9d4"
   },
   "media": {
     "new_video": false,
@@ -58,25 +64,27 @@
     "errors": 0,
     "warnings": 0,
     "layout": "dataset-layout/v1.3",
-    "files": 2919,
-    "history_commits": 20,
-    "lfs_objects": 1804,
-    "tasks": 10,
+    "files": 2977,
+    "history_commits": 29,
+    "lfs_objects": 1812,
+    "tasks": 11,
     "listed_asset_paths": 880,
     "missing_asset_paths": 0,
-    "manifest_sha256": "cff3fd9e3432ee68a97fb8cd05309ae46294fbf1e3746bf582cd131a7ef2226f"
+    "manifest_sha256": "881b63146b086f50a8ef7944fc69c85bf3f3da67494686e964956b2a11318507",
+    "history_refs": 2
   },
   "schema": "release-verification/1",
-  "exported_history_commit": "f501f7434a62c80e20c16c078f2420938da985fc",
-  "verified_at": "2026-10-19T04:42:15.085Z",
+  "exported_history_commit": "3edf1e4b8550ec38644f52725f24c65c9f52c846",
+  "verified_at": "2026-10-19T07:23:09.030483+00:00",
   "archive": {
     "file": "Dataset.zip",
-    "bytes": 17867366814,
-    "sha256": "a6e8530ddc7129ee6f9a54df8598cffb9519a93f97401e6baad44a846b5c423b",
+    "bytes": 17929276953,
+    "sha256": "f60defb00b4a23f210623c1186b2eaac55b5b4df6b33f8736c0678723397fd8e",
     "validation": "VALID",
     "errors": 0,
     "warnings": 0,
-    "all_member_sha256_verified": true
+    "all_member_sha256_verified": true,
+    "members_verified": 2977
   },
   "repository_mirror": {
     "directory": "Dataset",
@@ -84,5 +92,15 @@
     "errors": 0,
     "warnings": 0
   },
-  "scope": "The archive and replay verify the release source commit. Later delivery-documentation commits do not change runtime inputs."
+  "scope": "The archive and replay verify the release source commit. Later delivery-documentation commits do not change runtime inputs.",
+  "version": "1.0.1",
+  "delivery_finalization": {
+    "report_sha256": "b60dce0c695985b6c2673373061851373fcc4ff6165699b6a3d769a544debbf5",
+    "history_release_ref": "refs/tags/release/1.0.1",
+    "source_history_unchanged": true,
+    "game_files_unchanged": true,
+    "previous_package_preserved_locally": true,
+    "upload_performed": false,
+    "visibility_changed": false
+  }
 }

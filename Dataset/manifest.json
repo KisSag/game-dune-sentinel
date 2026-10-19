@@ -2,14 +2,14 @@
   "layout": "dataset-layout/v1.3",
   "game": "dune-sentinel",
   "title": "Dune Sentinel",
-  "version": "1.0.0",
-  "commit": "f501f7434a62c80e20c16c078f2420938da985fc",
+  "version": "1.0.1",
+  "commit": "3edf1e4b8550ec38644f52725f24c65c9f52c846",
   "engine": "5.7",
   "status": "complete",
   "variant": "repo-dataset",
   "pending": [],
-  "created": "2026-10-19T04:41:04.377579+00:00",
-  "source_package": "dune-sentinel_33df55d0",
+  "created": "2026-10-19T07:03:50.086360+00:00",
+  "source_package": "dune-sentinel_6962c38c",
   "replay_verification": {
     "pass": true,
     "report": "ReplayScripts/Verification/report.md",
@@ -17,7 +17,7 @@
       {
         "id": "files",
         "text": "every tracked file outside Content/ byte-identical; none missing; no extra files except git-ignored ones",
-        "result": "499 identical, 0 differ, 0 missing; 0 extra (0 git-ignored)",
+        "result": "547 identical, 0 differ, 0 missing; 0 extra (0 git-ignored)",
         "pass": true
       },
       {
@@ -130,10 +130,10 @@
     }
   },
   "runtime_validation": {
-    "basis": "identical runtime code, configuration and native assets; separately proved raw JSON CRLF-to-LF changes",
+    "basis": "Ten historical tasks retain exact validated runtime inputs; the control-layout task has one actual rendered button-route run and the release has identical runtime inputs to that tested reference.",
     "equivalent_task_states": 17,
-    "task_pairs": 10,
-    "new_task_route_executions": 0,
+    "task_pairs": 11,
+    "new_task_route_executions": 1,
     "prior_execution_identities_preserved": true,
     "new_packaged_smoke": "passed"
   },
@@ -151,8 +151,8 @@
     },
     {
       "path": "Brief/design.md",
-      "bytes": 1711,
-      "sha256": "fae609a9afc2933e35bb03aa6e592eff4aa835255bd8ab11774a6390229af8be"
+      "bytes": 2028,
+      "sha256": "ca1066f69b8f3357cb196bb12c4828a1acb614b991aefb746d19cfea6071aade"
     },
     {
       "path": "Gameplay/dune-sentinel_S1.mp4",
@@ -161,13 +161,13 @@
     },
     {
       "path": "git.log",
-      "bytes": 3627406,
-      "sha256": "10f98d44f8398fdbadd0673f8fd6a72b2b520b713fb156a12db04fad9c857b90"
+      "bytes": 14704037,
+      "sha256": "b61bf43589ab84eb9a3a9f524c7fb608f1c3b7035ad44e9834fe86bff2549735"
     },
     {
       "path": "README.md",
-      "bytes": 2583,
-      "sha256": "8159bfc1d66927183797103ec52cf0cefa531a7b80d8b8a5fe9739ecf2ceb3dc"
+      "bytes": 2656,
+      "sha256": "44392a5b79540fe2b157784eaac2876c9b4b71dba6acea74523195a6e21290e9"
     },
     {
       "path": "ReplayScripts/derive.py",
@@ -182,7 +182,7 @@
     {
       "path": "ReplayScripts/game.json",
       "bytes": 13747,
-      "sha256": "cf275d82f1059bf2111fef3136841d26e10f5dfd347560a35e4913080f2a7a0e"
+      "sha256": "e3ef23ff3cfa1c4de4343f5343e45178d34a345a423ff63368c90e69bdd22fc5"
     },
     {
       "path": "ReplayScripts/initial-assets.manifest.json",
@@ -191,8 +191,8 @@
     },
     {
       "path": "ReplayScripts/ledger.json",
-      "bytes": 325184,
-      "sha256": "917839fa03857fc83debf6d8e06e124d607ef1ebb612b9ce7d9f805e08c88614"
+      "bytes": 333621,
+      "sha256": "4b24742fdb59f57396b8b22cb89ba2d6480831a4a1598f33751cbf4410a03f93"
     },
     {
       "path": "ReplayScripts/ledger.py",
@@ -231,13 +231,13 @@
     },
     {
       "path": "ReplayScripts/Verification/dump-replay/assets.json",
-      "bytes": 394576,
-      "sha256": "015d54873488857985385b5e89d32f7fe6f460189b947a99f9195e6e33323365"
+      "bytes": 394575,
+      "sha256": "cc17ab26560eff6f00bcc56e59bfe434d8efa7cb70471f61dacb188aa1da1434"
     },
     {
       "path": "ReplayScripts/Verification/dump-replay/done.json",
       "bytes": 159,
-      "sha256": "35e11a00fe415ae1093d4899b155b91b7f35cda1980bcf02c3e24d67721e10e3"
+      "sha256": "1e08ca36cd76e9c6ea5781773683354b3131a676a0a835a767882e8d79d8231a"
     },
     {
       "path": "ReplayScripts/Verification/dump-replay/maps/Maps__DesertDefense.json",
@@ -247,7 +247,7 @@
     {
       "path": "ReplayScripts/Verification/dump-replay/maps.json",
       "bytes": 138,
-      "sha256": "8443d363544e7ca707c0b12498fd2d67255883440af5df420238809a8d18714b"
+      "sha256": "26842cce9a47a0f4089ebda788b795479580ca2577a8ba8a14f3491da85112fd"
     },
     {
       "path": "ReplayScripts/Verification/dump-truth/assets.json",
@@ -257,7 +257,7 @@
     {
       "path": "ReplayScripts/Verification/dump-truth/done.json",
       "bytes": 157,
-      "sha256": "c35373a15d5169622b773df1f73970225f43ece9509b255c3d6f246ff1f32282"
+      "sha256": "b2cd227b4a5e16380beec4405593b4b945a4b6e6b59e7cfdb00622bcd113f829"
     },
     {
       "path": "ReplayScripts/Verification/dump-truth/maps/Maps__DesertDefense.json",
@@ -267,22 +267,22 @@
     {
       "path": "ReplayScripts/Verification/dump-truth/maps.json",
       "bytes": 137,
-      "sha256": "bc073341fea227ffbc6c3367ad43defe7c976e90a2d4c34e34e9f7f5b42b9550"
+      "sha256": "1a1fa546a547ccaea597f14bfcc3fa5c280d66df3cd4097cb9e66a9cad9cf0b4"
     },
     {
       "path": "ReplayScripts/Verification/report.json",
-      "bytes": 19366,
-      "sha256": "b2dc02e459744db95386913413a0f7cd558459dcc9314cb679799fc42e436c59"
+      "bytes": 22641,
+      "sha256": "d0e728e43e4acda0f9188af1959ae5686bf10d19a7a9ecec4781d77c899fa095"
     },
     {
       "path": "ReplayScripts/Verification/report.md",
-      "bytes": 8661,
-      "sha256": "b2c3d770621bc8fdaaef904ec960f7a8991e9d076468a891172308287017834e"
+      "bytes": 8976,
+      "sha256": "3e5cb65a34207df38d4bf0cb862d63286627d194cce9a460197d8b9fec16562c"
     },
     {
       "path": "ReplayScripts/Verification/windows.jsonl",
-      "bytes": 212635,
-      "sha256": "88f766f95e68b173ec5fcc0fac9cdc9e1980fa808bafd8f6542c790bd95adf37"
+      "bytes": 216330,
+      "sha256": "fc5b58d494b0fc1ac35d7a14fb5e5c8456b25f992edbe0023720d4ae3dc5ded0"
     },
     {
       "path": "ReplayScripts/verify.py",
@@ -326,12 +326,12 @@
     },
     {
       "path": "workflow.jsonl",
-      "bytes": 58051,
-      "sha256": "9d2954865ddcf7576f6e0778b4d626566e00ce65a06410ee9db1a564812f989d"
+      "bytes": 67373,
+      "sha256": "da27a38f8195f66d24d0b9986f008ce718734b28718e301c695abe2c48517ba0"
     }
   ],
   "totals": {
     "files": 37,
-    "bytes": 39433739
+    "bytes": 50535803
   }
 }

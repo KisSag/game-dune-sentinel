@@ -1,7 +1,7 @@
 {
  "schema": "ue-replay.ledger/v1",
  "game": "dune-sentinel",
- "final": "f501f7434a62c80e20c16c078f2420938da985fc",
+ "final": "3edf1e4b8550ec38644f52725f24c65c9f52c846",
  "first": "e267270142e3153a969d703062f5ee016522f597",
  "windows": [
   {
@@ -11172,10 +11172,381 @@
    "shell": [],
    "reconstruction": [],
    "events": {}
+  },
+  {
+   "index": 20,
+   "sha": "fd3ee65f69fd840db8301c36ea2cf86787939e3f",
+   "parent": "f501f7434a62c80e20c16c078f2420938da985fc",
+   "time": "2026-10-18T21:42:52-07:00",
+   "subject": "Publish verified release dataset and replay guidance",
+   "merge_parents": [],
+   "inputs": [
+    {
+     "status": "A",
+     "path": "Dataset/.gitattributes"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/Brief/brief.md"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/Brief/design.md"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/Gameplay/dune-sentinel_S1.mp4"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/README.md"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/README.md"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/Verification/dump-replay/assets.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/Verification/dump-replay/done.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/Verification/dump-replay/maps.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/Verification/dump-replay/maps/Maps__DesertDefense.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/Verification/dump-truth/assets.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/Verification/dump-truth/done.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/Verification/dump-truth/maps.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/Verification/dump-truth/maps/Maps__DesertDefense.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/Verification/report.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/Verification/report.md"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/Verification/windows.jsonl"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/derive.py"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/editor/ue_dump.py"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/game.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/initial-assets.manifest.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/ledger.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/ledger.py"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/live.py"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/package.py"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/runner.py"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/shellfx.py"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/ue_replay.py"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/ReplayScripts/verify.py"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_02.jpg"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_03.jpg"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_04.jpg"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_05.jpg"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_06.jpg"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_07.jpg"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_08.jpg"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/git.log"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/manifest.json"
+    },
+    {
+     "status": "A",
+     "path": "Dataset/workflow.jsonl"
+    },
+    {
+     "status": "A",
+     "path": "Docs/validation/release.json"
+    },
+    {
+     "status": "M",
+     "path": "README.md"
+    },
+    {
+     "status": "M",
+     "path": "workflow.jsonl"
+    }
+   ],
+   "content": [],
+   "scripts_changed": [],
+   "runs": [],
+   "drops": [],
+   "shell": [],
+   "reconstruction": [],
+   "events": {}
+  },
+  {
+   "index": 21,
+   "sha": "1a810312d7b6f06ecda92fdc1537138457ac50c9",
+   "parent": "fd3ee65f69fd840db8301c36ea2cf86787939e3f",
+   "time": "2026-10-18T22:00:00-07:00",
+   "subject": "Remap flight and weapon controls for keyboard pilots",
+   "merge_parents": [],
+   "inputs": [
+    {
+     "status": "M",
+     "path": "README.md"
+    },
+    {
+     "status": "M",
+     "path": "Source/DuneSentinel/DSFlightPawn.cpp"
+    },
+    {
+     "status": "M",
+     "path": "Source/DuneSentinel/DSHUD.cpp"
+    },
+    {
+     "status": "M",
+     "path": "workflow.jsonl"
+    }
+   ],
+   "content": [],
+   "scripts_changed": [],
+   "runs": [],
+   "drops": [],
+   "shell": [],
+   "reconstruction": [],
+   "events": {}
+  },
+  {
+   "index": 22,
+   "sha": "6cd44aeea5a4fa8892659519f8b20bfa178a4824",
+   "parent": "1a810312d7b6f06ecda92fdc1537138457ac50c9",
+   "time": "2026-10-18T22:03:30-07:00",
+   "subject": "Record focused route for the keyboard control change",
+   "merge_parents": [],
+   "inputs": [
+    {
+     "status": "A",
+     "path": "Tests/keyboard_flight_layout_route.json"
+    },
+    {
+     "status": "M",
+     "path": "workflow.jsonl"
+    }
+   ],
+   "content": [],
+   "scripts_changed": [],
+   "runs": [],
+   "drops": [],
+   "shell": [],
+   "reconstruction": [],
+   "events": {}
+  },
+  {
+   "index": 23,
+   "sha": "7659547d965fd8957b8c16a95808bc7b3fbb84cc",
+   "parent": "6cd44aeea5a4fa8892659519f8b20bfa178a4824",
+   "time": "2026-10-18T22:09:18-07:00",
+   "subject": "Document focused runtime acceptance of the revised flight controls",
+   "merge_parents": [],
+   "inputs": [
+    {
+     "status": "A",
+     "path": "Docs/validation/keyboard-flight-layout.md"
+    },
+    {
+     "status": "A",
+     "path": "Docs/validation/keyboard-flight-layout/build.json"
+    },
+    {
+     "status": "A",
+     "path": "Docs/validation/keyboard-flight-layout/events.jsonl"
+    },
+    {
+     "status": "A",
+     "path": "Docs/validation/keyboard-flight-layout/raw-evidence-hashes.json"
+    },
+    {
+     "status": "A",
+     "path": "Docs/validation/keyboard-flight-layout/summary.json"
+    },
+    {
+     "status": "A",
+     "path": "Docs/validation/keyboard-flight-layout/trace.jsonl"
+    },
+    {
+     "status": "M",
+     "path": "README.md"
+    },
+    {
+     "status": "M",
+     "path": "workflow.jsonl"
+    }
+   ],
+   "content": [],
+   "scripts_changed": [],
+   "runs": [],
+   "drops": [],
+   "shell": [],
+   "reconstruction": [],
+   "events": {}
+  },
+  {
+   "index": 24,
+   "sha": "7883ee2a82805e2fb25156e01b8a9d5e0583903e",
+   "parent": "7659547d965fd8957b8c16a95808bc7b3fbb84cc",
+   "time": "2026-10-18T22:09:57-07:00",
+   "subject": "Record passing repository format check for control-layout patch",
+   "merge_parents": [],
+   "inputs": [
+    {
+     "status": "M",
+     "path": "Docs/validation/keyboard-flight-layout.md"
+    },
+    {
+     "status": "A",
+     "path": "Docs/validation/keyboard-flight-layout/repository-format.json"
+    },
+    {
+     "status": "M",
+     "path": "workflow.jsonl"
+    }
+   ],
+   "content": [],
+   "scripts_changed": [],
+   "runs": [],
+   "drops": [],
+   "shell": [],
+   "reconstruction": [],
+   "events": {}
+  },
+  {
+   "index": 25,
+   "sha": "b0d5d39ccd20f28900512c34899066a97b8bb560",
+   "parent": "7883ee2a82805e2fb25156e01b8a9d5e0583903e",
+   "time": "2026-10-18T22:27:21-07:00",
+   "subject": "Record preparation of the updated formal delivery",
+   "merge_parents": [],
+   "inputs": [
+    {
+     "status": "M",
+     "path": "workflow.jsonl"
+    }
+   ],
+   "content": [],
+   "scripts_changed": [],
+   "runs": [],
+   "drops": [],
+   "shell": [],
+   "reconstruction": [],
+   "events": {}
+  },
+  {
+   "index": 26,
+   "sha": "3edf1e4b8550ec38644f52725f24c65c9f52c846",
+   "parent": "b0d5d39ccd20f28900512c34899066a97b8bb560",
+   "time": "2026-10-18T22:28:34-07:00",
+   "subject": "Align the release design with the revised flight controls",
+   "merge_parents": [],
+   "inputs": [
+    {
+     "status": "M",
+     "path": "Brief/design.md"
+    },
+    {
+     "status": "M",
+     "path": "README.md"
+    },
+    {
+     "status": "M",
+     "path": "workflow.jsonl"
+    }
+   ],
+   "content": [],
+   "scripts_changed": [],
+   "runs": [],
+   "drops": [],
+   "shell": [],
+   "reconstruction": [],
+   "events": {}
   }
  ],
  "counts": {
-  "windows": 19,
+  "windows": 26,
   "runs": 0,
   "runs_readonly": 0,
   "script_version": {},

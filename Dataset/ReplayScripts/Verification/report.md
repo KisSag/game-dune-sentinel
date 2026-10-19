@@ -1,10 +1,10 @@
-# Replay verification: dune-sentinel at 33df55d067
+# Replay verification: dune-sentinel at 6962c38c8d
 
 ## Verdict: PASS
 
 | criterion | result | pass |
 |---|---|---|
-| every tracked file outside Content/ byte-identical; none missing; no extra files except git-ignored ones | 499 identical, 0 differ, 0 missing; 0 extra (0 git-ignored) | yes |
+| every tracked file outside Content/ byte-identical; none missing; no extra files except git-ignored ones | 547 identical, 0 differ, 0 missing; 0 extra (0 git-ignored) | yes |
 | every asset of the final commit present with the same class and structure digest | 528 same, 0 differ, 0 missing, 0 extra, 0 class changed | yes |
 | every game map: same actors (class, label, folder) with the same transform, components, properties and world settings | DesertDefense 1193/1193 | yes |
 
@@ -74,7 +74,7 @@ store packs and downloads restored into the project where the builder copied the
 
 | | identical | differs | missing |
 |---|---:|---:|---:|
-| outside Content/ | 499 | 0 | 0 |
+| outside Content/ | 547 | 0 | 0 |
 | Content/ | 527 | 0 | 0 |
 
 Files in the replay project that the commit does not have: 0.
@@ -131,3 +131,10 @@ Same class and digest: 528; differs: 0; missing: 0; extra: 0.
 | 17 | 061c686 | 0 | 32 | 0 | 9 | 0 | 0 | 0 |
 | 18 | 32d1e06 | 0 | 16 | 0 | 360 | 0 | 0 | 0 |
 | 19 | 33df55d | 0 | 3 | 0 | 0 | 0 | 0 | 0 |
+| 20 | cc6bc95 | 0 | 8 | 0 | 0 | 0 | 0 | 0 |
+| 21 | 1a3798b | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
+| 22 | 139b173 | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
+| 23 | cae063f | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
+| 24 | 0290c05 | 0 | 5 | 0 | 0 | 0 | 0 | 0 |
+| 25 | 486bbc9 | 0 | 2 | 0 | 0 | 0 | 0 | 0 |
+| 26 | 6962c38 | 0 | 5 | 0 | 0 | 0 | 0 | 0 |

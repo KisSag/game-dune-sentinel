@@ -1,6 +1,6 @@
 # Dune Sentinel
 
-UE 5.7. Version 1.0.0; commit `f501f7434a62c80e20c16c078f2420938da985fc`.
+UE 5.7. Version 1.0.1; commit `3edf1e4b8550ec38644f52725f24c65c9f52c846`.
 
 ## Requirements
 
@@ -13,7 +13,7 @@ The full archive additionally contains UEProject/, Build/, History/ and separate
 
 ## Play the game
 
-Run Build/DuneSentinel.exe from the full archive. Enter starts flight; W accelerates, S brakes, A/D roll, Down/Up pitch and Q/E yaw. Tab selects a target, F tracks it, LeftControl fires the cannon and SpaceBar launches a missile.
+Run Build/DuneSentinel.exe from the full archive. Enter starts flight; W/S pitch up/down, A/D roll and Q/E yaw. Space accelerates and either Ctrl key brakes. Left mouse fires the cannon and F launches a missile. Tab selects a target; hold right mouse to track it and release to restore the flight view.
 
 ## Replay the creation process
 

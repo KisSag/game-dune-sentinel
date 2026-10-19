@@ -28,7 +28,7 @@ The current keyboard layout update is verified in [its focused acceptance report
 
 Use [the portable replay instructions](Dataset/ReplayScripts/README.md) with the History folder from the complete archive. The repository-level replay configuration records the local authoring context; the portable instructions describe restoring the delivered history and configuring a fresh machine.
 
-[Release verification](Docs/validation/release.json) distinguishes the packaged smoke test, prior task-route evidence verified through identical runtime inputs, and the complete recorded asset-adoption replay.
+[Release verification](Docs/validation/release.json) records the keyboard input route, packaged smoke test, retained task-route evidence verified through identical runtime inputs, complete recorded asset-adoption replay, and validated 1.0.1 archive.
 
 ## Reference gallery
 

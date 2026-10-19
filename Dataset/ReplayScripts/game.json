@@ -4,7 +4,7 @@
   "repo": "{root}/release-ue57/dune-sentinel",
   "recording": "",
   "first": "e267270142e3153a969d703062f5ee016522f597",
-  "final": "f501f7434a62c80e20c16c078f2420938da985fc",
+  "final": "3edf1e4b8550ec38644f52725f24c65c9f52c846",
   "uproject": "DuneSentinel.uproject",
   "editor_target": "DuneSentinelEditor",
   "module": "DuneSentinel",

@@ -1,6 +1,6 @@
 {
   "schema": "release-preparation/1",
-  "status": "awaiting_exact_privacy_review",
+  "status": "artifacts_validated",
   "source_commit": "6962c38c8da665712ca65b6e4bcce56836cedcc8",
   "tasks_commit": "b224278768f2f65aa1dc33ceccd8873bce5230e5",
   "engine": "5.7",
@@ -18,14 +18,20 @@
   "scanner_protection_checks_passed": 14,
   "privacy": {
     "files": 2,
-    "pending_exact_occurrences": 16,
+    "pending_exact_occurrences": 0,
     "identical_prior_engine_strings": 14,
-    "exceptions_applied": false,
+    "exceptions_applied": true,
     "proposal_sha256": "fdc2aa582b575dade87b965921462d9e5f2d5454a29f0246d8fcdc8a61ccfde0",
-    "identical_prior_compressed_blocks": 2
+    "identical_prior_compressed_blocks": 2,
+    "registered_exact_occurrences": 16,
+    "blocking_hits": 0
   },
   "new_media": false,
-  "new_dataset_published": false,
+  "new_dataset_published": true,
   "upload_performed": false,
-  "visibility_changed": false
+  "visibility_changed": false,
+  "full_directory_validation": "VALID",
+  "archive_validation": "VALID",
+  "repository_mirror_validation": "VALID",
+  "finalization_report_sha256": "b60dce0c695985b6c2673373061851373fcc4ff6165699b6a3d769a544debbf5"
 }

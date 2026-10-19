@@ -1,0 +1,19 @@
+{
+  "schema": "manual-upload-readiness/1",
+  "verified_at": "2026-10-19T07:26:27.530959+00:00",
+  "validated_commit": "eb7f476f663c2724436d4e93e42d3d3842524615",
+  "repository_validation": "VALID",
+  "errors": 0,
+  "warnings": 0,
+  "repository_report_sha256": "bf54b040cf8775184cc480110e2668de3224e74fa7eec141569687a53a1e1234",
+  "tasks_commit": "b224278768f2f65aa1dc33ceccd8873bce5230e5",
+  "task_count": 11,
+  "source_release": "6962c38c8da665712ca65b6e4bcce56836cedcc8",
+  "archive_sha256": "f60defb00b4a23f210623c1186b2eaac55b5b4df6b33f8736c0678723397fd8e",
+  "upload_scope": "source_assets_tasks_and_dataset_mirror",
+  "archive_and_build_external": true,
+  "upload_performed": false,
+  "visibility_changed": false,
+  "new_media": false,
+  "scope": "This receipt and its workflow row only add release documentation after the identified repository validation. The upload plan binds the final committed refs and is prepared outside the project."
+}

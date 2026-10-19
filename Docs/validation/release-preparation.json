@@ -1,6 +1,6 @@
 {
   "schema": "release-preparation/1",
-  "status": "artifacts_validated",
+  "status": "ready_for_manual_upload",
   "source_commit": "6962c38c8da665712ca65b6e4bcce56836cedcc8",
   "tasks_commit": "b224278768f2f65aa1dc33ceccd8873bce5230e5",
   "engine": "5.7",
@@ -33,5 +33,8 @@
   "full_directory_validation": "VALID",
   "archive_validation": "VALID",
   "repository_mirror_validation": "VALID",
-  "finalization_report_sha256": "b60dce0c695985b6c2673373061851373fcc4ff6165699b6a3d769a544debbf5"
+  "finalization_report_sha256": "b60dce0c695985b6c2673373061851373fcc4ff6165699b6a3d769a544debbf5",
+  "repository_validation": "VALID",
+  "repository_validation_commit": "eb7f476f663c2724436d4e93e42d3d3842524615",
+  "readiness_receipt": "Docs/validation/pre-upload.json"
 }

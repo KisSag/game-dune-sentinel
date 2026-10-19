@@ -26,7 +26,9 @@ Gameplay evidence, replay verification and packaged-build checks are reported se
 
 ## Delivery
 
-The validated dataset mirror is in `Dataset/`. The complete archive is `Dataset.zip`, kept outside Git; it also includes the project, Windows Shipping build, anonymized history with LFS objects and separated evaluation documents. The archive records the release source revision; later delivery documentation commits do not change the runtime inputs.
+The validated dataset mirror is in `Dataset/`. The complete archive is `Dataset.zip`, kept outside Git; it also includes the project, Windows Shipping build, anonymized history with LFS objects and separated evaluation documents. The archive records the release source revision.
+
+The current keyboard layout update is verified in [its focused acceptance report](Docs/validation/keyboard-flight-layout.md). The retained Dataset archive and earlier Windows Shipping executable predate this update and still use the earlier controls; this source update does not regenerate that release package.
 
 Use [the portable replay instructions](Dataset/ReplayScripts/README.md) with the History folder from the complete archive. The repository-level replay configuration records the local authoring context; the portable instructions describe restoring the delivered history and configuring a fresh machine.
 

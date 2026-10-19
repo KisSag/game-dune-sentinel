@@ -1,0 +1,21 @@
+{"event":"route_clock_started","world_seconds_offset":0.00050000002374872565,"wall_seconds_since_module_start":4.8987678997218609,"map":"DesertDefense","clock":"world seconds from first begun-play tick with controller, PlayerInput and pawn; no warm-up freeze","input":"APlayerController::InputKey / FInputKeyEventArgs::CreateSimulated"}
+{"event":"key","key":"Enter","press":true,"scheduled_t":1,"actual_t":1.0053894184529781,"inputkey_return_not_success_verdict":false}
+{"event":"key","key":"Enter","press":false,"scheduled_t":1.1499999999999999,"actual_t":1.1773456148803234,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"W","press":true,"scheduled_t":3,"actual_t":3.0101529099047184,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"W","press":false,"scheduled_t":3.6499999999999999,"actual_t":3.6576766110956669,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"S","press":true,"scheduled_t":5,"actual_t":5.0043810121715069,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"S","press":false,"scheduled_t":5.6500000000000004,"actual_t":5.6527749113738537,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"SpaceBar","press":true,"scheduled_t":7,"actual_t":7.0077516101300716,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"SpaceBar","press":false,"scheduled_t":10,"actual_t":10.005666509270668,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"LeftControl","press":true,"scheduled_t":11,"actual_t":11.008600309491158,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"LeftControl","press":false,"scheduled_t":12.5,"actual_t":12.502873212099075,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"LeftMouseButton","press":true,"scheduled_t":14,"actual_t":14.005585011094809,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"LeftMouseButton","press":false,"scheduled_t":15,"actual_t":15.005300611257553,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"F","press":true,"scheduled_t":17,"actual_t":17.001102209091187,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"F","press":false,"scheduled_t":17.149999999999999,"actual_t":17.157865110784769,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"Tab","press":true,"scheduled_t":19,"actual_t":19.003435511142015,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"Tab","press":false,"scheduled_t":19.149999999999999,"actual_t":19.15719361230731,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"RightMouseButton","press":true,"scheduled_t":21,"actual_t":21.006554011255503,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"RightMouseButton","press":false,"scheduled_t":24,"actual_t":24.006524812430143,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"RightControl","press":true,"scheduled_t":26,"actual_t":26.000233512371778,"inputkey_return_not_success_verdict":true}
+{"event":"key","key":"RightControl","press":false,"scheduled_t":27,"actual_t":27.002215512096882,"inputkey_return_not_success_verdict":true}

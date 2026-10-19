@@ -1,0 +1,13 @@
+{
+  "schema": "keyboard-controls-build/1",
+  "commit": "139b173ba7ac26a8f4e3b04e1ea214480520f0c4",
+  "status": "ok",
+  "exit_code": 0,
+  "engine": "5.7",
+  "target": "DuneSentinelEditor Win64 Development",
+  "compile_seconds": 47.5,
+  "build_log_sha256": "a0aa1d9c2d9259b5348e1a4c6ed5cfd7db635c39426fc60fd63c9864ff5b44b7",
+  "packaged": false,
+  "observer": "TaskRouteProbe/v4",
+  "observer_scope": "Test-only plugin in the private build clone; not a game source dependency."
+}

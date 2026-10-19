@@ -1,0 +1,42 @@
+[
+  {
+    "file": "engine.log",
+    "bytes": 110363,
+    "sha256": "98590ff98cac2b3f19f874d2e85985ccd21c675a3aa27a49c155906707d6bd45"
+  },
+  {
+    "file": "events.jsonl",
+    "bytes": 3131,
+    "sha256": "df2a3d534f3a2a177a0d840d80c334a46ada5ac7e0e2589fbef5d7701c5c3b1d"
+  },
+  {
+    "file": "render.jsonl",
+    "bytes": 142484,
+    "sha256": "8eeae0fd84b55cdf73cfcb88d580b2c7b98a3b3827694da4b558a5a946a0efbd"
+  },
+  {
+    "file": "scene.jsonl",
+    "bytes": 286235,
+    "sha256": "dd9afd5e8049a23ba94d812d5309f6f75875c2905492a8c8a42527457ec45f7a"
+  },
+  {
+    "file": "summary.json",
+    "bytes": 598,
+    "sha256": "56a952589c3d07bd45020482a0cd6b81f7f7050da58d696114d432fd01e7a960"
+  },
+  {
+    "file": "surface-state.json",
+    "bytes": 17818226,
+    "sha256": "787e86accffa6fea1de9f7a8a631cb6972a01713ffdf660a67a78b3307de8a22"
+  },
+  {
+    "file": "telemetry.jsonl",
+    "bytes": 7723169,
+    "sha256": "610ee290708ed8da6447c03eb22b9ef35a542db91d1011af85e059012c66632e"
+  },
+  {
+    "file": "timing.jsonl",
+    "bytes": 10095937,
+    "sha256": "6966f8681b4a1920006426485be949b54cb5e374f30efbeccdcdab77fba05846"
+  }
+]

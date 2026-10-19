@@ -4,6 +4,8 @@ Sentinel is an isolated forward airbase in a desert basin. A clear daytime sky, 
 
 The player flies one of three modern fighters in third person. Each airframe trades durability, speed, handling and ammunition. Independent pitch, roll and yaw support expert flight, with throttle, braking, cannon fire, missile fire and target selection. The camera keeps the aircraft below the centre of the view.
 
+The keyboard layout uses W/S for pitch up/down, A/D for roll, Q/E for yaw, Space to accelerate and either Ctrl key to brake. Left mouse fires the cannon; F launches a missile. Tab selects a target and holding right mouse looks at that target until released. Enter starts flight, V changes the camera and Esc pauses.
+
 Start at the airbase menu, select an aircraft and launch. Enemy fighters attack the player; bombers fly toward the airbase, bomb it and depart. Incoming waves repeat every five minutes. Flying near the base replenishes ammunition. Aircraft destruction and survival award points; losing the player aircraft or the base ends the sortie.
 
 Native gameplay classes implement flight, weapons, opponents, score and the interface. `/Game/Maps/DesertDefense` is the play map. A Blueprint game-mode subclass holds editable base health and wave timing. Existing Unreal Engine 5.7 components are adopted with exact asset hashes and recorded changes.

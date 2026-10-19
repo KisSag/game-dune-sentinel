@@ -1,0 +1,22 @@
+[
+  {"t": 1.0, "key": "Enter", "press": true},
+  {"t": 1.15, "key": "Enter", "press": false},
+  {"t": 3.0, "key": "W", "press": true},
+  {"t": 3.65, "key": "W", "press": false},
+  {"t": 5.0, "key": "S", "press": true},
+  {"t": 5.65, "key": "S", "press": false},
+  {"t": 7.0, "key": "SpaceBar", "press": true},
+  {"t": 10.0, "key": "SpaceBar", "press": false},
+  {"t": 11.0, "key": "LeftControl", "press": true},
+  {"t": 12.5, "key": "LeftControl", "press": false},
+  {"t": 14.0, "key": "LeftMouseButton", "press": true},
+  {"t": 15.0, "key": "LeftMouseButton", "press": false},
+  {"t": 17.0, "key": "F", "press": true},
+  {"t": 17.15, "key": "F", "press": false},
+  {"t": 19.0, "key": "Tab", "press": true},
+  {"t": 19.15, "key": "Tab", "press": false},
+  {"t": 21.0, "key": "RightMouseButton", "press": true},
+  {"t": 24.0, "key": "RightMouseButton", "press": false},
+  {"t": 26.0, "key": "RightControl", "press": true},
+  {"t": 27.0, "key": "RightControl", "press": false}
+]

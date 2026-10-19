@@ -1,0 +1,56 @@
+{
+ "verdict": "VALID",
+ "target": "E:/GameDataTraining/release-ue57/dune-sentinel",
+ "findings": [
+  {
+   "severity": "note",
+   "area": "repo",
+   "message": "DuneSentinel.uproject: engine 5.7"
+  },
+  {
+   "severity": "note",
+   "area": "repo: README",
+   "message": "7 images, all committed"
+  },
+  {
+   "severity": "note",
+   "area": "repo: assets.manifest.json",
+   "message": "30 assets, 880 listed paths, 0 missing"
+  },
+  {
+   "severity": "note",
+   "area": "repo: workflow.jsonl",
+   "message": "45 rows, 0 not matching the row schema, 3 user.direction rows"
+  },
+  {
+   "severity": "note",
+   "area": "repo: Tasks",
+   "message": "11 task(s) on tasks (about 10 recommended)"
+  },
+  {
+   "severity": "note",
+   "area": "dataset Dataset/: workflow.jsonl",
+   "message": "37 rows, 0 not matching the row schema, 1 user.direction rows"
+  },
+  {
+   "severity": "note",
+   "area": "dataset Dataset/: git.log",
+   "message": "20 commits"
+  },
+  {
+   "severity": "note",
+   "area": "dataset Dataset/",
+   "message": "dune-sentinel repo-dataset complete: 37 files, 1 scenario video(s)"
+  },
+  {
+   "severity": "note",
+   "area": "layout (Dataset)",
+   "message": "Gameplay/dune-sentinel_S1.mp4: 63.0 s, h264 1920x1080 + aac"
+  },
+  {
+   "severity": "note",
+   "area": "layout (Dataset)",
+   "message": "validate-dataset.ps1: VALID  E:\\GameDataTraining\\release-ue57\\dune-sentinel\\Dataset  (repo Dataset, layout dataset-layout/v1.3, 39 files)"
+  }
+ ]
+}

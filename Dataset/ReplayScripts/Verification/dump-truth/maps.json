@@ -1,0 +1,9 @@
+[
+ {
+  "map": "/Game/Maps/DesertDefense",
+  "actors": 1193,
+  "t3d": true,
+  "seconds": 9.2,
+  "file": "Maps__DesertDefense"
+ }
+]

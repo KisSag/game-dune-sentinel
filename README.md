@@ -23,3 +23,29 @@ Evaluation tasks are maintained on the separate `tasks` branch. Each task identi
 The retained release contains 527 native resource packages. Each adopted state has an exact-byte reuse receipt under `Docs/validation/reuse/`. `ReplayConfig.json` restores the inputs from their recorded commits and removes assets absent from each state. This reproduces the recorded adoption and changes; it does not claim that adopted artwork was imported again.
 
 Gameplay evidence, replay verification and packaged-build checks are reported separately in the delivery metadata. Existing gameplay media are reference material. Current checks produce no new screenshots or video.
+
+## Delivery
+
+The validated dataset mirror is in `Dataset/`. The complete archive is `Dataset.zip`, kept outside Git; it also includes the project, Windows Shipping build, anonymized history with LFS objects and separated evaluation documents. The archive records the release source revision; later delivery documentation commits do not change the runtime inputs.
+
+Use [the portable replay instructions](Dataset/ReplayScripts/README.md) with the History folder from the complete archive. The repository-level replay configuration records the local authoring context; the portable instructions describe restoring the delivered history and configuring a fresh machine.
+
+[Release verification](Docs/validation/release.json) distinguishes the packaged smoke test, prior task-route evidence verified through identical runtime inputs, and the complete recorded asset-adoption replay.
+
+## Reference gallery
+
+The following retained gameplay stills are reference material, not new captures of this release.
+
+![Retained gameplay reference](Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_02.jpg)
+
+![Retained gameplay reference 2](Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_03.jpg)
+
+![Retained gameplay reference 3](Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_04.jpg)
+
+![Retained gameplay reference 4](Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_05.jpg)
+
+![Retained gameplay reference 5](Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_06.jpg)
+
+![Retained gameplay reference 6](Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_07.jpg)
+
+![Retained gameplay reference 7](Dataset/Screenshots/dune-sentinel_S1_20261016-025526_s42_08.jpg)

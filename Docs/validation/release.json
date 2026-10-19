@@ -1,0 +1,88 @@
+{
+  "source_commit": "33df55d0676dafd98985427d945db79ac3464b98",
+  "tasks_commit": "e8802875a19a2b194972ab52264d61175c7c1680",
+  "engine": "5.7.4",
+  "shipping_smoke": {
+    "checks_passed": 15,
+    "actual_new_execution": true,
+    "duration_limit_seconds": 30,
+    "exit_code": 0,
+    "new_task_routes_executed": 0,
+    "report_sha256": "e3daf33d5a57a2bc95286fbc9b29adc49b6fde2e2e472059fb2b2b7a853dd802"
+  },
+  "task_evidence": {
+    "tasks": 10,
+    "hard_tasks": 2,
+    "states": 17,
+    "runtime_inputs_identical": true,
+    "raw_json_newline_differences": 29,
+    "raw_json_values_identical": true,
+    "basis": "Previously completed task-route checks reused after exact runtime-input equivalence verification; task routes were not executed again."
+  },
+  "replay": {
+    "windows": 19,
+    "asset_adoptions": 18,
+    "prunes": 18,
+    "editor_authoring_runs": 0,
+    "non_content_files_identical": 499,
+    "native_packages_identical": 527,
+    "asset_objects_identical": 528,
+    "map_actors_identical": 1193,
+    "scope": "Recorded adoption and organization of completed native assets."
+  },
+  "privacy": {
+    "reviewed_shipping_occurrences": 25,
+    "reviewed_model_occurrences": 1,
+    "scanner_protection_tests_passed": 14,
+    "binary_classification_tests_passed": 82,
+    "recorded_text_processing_tests_passed": 34,
+    "game_binary_changes": false,
+    "blocking_hits": 0,
+    "allowlisted_occurrences_in_full_directory": 118,
+    "packaging_rules_revision": "734756fb77bc4cc7bf492819edc0144de69ef2fc"
+  },
+  "media": {
+    "new_video": false,
+    "new_screenshots": false,
+    "existing_media_role": "reference"
+  },
+  "export_text_changes": {
+    "history_text_blobs_changed": 1,
+    "file": "RawAssets/Fonts/Rajdhani-OFL.txt",
+    "change": "Contact email redacted by the delivery text cleaner.",
+    "copyright_and_license_text_preserved": true,
+    "runtime_source_changes": false
+  },
+  "full_directory_validation": {
+    "status": "VALID",
+    "errors": 0,
+    "warnings": 0,
+    "layout": "dataset-layout/v1.3",
+    "files": 2919,
+    "history_commits": 20,
+    "lfs_objects": 1804,
+    "tasks": 10,
+    "listed_asset_paths": 880,
+    "missing_asset_paths": 0,
+    "manifest_sha256": "cff3fd9e3432ee68a97fb8cd05309ae46294fbf1e3746bf582cd131a7ef2226f"
+  },
+  "schema": "release-verification/1",
+  "exported_history_commit": "f501f7434a62c80e20c16c078f2420938da985fc",
+  "verified_at": "2026-10-19T04:42:15.085Z",
+  "archive": {
+    "file": "Dataset.zip",
+    "bytes": 17867366814,
+    "sha256": "a6e8530ddc7129ee6f9a54df8598cffb9519a93f97401e6baad44a846b5c423b",
+    "validation": "VALID",
+    "errors": 0,
+    "warnings": 0,
+    "all_member_sha256_verified": true
+  },
+  "repository_mirror": {
+    "directory": "Dataset",
+    "validation": "VALID",
+    "errors": 0,
+    "warnings": 0
+  },
+  "scope": "The archive and replay verify the release source commit. Later delivery-documentation commits do not change runtime inputs."
+}

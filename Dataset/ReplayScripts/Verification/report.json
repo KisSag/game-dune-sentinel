@@ -1,0 +1,853 @@
+{
+ "schema": "ue-replay.verification/v1",
+ "game": "dune-sentinel",
+ "final_commit": "f501f7434a62c80e20c16c078f2420938da985fc",
+ "time": "2026-10-18T13:52:06.447-07:00",
+ "files": {
+  "content": {
+   "identical": 527
+  },
+  "other": {
+   "identical": 499
+  },
+  "differs": [],
+  "missing": [],
+  "extra": []
+ },
+ "assets": {
+  "total": {
+   "same": 528
+  },
+  "by_class": {
+   "Blueprint": {
+    "same": 1
+   },
+   "BlueprintGeneratedClass": {
+    "same": 1
+   },
+   "Font": {
+    "same": 2
+   },
+   "FontFace": {
+    "same": 2
+   },
+   "LandscapeLayerInfoObject": {
+    "same": 4
+   },
+   "Material": {
+    "same": 127
+   },
+   "MaterialFunction": {
+    "same": 2
+   },
+   "MaterialInstanceConstant": {
+    "same": 33
+   },
+   "SoundWave": {
+    "same": 12
+   },
+   "StaticMesh": {
+    "same": 55
+   },
+   "Texture2D": {
+    "same": 288
+   },
+   "World": {
+    "same": 1
+   }
+  },
+  "diffs": [],
+  "load_error_both": []
+ },
+ "maps": {
+  "/Game/Maps/DesertDefense": {
+   "truth_actors": 1193,
+   "replay_actors": 1193,
+   "matched": 1193,
+   "identical": 1193,
+   "differs": 0,
+   "missing": 0,
+   "extra": 0,
+   "differing_fields": {},
+   "world_settings_same": true,
+   "detail": {
+    "differs": [],
+    "missing": [],
+    "extra": []
+   }
+  }
+ },
+ "maps_excluded": {
+  "reason": "outside the game's map roots ['/Game/Maps']: demo/showcase levels shipped inside store packs, not built by the game's creator",
+  "maps": []
+ },
+ "rows": {
+  "totals": {},
+  "runs": []
+ },
+ "windows": [
+  {
+   "window": 1,
+   "commit": "41a3587cc44b3e1e5ee32e919634611adf42e4a6",
+   "subject": "Adopt the verified native air-combat baseline",
+   "time": "2026-10-18T13:42:23.761-07:00",
+   "seconds": 4.3,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 50,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 2,
+   "commit": "ab456a44d9248378dbc6553534e2bae89f9caff2",
+   "subject": "Adopt clearer ground presentation and launch feedback",
+   "time": "2026-10-18T13:42:29.609-07:00",
+   "seconds": 5.8,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 5,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 3,
+   "commit": "df8b278662e1b5018e1e8c281e4f6ece1eee1e91",
+   "subject": "Adopt corrected aircraft parking height",
+   "time": "2026-10-18T13:42:33.897-07:00",
+   "seconds": 4.3,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 4,
+   "commit": "741d45365a92dfefad4124a276b633e50373ec43",
+   "subject": "Adopt cannon feedback preparation",
+   "time": "2026-10-18T13:42:38.231-07:00",
+   "seconds": 4.3,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 5,
+   "commit": "ca2ddad264756fc4c85aca6211a0ef94851e1b5f",
+   "subject": "Adopt visible cannon flashes smoke and projectile trails",
+   "time": "2026-10-18T13:42:42.560-07:00",
+   "seconds": 4.3,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 4,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 6,
+   "commit": "4c7e9eb314b496e65be3c818d2a10cae6f1f1fa3",
+   "subject": "Adopt bomber formations and missile test baseline",
+   "time": "2026-10-18T13:42:46.848-07:00",
+   "seconds": 4.3,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 7,
+   "commit": "5520597413439a3b4cdf1e96f3b2098970fe2f2a",
+   "subject": "Adopt unguided missile flight and visible exhaust trails",
+   "time": "2026-10-18T13:42:51.083-07:00",
+   "seconds": 4.2,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 8,
+   "commit": "85705315951de1d8b535861e2f6c31b0ad58eec7",
+   "subject": "Adopt desert settlements terrain variation and oases",
+   "time": "2026-10-18T13:42:57.944-07:00",
+   "seconds": 6.9,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 44,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 9,
+   "commit": "77fc78c99f85d744477e1c29732671aa57dd949b",
+   "subject": "Adopt grounded settlements shorelines and vegetation",
+   "time": "2026-10-18T13:43:04.121-07:00",
+   "seconds": 6.2,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 7,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 10,
+   "commit": "acc965b287753a7fbf75dc794d5a70e806aa995b",
+   "subject": "Adopt terrain and settlement acceptance baseline",
+   "time": "2026-10-18T13:43:08.642-07:00",
+   "seconds": 4.5,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 11,
+   "commit": "fa734dc8789da1f8c4143b3b8ff6a41d17de87d5",
+   "subject": "Adopt detailed town assets rugged mountains and oases",
+   "time": "2026-10-18T13:43:20.392-07:00",
+   "seconds": 11.7,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 125,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 12,
+   "commit": "c1392585bed751f9b0fd051fa74c68d7f6a633ba",
+   "subject": "Adopt aircraft exhaust evaluation baseline",
+   "time": "2026-10-18T13:43:27.380-07:00",
+   "seconds": 7.0,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 13,
+   "commit": "bc274b256666614c31234ddfcbfff055c83d08cc",
+   "subject": "Adopt throttle-responsive aircraft exhaust",
+   "time": "2026-10-18T13:43:34.432-07:00",
+   "seconds": 7.0,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 2,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 14,
+   "commit": "03ab5ee5db053193c4246b0892b560f5918b5892",
+   "subject": "Adopt detailed aircraft hangars tower and airbase layout",
+   "time": "2026-10-18T13:43:47.303-07:00",
+   "seconds": 12.9,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 232,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 15,
+   "commit": "0c4645496ddb87d8376ebb33e9a7833e772393e9",
+   "subject": "Adopt stable landing brakes and aircraft clearance",
+   "time": "2026-10-18T13:43:56.211-07:00",
+   "seconds": 8.9,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 16,
+   "commit": "ea75a0f794a791c71bebc7980644af0c077c3fc8",
+   "subject": "Adopt the expanded desert landscape and environment assets",
+   "time": "2026-10-18T13:44:37.340-07:00",
+   "seconds": 41.1,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 620,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 17,
+   "commit": "82f75bcdbe1725526508115f58bf42bf31784f80",
+   "subject": "Adopt aligned roads oasis water and finished terrain",
+   "time": "2026-10-18T13:45:09.834-07:00",
+   "seconds": 32.5,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 9,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 18,
+   "commit": "4a5b0dc914f3f3915966458320478830961aa5b7",
+   "subject": "Adopt the completed release with unused native resources removed",
+   "time": "2026-10-18T13:45:25.885-07:00",
+   "seconds": 16.0,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 522,
+    "exact": 360,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  },
+  {
+   "window": 19,
+   "commit": "f501f7434a62c80e20c16c078f2420938da985fc",
+   "subject": "Describe asset reuse and configure the recorded 5.7 replay",
+   "time": "2026-10-18T13:45:28.919-07:00",
+   "seconds": 3.0,
+   "runs": 0,
+   "reconstruction": {
+    "checks": 0,
+    "match": 0
+   },
+   "content": {
+    "fallback": 0,
+    "deleted": 0,
+    "already_deleted": 0,
+    "exact": 0,
+    "differs": 0,
+    "kept_replay": 0,
+    "missing": 0,
+    "extra": 0
+   }
+  }
+ ],
+ "verdict": {
+  "pass": true,
+  "criteria": [
+   {
+    "id": "files",
+    "text": "every tracked file outside Content/ byte-identical; none missing; no extra files except git-ignored ones",
+    "pass": true,
+    "result": "499 identical, 0 differ, 0 missing; 0 extra (0 git-ignored)",
+    "failures": []
+   },
+   {
+    "id": "assets",
+    "text": "every asset of the final commit present with the same class and structure digest",
+    "pass": true,
+    "result": "528 same, 0 differ, 0 missing, 0 extra, 0 class changed",
+    "failures": []
+   },
+   {
+    "id": "maps",
+    "text": "every game map: same actors (class, label, folder) with the same transform, components, properties and world settings",
+    "pass": true,
+    "result": "DesertDefense 1193/1193",
+    "failures": []
+   }
+  ],
+  "exclusions": {
+   "content_bytes": {
+    "what": "Content/ .uasset/.umap bytes: Unreal writes a random PersistentGuid into every saved package; compared by structure instead (criteria assets, maps)",
+    "count": 0
+   },
+   "maps_not_compared": {
+    "what": "outside the game's map roots ['/Game/Maps']: demo/showcase levels shipped inside store packs, not built by the game's creator",
+    "maps": []
+   },
+   "git_ignored_extra_files": [],
+   "guid": {
+    "what": "random GUIDs Unreal writes on save (ExpressionGUID, Guid=...)",
+    "count": 0
+   },
+   "loc_key": {
+    "what": "random localization keys Unreal generates for text properties (NSLOCTEXT(\"\", \"<32 hex>\", ...))",
+    "count": 0
+   },
+   "memory_address": {
+    "what": "memory addresses in printed object values (delegates: '(0x00000801...)')",
+    "count": 0
+   },
+   "project_path": {
+    "what": "paths into the folder the editor ran in (game repo vs replay project, user profile name; absolute or project-relative) in import-source fields",
+    "count": 0
+   },
+   "derived_compression_size": {
+    "what": "AnimSequence compressed size: derived data of the compression codec run, not authored content (key tags.Compressed Size (KB))",
+    "count": 0
+   }
+  },
+  "informational": {
+   "workflow_rows_per_run": {},
+   "note": "row comparison is informational: rows carry times, ids and per-run counts"
+  }
+ },
+ "deviations": [
+  {
+   "kind": "shell_steps",
+   "what": "shell commands of the builder replayed from settings (delete, move-merge, host-python), each matched to its recorded command",
+   "items": [
+    {
+     "match": "reuse_native_state_v2.py' --state s01",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s02",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s03",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s04",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s05",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s06",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s07",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s08",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s09",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s10",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s11",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s12",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s13",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s14",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s15",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s16",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state s17",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+     "match": "reuse_native_state_v2.py' --state final",
+     "argv": [
+      "keep-committed",
+      "Content"
+     ],
+     "reason": "Remove content absent from this operation's adopted state."
+    }
+   ]
+  },
+  {
+   "kind": "asset_drops",
+   "what": "store packs and downloads restored into the project where the builder copied them in",
+   "items": [
+    {
+     "id": "reuse-s01",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s02",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s03",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s04",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s05",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s06",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s07",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s08",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s09",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s10",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s11",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s12",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s13",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s14",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s15",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s16",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-s17",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    },
+    {
+     "id": "reuse-final",
+     "packs": [
+      null
+     ],
+     "reason": "Restore the native bytes adopted in this recorded reuse operation."
+    }
+   ]
+  }
+ ]
+}

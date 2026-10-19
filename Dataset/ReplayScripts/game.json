@@ -1,0 +1,456 @@
+{
+  "game": "dune-sentinel",
+  "live": false,
+  "repo": "{root}/release-ue57/dune-sentinel",
+  "recording": "",
+  "first": "e267270142e3153a969d703062f5ee016522f597",
+  "final": "f501f7434a62c80e20c16c078f2420938da985fc",
+  "uproject": "DuneSentinel.uproject",
+  "editor_target": "DuneSentinelEditor",
+  "module": "DuneSentinel",
+  "engine": "E:/Game2/EpicGames/UE_5.7",
+  "work_root": "{root}/ue-replay/dune-sentinel-reuse57",
+  "reason_env": "UE_RUN_REASON",
+  "editor_args": [
+    "-unattended",
+    "-nop4",
+    "-nosplash",
+    "-AllowCommandletRendering",
+    "-RenderOffScreen",
+    "-d3d12"
+  ],
+  "readonly_patterns": [
+    "inspect_*",
+    "measure_*",
+    "*probe*",
+    "check_*",
+    "analyze_*",
+    "scan_*"
+  ],
+  "not_readonly": [],
+  "content_roots": [
+    "/Game"
+  ],
+  "map_roots": [
+    "/Game/Maps"
+  ],
+  "run_patterns": [],
+  "asset_drops": [
+    {
+      "id": "reuse-s01",
+      "match": "reuse_native_state_v2.py' --state s01",
+      "pack": "Adopted UE 5.7 project state s01",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "41a3587cc44b3e1e5ee32e919634611adf42e4a6"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s02",
+      "match": "reuse_native_state_v2.py' --state s02",
+      "pack": "Adopted UE 5.7 project state s02",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "ab456a44d9248378dbc6553534e2bae89f9caff2"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s03",
+      "match": "reuse_native_state_v2.py' --state s03",
+      "pack": "Adopted UE 5.7 project state s03",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "df8b278662e1b5018e1e8c281e4f6ece1eee1e91"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s04",
+      "match": "reuse_native_state_v2.py' --state s04",
+      "pack": "Adopted UE 5.7 project state s04",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "741d45365a92dfefad4124a276b633e50373ec43"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s05",
+      "match": "reuse_native_state_v2.py' --state s05",
+      "pack": "Adopted UE 5.7 project state s05",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "ca2ddad264756fc4c85aca6211a0ef94851e1b5f"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s06",
+      "match": "reuse_native_state_v2.py' --state s06",
+      "pack": "Adopted UE 5.7 project state s06",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "4c7e9eb314b496e65be3c818d2a10cae6f1f1fa3"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s07",
+      "match": "reuse_native_state_v2.py' --state s07",
+      "pack": "Adopted UE 5.7 project state s07",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "5520597413439a3b4cdf1e96f3b2098970fe2f2a"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s08",
+      "match": "reuse_native_state_v2.py' --state s08",
+      "pack": "Adopted UE 5.7 project state s08",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "85705315951de1d8b535861e2f6c31b0ad58eec7"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s09",
+      "match": "reuse_native_state_v2.py' --state s09",
+      "pack": "Adopted UE 5.7 project state s09",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "77fc78c99f85d744477e1c29732671aa57dd949b"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s10",
+      "match": "reuse_native_state_v2.py' --state s10",
+      "pack": "Adopted UE 5.7 project state s10",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "acc965b287753a7fbf75dc794d5a70e806aa995b"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s11",
+      "match": "reuse_native_state_v2.py' --state s11",
+      "pack": "Adopted UE 5.7 project state s11",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "fa734dc8789da1f8c4143b3b8ff6a41d17de87d5"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s12",
+      "match": "reuse_native_state_v2.py' --state s12",
+      "pack": "Adopted UE 5.7 project state s12",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "c1392585bed751f9b0fd051fa74c68d7f6a633ba"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s13",
+      "match": "reuse_native_state_v2.py' --state s13",
+      "pack": "Adopted UE 5.7 project state s13",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "bc274b256666614c31234ddfcbfff055c83d08cc"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s14",
+      "match": "reuse_native_state_v2.py' --state s14",
+      "pack": "Adopted UE 5.7 project state s14",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "03ab5ee5db053193c4246b0892b560f5918b5892"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s15",
+      "match": "reuse_native_state_v2.py' --state s15",
+      "pack": "Adopted UE 5.7 project state s15",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "0c4645496ddb87d8376ebb33e9a7833e772393e9"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s16",
+      "match": "reuse_native_state_v2.py' --state s16",
+      "pack": "Adopted UE 5.7 project state s16",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "ea75a0f794a791c71bebc7980644af0c077c3fc8"
+        }
+      ]
+    },
+    {
+      "id": "reuse-s17",
+      "match": "reuse_native_state_v2.py' --state s17",
+      "pack": "Adopted UE 5.7 project state s17",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "82f75bcdbe1725526508115f58bf42bf31784f80"
+        }
+      ]
+    },
+    {
+      "id": "reuse-final",
+      "match": "reuse_native_state_v2.py' --state final",
+      "pack": "Adopted UE 5.7 project state final",
+      "reason": "Restore the native bytes adopted in this recorded reuse operation.",
+      "items": [
+        {
+          "from_git": "Content",
+          "ref": "4a5b0dc914f3f3915966458320478830961aa5b7"
+        }
+      ]
+    }
+  ],
+  "shell_replay": [
+    {
+      "id": "reuse-s01-prune",
+      "match": "reuse_native_state_v2.py' --state s01",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "41a3587cc44b3e1e5ee32e919634611adf42e4a6",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s02-prune",
+      "match": "reuse_native_state_v2.py' --state s02",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "ab456a44d9248378dbc6553534e2bae89f9caff2",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s03-prune",
+      "match": "reuse_native_state_v2.py' --state s03",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "df8b278662e1b5018e1e8c281e4f6ece1eee1e91",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s04-prune",
+      "match": "reuse_native_state_v2.py' --state s04",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "741d45365a92dfefad4124a276b633e50373ec43",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s05-prune",
+      "match": "reuse_native_state_v2.py' --state s05",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "ca2ddad264756fc4c85aca6211a0ef94851e1b5f",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s06-prune",
+      "match": "reuse_native_state_v2.py' --state s06",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "4c7e9eb314b496e65be3c818d2a10cae6f1f1fa3",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s07-prune",
+      "match": "reuse_native_state_v2.py' --state s07",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "5520597413439a3b4cdf1e96f3b2098970fe2f2a",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s08-prune",
+      "match": "reuse_native_state_v2.py' --state s08",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "85705315951de1d8b535861e2f6c31b0ad58eec7",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s09-prune",
+      "match": "reuse_native_state_v2.py' --state s09",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "77fc78c99f85d744477e1c29732671aa57dd949b",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s10-prune",
+      "match": "reuse_native_state_v2.py' --state s10",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "acc965b287753a7fbf75dc794d5a70e806aa995b",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s11-prune",
+      "match": "reuse_native_state_v2.py' --state s11",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "fa734dc8789da1f8c4143b3b8ff6a41d17de87d5",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s12-prune",
+      "match": "reuse_native_state_v2.py' --state s12",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "c1392585bed751f9b0fd051fa74c68d7f6a633ba",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s13-prune",
+      "match": "reuse_native_state_v2.py' --state s13",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "bc274b256666614c31234ddfcbfff055c83d08cc",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s14-prune",
+      "match": "reuse_native_state_v2.py' --state s14",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "03ab5ee5db053193c4246b0892b560f5918b5892",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s15-prune",
+      "match": "reuse_native_state_v2.py' --state s15",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "0c4645496ddb87d8376ebb33e9a7833e772393e9",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s16-prune",
+      "match": "reuse_native_state_v2.py' --state s16",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "ea75a0f794a791c71bebc7980644af0c077c3fc8",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-s17-prune",
+      "match": "reuse_native_state_v2.py' --state s17",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "82f75bcdbe1725526508115f58bf42bf31784f80",
+      "reason": "Remove content absent from this operation's adopted state."
+    },
+    {
+      "id": "reuse-final-prune",
+      "match": "reuse_native_state_v2.py' --state final",
+      "cwd": "",
+      "argv": [
+        "keep-committed",
+        "Content"
+      ],
+      "ref": "4a5b0dc914f3f3915966458320478830961aa5b7",
+      "reason": "Remove content absent from this operation's adopted state."
+    }
+  ]
+}

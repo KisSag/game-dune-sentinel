@@ -1,0 +1,337 @@
+{
+  "layout": "dataset-layout/v1.3",
+  "game": "dune-sentinel",
+  "title": "Dune Sentinel",
+  "version": "1.0.0",
+  "commit": "f501f7434a62c80e20c16c078f2420938da985fc",
+  "engine": "5.7",
+  "status": "complete",
+  "variant": "repo-dataset",
+  "pending": [],
+  "created": "2026-10-19T04:41:04.377579+00:00",
+  "source_package": "dune-sentinel_33df55d0",
+  "replay_verification": {
+    "pass": true,
+    "report": "ReplayScripts/Verification/report.md",
+    "criteria": [
+      {
+        "id": "files",
+        "text": "every tracked file outside Content/ byte-identical; none missing; no extra files except git-ignored ones",
+        "result": "499 identical, 0 differ, 0 missing; 0 extra (0 git-ignored)",
+        "pass": true
+      },
+      {
+        "id": "assets",
+        "text": "every asset of the final commit present with the same class and structure digest",
+        "result": "528 same, 0 differ, 0 missing, 0 extra, 0 class changed",
+        "pass": true
+      },
+      {
+        "id": "maps",
+        "text": "every game map: same actors (class, label, folder) with the same transform, components, properties and world settings",
+        "result": "DesertDefense 1193/1193",
+        "pass": true
+      }
+    ],
+    "exclusions": [
+      {
+        "id": "content_bytes",
+        "what": "Content/ .uasset/.umap bytes: Unreal writes a random PersistentGuid into every saved package; compared by structure instead (criteria assets, maps)",
+        "count": 0
+      },
+      {
+        "id": "maps_not_compared",
+        "what": "outside the game's map roots ['/Game/Maps']: demo/showcase levels shipped inside store packs, not built by the game's creator",
+        "count": 0,
+        "maps": []
+      },
+      {
+        "id": "git_ignored_extra_files",
+        "what": "git_ignored_extra_files",
+        "count": 0
+      },
+      {
+        "id": "guid",
+        "what": "random GUIDs Unreal writes on save (ExpressionGUID, Guid=...)",
+        "count": 0
+      },
+      {
+        "id": "loc_key",
+        "what": "random localization keys Unreal generates for text properties (NSLOCTEXT(\"\", \"<32 hex>\", ...))",
+        "count": 0
+      },
+      {
+        "id": "memory_address",
+        "what": "memory addresses in printed object values (delegates: '(0x00000801...)')",
+        "count": 0
+      },
+      {
+        "id": "project_path",
+        "what": "paths into the folder the editor ran in (game repo vs replay project, user profile name; absolute or project-relative) in import-source fields",
+        "count": 0
+      },
+      {
+        "id": "derived_compression_size",
+        "what": "AnimSequence compressed size: derived data of the compression codec run, not authored content (key tags.Compressed Size (KB))",
+        "count": 0
+      }
+    ]
+  },
+  "build": null,
+  "scenarios": [
+    {
+      "file": "Gameplay/dune-sentinel_S1.mp4",
+      "scenario": 1,
+      "name": "Glass Horizon - Airfield Defense",
+      "result": "timeout",
+      "seconds": 62.984,
+      "source_run": "dune-sentinel_S1_20261016-025526_s42",
+      "audio_offset_s": 0.789,
+      "media_role": "retained_reference",
+      "captured_from_this_release": false
+    }
+  ],
+  "reference_media": {
+    "kind": "retained_reference",
+    "captured_from_this_release": false,
+    "files": {
+      "Gameplay/dune-sentinel_S1.mp4": {
+        "bytes": 28166024,
+        "sha256": "9f09c94fa75de2f1a623d052c208bfff21fb392cdae475b51933782c61609f51"
+      },
+      "Screenshots/dune-sentinel_S1_20261016-025526_s42_02.jpg": {
+        "bytes": 92180,
+        "sha256": "af879b9103170a9fd26db170f324d1f9b8d7e1383caed2093b7f6a28adc74576"
+      },
+      "Screenshots/dune-sentinel_S1_20261016-025526_s42_03.jpg": {
+        "bytes": 100215,
+        "sha256": "f47a8c4639264fa6b49186ff1a978946f232b8a4ce7aef6d02fcbbd85e835ea2"
+      },
+      "Screenshots/dune-sentinel_S1_20261016-025526_s42_04.jpg": {
+        "bytes": 101172,
+        "sha256": "e3e868bd0ad4cd8ae339e5d0825f6a9a1c026f638f4f3843d0ba277e6ab19398"
+      },
+      "Screenshots/dune-sentinel_S1_20261016-025526_s42_05.jpg": {
+        "bytes": 104817,
+        "sha256": "917c14b6ab3fb7db631369522d39bb9b7eec3b45c893140d1ae1b736e579157b"
+      },
+      "Screenshots/dune-sentinel_S1_20261016-025526_s42_06.jpg": {
+        "bytes": 108790,
+        "sha256": "f5b0a30dbf1ac7d731341f11cb4f6d970fc6907b0f5f6a1e1c965b9d525846d1"
+      },
+      "Screenshots/dune-sentinel_S1_20261016-025526_s42_07.jpg": {
+        "bytes": 99403,
+        "sha256": "53011748aacfb4f0d9481c47389e23fb5ae15fa5d619a4485bbadd3fce088663"
+      },
+      "Screenshots/dune-sentinel_S1_20261016-025526_s42_08.jpg": {
+        "bytes": 105515,
+        "sha256": "a9698ffd43a509b143576e63a1352806ca4be18a8f2b463846800d2d3551de51"
+      }
+    }
+  },
+  "runtime_validation": {
+    "basis": "identical runtime code, configuration and native assets; separately proved raw JSON CRLF-to-LF changes",
+    "equivalent_task_states": 17,
+    "task_pairs": 10,
+    "new_task_route_executions": 0,
+    "prior_execution_identities_preserved": true,
+    "new_packaged_smoke": "passed"
+  },
+  "history": null,
+  "brief": {
+    "brief": "Brief/brief.md",
+    "design": "Brief/design.md"
+  },
+  "tasks": null,
+  "files": [
+    {
+      "path": "Brief/brief.md",
+      "bytes": 976,
+      "sha256": "081aafbbea586eb6020faa28807ed673a3b1be45c30eaa7bf6146e121719370e"
+    },
+    {
+      "path": "Brief/design.md",
+      "bytes": 1711,
+      "sha256": "fae609a9afc2933e35bb03aa6e592eff4aa835255bd8ab11774a6390229af8be"
+    },
+    {
+      "path": "Gameplay/dune-sentinel_S1.mp4",
+      "bytes": 28166024,
+      "sha256": "9f09c94fa75de2f1a623d052c208bfff21fb392cdae475b51933782c61609f51"
+    },
+    {
+      "path": "git.log",
+      "bytes": 3627406,
+      "sha256": "10f98d44f8398fdbadd0673f8fd6a72b2b520b713fb156a12db04fad9c857b90"
+    },
+    {
+      "path": "README.md",
+      "bytes": 2583,
+      "sha256": "8159bfc1d66927183797103ec52cf0cefa531a7b80d8b8a5fe9739ecf2ceb3dc"
+    },
+    {
+      "path": "ReplayScripts/derive.py",
+      "bytes": 10215,
+      "sha256": "2727b43ac1e29391583ae1526162b35968692b0bed9684a24202468fba02ccf9"
+    },
+    {
+      "path": "ReplayScripts/editor/ue_dump.py",
+      "bytes": 20057,
+      "sha256": "bbc24bb09fcc3f5f5c6918240ca1a7dfdc698f306a35ba57bf87bb907daa9cbc"
+    },
+    {
+      "path": "ReplayScripts/game.json",
+      "bytes": 13747,
+      "sha256": "cf275d82f1059bf2111fef3136841d26e10f5dfd347560a35e4913080f2a7a0e"
+    },
+    {
+      "path": "ReplayScripts/initial-assets.manifest.json",
+      "bytes": 1439770,
+      "sha256": "351e116d4c86b083e8169c453684895c6fa0aec2f43ecf25a8d74f56cbd510b2"
+    },
+    {
+      "path": "ReplayScripts/ledger.json",
+      "bytes": 325184,
+      "sha256": "917839fa03857fc83debf6d8e06e124d607ef1ebb612b9ce7d9f805e08c88614"
+    },
+    {
+      "path": "ReplayScripts/ledger.py",
+      "bytes": 39515,
+      "sha256": "2c77f5de14a20f8765a914a840f32b62c9d6b4dfd717cb34c1f38b9f5b172e54"
+    },
+    {
+      "path": "ReplayScripts/live.py",
+      "bytes": 42145,
+      "sha256": "8474e0937af75d63d39821acf441dbbe55fe4d97047201b1247138e7f61ce4ee"
+    },
+    {
+      "path": "ReplayScripts/package.py",
+      "bytes": 11265,
+      "sha256": "25a444fb28b33b63b71adb031ef775db478e7d76239459ed1df1439a71bfd3d2"
+    },
+    {
+      "path": "ReplayScripts/README.md",
+      "bytes": 5088,
+      "sha256": "2e852891f80e702d40168b33f1dcbac2d63be771b6bb7bad9543e9cb762586e3"
+    },
+    {
+      "path": "ReplayScripts/runner.py",
+      "bytes": 55493,
+      "sha256": "b58469dbbb3d51af4ac7e8d9c8477d5e1ecd180101b8363cd0b93d119c8b24c4"
+    },
+    {
+      "path": "ReplayScripts/shellfx.py",
+      "bytes": 20603,
+      "sha256": "6cf69baa5710a65a24e08124b83dfe8663405d0186728778b2e75133bf62f94a"
+    },
+    {
+      "path": "ReplayScripts/ue_replay.py",
+      "bytes": 15989,
+      "sha256": "08c37082c193b9363f892e3ae9bf0f4313bd6e1073771b092f2df019c3f3d932"
+    },
+    {
+      "path": "ReplayScripts/Verification/dump-replay/assets.json",
+      "bytes": 394576,
+      "sha256": "015d54873488857985385b5e89d32f7fe6f460189b947a99f9195e6e33323365"
+    },
+    {
+      "path": "ReplayScripts/Verification/dump-replay/done.json",
+      "bytes": 159,
+      "sha256": "35e11a00fe415ae1093d4899b155b91b7f35cda1980bcf02c3e24d67721e10e3"
+    },
+    {
+      "path": "ReplayScripts/Verification/dump-replay/maps/Maps__DesertDefense.json",
+      "bytes": 1899699,
+      "sha256": "70ff112e57299f9e84e317803dfb877ec5e37f52b83d49c8e6dc34d9b10c14cc"
+    },
+    {
+      "path": "ReplayScripts/Verification/dump-replay/maps.json",
+      "bytes": 138,
+      "sha256": "8443d363544e7ca707c0b12498fd2d67255883440af5df420238809a8d18714b"
+    },
+    {
+      "path": "ReplayScripts/Verification/dump-truth/assets.json",
+      "bytes": 394575,
+      "sha256": "38e2424db17189e90903cbc65b30eaf98bb9b5a78d4a7336c3491c81715499c3"
+    },
+    {
+      "path": "ReplayScripts/Verification/dump-truth/done.json",
+      "bytes": 157,
+      "sha256": "c35373a15d5169622b773df1f73970225f43ece9509b255c3d6f246ff1f32282"
+    },
+    {
+      "path": "ReplayScripts/Verification/dump-truth/maps/Maps__DesertDefense.json",
+      "bytes": 1899699,
+      "sha256": "70ff112e57299f9e84e317803dfb877ec5e37f52b83d49c8e6dc34d9b10c14cc"
+    },
+    {
+      "path": "ReplayScripts/Verification/dump-truth/maps.json",
+      "bytes": 137,
+      "sha256": "bc073341fea227ffbc6c3367ad43defe7c976e90a2d4c34e34e9f7f5b42b9550"
+    },
+    {
+      "path": "ReplayScripts/Verification/report.json",
+      "bytes": 19366,
+      "sha256": "b2dc02e459744db95386913413a0f7cd558459dcc9314cb679799fc42e436c59"
+    },
+    {
+      "path": "ReplayScripts/Verification/report.md",
+      "bytes": 8661,
+      "sha256": "b2c3d770621bc8fdaaef904ec960f7a8991e9d076468a891172308287017834e"
+    },
+    {
+      "path": "ReplayScripts/Verification/windows.jsonl",
+      "bytes": 212635,
+      "sha256": "88f766f95e68b173ec5fcc0fac9cdc9e1980fa808bafd8f6542c790bd95adf37"
+    },
+    {
+      "path": "ReplayScripts/verify.py",
+      "bytes": 36023,
+      "sha256": "d5321bb76c3bbeb21b5ef7897456135d31cb9e32dbd3ab2e2ee4cf2061a5d82d"
+    },
+    {
+      "path": "Screenshots/dune-sentinel_S1_20261016-025526_s42_02.jpg",
+      "bytes": 92180,
+      "sha256": "af879b9103170a9fd26db170f324d1f9b8d7e1383caed2093b7f6a28adc74576"
+    },
+    {
+      "path": "Screenshots/dune-sentinel_S1_20261016-025526_s42_03.jpg",
+      "bytes": 100215,
+      "sha256": "f47a8c4639264fa6b49186ff1a978946f232b8a4ce7aef6d02fcbbd85e835ea2"
+    },
+    {
+      "path": "Screenshots/dune-sentinel_S1_20261016-025526_s42_04.jpg",
+      "bytes": 101172,
+      "sha256": "e3e868bd0ad4cd8ae339e5d0825f6a9a1c026f638f4f3843d0ba277e6ab19398"
+    },
+    {
+      "path": "Screenshots/dune-sentinel_S1_20261016-025526_s42_05.jpg",
+      "bytes": 104817,
+      "sha256": "917c14b6ab3fb7db631369522d39bb9b7eec3b45c893140d1ae1b736e579157b"
+    },
+    {
+      "path": "Screenshots/dune-sentinel_S1_20261016-025526_s42_06.jpg",
+      "bytes": 108790,
+      "sha256": "f5b0a30dbf1ac7d731341f11cb4f6d970fc6907b0f5f6a1e1c965b9d525846d1"
+    },
+    {
+      "path": "Screenshots/dune-sentinel_S1_20261016-025526_s42_07.jpg",
+      "bytes": 99403,
+      "sha256": "53011748aacfb4f0d9481c47389e23fb5ae15fa5d619a4485bbadd3fce088663"
+    },
+    {
+      "path": "Screenshots/dune-sentinel_S1_20261016-025526_s42_08.jpg",
+      "bytes": 105515,
+      "sha256": "a9698ffd43a509b143576e63a1352806ca4be18a8f2b463846800d2d3551de51"
+    },
+    {
+      "path": "workflow.jsonl",
+      "bytes": 58051,
+      "sha256": "9d2954865ddcf7576f6e0778b4d626566e00ce65a06410ee9db1a564812f989d"
+    }
+  ],
+  "totals": {
+    "files": 37,
+    "bytes": 39433739
+  }
+}

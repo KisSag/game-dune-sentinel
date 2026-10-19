@@ -446,12 +446,12 @@ void ADSHUD::Controls()
     ModalBackdrop(TEXT("PILOT QUALIFICATION  /  KEYBOARD + MOUSE"), TEXT("EXPERT FLIGHT"));
     struct FEntry { const TCHAR* Action; const TCHAR* Keys; };
     const FEntry Entries[] = {
-        { TEXT("PITCH / ROLL"), TEXT("MOUSE + UP/DOWN / A,D") },
+        { TEXT("PITCH / ROLL"), TEXT("MOUSE + W/S / A,D") },
         { TEXT("YAW / LEVEL FLIGHT"), TEXT("Q,E / Q+E") },
-        { TEXT("ACCELERATE / BRAKE"), TEXT("W / S") },
-        { TEXT("HIGH-G TURN"), TEXT("W + S + PITCH") },
-        { TEXT("CANNON / MISSILE"), TEXT("LMB, CTRL / RMB, SPACE") },
-        { TEXT("NEXT TARGET / TARGET VIEW"), TEXT("TAB / HOLD TAB OR F") },
+        { TEXT("ACCELERATE / BRAKE"), TEXT("SPACE / CTRL") },
+        { TEXT("HIGH-G TURN"), TEXT("SPACE + CTRL + PITCH") },
+        { TEXT("CANNON / MISSILE"), TEXT("LMB / F") },
+        { TEXT("NEXT TARGET / TARGET VIEW"), TEXT("TAB / HOLD TAB OR RMB") },
         { TEXT("FREE LOOK"), TEXT("ALT + MOUSE") },
         { TEXT("CAMERA / PAUSE"), TEXT("V / ESC") }
     };

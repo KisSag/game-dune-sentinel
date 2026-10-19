@@ -8,7 +8,7 @@ Open `DuneSentinel.uproject` with Unreal Engine 5.7 and build `DuneSentinelEdito
 
 ## Controls
 
-Enter launches from the main menu. W increases throttle; S brakes. A/D roll, Up/Down pitch, Q/E yaw. Left mouse or Left Ctrl fires the cannon; right mouse or Space fires missiles. Tab cycles targets and F looks at the target. Esc pauses.
+Enter launches from the main menu. W pitches up and S pitches down; A/D roll and Q/E yaw. Hold Space to accelerate and Ctrl to brake. Left mouse fires the cannon; F fires a missile. Tab cycles targets and holding right mouse looks at the selected enemy; release it to return to the normal flight view. Mouse flight, Alt free look, V camera switching and Esc pause retain their existing behavior.
 
 ## Assets
 

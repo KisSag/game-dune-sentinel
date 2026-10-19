@@ -117,13 +117,14 @@ void ADSFlightPawn::MakeInputActions()
         FEnhancedActionKeyMapping& Mapping = FlightMapping->MapKey(Input, Key);
         if (bNegative) Mapping.Modifiers.Add(NewObject<UInputModifierNegate>(FlightMapping));
     };
-    Map(PitchAction, EKeys::Down); Map(PitchAction, EKeys::Up, true);
+    Map(PitchAction, EKeys::W); Map(PitchAction, EKeys::S, true);
     Map(RollAction, EKeys::D); Map(RollAction, EKeys::A, true);
     Map(YawRightAction, EKeys::E); Map(YawLeftAction, EKeys::Q);
-    Map(ThrottleAction, EKeys::W); Map(BrakeAction, EKeys::S);
-    Map(GunAction, EKeys::LeftMouseButton); Map(GunAction, EKeys::LeftControl);
-    Map(MissileAction, EKeys::RightMouseButton); Map(MissileAction, EKeys::SpaceBar);
-    Map(TargetAction, EKeys::Tab); Map(LookAction, EKeys::F);
+    Map(ThrottleAction, EKeys::SpaceBar);
+    Map(BrakeAction, EKeys::LeftControl); Map(BrakeAction, EKeys::RightControl);
+    Map(GunAction, EKeys::LeftMouseButton);
+    Map(MissileAction, EKeys::F);
+    Map(TargetAction, EKeys::Tab); Map(LookAction, EKeys::RightMouseButton);
     Map(FreeLookAction, EKeys::LeftAlt); Map(CameraAction, EKeys::V);
     Map(MousePitchAction, EKeys::MouseY); Map(MouseRollAction, EKeys::MouseX);
 }

@@ -1,0 +1,11 @@
+{
+  "FileVersion": 3,
+  "Version": 3,
+  "VersionName": "3.0",
+  "FriendlyName": "Task Route Probe",
+  "Description": "Independent keyboard-route observer. Writes numeric evidence only.",
+  "Category": "Testing",
+  "CanContainContent": false,
+  "EnabledByDefault": true,
+  "Modules": [{"Name": "TaskRouteProbe", "Type": "Runtime", "LoadingPhase": "PostEngineInit"}]
+}
